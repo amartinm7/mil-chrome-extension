@@ -33,6 +33,10 @@ lsof -i :9090
 sudo kill -9 pid
 `````
 
+open chrome-extensions
+`````bash
+chrome://extensions/
+`````
 
 import uikit
 https://alligator.io/vuejs/css-frameworks-vuejs/
