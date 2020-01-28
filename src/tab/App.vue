@@ -78,7 +78,7 @@
                       </ul>
                     </li>
                     <li class="uk-nav-divider"></li>
-                    <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: trash"></span> Item</a></li>
+                    <li><a v-on:click="onLogout"><span class="uk-margin-small-right" uk-icon="icon: sign-out"></span>Salir</a></li>
                   </ul>
                 </div>
               </div>
