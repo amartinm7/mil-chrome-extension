@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="uk-container uk-section">
+    <section class="uk-section uk-section-xsmall">
       <div alt="Placeholder image" class="ma-NavigationHeader-logoLink" >
         <a href="http://milanuncios.com" target="_blank" style="text-decoration:none;">
           <img src="https://scm-milanuncios-frontend-pro.milanuncios.com/statics/images/common/logo.2676833a05.svg">
@@ -23,7 +23,7 @@
       </div>
     </section>
     <!-- login -->
-    <section class="uk-container uk-section" v-if="isLogged == false">
+    <section class="uk-section uk-section-xsmall" v-if="isLogged == false">
       <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m">
         <div class="uk-container">
           <form class="uk-form-stacked">
@@ -41,7 +41,7 @@
             </div>
             <div class="uk-margin">
               <div class="uk-inline">
-                <button v-on:click="onSubmit" class="uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom">login</button>
+                <button type="button" v-on:click="onSubmit" class="uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom">login</button>
               </div>
             </div>
           </form>
@@ -50,7 +50,7 @@
     </section>
     <!-- end login -->
     <!-- nav bar -->
-    <section class="uk-container uk-section" v-if="isLogged == true">
+    <section class="uk-section uk-section-xsmall" v-if="isLogged == true">
       <div class="uk-card uk-card-hover uk-card-default uk-width-1-1@s">
         <div class="uk-card-header">
           <div class="uk-grid-small uk-flex-middle" uk-grid>
@@ -85,7 +85,10 @@
             </div>
             <div class="uk-width-expand">
               <h6 class="uk-card-subtitle uk-margin-remove-bottom">{{logedUser.email}}</h6>
-              <p class="uk-text-meta uk-margin-remove-top">Usuario desde el {{getDate()}}</p>
+              <p class="uk-text-meta uk-margin-remove-top">Usuario desde el {{ getDate() }}</p>
+            </div>
+            <div class="uk-width-auto">
+              <a v-on:click="onLogout" uk-icon="icon: sign-out"></a>
             </div>
           </div>
         </div>
@@ -93,7 +96,7 @@
     </section>
     <!-- end nav bar -->
     <!-- items -->
-    <section class="uk-container uk-section" v-if="isLogged == true">
+    <section class="uk-section uk-section-xsmall" v-if="isLogged == true">
       <ul uk-tab>
         <li class="uk-active"><a href="#">
           Tus Anuncios
@@ -102,7 +105,7 @@
           Tus favoritos
         </a></li>
       </ul>
-      <ul class="uk-switcher uk-margin">
+      <ul class="uk-switcher uk-margin-small-left">
         <li class="uk-active">
           <article class="uk-comment" v-for="(ad, index) in ads" v-bind:todo="ad" v-bind:key="ad.id">
             <header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
@@ -114,8 +117,8 @@
               <div class="uk-width-expand">
                 <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" v-bind:href="getAdUrl(ad)" target="_blank">{{ad.titulo }}</a></h4>
                 <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-                  <li><a v-bind:href="getAdUrl(ad)" target="_blank" class="uk-link-reset">{{ad.fecha}}</a></li>
-                  <li><a v-bind:href="getAdUrl(ad)" target="_blank" class="uk-link-reset">{{ad.precio}}</a></li>
+                  <li><a v-bind:href="getAdUrl(ad)" target="_blank" class="uk-link-reset">Hace {{ad.fecha}}</a></li>
+                  <li><a v-bind:href="getAdUrl(ad)" target="_blank" class="uk-link-reset">Precio {{ad.precio}}</a></li>
                 </ul>
               </div>
             </header>
@@ -144,17 +147,43 @@
         </li>
       </ul>
     </section>
-    <section>
-      <div class="uk-cover-container uk-height-medium" @mouseover="videoMute = false" @mouseleave="videoMute = true">
+
+    <section class="uk-section uk-section-xsmall">
+      <div class="uk-flex uk-flex-center" style="width: 100%">
+        <a href="https://go.onelink.me/app/1ee638ce" target="_blank" rel="noopener noreferrer">
+          <div class="social-media-google-store uk-margin-left"/>
+        </a>
+        <a href="https://go.onelink.me/app/751615a1" target="_blank" rel="noopener noreferrer">
+          <div class="social-media-apple-store uk-margin-left" />
+        </a>
+      </div>
+    </section>
+
+    <section class="uk-section uk-section-xsmall">
+      <div class="uk-flex uk-flex-center">
+        <a href="https://www.facebook.com/Milanuncios/" target="_blank" rel="noopener noreferrer">
+          <div class="social-media-facebook uk-margin-left"/>
+        </a>
+        <a href="https://twitter.com/milanuncios" target="_blank" rel="noopener noreferrer">
+          <div class="social-media-twitter uk-margin-left"/>
+        </a>
+        <a href="https://www.instagram.com/milanuncios/" target="_blank" rel="noopener noreferrer">
+          <div class="social-media-instagram uk-margin-left"/>
+        </a>
+        <a href="https://www.youtube.com/channel/UCw6Jn6QF5L9NXYkr_XNFMCQ" target="_blank" rel="noopener noreferrer">
+          <div class="social-media-youtube uk-margin-left"/>
+        </a>
+      </div>
+    </section>
+    <section class="uk-section uk-section-xsmall">
+      <div class="uk-cover-container" @mouseover="videoMute = false" @mouseleave="videoMute = true">
         <iframe src="https://www.youtube-nocookie.com/embed/KKrEUft8p4g?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1"
                 width="1920" height="1080"
                 frameborder="0" uk-responsive
                 uk-video="automute: true"></iframe>
       </div>
-
     </section>
     <!-- end items -->
-    <footer></footer>
   </div>
 </template>
 
@@ -219,102 +248,72 @@
       },
       onSubmit: function () {
         console.log(">>>onSubmit")
-        //if (this.isDisabled) return;
-        //this.isDisabled = true;
-        //this.isLoading = true;
         this.isLogged = true
-        this.login(this.formData)
+        this.loadPage(this.formData)
       },
-      loginOld: function ({ email, password }) {
-        console.log(">>>login")
+      onLoadPage: async function(){
         const vm = this
-        const url = "https://www.milanuncios.com/api/v3/logins"
-
-        const data = {
-          "identifier": this.formData.email,
-          "password": this.formData.password,
-          "rememberMe": "true"
-        }
-
-        const headers = {
-          "Content-Type": "application/json",
-          "mav": "2",
-          "Accept": "*/*",
-          "Cache-Control": "no-cache",
-          "Connection": "keep-alive"
-        }
-
-        console.log(JSON.stringify(data))
-
-        axios({
-          method: 'post',
-          url: url,
-          data: data,
-          headers: headers
-        }).then((res) => {
-          console.log("RESPONSE ==== : ", res);
-          const params =  {
-            "r": "30",
-            "p": "1",
-            "token": res.data.session.apiToken
-          }
-          const urlMisAnuncios = `https://www.milanuncios.com/api/v2/misanuncios/misanuncios.php?${qs.stringify(params)}`
-          const headers2 = {
-            "mav": "2",
-            "Accept": "*/*",
-            "Cache-Control": "no-cache",
-            'Content-Type': 'application/x-www-form-urlencoded',
-            "Connection": "keep-alive",
-            "cookie": {
-              "PHPSESSID": res.data.session.id,
-              "ma_email": res.data.user.email,
-              "ma_session_id": res.data.session.id,
-              "s": res.data.session.apiToken
-            }
-          }
-          axios({
-            method: 'post',
-            url: urlMisAnuncios,
-            data: params,
-            headers: headers2
-          }).then((res) => {
-            console.log("RESPONSE ==== : ", res)
-            vm.ads = res.data.data.anuncios
-            console.log(JSON.stringify(vm.ads))
-          }).catch((err) => {
-            console.log(JSON.stringify(err));
-            console.log("ERROR: ====", err);
-          })
-        }).catch((err) => {
-          console.log(JSON.stringify(err));
-          console.log("ERROR: ====", err);
-        })
-
-      },
-      login: async function ({ email, password }) {
-        console.log(">>>login")
-        const vm = this
+        console.log(">>>onLoadPage")
         try {
-          const loginResponse = await this.doLogin()
-          vm.logedUser.email = loginResponse.data.user.email
-          vm.logedUser.createdAt = loginResponse.data.user.createdAt
-          console.log(">>>loginResponse: " + JSON.stringify(loginResponse))
-          const { header, params } = await this.getHeaderAndQueryParams(loginResponse)
-          console.log("h&qp:" + JSON.stringify({ header, params }))
-          const adsResponse = await this.getAds(header, params)
-          vm.ads = adsResponse.data.data.anuncios
-          console.log(JSON.stringify(vm.ads))
-          vm.favoriteAds = adsResponse.data.data.anuncios
-          // const favoriteAdsResponse = await this.getFavoriteAds(header, params)
-          // vm.favoriteAds = favoriteAdsResponse.data.data.anuncios
-          // console.log(JSON.stringify(vm.favoriteAds))
+          const responseLoginWithCookie = await this.loginWithCookie()
+          console.log(">>>loginWithCookie " + JSON.stringify(responseLoginWithCookie))
+          let apiToken = responseLoginWithCookie.data.apiToken
+          vm.logedUser.email = responseLoginWithCookie.data.user.email
+          vm.logedUser.createdAt = responseLoginWithCookie.data.user.createdAt
+          const responseLoadPage = await this.loadPage(undefined, apiToken)
+          console.log(">>>responseLoadPage " + JSON.stringify(responseLoadPage))
         } catch (err) {
           console.log(JSON.stringify(err));
           console.log("ERROR: ====", err);
         }
       },
+      loginWithCookie: function(){
+        console.log(">>>loginWithCookie")
+        const url = "https://www.milanuncios.com/api/v3/sessions/current"
+        const headers = {
+          "Content-Type": "application/json",
+          "mav": "2",
+          "Accept": "*/*",
+          "Cache-Control": "no-cache"
+        }
+
+        console.log(JSON.stringify(headers))
+
+        return axios({
+          method: 'get',
+          url: url,
+          headers: headers,
+          config: { withCredentials: true }
+        })
+      },
+      loadPage: async function (formData, apiToken) {
+        console.log(">>>loadPage")
+        const vm = this
+        let loginResponse = {}
+        let apiTokenFinal = apiToken
+        if (apiToken == undefined || apiToken.isEmpty) {
+          loginResponse = await this.doLogin()
+          console.log(">>>doLogin")
+          console.log(">>>cookies" + JSON.stringify(loginResponse.headers))
+          vm.logedUser.email = loginResponse.data.user.email
+          vm.logedUser.createdAt = loginResponse.data.user.createdAt
+          console.log(">>>loginResponse: " + JSON.stringify(loginResponse))
+          apiTokenFinal = loginResponse.data.session.apiToken
+        }
+        vm.isLogged = true
+        const { header, params } = await this.getHeaderAndQueryParams(apiTokenFinal)
+        console.log("h&qp:" + JSON.stringify({ header, params }))
+        const adsResponse = await this.getAds(header, params)
+        vm.ads = adsResponse.data.data.anuncios
+        console.log(JSON.stringify(vm.ads))
+        vm.favoriteAds = adsResponse.data.data.anuncios
+        // const favoriteAdsResponse = await this.getFavoriteAds(header, params)
+        // vm.favoriteAds = favoriteAdsResponse.data.data.anuncios
+        // console.log(JSON.stringify(vm.favoriteAds))
+        return Promise.resolve(123)
+      },
       doLogin: async function () {
-        console.log(">>>login")
+        console.log(">>>doLogin")
         const url = "https://www.milanuncios.com/api/v3/logins"
         const data = {
           "identifier": this.formData.email,
@@ -326,8 +325,7 @@
           "Content-Type": "application/json",
           "mav": "2",
           "Accept": "*/*",
-          "Cache-Control": "no-cache",
-          "Connection": "keep-alive"
+          "Cache-Control": "no-cache"
         }
 
         console.log(JSON.stringify(data))
@@ -336,29 +334,23 @@
           method: 'post',
           url: url,
           data: data,
-          headers: headers
+          headers: headers,
+          config: { withCredentials: true }
         })
 
       },
-      getHeaderAndQueryParams: async function(loginResponse){
+      getHeaderAndQueryParams: async function(apiToken){
         console.log(">>>getHeaderAndQueryParams")
         const params =  {
           "r": "30",
           "p": "1",
-          "token": loginResponse.data.session.apiToken
+          "token": apiToken
         }
         const header = {
           "mav": "2",
           "Accept": "*/*",
           "Cache-Control": "no-cache",
-          'Content-Type': 'application/json',
-          //"Connection": "keep-alive",
-          /*"cookie": {
-            "PHPSESSID": loginResponse.data.session.id,
-            "ma_email": loginResponse.data.user.email,
-            "ma_session_id": loginResponse.data.session.id,
-            "s": loginResponse.data.session.apiToken
-          }*/
+          'Content-Type': 'application/json'
         }
         console.log(">>>getHeaderAndQueryParams:" + JSON.stringify({header, params}))
         return new Promise(
@@ -373,7 +365,8 @@
           method: 'post',
           url: urlMisAnuncios,
           data: params,
-          headers: header
+          headers: header,
+          config: { withCredentials: true }
         })
       },
       getFavoriteAds: async function (header, params) {
@@ -383,7 +376,8 @@
           method: 'post',
           url: urlMisFavoritos,
           data: params,
-          headers: header
+          headers: header,
+          config: { withCredentials: true }
         })
       },
       clearInputs: function (e) {
@@ -398,7 +392,20 @@
             this.formError[path] = message;
           });
         }
-      }
+      },
+      onLogout: async function(){
+        const vm = this
+        const response = await this.logout()
+        vm.isLogged = false
+      },
+      logout: async function () {
+        const url = "https://www.milanuncios.com/api/v3/logout"
+        return axios({
+          method: 'post',
+          url: url,
+          config: { withCredentials: true }
+        })
+      },
     },
     created() {
 
@@ -410,6 +417,11 @@
       //           this.isDisabled = !valid;
       //         }
       // );
+    },
+    mounted() {
+      this.onLoadPage()
+      //document.cookie = "username=John Doe"
+      //chrome.cookies.set({ url: "http://example.com/", name: "CookieVar", value: "123", expirationDate: 3600 });
     }
   };
 </script>
@@ -431,6 +443,76 @@
     margin: auto;
     text-align: center;
     width: 234px;
+  }
+
+  .social-media-google-store {
+    opacity: 1;
+    width: 120px;
+    height: 40px;
+    background: url(https://scm-milanuncios-frontend-pro.milanuncios.com/statics/images/promo/logo-disponible-googlePlay.dda98bd191.png) no-repeat;
+  }
+
+  .social-media-google-store:hover {
+    opacity: .5;
+    transition: opacity .2s ease-out;
+    -moz-transition: opacity .2s ease-out;
+    -webkit-transition: opacity .2s ease-out;
+    -o-transition: opacity .2s ease-out;
+  }
+
+  .social-media-apple-store {
+    opacity: 1;
+    width: 120px;
+    height: 40px;
+    background: url(https://scm-milanuncios-frontend-pro.milanuncios.com/statics/images/promo/logo-disponible-appStore.c1747aba6d.png) no-repeat;
+  }
+
+  .social-media-apple-store:hover {
+    opacity: .5;
+    transition: opacity .2s ease-out;
+    -moz-transition: opacity .2s ease-out;
+    -webkit-transition: opacity .2s ease-out;
+    -o-transition: opacity .2s ease-out;
+  }
+
+  .social-media-facebook {
+    width: 40px;
+    height: 40px;
+    background: url(https://scm-milanuncios-frontend-pro.milanuncios.com/statics/images/common/social-networks/ic-facebook-footer.a86d3f466e.svg) no-repeat;
+  }
+
+  .social-media-facebook:hover {
+    background: url(https://scm-milanuncios-frontend-pro.milanuncios.com/statics/images/common/social-networks/ic-facebook-footer-hover.40b5a2798a.svg) no-repeat;
+  }
+
+  .social-media-twitter {
+    width: 40px;
+    height: 40px;
+    background: url(https://scm-milanuncios-frontend-pro.milanuncios.com/statics/images/common/social-networks/ic-twitter-footer.499be77ce3.svg) no-repeat;
+  }
+
+  .social-media-twitter:hover {
+    background: url(https://scm-milanuncios-frontend-pro.milanuncios.com/statics/images/common/social-networks/ic-twitter-footer-hover.8aec2306f6.svg) no-repeat;
+  }
+
+  .social-media-instagram {
+    width: 40px;
+    height: 40px;
+    background: url(https://scm-milanuncios-frontend-pro.milanuncios.com/statics/images/common/social-networks/ic-instagram-footer.d92316c95b.svg) no-repeat;
+  }
+
+  .social-media-instagram:hover {
+    background: url(https://scm-milanuncios-frontend-pro.milanuncios.com/statics/images/common/social-networks/ic-instagram-footer-hover.0d3f51cbe9.svg) no-repeat;
+  }
+
+  .social-media-youtube {
+    width: 40px;
+    height: 40px;
+    background: url(https://scm-milanuncios-frontend-pro.milanuncios.com/statics/images/common/social-networks/ic-youtube-footer.dbab7f6c02.svg) no-repeat;
+  }
+
+  .social-media-youtube:hover {
+    background: url(https://scm-milanuncios-frontend-pro.milanuncios.com/statics/images/common/social-networks/ic-youtube-footer-hover.18e3d63e1c.svg) no-repeat;
   }
 
 

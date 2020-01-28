@@ -21,6 +21,11 @@
     "newtab": "tab/tab.html"
   },
   "permissions": [
+    "cookies",
+    "https://www.milanuncios.com/*",
+    "https://*/",
     "storage"
-  ]
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }
+

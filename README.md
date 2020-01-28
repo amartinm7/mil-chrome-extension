@@ -38,5 +38,7 @@ open chrome-extensions
 chrome://extensions/
 `````
 
-import uikit
+https://github.com/Kocal/vue-web-extension
 https://alligator.io/vuejs/css-frameworks-vuejs/
+https://medium.com/@simoneldevig_80359/building-chrome-extensions-with-vue-js-cafaefb82bd4
+https://www.chromium.org/developers/design-documents/extensions/proposed-changes/apis-under-development/proposal-chrome-extensions-cookies-api
