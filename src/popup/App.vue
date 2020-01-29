@@ -69,7 +69,8 @@
                     <p class="uk-text-meta uk-margin-remove-top">Usuario desde el {{ getDate() }}</p>
                   </div>
                   <ul class="uk-nav uk-nav-default" uk-accordion>
-                    <li class="uk-parent">
+                    <li class="uk-nav-divider"></li>
+                    <li class="uk-parent uk-open">
                       <a href="#" class="uk-accordion-title"><span class="uk-margin-small-right" uk-icon="icon: table"></span>Tús anuncios</a>
                       <ul class="uk-nav-sub uk-accordion-content">
                         <li><a href="#"><span class="uk-margin-small-right uk-icon" uk-icon="icon: star"/>Destacar anuncios</a></li>
