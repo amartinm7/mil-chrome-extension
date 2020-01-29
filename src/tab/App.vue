@@ -61,20 +61,29 @@
               <div id="offcanvas-usage" uk-offcanvas="overlay: true">
                 <div class="uk-offcanvas-bar">
                   <button class="uk-offcanvas-close" type="button" uk-close></button>
-                  <ul class="uk-nav-header uk-parent">Your Profile Man!</ul>
+                  <div>
+                    <img class="uk-border-circle" width="40" height="40" src="https://sw25672.smartweb-static.com/upload_dir/shop/category/images-_sjove-tegninger-af-dyr_.w293.h293.fill.png">
+                  </div>
+                  <div class="uk-width-expand">
+                    <h6 class="uk-card-subtitle uk-margin-remove-bottom">{{logedUser.email}}</h6>
+                    <p class="uk-text-meta uk-margin-remove-top">Usuario desde el {{ getDate() }}</p>
+                  </div>
                   <ul class="uk-nav uk-nav-default" uk-accordion>
                     <li class="uk-parent">
-                      <a href="#" class="uk-accordion-title"><span class="uk-margin-small-right" uk-icon="icon: table"></span>Item</a>
+                      <a href="#" class="uk-accordion-title"><span class="uk-margin-small-right" uk-icon="icon: table"></span>Tús anuncios</a>
                       <ul class="uk-nav-sub uk-accordion-content">
-                        <li><a href="#">Sub item</a></li>
-                        <li><a href="#">Sub item</a></li>
+                        <li><a href="#"><span class="uk-margin-small-right uk-icon" uk-icon="icon: star"/>Destacar anuncios</a></li>
+                        <li><a href="#"><span class="uk-margin-small-right uk-icon" uk-icon="icon: heart"/>Mis favoritos</a></li>
+                        <li><a href="#"><span class="uk-margin-small-right uk-icon" uk-icon="icon: search"/>Mis busquedas</a></li>
+                        <li><a href="#"><span class="uk-margin-small-right uk-icon" uk-icon="icon: comments"/>Mis mensajes</a></li>
+                        <li><a href="#"><span class="uk-margin-small-right uk-icon" uk-icon="icon: home"/>Mi tienda</a></li>
                       </ul>
                     </li>
                     <li class="uk-parent">
-                      <a href="#" class="uk-accordion-title"><span class="uk-margin-small-right" uk-icon="icon: thumbnails"></span> Item</a>
+                      <a href="#" class="uk-accordion-title"><span class="uk-margin-small-right" uk-icon="icon: thumbnails"></span>Mi Perfil</a>
                       <ul class="uk-nav-sub uk-accordion-content">
-                        <li><a href="#">Sub item</a></li>
-                        <li><a href="#">Sub item</a></li>
+                        <li><a href="#"><span class="uk-margin-small-right uk-icon" uk-icon="icon: user"/>Cuenta y privacidad</a></li>
+                        <li><a href="#"><span class="uk-margin-small-right uk-icon" uk-icon="icon: question"/>Ayuda</a></li>
                       </ul>
                     </li>
                     <li class="uk-nav-divider"></li>
@@ -175,6 +184,18 @@
         </a>
       </div>
     </section>
+    <section>
+          <a class="uk-button uk-button-default" href="#modal-center" uk-toggle>Open</a>
+          <div id="modal-center" class="uk-flex-top" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+              <button class="uk-modal-close-default" type="button" uk-close></button>
+              <iframe src="https://www.youtube-nocookie.com/embed/KKrEUft8p4g?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1"
+                      width="1920" height="1080"
+                      frameborder="0" uk-responsive
+                      uk-video="automute: true"></iframe>
+            </div>
+          </div>
+    </section>
     <section class="uk-section uk-section-xsmall">
       <div class="uk-cover-container" @mouseover="videoMute = false" @mouseleave="videoMute = true">
         <iframe src="https://www.youtube-nocookie.com/embed/KKrEUft8p4g?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1"
@@ -229,6 +250,7 @@
             fotos_thumb: []
           }
         ],
+        savedSearchs:[],
         videoMute: true
       };
     },
@@ -307,7 +329,7 @@
         vm.ads = adsResponse.data.data.anuncios
         console.log(JSON.stringify(vm.ads))
         vm.favoriteAds = adsResponse.data.data.anuncios
-        // const favoriteAdsResponse = await this.getFavoriteAds(header, params)
+        const saved = await this.getSavedSearchs(header, params)
         // vm.favoriteAds = favoriteAdsResponse.data.data.anuncios
         // console.log(JSON.stringify(vm.favoriteAds))
         return Promise.resolve(123)
@@ -378,6 +400,17 @@
           data: params,
           headers: header,
           config: { withCredentials: true }
+        })
+      },
+      getSavedSearchs: async function (header, params) {
+        const url = `https://ms-ma--user-profiles.spain.schibsted.io/users/183565764/savedsearches/?${qs.stringify(params)}`
+        return axios({
+          method: 'get',
+          url: url,
+          data: params,
+          headers: header,
+          config: { withCredentials: true }
+          //[{"id":"e03f3ab9-7edb-4019-8b35-7c4e1e187446","userId":"183565764","title":"seat leon en Madrid","status":"ACTIVE","targeting":{"type":"coches","location":{"province":{"id":28}},"category":{"id":100664},"brand":"seat","model":"leon","price":{"from":6000.0,"to":42000.0},"year":{"from":2019.0,"to":2020.0}},"creationDate":"2020-01-28T08:27:32.374","updateDate":"2020-01-28T08:27:32.374"}]
         })
       },
       clearInputs: function (e) {
