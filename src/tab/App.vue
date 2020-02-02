@@ -234,8 +234,12 @@
         </a>
       </div>
     </section>
-    <section>
-      <a class="uk-button uk-button-default" href="#modal-center" uk-toggle>Open</a>
+    <section class="uk-section uk-section-xsmall">
+      <div class="uk-cover-container" >
+        <a class="uk-button uk-button-default" href="#modal-center" uk-toggle>
+          <img src="https://scm-milanuncios-frontend-pro.milanuncios.com/statics/images/banners/carsCampaign/carsCampaignBannerMobile_bg.b97cbb6439.jpg">
+        </a>
+      </div>
       <div id="modal-center" class="uk-flex-top" uk-modal>
         <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
           <button class="uk-modal-close-default" type="button" uk-close></button>
@@ -246,14 +250,14 @@
         </div>
       </div>
     </section>
-    <section class="uk-section uk-section-xsmall">
+<!--    <section class="uk-section uk-section-xsmall">
       <div class="uk-cover-container" @mouseover="videoMute = false" @mouseleave="videoMute = true">
         <iframe src="https://www.youtube-nocookie.com/embed/KKrEUft8p4g?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1"
                 width="1920" height="1080"
                 frameborder="0" uk-responsive
                 uk-video="automute: true"></iframe>
       </div>
-    </section>
+    </section>-->
     <!-- end items -->
   </div>
 </template>
