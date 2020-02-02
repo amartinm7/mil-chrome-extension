@@ -68,23 +68,24 @@
                     <h6 class="uk-card-subtitle uk-margin-remove-bottom">{{logedUser.email}}</h6>
                     <p class="uk-text-meta uk-margin-remove-top">Usuario desde el {{ getDate() }}</p>
                   </div>
-                  <ul class="uk-nav uk-nav-default" uk-accordion>
+                  <ul class="uk-nav uk-nav-default" uk-accordion="collapsible: false">
                     <li class="uk-nav-divider"></li>
                     <li class="uk-parent uk-open">
                       <a href="#" class="uk-accordion-title"><span class="uk-margin-small-right" uk-icon="icon: table"></span>Tús anuncios</a>
                       <ul class="uk-nav-sub uk-accordion-content">
-                        <li><a href="#"><span class="uk-margin-small-right uk-icon" uk-icon="icon: star"/>Destacar anuncios</a></li>
-                        <li><a href="#"><span class="uk-margin-small-right uk-icon" uk-icon="icon: heart"/>Mis favoritos</a></li>
-                        <li><a href="#"><span class="uk-margin-small-right uk-icon" uk-icon="icon: search"/>Mis busquedas</a></li>
-                        <li><a href="#"><span class="uk-margin-small-right uk-icon" uk-icon="icon: comments"/>Mis mensajes</a></li>
-                        <li><a href="#"><span class="uk-margin-small-right uk-icon" uk-icon="icon: home"/>Mi tienda</a></li>
+                        <li><a href="https://www.milanuncios.com/publicar-anuncios-gratis/" target="_blank"><span class="uk-margin-small-right uk-icon" uk-icon="icon: pencil"/>Publicar anuncios</a></li>
+                        <li><a href="https://www.milanuncios.com/creditos/destaca-tu-anuncio" target="_blank"><span class="uk-margin-small-right uk-icon" uk-icon="icon: star"/>Destacar anuncios</a></li>
+                        <li><a href="https://www.milanuncios.com/seleccion/" target="_blank"><span class="uk-margin-small-right uk-icon" uk-icon="icon: heart"/>Mis favoritos</a></li>
+                        <li><a href="https://www.milanuncios.com/mis-busquedas/" target="_blank"><span class="uk-margin-small-right uk-icon" uk-icon="icon: search"/>Mis busquedas</a></li>
+                        <li><a href="https://www.milanuncios.com/mis-mensajes/" target="_blank"><span class="uk-margin-small-right uk-icon" uk-icon="icon: comments"/>Mis mensajes</a></li>
+                        <li><a href="https://www.milanuncios.com/mi-tienda/" target="_blank"><span class="uk-margin-small-right uk-icon" uk-icon="icon: home"/>Mi tienda</a></li>
                       </ul>
                     </li>
-                    <li class="uk-parent">
+                    <li class="uk-parent uk-open">
                       <a href="#" class="uk-accordion-title"><span class="uk-margin-small-right" uk-icon="icon: thumbnails"></span>Mi Perfil</a>
                       <ul class="uk-nav-sub uk-accordion-content">
-                        <li><a href="#"><span class="uk-margin-small-right uk-icon" uk-icon="icon: user"/>Cuenta y privacidad</a></li>
-                        <li><a href="#"><span class="uk-margin-small-right uk-icon" uk-icon="icon: question"/>Ayuda</a></li>
+                        <li><a href="#" target="_blank"><span class="uk-margin-small-right uk-icon" uk-icon="icon: user"/>Cuenta y privacidad</a></li>
+                        <li><a href="https://ayuda.milanuncios.com/hc/es" target="_blank"><span class="uk-margin-small-right uk-icon" uk-icon="icon: question"/>Ayuda</a></li>
                       </ul>
                     </li>
                     <li class="uk-nav-divider"></li>

@@ -73,18 +73,19 @@
                     <li class="uk-parent uk-open">
                       <a href="#" class="uk-accordion-title"><span class="uk-margin-small-right" uk-icon="icon: table"></span>Tús anuncios</a>
                       <ul class="uk-nav-sub uk-accordion-content">
-                        <li><a href="#"><span class="uk-margin-small-right uk-icon" uk-icon="icon: star"/>Destacar anuncios</a></li>
-                        <li><a href="#"><span class="uk-margin-small-right uk-icon" uk-icon="icon: heart"/>Mis favoritos</a></li>
-                        <li><a href="#"><span class="uk-margin-small-right uk-icon" uk-icon="icon: search"/>Mis busquedas</a></li>
-                        <li><a href="#"><span class="uk-margin-small-right uk-icon" uk-icon="icon: comments"/>Mis mensajes</a></li>
-                        <li><a href="#"><span class="uk-margin-small-right uk-icon" uk-icon="icon: home"/>Mi tienda</a></li>
+                        <li><a href="https://www.milanuncios.com/publicar-anuncios-gratis/" target="_blank"><span class="uk-margin-small-right uk-icon" uk-icon="icon: pencil"/>Publicar anuncios</a></li>
+                        <li><a href="https://www.milanuncios.com/creditos/destaca-tu-anuncio" target="_blank"><span class="uk-margin-small-right uk-icon" uk-icon="icon: star"/>Destacar anuncios</a></li>
+                        <li><a href="https://www.milanuncios.com/seleccion/" target="_blank"><span class="uk-margin-small-right uk-icon" uk-icon="icon: heart"/>Mis favoritos</a></li>
+                        <li><a href="https://www.milanuncios.com/mis-busquedas/" target="_blank"><span class="uk-margin-small-right uk-icon" uk-icon="icon: search"/>Mis busquedas</a></li>
+                        <li><a href="https://www.milanuncios.com/mis-mensajes/" target="_blank"><span class="uk-margin-small-right uk-icon" uk-icon="icon: comments"/>Mis mensajes</a></li>
+                        <li><a href="https://www.milanuncios.com/mi-tienda/" target="_blank"><span class="uk-margin-small-right uk-icon" uk-icon="icon: home"/>Mi tienda</a></li>
                       </ul>
                     </li>
                     <li class="uk-parent uk-open">
                       <a href="#" class="uk-accordion-title"><span class="uk-margin-small-right" uk-icon="icon: thumbnails"></span>Mi Perfil</a>
                       <ul class="uk-nav-sub uk-accordion-content">
-                        <li><a href="#"><span class="uk-margin-small-right uk-icon" uk-icon="icon: user"/>Cuenta y privacidad</a></li>
-                        <li><a href="#"><span class="uk-margin-small-right uk-icon" uk-icon="icon: question"/>Ayuda</a></li>
+                        <li><a href="#" target="_blank"><span class="uk-margin-small-right uk-icon" uk-icon="icon: user"/>Cuenta y privacidad</a></li>
+                        <li><a href="https://ayuda.milanuncios.com/hc/es" target="_blank"><span class="uk-margin-small-right uk-icon" uk-icon="icon: question"/>Ayuda</a></li>
                       </ul>
                     </li>
                     <li class="uk-nav-divider"></li>
@@ -186,16 +187,16 @@
       </div>
     </section>
     <section>
-          <a class="uk-button uk-button-default" href="#modal-center" uk-toggle>Open</a>
-          <div id="modal-center" class="uk-flex-top" uk-modal>
-            <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
-              <button class="uk-modal-close-default" type="button" uk-close></button>
-              <iframe src="https://www.youtube-nocookie.com/embed/KKrEUft8p4g?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1"
-                      width="1920" height="1080"
-                      frameborder="0" uk-responsive
-                      uk-video="automute: true"></iframe>
-            </div>
-          </div>
+      <a class="uk-button uk-button-default" href="#modal-center" uk-toggle>Open</a>
+      <div id="modal-center" class="uk-flex-top" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+          <button class="uk-modal-close-default" type="button" uk-close></button>
+          <iframe src="https://www.youtube-nocookie.com/embed/KKrEUft8p4g?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1"
+                  width="1920" height="1080"
+                  frameborder="0" uk-responsive
+                  uk-video="automute: true"></iframe>
+        </div>
+      </div>
     </section>
     <section class="uk-section uk-section-xsmall">
       <div class="uk-cover-container" @mouseover="videoMute = false" @mouseleave="videoMute = true">
