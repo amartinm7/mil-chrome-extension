@@ -239,6 +239,13 @@
           <div class="social-media-youtube uk-margin-left"/>
         </a>
       </div>
+      <div class="uk-flex uk-flex-center" style="width: 100%">
+        <p>&nbsp;</p>
+        <p>Copyright © 2020 - Adevinta Spain S.L.U.</p>
+      </div>
+      <div class="uk-flex uk-flex-center" style="width: 100%">
+        <p>Todos los derechos reservados.</p>
+      </div>
     </section>
     <section class="uk-section uk-section-xsmall">
       <div class="uk-cover-container" >
@@ -256,14 +263,14 @@
         </div>
       </div>
     </section>
-<!--    <section class="uk-section uk-section-xsmall">
-      <div class="uk-cover-container" @mouseover="videoMute = false" @mouseleave="videoMute = true">
-        <iframe src="https://www.youtube-nocookie.com/embed/KKrEUft8p4g?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1"
-                width="1920" height="1080"
-                frameborder="0" uk-responsive
-                uk-video="automute: true"></iframe>
-      </div>
-    </section>-->
+    <!--    <section class="uk-section uk-section-xsmall">
+          <div class="uk-cover-container" @mouseover="videoMute = false" @mouseleave="videoMute = true">
+            <iframe src="https://www.youtube-nocookie.com/embed/KKrEUft8p4g?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1"
+                    width="1920" height="1080"
+                    frameborder="0" uk-responsive
+                    uk-video="automute: true"></iframe>
+          </div>
+        </section>-->
     <!-- end items -->
   </div>
 </template>

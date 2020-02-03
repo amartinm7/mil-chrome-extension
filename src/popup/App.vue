@@ -239,6 +239,13 @@
           <div class="social-media-youtube uk-margin-left"/>
         </a>
       </div>
+      <div class="uk-flex uk-flex-center" style="width: 100%">
+        <p>&nbsp;</p>
+        <p>Copyright © 2020 - Adevinta Spain S.L.U.</p>
+      </div>
+      <div class="uk-flex uk-flex-center" style="width: 100%">
+        <p>Todos los derechos reservados.</p>
+      </div>
     </section>
     <section class="uk-section uk-section-xsmall">
       <div class="uk-cover-container" >
