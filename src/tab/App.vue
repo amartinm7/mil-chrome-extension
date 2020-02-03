@@ -209,6 +209,9 @@
 
     <section class="uk-section uk-section-xsmall">
       <div class="uk-flex uk-flex-center" style="width: 100%">
+        <p>Descarga Milanuncios en tu móvil</p>
+      </div>
+      <div class="uk-flex uk-flex-center" style="width: 100%">
         <a href="https://go.onelink.me/app/1ee638ce" target="_blank" rel="noopener noreferrer">
           <div class="social-media-google-store uk-margin-left"/>
         </a>
@@ -219,6 +222,9 @@
     </section>
 
     <section class="uk-section uk-section-xsmall">
+      <div class="uk-flex uk-flex-center" style="width: 100%">
+        <p>Encuentranos en: </p>
+      </div>
       <div class="uk-flex uk-flex-center">
         <a href="https://www.facebook.com/Milanuncios/" target="_blank" rel="noopener noreferrer">
           <div class="social-media-facebook uk-margin-left"/>
