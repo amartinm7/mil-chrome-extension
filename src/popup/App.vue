@@ -4,10 +4,8 @@
       <div class="uk-card uk-card-hover uk-card-default uk-width-1-1@s">
         <div class="uk-card-header">
           <div class="uk-grid-small uk-flex-middle" uk-grid>
-            <div class="uk-width-auto">
-              <a href="#offcanvas-usage" uk-toggle>
-                <img class="uk-border-circle" width="40" height="40" src="https://sw25672.smartweb-static.com/upload_dir/shop/category/images-_sjove-tegninger-af-dyr_.w293.h293.fill.png">
-              </a>
+            <div class="uk-width-auto" v-if="isLogged == true">
+              <a href="#offcanvas-usage" uk-toggle uk-icon="icon: menu"></a>
               <div id="offcanvas-usage" uk-offcanvas="overlay: true">
                 <div class="uk-offcanvas-bar">
                   <button class="uk-offcanvas-close" type="button" uk-close></button>
@@ -49,7 +47,7 @@
                 <img src="https://scm-milanuncios-frontend-pro.milanuncios.com/statics/images/common/logo.2676833a05.svg">
               </a>
             </div>
-            <div class="uk-width-auto">
+            <div class="uk-width-auto" v-if="isLogged == true">
               <a v-on:click="onLogout" uk-icon="icon: sign-out"></a>
             </div>
           </div>
@@ -248,7 +246,7 @@
       </div>
     </section>
     <section class="uk-section uk-section-xsmall">
-      <div class="uk-cover-container" >
+      <div class="uk-position-relative uk-visible-toggle uk-light" >
         <a class="uk-button uk-button-default" href="#modal-center" uk-toggle>
           <img src="https://scm-milanuncios-frontend-pro.milanuncios.com/statics/images/banners/carsCampaign/carsCampaignBannerMobile_bg.b97cbb6439.jpg">
         </a>
