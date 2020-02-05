@@ -1,4 +1,5 @@
 {
+  "short_name": "ma-companion-extension",
   "name": "ma-companion-extension",
   "description": "milanuncios chrome extension",
   "version": "1.0.0",
@@ -23,7 +24,6 @@
     "https://*/",
     "storage"
   ],
-  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
-  "update_url": "https://www.milanuncios.com/chrome-extensions/ma-companion-extension/updates.xml"
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }
 
