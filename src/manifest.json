@@ -1,7 +1,7 @@
 {
   "name": "ma-companion-extension",
-  "description": "A Vue.js web extension",
-  "version": 1,
+  "description": "milanuncios chrome extension",
+  "version": "1.0.0",
   "manifest_version": 2,
   "icons": {
     "16": "icons/icon_16.png",
@@ -9,16 +9,13 @@
     "128": "icons/icon_128.png"
   },
   "browser_action": {
-    "default_title": "new-tab-page",
+    "default_title": "ma-companion-extension",
     "default_popup": "popup/popup.html"
   },
   "background": {
     "scripts": [
       "background.js"
     ]
-  },
-  "chrome_url_overrides": {
-    "newtab": "tab/tab.html"
   },
   "permissions": [
     "cookies",
