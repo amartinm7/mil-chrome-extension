@@ -1,7 +1,7 @@
 {
-  "name": "new-tab-page",
+  "name": "ma-companion-extension",
   "version": "1.0.0",
-  "description": "A Vue.js web extension",
+  "description": "milanuncios chrome extension",
   "author": "antonio.martin <antonio.martin@schibsted.com>",
   "scripts": {
     "prettier": "prettier \"src/**/*.{js,vue}\"",

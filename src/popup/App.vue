@@ -1,72 +1,70 @@
 <template>
   <div>
     <section class="uk-section uk-section-xsmall">
-      <div class="uk-card uk-card-hover uk-card-default uk-width-1-1@s">
-        <div class="uk-card-header">
-          <div class="uk-grid-small uk-flex-middle" uk-grid>
-            <div class="uk-width-auto" v-if="isLogged == true">
-              <a href="#offcanvas-usage" uk-toggle uk-icon="icon: menu"></a>
-              <div id="offcanvas-usage" uk-offcanvas="overlay: true">
-                <div class="uk-offcanvas-bar">
-                  <button class="uk-offcanvas-close" type="button" uk-close></button>
-                  <div>
-                    <img class="uk-border-circle" width="40" height="40" src="https://sw25672.smartweb-static.com/upload_dir/shop/category/images-_sjove-tegninger-af-dyr_.w293.h293.fill.png">
-                  </div>
-                  <div class="uk-width-expand">
-                    <h6 class="uk-card-subtitle uk-margin-remove-bottom">{{logedUser.email}}</h6>
-                    <p class="uk-text-meta uk-margin-remove-top">Usuario desde el {{ getDate() }}</p>
-                  </div>
-                  <ul class="uk-nav uk-nav-default" uk-accordion="collapsible: false">
-                    <li class="uk-nav-divider"></li>
-                    <li class="uk-parent uk-open">
-                      <a href="#" class="uk-accordion-title"><span class="uk-margin-small-right" uk-icon="icon: table"></span>Tús anuncios</a>
-                      <ul class="uk-nav-sub uk-accordion-content">
-                        <li><a href="https://www.milanuncios.com/publicar-anuncios-gratis/" target="_blank"><span class="uk-margin-small-right uk-icon" uk-icon="icon: pencil"/>Publicar anuncios</a></li>
-                        <li><a href="https://www.milanuncios.com/creditos/destaca-tu-anuncio" target="_blank"><span class="uk-margin-small-right uk-icon" uk-icon="icon: star"/>Destacar anuncios</a></li>
-                        <li><a href="https://www.milanuncios.com/seleccion/" target="_blank"><span class="uk-margin-small-right uk-icon" uk-icon="icon: heart"/>Mis favoritos</a></li>
-                        <li><a href="https://www.milanuncios.com/mis-busquedas/" target="_blank"><span class="uk-margin-small-right uk-icon" uk-icon="icon: search"/>Mis busquedas</a></li>
-                        <li><a href="https://www.milanuncios.com/mis-mensajes/" target="_blank"><span class="uk-margin-small-right uk-icon" uk-icon="icon: comments"/>Mis mensajes</a></li>
-                        <li><a href="https://www.milanuncios.com/mi-tienda/" target="_blank"><span class="uk-margin-small-right uk-icon" uk-icon="icon: home"/>Mi tienda</a></li>
-                      </ul>
-                    </li>
-                    <li class="uk-parent uk-open">
-                      <a href="#" class="uk-accordion-title"><span class="uk-margin-small-right" uk-icon="icon: thumbnails"></span>Mi Perfil</a>
-                      <ul class="uk-nav-sub uk-accordion-content">
-                        <li><a href="#" target="_blank"><span class="uk-margin-small-right uk-icon" uk-icon="icon: user"/>Cuenta y privacidad</a></li>
-                        <li><a href="https://ayuda.milanuncios.com/hc/es" target="_blank"><span class="uk-margin-small-right uk-icon" uk-icon="icon: question"/>Ayuda</a></li>
-                      </ul>
-                    </li>
-                    <li class="uk-nav-divider"></li>
-                    <li><a v-on:click="onLogout"><span class="uk-margin-small-right" uk-icon="icon: sign-out"></span>Salir</a></li>
-                  </ul>
+      <div class="uk-grid-small uk-flex-middle uk-flex-around" uk-grid>
+        <div class="uk-width-auto" >
+          <div class="uk-width-auto" v-show="isLogged == true">
+            <a href="#offcanvas-usage" uk-toggle uk-icon="icon: menu"></a>
+            <div id="offcanvas-usage" uk-offcanvas="overlay: true">
+              <div class="uk-offcanvas-bar">
+                <button class="uk-offcanvas-close" type="button" uk-close></button>
+                <div>
+                  <img class="uk-border-circle" width="40" height="40" src="https://sw25672.smartweb-static.com/upload_dir/shop/category/images-_sjove-tegninger-af-dyr_.w293.h293.fill.png">
                 </div>
+                <div class="uk-width-expand">
+                  <h6 class="uk-card-subtitle uk-margin-remove-bottom">{{logedUser.email}}</h6>
+                  <p class="uk-text-meta uk-margin-remove-top">Usuario desde el {{ getDate() }}</p>
+                </div>
+                <ul class="uk-nav uk-nav-default" uk-accordion="collapsible: false">
+                  <li class="uk-nav-divider"></li>
+                  <li class="uk-parent uk-open">
+                    <a href="#" class="uk-accordion-title"><span class="uk-margin-small-right" uk-icon="icon: table"></span>Tús anuncios</a>
+                    <ul class="uk-nav-sub uk-accordion-content">
+                      <li><a href="https://www.milanuncios.com/publicar-anuncios-gratis/" target="_blank"><span class="uk-margin-small-right uk-icon" uk-icon="icon: pencil"/>Publicar anuncios</a></li>
+                      <li><a href="https://www.milanuncios.com/creditos/destaca-tu-anuncio" target="_blank"><span class="uk-margin-small-right uk-icon" uk-icon="icon: star"/>Destacar anuncios</a></li>
+                      <li><a href="https://www.milanuncios.com/seleccion/" target="_blank"><span class="uk-margin-small-right uk-icon" uk-icon="icon: heart"/>Mis favoritos</a></li>
+                      <li><a href="https://www.milanuncios.com/mis-busquedas/" target="_blank"><span class="uk-margin-small-right uk-icon" uk-icon="icon: search"/>Mis busquedas</a></li>
+                      <li><a href="https://www.milanuncios.com/mis-mensajes/" target="_blank"><span class="uk-margin-small-right uk-icon" uk-icon="icon: comments"/>Mis mensajes</a></li>
+                      <li><a href="https://www.milanuncios.com/mi-tienda/" target="_blank"><span class="uk-margin-small-right uk-icon" uk-icon="icon: home"/>Mi tienda</a></li>
+                    </ul>
+                  </li>
+                  <li class="uk-parent uk-open">
+                    <a href="#" class="uk-accordion-title"><span class="uk-margin-small-right" uk-icon="icon: thumbnails"></span>Mi Perfil</a>
+                    <ul class="uk-nav-sub uk-accordion-content">
+                      <li><a href="https://www.milanuncios.com/mis-anuncios/" target="_blank"><span class="uk-margin-small-right uk-icon" uk-icon="icon: user"/>Cuenta y privacidad</a></li>
+                      <li><a href="https://ayuda.milanuncios.com/hc/es" target="_blank"><span class="uk-margin-small-right uk-icon" uk-icon="icon: question"/>Ayuda</a></li>
+                    </ul>
+                  </li>
+                  <li class="uk-nav-divider"></li>
+                  <li><a v-on:click="onLogout"><span class="uk-margin-small-right" uk-icon="icon: sign-out"></span>Salir</a></li>
+                </ul>
               </div>
             </div>
-            <div class="uk-width-expand">
-              <a href="http://milanuncios.com" target="_blank" style="text-decoration:none;" class="ma-NavigationHeader-logoLink">
-                <img src="https://scm-milanuncios-frontend-pro.milanuncios.com/statics/images/common/logo.2676833a05.svg">
-              </a>
-            </div>
-            <div class="uk-width-auto" v-if="isLogged == true">
-              <a v-on:click="onLogout" uk-icon="icon: sign-out"></a>
-            </div>
-          </div>
-          <div>&nbsp;</div>
-          <div class="uk-container">
-            <form class="uk-form-stacked" v-on:submit.prevent="onSearch">
-              <div class="uk-margin">
-                <div class="uk-inline">
-                  <span class="uk-form-icon" uk-icon="icon: search"></span>
-                  <input type="text" class="uk-input uk-form-width-large"
-                         placeholder="¿que buscas?"
-                         v-on:keyup.enter="onSearch"
-                         v-model="searchFormData.keywords">
-                </div>
-              </div>
-            </form>
           </div>
         </div>
+        <div class="uk-width-auto">
+          <a href="http://milanuncios.com" target="_blank" style="text-decoration:none;" class="ma-NavigationHeader-logoLink">
+            <img src="https://scm-milanuncios-frontend-pro.milanuncios.com/statics/images/common/logo.2676833a05.svg">
+          </a>
+        </div>
+        <div class="uk-width-auto">
+        </div>
       </div>
+      <div>&nbsp;</div>
+      <div class="uk-container">
+        <form class="uk-form-stacked" v-on:submit.prevent="onSearch">
+          <div class="uk-margin">
+            <div class="uk-inline">
+              <span class="uk-form-icon" uk-icon="icon: search"></span>
+              <input type="text" class="uk-input uk-form-width-large"
+                     placeholder="¿que buscas?"
+                     v-on:keyup.enter="onSearch"
+                     v-model="searchFormData.keywords">
+            </div>
+          </div>
+        </form>
+      </div>
+
     </section>
     <!-- login -->
     <section class="uk-section uk-section-xsmall" v-if="isLogged == false">
@@ -76,18 +74,18 @@
             <div class="uk-margin">
               <div class="uk-inline">
                 <span class="uk-form-icon" uk-icon="icon: user"></span>
-                <input type="email" class="uk-input uk-form-width-large" placeholder="User" v-model="formData.email">
+                <input type="email" v-bind:class='{"uk-input":true, "uk-form-width-large":true, "uk-form-danger":(formData.errors.invalidEmail == true)}' placeholder="User" v-model="formData.email">
               </div>
             </div>
             <div class="uk-margin">
               <div class="uk-inline">
                 <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
-                <input type="password" class="uk-input uk-form-width-large" placeholder="Password" v-model="formData.password">
+                <input type="password" v-bind:class='{"uk-input":true, "uk-form-width-large":true, "uk-form-danger":(formData.errors.invalidPassword == true)}' placeholder="Password" v-model="formData.password">
               </div>
             </div>
             <div class="uk-margin">
               <div class="uk-inline">
-                <button type="button" v-on:click="onSubmit" class="uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom">login</button>
+                <button type="button" v-on:click="onDoLogin" class="uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom">login</button>
               </div>
             </div>
           </form>
@@ -95,63 +93,6 @@
       </div>
     </section>
     <!-- end login -->
-    <!-- nav bar -->
-    <!--    <section class="uk-section uk-section-xsmall" v-if="isLogged == true">
-          <div class="uk-card uk-card-hover uk-card-default uk-width-1-1@s">
-            <div class="uk-card-header">
-              <div class="uk-grid-small uk-flex-middle" uk-grid>
-                <div class="uk-width-auto">
-                  <a href="#offcanvas-usage" uk-toggle>
-                    <img class="uk-border-circle" width="40" height="40" src="https://sw25672.smartweb-static.com/upload_dir/shop/category/images-_sjove-tegninger-af-dyr_.w293.h293.fill.png">
-                  </a>
-                  <div id="offcanvas-usage" uk-offcanvas="overlay: true">
-                    <div class="uk-offcanvas-bar">
-                      <button class="uk-offcanvas-close" type="button" uk-close></button>
-                      <div>
-                        <img class="uk-border-circle" width="40" height="40" src="https://sw25672.smartweb-static.com/upload_dir/shop/category/images-_sjove-tegninger-af-dyr_.w293.h293.fill.png">
-                      </div>
-                      <div class="uk-width-expand">
-                        <h6 class="uk-card-subtitle uk-margin-remove-bottom">{{logedUser.email}}</h6>
-                        <p class="uk-text-meta uk-margin-remove-top">Usuario desde el {{ getDate() }}</p>
-                      </div>
-                      <ul class="uk-nav uk-nav-default" uk-accordion="collapsible: false">
-                        <li class="uk-nav-divider"></li>
-                        <li class="uk-parent uk-open">
-                          <a href="#" class="uk-accordion-title"><span class="uk-margin-small-right" uk-icon="icon: table"></span>Tús anuncios</a>
-                          <ul class="uk-nav-sub uk-accordion-content">
-                            <li><a href="https://www.milanuncios.com/publicar-anuncios-gratis/" target="_blank"><span class="uk-margin-small-right uk-icon" uk-icon="icon: pencil"/>Publicar anuncios</a></li>
-                            <li><a href="https://www.milanuncios.com/creditos/destaca-tu-anuncio" target="_blank"><span class="uk-margin-small-right uk-icon" uk-icon="icon: star"/>Destacar anuncios</a></li>
-                            <li><a href="https://www.milanuncios.com/seleccion/" target="_blank"><span class="uk-margin-small-right uk-icon" uk-icon="icon: heart"/>Mis favoritos</a></li>
-                            <li><a href="https://www.milanuncios.com/mis-busquedas/" target="_blank"><span class="uk-margin-small-right uk-icon" uk-icon="icon: search"/>Mis busquedas</a></li>
-                            <li><a href="https://www.milanuncios.com/mis-mensajes/" target="_blank"><span class="uk-margin-small-right uk-icon" uk-icon="icon: comments"/>Mis mensajes</a></li>
-                            <li><a href="https://www.milanuncios.com/mi-tienda/" target="_blank"><span class="uk-margin-small-right uk-icon" uk-icon="icon: home"/>Mi tienda</a></li>
-                          </ul>
-                        </li>
-                        <li class="uk-parent uk-open">
-                          <a href="#" class="uk-accordion-title"><span class="uk-margin-small-right" uk-icon="icon: thumbnails"></span>Mi Perfil</a>
-                          <ul class="uk-nav-sub uk-accordion-content">
-                            <li><a href="#" target="_blank"><span class="uk-margin-small-right uk-icon" uk-icon="icon: user"/>Cuenta y privacidad</a></li>
-                            <li><a href="https://ayuda.milanuncios.com/hc/es" target="_blank"><span class="uk-margin-small-right uk-icon" uk-icon="icon: question"/>Ayuda</a></li>
-                          </ul>
-                        </li>
-                        <li class="uk-nav-divider"></li>
-                        <li><a v-on:click="onLogout"><span class="uk-margin-small-right" uk-icon="icon: sign-out"></span>Salir</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="uk-width-expand">
-                  <h6 class="uk-card-subtitle uk-margin-remove-bottom">{{logedUser.email}}</h6>
-                  <p class="uk-text-meta uk-margin-remove-top">Usuario desde el {{ getDate() }}</p>
-                </div>
-                <div class="uk-width-auto">
-                  <a v-on:click="onLogout" uk-icon="icon: sign-out"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>-->
-    <!-- end nav bar -->
     <!-- items -->
     <section class="uk-section uk-section-xsmall" v-if="isLogged == true">
       <ul uk-tab>
@@ -245,6 +186,7 @@
         <p>Todos los derechos reservados.</p>
       </div>
     </section>
+
     <section class="uk-section uk-section-xsmall">
       <div class="uk-position-relative uk-visible-toggle uk-light" >
         <a class="uk-button uk-button-default" href="#modal-center" uk-toggle>
@@ -261,22 +203,13 @@
         </div>
       </div>
     </section>
-    <!--    <section class="uk-section uk-section-xsmall">
-          <div class="uk-cover-container" @mouseover="videoMute = false" @mouseleave="videoMute = true">
-            <iframe src="https://www.youtube-nocookie.com/embed/KKrEUft8p4g?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1"
-                    width="1920" height="1080"
-                    frameborder="0" uk-responsive
-                    uk-video="automute: true"></iframe>
-          </div>
-        </section>-->
-    <!-- end items -->
+
   </div>
 </template>
 
 <script>
   import axios from 'axios';
   import qs from 'querystring'
-  //import login from './components/Login'
 
   export default {
     data() {
@@ -288,16 +221,16 @@
           keywords: ""
         },
         formData: {
-          email: "antonio.martin@schibsted.com",
-          password: "Schibsted18"
-        },
-        formError: {
           email: "",
-          password: ""
+          password: "",
+          errors: {
+            invalidEmail: false,
+            invalidPassword: false
+          },
         },
         logedUser: {
           email: "",
-          createdAt: ""
+          createdAt: "01/01/2020"
         },
         ads:[
           {
@@ -316,7 +249,6 @@
           }
         ],
         savedSearchs:[],
-        videoMute: true
       };
     },
     methods: {
@@ -329,14 +261,29 @@
       getDate: function (){
         return (this.logedUser != undefined ) ? new Date(this.logedUser.createdAt).toLocaleDateString() : ""
       },
+      hasErrorsInLoginForm(){
+        this.formData.errors.invalidEmail = !this.formData.email || 0 === this.formData.email.length
+        this.formData.errors.invalidPassword = !this.formData.password || 0 === this.formData.email.password
+        return this.formData.errors.invalidEmail || this.formData.errors.invalidPassword
+      },
       onSearch: function () {
         const url = `https://www.milanuncios.com/anuncios/${this.searchFormData.keywords}.htm?fromSearch=1`
         window.open(url, '_blank');
       },
-      onSubmit: function () {
-        console.log(">>>onSubmit")
-        this.isLogged = true
-        this.loadPage(this.formData)
+      onDoLogin: async function () {
+        console.log(">>>onDoLogin")
+        if ( this.hasErrorsInLoginForm() ){
+          console.log(">>>invalid credentials")
+          return
+        }
+        try {
+          await this.loadPage(this.formData)
+        } catch (err) {
+          this.formData.errors.invalidEmail = true
+          this.formData.errors.invalidPassword = true
+          console.log(JSON.stringify(err));
+          console.log("ERROR: ====", err);
+        }
       },
       onLoadPage: async function(){
         const vm = this
@@ -478,19 +425,6 @@
           //[{"id":"e03f3ab9-7edb-4019-8b35-7c4e1e187446","userId":"183565764","title":"seat leon en Madrid","status":"ACTIVE","targeting":{"type":"coches","location":{"province":{"id":28}},"category":{"id":100664},"brand":"seat","model":"leon","price":{"from":6000.0,"to":42000.0},"year":{"from":2019.0,"to":2020.0}},"creationDate":"2020-01-28T08:27:32.374","updateDate":"2020-01-28T08:27:32.374"}]
         })
       },
-      clearInputs: function (e) {
-        if (e.target && e.target.nodeName == "INPUT") {
-          e.target.className = "input";
-          this.formError[e.target.name] = "";
-        }
-      },
-      showErrors: function (errors) {
-        if (errors && typeof errors == "object") {
-          errors.forEach(({ path, message }) => {
-            this.formError[path] = message;
-          });
-        }
-      },
       onLogout: async function(){
         const vm = this
         const response = await this.logout()
@@ -506,20 +440,9 @@
       },
     },
     created() {
-
-      // this works only with html5 validation
-      // this.$multiwatch(
-      //         ["formData.username", "formData.email", "formData.password"],
-      //         function() {
-      //           const valid = this.$refs.form.checkValidity();
-      //           this.isDisabled = !valid;
-      //         }
-      // );
     },
     mounted() {
       this.onLoadPage()
-      //document.cookie = "username=John Doe"
-      //chrome.cookies.set({ url: "http://example.com/", name: "CookieVar", value: "123", expirationDate: 3600 });
     }
   };
 </script>
@@ -612,6 +535,5 @@
   .social-media-youtube:hover {
     background: url(https://scm-milanuncios-frontend-pro.milanuncios.com/statics/images/common/social-networks/ic-youtube-footer-hover.18e3d63e1c.svg) no-repeat;
   }
-
 
 </style>
