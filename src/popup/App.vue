@@ -52,13 +52,13 @@
       </div>
       <div>&nbsp;</div>
       <div class="uk-container">
-        <form class="uk-form-stacked" v-on:submit.prevent="onSearch">
+        <form class="uk-form-stacked" v-on:submit.prevent="onAdSearch">
           <div class="uk-margin">
             <div class="uk-inline">
               <span class="uk-form-icon" uk-icon="icon: search"></span>
               <input type="text" class="uk-input uk-form-width-large"
                      placeholder="¿que buscas?"
-                     v-on:keyup.enter="onSearch"
+                     v-on:keyup.enter="onAdSearch"
                      v-model="searchFormData.keywords">
             </div>
           </div>
@@ -106,20 +106,25 @@
       <ul class="uk-switcher uk-margin-small-left">
         <li class="uk-active">
           <article class="uk-comment" v-for="(ad, index) in ads" v-bind:todo="ad" v-bind:key="ad.id">
-            <header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
-              <div class="uk-width-auto">
-                <a v-bind:href="getAdUrl(ad)" target="_blank" style="text-decoration:none;">
-                  <img class="uk-comment-avatar" v-bind:src="getFotoFromAd(ad)" width="80" height="80" alt="">
-                </a>
+            <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m">
+              <div>&nbsp;</div>
+              <div>&nbsp;</div>
+              <div class="uk-width-auto uk-flex uk-flex-middle uk-flex-between">
+                <img width="80" height="80" v-bind:src="getFotoFromAd(ad)" class="uk-margin-auto">
+                <div>
+                  <a class="uk-link-reset" v-bind:href="getAdUrl(ad.idanuncio)" target="_blank">{{ad.titulo}}</a>
+                  <ul class="uk-subnav uk-subnav-divider uk-margin-remove-top">
+                    <li><a v-bind:href="getAdUrl(ad.idanuncio)" target="_blank" class="uk-link-reset" style="text-transform: lowercase;">Hace {{ad.fecha}}</a></li>
+                    <li><a v-bind:href="getAdUrl(ad.idanuncio)" target="_blank" class="uk-link-reset" style="text-transform: lowercase;">Precio {{ad.precio}}</a></li>
+                  </ul>
+                </div>
               </div>
-              <div class="uk-width-expand">
-                <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" v-bind:href="getAdUrl(ad)" target="_blank">{{ad.titulo }}</a></h4>
-                <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-                  <li><a v-bind:href="getAdUrl(ad)" target="_blank" class="uk-link-reset">Hace {{ad.fecha}}</a></li>
-                  <li><a v-bind:href="getAdUrl(ad)" target="_blank" class="uk-link-reset">Precio {{ad.precio}}</a></li>
-                </ul>
+              <div class="uk-card-badge">
+                <span class="uk-label"><a v-on:click.prevent.stop="onDoRenew(ad.idanuncio)" class="uk-link-reset">Renueva</a></span>
+                <span class="uk-label"><a v-bind:href="getBetUrl(ad.idanuncio)" target="_blank" class="uk-link-reset">Subasta</a></span>
               </div>
-            </header>
+              <p>{{ad.texto}}</p>
+            </div>
           </article>
         </li>
         <li>
@@ -221,8 +226,8 @@
           keywords: ""
         },
         formData: {
-          email: "",
-          password: "",
+          email: "antonio.martin@schibsted.com",
+          password: "Schibsted18",
           errors: {
             invalidEmail: false,
             invalidPassword: false
@@ -236,6 +241,7 @@
           {
             titulo: "",
             precio: "",
+            texto: "",
             fotos: [],
             fotos_thumb: []
           }
@@ -248,15 +254,18 @@
             fotos_thumb: []
           }
         ],
-        savedSearchs:[],
+        savedSearchs: null,
       };
     },
     methods: {
       getFotoFromAd: function (ad){
         return ( ad.fotos_thumb != undefined && ad.fotos_thumb[0] != undefined ) ?  ad.fotos_thumb[0] : ""
       },
-      getAdUrl: function (ad) {
-        return `http://www.milanuncios.com/anuncios/r${ad.idanuncio}.htm`
+      getAdUrl: function (idanuncio) {
+        return `http://www.milanuncios.com/anuncios/r${idanuncio}.htm`
+      },
+      getBetUrl: function (idanuncio){
+        return `https://www.milanuncios.com/mis-anuncios/subastas/${idanuncio}`
       },
       getDate: function (){
         return (this.logedUser != undefined ) ? new Date(this.logedUser.createdAt).toLocaleDateString() : ""
@@ -266,9 +275,19 @@
         this.formData.errors.invalidPassword = !this.formData.password || 0 === this.formData.email.password
         return this.formData.errors.invalidEmail || this.formData.errors.invalidPassword
       },
-      onSearch: function () {
+      onAdSearch: function () {
         const url = `https://www.milanuncios.com/anuncios/${this.searchFormData.keywords}.htm?fromSearch=1`
         window.open(url, '_blank');
+      },
+      onDoRenew: async function(idanuncio){
+        console.log(">>>onDoRenew")
+        try {
+          await this.doRenewAd(idanuncio)
+          console.log(`>>>renewed ad ${{idanuncio}}`)
+        } catch (err) {
+          console.log(JSON.stringify(err));
+          console.log("ERROR: ====", err);
+        }
       },
       onDoLogin: async function () {
         console.log(">>>onDoLogin")
@@ -340,10 +359,12 @@
         const adsResponse = await this.getAds(header, params)
         vm.ads = adsResponse.data.data.anuncios
         console.log(JSON.stringify(vm.ads))
-        vm.favoriteAds = adsResponse.data.data.anuncios
-        const saved = await this.getSavedSearchs(header, params)
-        // vm.favoriteAds = favoriteAdsResponse.data.data.anuncios
-        // console.log(JSON.stringify(vm.favoriteAds))
+        const favouriteAdsResponse = await this.getFavoriteAds(header, params)
+        vm.favoriteAds = favouriteAdsResponse.data.data.anuncios
+        console.log(JSON.stringify(vm.favoriteAds))
+        const savedAdsResponse = await this.getSavedSearchs(header, params)
+        console.log(JSON.stringify(vm.savedSearchs))
+        vm.savedSearchs = savedAdsResponse.data.data.anuncios
         return Promise.resolve(123)
       },
       doLogin: async function () {
@@ -378,7 +399,8 @@
         const params =  {
           "r": "30",
           "p": "1",
-          "token": apiToken
+          "token": apiToken,
+          "tokenRenew": apiToken
         }
         const header = {
           "mav": "2",
@@ -425,6 +447,24 @@
           //[{"id":"e03f3ab9-7edb-4019-8b35-7c4e1e187446","userId":"183565764","title":"seat leon en Madrid","status":"ACTIVE","targeting":{"type":"coches","location":{"province":{"id":28}},"category":{"id":100664},"brand":"seat","model":"leon","price":{"from":6000.0,"to":42000.0},"year":{"from":2019.0,"to":2020.0}},"creationDate":"2020-01-28T08:27:32.374","updateDate":"2020-01-28T08:27:32.374"}]
         })
       },
+      doRenewAd: async function (adId) {
+        const vm = this
+        const responseLoginWithCookie = await this.loginWithCookie()
+        console.log(">>>loginWithCookie " + JSON.stringify(responseLoginWithCookie))
+        let apiToken = responseLoginWithCookie.data.apiToken
+        vm.logedUser.email = responseLoginWithCookie.data.user.email
+        vm.logedUser.createdAt = responseLoginWithCookie.data.user.createdAt
+        const { header, params } = await this.getHeaderAndQueryParams(apiToken)
+        console.log("h&qp:" + JSON.stringify({ header, params }))
+        const url = `https://www.milanuncios.com/api/v3/adrenew/${adId}`
+        return axios({
+          method: 'post',
+          url: url,
+          data: params,
+          headers: header,
+          config: { withCredentials: true }
+        })
+      },
       onLogout: async function(){
         const vm = this
         const response = await this.logout()
@@ -441,8 +481,8 @@
     },
     created() {
     },
-    mounted() {
-      this.onLoadPage()
+    mounted: async function () {
+      await this.onLoadPage()
     }
   };
 </script>
