@@ -1,4 +1,4 @@
-#  Chrome-ext tab joke
+#  Chrome-ext mil-ads companion
 
 ![Chrome-ext](./_images/title.png "Chrome ext with Vue")
 
