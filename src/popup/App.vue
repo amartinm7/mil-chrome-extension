@@ -50,10 +50,8 @@
         <div class="uk-width-auto">
         </div>
       </div>
-      <div>&nbsp;</div>
-      <div class="uk-container">
+      <div class="uk-container uk-padding-small">
         <form class="uk-form-stacked" v-on:submit.prevent="onAdSearch">
-          <div class="uk-margin">
             <div class="uk-inline">
               <span class="uk-form-icon" uk-icon="icon: search"></span>
               <input type="text" class="uk-input uk-form-width-large"
@@ -61,7 +59,6 @@
                      v-on:keyup.enter="onAdSearch"
                      v-model="searchFormData.keywords">
             </div>
-          </div>
         </form>
       </div>
 
@@ -94,7 +91,7 @@
     </section>
     <!-- end login -->
     <!-- items -->
-    <section class="uk-section" v-if="isLogged == true">
+    <section class="uk-section uk-section-xsmall" v-if="isLogged == true">
       <ul uk-tab>
         <li class="uk-active"><a href="#">
           Tus Anuncios
@@ -107,14 +104,15 @@
         <div class="uk-active">
           <article class="uk-comment" v-for="(ad, index) in ads" v-bind:todo="ad" v-bind:key="ad.id">
             <div class="uk-card uk-card-default uk-card-body uk-padding-small">
-              <div>&nbsp;</div>
-              <div>&nbsp;</div>
-              <div>&nbsp;</div>
+              <div class="uk-text-right">
+                <span class="uk-label"><a v-on:click.prevent.stop="onDoRenew(ad.idanuncio)" class="uk-link-reset">Renueva</a></span>
+                <span class="uk-label"><a v-bind:href="getBetUrl(ad.idanuncio)" target="_blank" class="uk-link-reset">Subasta</a></span>
+              </div>
               <div class="uk-width-auto uk-flex uk-flex-top uk-flex-between">
-                <div class="uk-width-1-4 uk-height-small">
-                  <img width="80" height="80" v-bind:src="getFotoFromAd(ad)" class="uk-margin-auto">
+                <div class="uk-width-1-4 uk-height-max-small">
+                  <img v-bind:src="getFotoFromAd(ad)" class="uk-margin-auto">
                 </div>
-                <div class="uk-width-3-4">
+                <div class="uk-width-3-4 uk-padding-small">
                   <a class="uk-link-reset" v-bind:href="getAdUrl(ad.idanuncio)" target="_blank">{{ad.titulo}}</a>
                   <ul class="uk-margin-remove-top">
                     <li><a v-bind:href="getAdUrl(ad.idanuncio)" target="_blank" class="uk-link-reset" style="text-transform: lowercase;">Hace {{ad.fecha}}</a></li>
@@ -122,10 +120,6 @@
                   </ul>
                   <span>{{sanitizeText(ad.texto)}}</span>
                 </div>
-              </div>
-              <div class="uk-card-badge">
-                <span class="uk-label"><a v-on:click.prevent.stop="onDoRenew(ad.idanuncio)" class="uk-link-reset">Renueva</a></span>
-                <span class="uk-label"><a v-bind:href="getBetUrl(ad.idanuncio)" target="_blank" class="uk-link-reset">Subasta</a></span>
               </div>
             </div>
           </article>
@@ -155,8 +149,8 @@
     </section>
 
     <section class="uk-section uk-section-xsmall">
-      <div class="uk-flex uk-flex-center">
-        <p>Descarga Milanuncios en tu móvil</p>
+      <div class="uk-width-auto uk-text-center uk-padding-small">
+        <div>Descarga Milanuncios en tu móvil</div>
       </div>
       <div class="uk-flex uk-flex-center uk-flex-around">
         <div class="uk-width-1-6">
@@ -177,8 +171,8 @@
     </section>
 
     <section class="uk-section uk-section-xsmall">
-      <div class="uk-flex uk-flex-center" style="width: 100%">
-        <p>Encuentranos en: </p>
+      <div class="uk-width-auto uk-text-center uk-padding-small">
+        <div>Encuentranos en: </div>
       </div>
       <div class="uk-flex uk-flex-center uk-flex-around">
         <div class="uk-width-1-5">
@@ -206,12 +200,9 @@
         <div class="uk-width-1-5">
         </div>
       </div>
-      <div class="uk-flex uk-flex-center" style="width: 100%">
-        <p>&nbsp;</p>
-        <p>Copyright © 2020 - Adevinta Spain S.L.U.</p>
-      </div>
-      <div class="uk-flex uk-flex-center" style="width: 100%">
-        <p>Todos los derechos reservados.</p>
+      <div class="uk-width-auto uk-text-center uk-padding-small">
+        <div>Copyright © 2020 - Adevinta Spain S.L.U.</div>
+        <div>Todos los derechos reservados.</div>
       </div>
     </section>
 
@@ -604,14 +595,11 @@
     background: url(https://scm-milanuncios-frontend-pro.milanuncios.com/statics/images/common/social-networks/ic-youtube-footer-hover.18e3d63e1c.svg) no-repeat;
   }
 
-/*
   div {
     background-color: lightgrey;;
     border: 1px solid green;
     padding: 1px;
     margin: 1px;
   }
-  */
-
 
 </style>
