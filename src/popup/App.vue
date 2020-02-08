@@ -42,7 +42,7 @@
             </div>
           </div>
         </div>
-        <div class="uk-width-auto">
+        <div class="uk-width-auto uk-padding-remove">
           <a href="http://milanuncios.com" target="_blank" style="text-decoration:none;" class="ma-NavigationHeader-logoLink">
             <img src="https://scm-milanuncios-frontend-pro.milanuncios.com/statics/images/common/logo.2676833a05.svg">
           </a>
@@ -94,7 +94,7 @@
     </section>
     <!-- end login -->
     <!-- items -->
-    <section class="uk-section uk-section-xsmall" v-if="isLogged == true">
+    <section class="uk-section" v-if="isLogged == true">
       <ul uk-tab>
         <li class="uk-active"><a href="#">
           Tus Anuncios
@@ -103,30 +103,32 @@
           Tus favoritos
         </a></li>
       </ul>
-      <ul class="uk-switcher uk-margin-small-left">
-        <li class="uk-active">
+      <div class="uk-switcher">
+        <div class="uk-active">
           <article class="uk-comment" v-for="(ad, index) in ads" v-bind:todo="ad" v-bind:key="ad.id">
-            <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m">
+            <div class="uk-card uk-card-default uk-card-body uk-padding-small">
               <div>&nbsp;</div>
               <div>&nbsp;</div>
-              <div class="uk-width-auto uk-flex uk-flex-middle uk-flex-between">
-                <img width="80" height="80" v-bind:src="getFotoFromAd(ad)" class="uk-margin-auto">
-                <div>
+              <div class="uk-width-auto uk-flex uk-flex-top uk-flex-between">
+                <div class="uk-width-1-4 uk-height-small">
+                  <img width="80" height="80" v-bind:src="getFotoFromAd(ad)" class="uk-margin-auto">
+                </div>
+                <div class="uk-width-3-4">
                   <a class="uk-link-reset" v-bind:href="getAdUrl(ad.idanuncio)" target="_blank">{{ad.titulo}}</a>
-                  <ul class="uk-subnav uk-subnav-divider uk-margin-remove-top">
+                  <ul class="uk-margin-remove-top">
                     <li><a v-bind:href="getAdUrl(ad.idanuncio)" target="_blank" class="uk-link-reset" style="text-transform: lowercase;">Hace {{ad.fecha}}</a></li>
                     <li><a v-bind:href="getAdUrl(ad.idanuncio)" target="_blank" class="uk-link-reset" style="text-transform: lowercase;">Precio {{ad.precio}}</a></li>
                   </ul>
+                  <span>{{sanitizeText(ad.texto)}}</span>
                 </div>
               </div>
               <div class="uk-card-badge">
                 <span class="uk-label"><a v-on:click.prevent.stop="onDoRenew(ad.idanuncio)" class="uk-link-reset">Renueva</a></span>
                 <span class="uk-label"><a v-bind:href="getBetUrl(ad.idanuncio)" target="_blank" class="uk-link-reset">Subasta</a></span>
               </div>
-              <p>{{ad.texto}}</p>
             </div>
           </article>
-        </li>
+        </div>
         <li>
           <article class="uk-comment" v-for="(ad, index) in ads" v-bind:todo="ad" v-bind:key="ad.id">
             <header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
@@ -148,7 +150,7 @@
             </div>
           </article>
         </li>
-      </ul>
+      </div>
     </section>
 
     <section class="uk-section uk-section-xsmall">
@@ -269,6 +271,12 @@
       },
       getDate: function (){
         return (this.logedUser != undefined ) ? new Date(this.logedUser.createdAt).toLocaleDateString() : ""
+      },
+      sanitizeText: function (text){
+        if (text.trim().length > 88 ) {
+          return (`${text.trim().substring(0,85)}...`)
+        }
+        return text.trim()
       },
       hasErrorsInLoginForm(){
         this.formData.errors.invalidEmail = !this.formData.email || 0 === this.formData.email.length
@@ -502,7 +510,6 @@
     display: block;
     height: 47px;
     margin: auto;
-    text-align: center;
     width: 234px;
   }
 
@@ -576,4 +583,12 @@
     background: url(https://scm-milanuncios-frontend-pro.milanuncios.com/statics/images/common/social-networks/ic-youtube-footer-hover.18e3d63e1c.svg) no-repeat;
   }
 
+/*
+  div {
+    background-color: lightgrey;;
+    border: 1px solid green;
+    padding: 1px;
+    margin: 1px;
+  }
+*/
 </style>
