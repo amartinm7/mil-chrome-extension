@@ -180,19 +180,31 @@
       <div class="uk-flex uk-flex-center" style="width: 100%">
         <p>Encuentranos en: </p>
       </div>
-      <div class="uk-flex uk-flex-center uk-flex-">
-        <a href="https://www.facebook.com/Milanuncios/" target="_blank" rel="noopener noreferrer">
-          <div class="social-media-facebook"/>
-        </a>
-        <a href="https://twitter.com/milanuncios" target="_blank" rel="noopener noreferrer">
-          <div class="social-media-twitter"/>
-        </a>
-        <a href="https://www.instagram.com/milanuncios/" target="_blank" rel="noopener noreferrer">
-          <div class="social-media-instagram"/>
-        </a>
-        <a href="https://www.youtube.com/channel/UCw6Jn6QF5L9NXYkr_XNFMCQ" target="_blank" rel="noopener noreferrer">
-          <div class="social-media-youtube"/>
-        </a>
+      <div class="uk-flex uk-flex-center uk-flex-around">
+        <div class="uk-width-1-5">
+        </div>
+        <div class="uk-width-auto ">
+          <a href="https://www.facebook.com/Milanuncios/" target="_blank" rel="noopener noreferrer">
+            <div class="social-media-facebook"/>
+          </a>
+        </div>
+        <div class="uk-width-auto">
+          <a href="https://twitter.com/milanuncios" target="_blank" rel="noopener noreferrer">
+            <div class="social-media-twitter"/>
+          </a>
+        </div>
+        <div class="uk-width-auto">
+          <a href="https://www.instagram.com/milanuncios/" target="_blank" rel="noopener noreferrer">
+            <div class="social-media-instagram"/>
+          </a>
+        </div>
+        <div class="uk-width-auto">
+          <a href="https://www.youtube.com/channel/UCw6Jn6QF5L9NXYkr_XNFMCQ" target="_blank" rel="noopener noreferrer">
+            <div class="social-media-youtube"/>
+          </a>
+        </div>
+        <div class="uk-width-1-5">
+        </div>
       </div>
       <div class="uk-flex uk-flex-center" style="width: 100%">
         <p>&nbsp;</p>
@@ -599,5 +611,7 @@
     padding: 1px;
     margin: 1px;
   }
-*/
+  */
+
+
 </style>
