@@ -25,6 +25,7 @@
     "@types/chrome": "^0.0.74",
     "archiver": "^3.0.0",
     "babel-loader": "^8.0.2",
+    "chrome-webstore-upload-cli": "^1.2.0",
     "copy-webpack-plugin": "^4.5.3",
     "core-js": "^3.0.1",
     "cross-env": "^5.2.0",

@@ -42,7 +42,7 @@
             </div>
           </div>
         </div>
-        <div class="uk-width-auto">
+        <div class="uk-width-auto uk-padding-remove">
           <a href="http://milanuncios.com" target="_blank" style="text-decoration:none;" class="ma-NavigationHeader-logoLink">
             <img src="https://scm-milanuncios-frontend-pro.milanuncios.com/statics/images/common/logo.2676833a05.svg">
           </a>
@@ -94,7 +94,7 @@
     </section>
     <!-- end login -->
     <!-- items -->
-    <section class="uk-section uk-section-xsmall" v-if="isLogged == true">
+    <section class="uk-section" v-if="isLogged == true">
       <ul uk-tab>
         <li class="uk-active"><a href="#">
           Tus Anuncios
@@ -103,30 +103,33 @@
           Tus favoritos
         </a></li>
       </ul>
-      <ul class="uk-switcher uk-margin-small-left">
-        <li class="uk-active">
+      <div class="uk-switcher">
+        <div class="uk-active">
           <article class="uk-comment" v-for="(ad, index) in ads" v-bind:todo="ad" v-bind:key="ad.id">
-            <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m">
+            <div class="uk-card uk-card-default uk-card-body uk-padding-small">
               <div>&nbsp;</div>
               <div>&nbsp;</div>
-              <div class="uk-width-auto uk-flex uk-flex-middle uk-flex-between">
-                <img width="80" height="80" v-bind:src="getFotoFromAd(ad)" class="uk-margin-auto">
-                <div>
+              <div>&nbsp;</div>
+              <div class="uk-width-auto uk-flex uk-flex-top uk-flex-between">
+                <div class="uk-width-1-4 uk-height-small">
+                  <img width="80" height="80" v-bind:src="getFotoFromAd(ad)" class="uk-margin-auto">
+                </div>
+                <div class="uk-width-3-4">
                   <a class="uk-link-reset" v-bind:href="getAdUrl(ad.idanuncio)" target="_blank">{{ad.titulo}}</a>
-                  <ul class="uk-subnav uk-subnav-divider uk-margin-remove-top">
+                  <ul class="uk-margin-remove-top">
                     <li><a v-bind:href="getAdUrl(ad.idanuncio)" target="_blank" class="uk-link-reset" style="text-transform: lowercase;">Hace {{ad.fecha}}</a></li>
                     <li><a v-bind:href="getAdUrl(ad.idanuncio)" target="_blank" class="uk-link-reset" style="text-transform: lowercase;">Precio {{ad.precio}}</a></li>
                   </ul>
+                  <span>{{sanitizeText(ad.texto)}}</span>
                 </div>
               </div>
               <div class="uk-card-badge">
                 <span class="uk-label"><a v-on:click.prevent.stop="onDoRenew(ad.idanuncio)" class="uk-link-reset">Renueva</a></span>
                 <span class="uk-label"><a v-bind:href="getBetUrl(ad.idanuncio)" target="_blank" class="uk-link-reset">Subasta</a></span>
               </div>
-              <p>{{ad.texto}}</p>
             </div>
           </article>
-        </li>
+        </div>
         <li>
           <article class="uk-comment" v-for="(ad, index) in ads" v-bind:todo="ad" v-bind:key="ad.id">
             <header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
@@ -148,20 +151,28 @@
             </div>
           </article>
         </li>
-      </ul>
+      </div>
     </section>
 
     <section class="uk-section uk-section-xsmall">
-      <div class="uk-flex uk-flex-center" style="width: 100%">
+      <div class="uk-flex uk-flex-center">
         <p>Descarga Milanuncios en tu móvil</p>
       </div>
-      <div class="uk-flex uk-flex-center" style="width: 100%">
-        <a href="https://go.onelink.me/app/1ee638ce" target="_blank" rel="noopener noreferrer">
-          <div class="social-media-google-store uk-margin-left"/>
-        </a>
-        <a href="https://go.onelink.me/app/751615a1" target="_blank" rel="noopener noreferrer">
-          <div class="social-media-apple-store uk-margin-left" />
-        </a>
+      <div class="uk-flex uk-flex-center uk-flex-around">
+        <div class="uk-width-1-6">
+        </div>
+        <div class="">
+          <a href="https://go.onelink.me/app/1ee638ce" target="_blank" rel="noopener noreferrer">
+            <div class="social-media-google-store"/>
+          </a>
+        </div>
+        <div>
+          <a href="https://go.onelink.me/app/751615a1" target="_blank" rel="noopener noreferrer">
+            <div class="social-media-apple-store"/>
+          </a>
+        </div>
+        <div class="uk-width-1-6">
+        </div>
       </div>
     </section>
 
@@ -169,19 +180,31 @@
       <div class="uk-flex uk-flex-center" style="width: 100%">
         <p>Encuentranos en: </p>
       </div>
-      <div class="uk-flex uk-flex-center">
-        <a href="https://www.facebook.com/Milanuncios/" target="_blank" rel="noopener noreferrer">
-          <div class="social-media-facebook uk-margin-left"/>
-        </a>
-        <a href="https://twitter.com/milanuncios" target="_blank" rel="noopener noreferrer">
-          <div class="social-media-twitter uk-margin-left"/>
-        </a>
-        <a href="https://www.instagram.com/milanuncios/" target="_blank" rel="noopener noreferrer">
-          <div class="social-media-instagram uk-margin-left"/>
-        </a>
-        <a href="https://www.youtube.com/channel/UCw6Jn6QF5L9NXYkr_XNFMCQ" target="_blank" rel="noopener noreferrer">
-          <div class="social-media-youtube uk-margin-left"/>
-        </a>
+      <div class="uk-flex uk-flex-center uk-flex-around">
+        <div class="uk-width-1-5">
+        </div>
+        <div class="uk-width-auto ">
+          <a href="https://www.facebook.com/Milanuncios/" target="_blank" rel="noopener noreferrer">
+            <div class="social-media-facebook"/>
+          </a>
+        </div>
+        <div class="uk-width-auto">
+          <a href="https://twitter.com/milanuncios" target="_blank" rel="noopener noreferrer">
+            <div class="social-media-twitter"/>
+          </a>
+        </div>
+        <div class="uk-width-auto">
+          <a href="https://www.instagram.com/milanuncios/" target="_blank" rel="noopener noreferrer">
+            <div class="social-media-instagram"/>
+          </a>
+        </div>
+        <div class="uk-width-auto">
+          <a href="https://www.youtube.com/channel/UCw6Jn6QF5L9NXYkr_XNFMCQ" target="_blank" rel="noopener noreferrer">
+            <div class="social-media-youtube"/>
+          </a>
+        </div>
+        <div class="uk-width-1-5">
+        </div>
       </div>
       <div class="uk-flex uk-flex-center" style="width: 100%">
         <p>&nbsp;</p>
@@ -269,6 +292,12 @@
       },
       getDate: function (){
         return (this.logedUser != undefined ) ? new Date(this.logedUser.createdAt).toLocaleDateString() : ""
+      },
+      sanitizeText: function (text){
+        if (text.trim().length > 88 ) {
+          return (`${text.trim().substring(0,85)}...`)
+        }
+        return text.trim()
       },
       hasErrorsInLoginForm(){
         this.formData.errors.invalidEmail = !this.formData.email || 0 === this.formData.email.length
@@ -502,7 +531,6 @@
     display: block;
     height: 47px;
     margin: auto;
-    text-align: center;
     width: 234px;
   }
 
@@ -575,5 +603,15 @@
   .social-media-youtube:hover {
     background: url(https://scm-milanuncios-frontend-pro.milanuncios.com/statics/images/common/social-networks/ic-youtube-footer-hover.18e3d63e1c.svg) no-repeat;
   }
+
+/*
+  div {
+    background-color: lightgrey;;
+    border: 1px solid green;
+    padding: 1px;
+    margin: 1px;
+  }
+  */
+
 
 </style>
