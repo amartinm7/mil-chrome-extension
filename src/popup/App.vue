@@ -155,16 +155,24 @@
     </section>
 
     <section class="uk-section uk-section-xsmall">
-      <div class="uk-flex uk-flex-center" style="width: 100%">
+      <div class="uk-flex uk-flex-center">
         <p>Descarga Milanuncios en tu móvil</p>
       </div>
-      <div class="uk-flex uk-flex-center" style="width: 100%">
-        <a href="https://go.onelink.me/app/1ee638ce" target="_blank" rel="noopener noreferrer">
-          <div class="social-media-google-store uk-margin-left"/>
-        </a>
-        <a href="https://go.onelink.me/app/751615a1" target="_blank" rel="noopener noreferrer">
-          <div class="social-media-apple-store uk-margin-left" />
-        </a>
+      <div class="uk-flex uk-flex-center uk-flex-around">
+        <div class="uk-width-1-6">
+        </div>
+        <div class="">
+          <a href="https://go.onelink.me/app/1ee638ce" target="_blank" rel="noopener noreferrer">
+            <div class="social-media-google-store"/>
+          </a>
+        </div>
+        <div>
+          <a href="https://go.onelink.me/app/751615a1" target="_blank" rel="noopener noreferrer">
+            <div class="social-media-apple-store"/>
+          </a>
+        </div>
+        <div class="uk-width-1-6">
+        </div>
       </div>
     </section>
 
@@ -172,18 +180,18 @@
       <div class="uk-flex uk-flex-center" style="width: 100%">
         <p>Encuentranos en: </p>
       </div>
-      <div class="uk-flex uk-flex-center">
+      <div class="uk-flex uk-flex-center uk-flex-">
         <a href="https://www.facebook.com/Milanuncios/" target="_blank" rel="noopener noreferrer">
-          <div class="social-media-facebook uk-margin-left"/>
+          <div class="social-media-facebook"/>
         </a>
         <a href="https://twitter.com/milanuncios" target="_blank" rel="noopener noreferrer">
-          <div class="social-media-twitter uk-margin-left"/>
+          <div class="social-media-twitter"/>
         </a>
         <a href="https://www.instagram.com/milanuncios/" target="_blank" rel="noopener noreferrer">
-          <div class="social-media-instagram uk-margin-left"/>
+          <div class="social-media-instagram"/>
         </a>
         <a href="https://www.youtube.com/channel/UCw6Jn6QF5L9NXYkr_XNFMCQ" target="_blank" rel="noopener noreferrer">
-          <div class="social-media-youtube uk-margin-left"/>
+          <div class="social-media-youtube"/>
         </a>
       </div>
       <div class="uk-flex uk-flex-center" style="width: 100%">
