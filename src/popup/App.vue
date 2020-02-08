@@ -113,12 +113,23 @@
                   <img v-bind:src="getFotoFromAd(ad)" class="uk-margin-auto">
                 </div>
                 <div class="uk-width-3-4 uk-padding-small">
-                  <a class="uk-link-reset" v-bind:href="getAdUrl(ad.idanuncio)" target="_blank">{{ad.titulo}}</a>
-                  <ul class="uk-margin-remove-top">
-                    <li><a v-bind:href="getAdUrl(ad.idanuncio)" target="_blank" class="uk-link-reset" style="text-transform: lowercase;">Hace {{ad.fecha}}</a></li>
-                    <li><a v-bind:href="getAdUrl(ad.idanuncio)" target="_blank" class="uk-link-reset" style="text-transform: lowercase;">Precio {{ad.precio}}</a></li>
-                  </ul>
-                  <span>{{sanitizeText(ad.texto)}}</span>
+                  <div>
+                    <a class="uk-link-reset" v-bind:href="getAdUrl(ad.idanuncio)" target="_blank">{{ad.titulo}}</a>
+                  </div>
+                  <div>{{sanitizeText(ad.texto)}}</div>
+                  <div>&nbsp;</div>
+                  <div class="uk-flex uk-flex-column uk-text-right uk-width-auto">
+                    <div>
+                      <span class="uk-label-success">
+                        <a v-bind:href="getAdUrl(ad.idanuncio)" target="_blank" class="uk-link-reset" style="text-transform: lowercase;">Hace {{ad.fecha}}</a>
+                      </span>
+                    </div>
+                    <div>
+                      <span class="uk-label-warning">
+                        <a v-bind:href="getAdUrl(ad.idanuncio)" target="_blank" class="uk-link-reset" style="text-transform: lowercase;">Precio {{ad.precio}}</a>
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -594,12 +605,12 @@
   .social-media-youtube:hover {
     background: url(https://scm-milanuncios-frontend-pro.milanuncios.com/statics/images/common/social-networks/ic-youtube-footer-hover.18e3d63e1c.svg) no-repeat;
   }
-
+/*
   div {
     background-color: lightgrey;;
     border: 1px solid green;
     padding: 1px;
     margin: 1px;
   }
-
+*/
 </style>
