@@ -109,6 +109,7 @@
             <div class="uk-card uk-card-default uk-card-body uk-padding-small">
               <div>&nbsp;</div>
               <div>&nbsp;</div>
+              <div>&nbsp;</div>
               <div class="uk-width-auto uk-flex uk-flex-top uk-flex-between">
                 <div class="uk-width-1-4 uk-height-small">
                   <img width="80" height="80" v-bind:src="getFotoFromAd(ad)" class="uk-margin-auto">
