@@ -135,27 +135,40 @@
             </div>
           </article>
         </div>
-        <li>
-          <article class="uk-comment" v-for="(ad, index) in ads" v-bind:todo="ad" v-bind:key="ad.id">
-            <header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
-              <div class="uk-width-auto">
-                <a v-bind:href="getAdUrl(ad)" target="_blank" style="text-decoration:none;">
-                  <img class="uk-comment-avatar" v-bind:src="getFotoFromAd(ad)" width="80" height="80" alt="">
-                </a>
+        <div>
+          <article class="uk-comment" v-for="(ad, index) in favoriteAds" v-bind:todo="ad" v-bind:key="ad.id">
+            <div class="uk-card uk-card-default uk-card-body uk-padding-small">
+              <div class="uk-text-right">
+                <span class="uk-label"><a v-on:click.prevent.stop="onDoRenew(ad.idanuncio)" class="uk-link-reset">Renueva</a></span>
+                <span class="uk-label"><a v-bind:href="getBetUrl(ad.idanuncio)" target="_blank" class="uk-link-reset">Subasta</a></span>
               </div>
-              <div class="uk-width-expand">
-                <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" v-bind:href="getAdUrl(ad)" target="_blank">{{ad.titulo }}</a></h4>
-                <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-                  <li><a v-bind:href="getAdUrl(ad)" target="_blank" class="uk-link-reset">{{ad.fecha}}</a></li>
-                  <li><a v-bind:href="getAdUrl(ad)" target="_blank" class="uk-link-reset">{{ad.precio}}</a></li>
-                </ul>
+              <div class="uk-width-auto uk-flex uk-flex-top uk-flex-between">
+                <div class="uk-width-1-4 uk-height-max-small">
+                  <img v-bind:src="getFotoFromAd(ad)" class="uk-margin-auto">
+                </div>
+                <div class="uk-width-3-4 uk-padding-small">
+                  <div>
+                    <a class="uk-link-reset" v-bind:href="getAdUrl(ad.idanuncio)" target="_blank">{{ad.titulo}}</a>
+                  </div>
+                  <div>{{sanitizeText(ad.texto)}}</div>
+                  <div>&nbsp;</div>
+                  <div class="uk-flex uk-flex-column uk-text-right uk-width-auto">
+                    <div>
+                      <span class="uk-label-success">
+                        <a v-bind:href="getAdUrl(ad.idanuncio)" target="_blank" class="uk-link-reset" style="text-transform: lowercase;">Hace {{ad.fecha}}</a>
+                      </span>
+                    </div>
+                    <div>
+                      <span class="uk-label-warning">
+                        <a v-bind:href="getAdUrl(ad.idanuncio)" target="_blank" class="uk-link-reset" style="text-transform: lowercase;">Precio {{ad.precio}}</a>
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </header>
-            <div class="uk-comment-body">
-              <p>{{ad.texto}}</p>
             </div>
           </article>
-        </li>
+        </div>
       </div>
     </section>
 
@@ -275,6 +288,7 @@
           {
             titulo: "",
             precio: "",
+            texto: "",
             fotos: [],
             fotos_thumb: []
           }
@@ -457,13 +471,19 @@
         })
       },
       getFavoriteAds: async function (header, params) {
-        console.log(">>>getFavoriteAds:" + JSON.stringify({header, params}))
-        const urlMisFavoritos = `http://www.millocal.com/api/v1/favoritos/favoritos.php?${qs.stringify(params)}`
+        const header1 = {
+          "mav": "2",
+          "Accept": "*/*",
+          "Cache-Control": "no-cache",
+          'Content-Type': 'application/x-www-form-urlencoded'
+        }
+        console.log(">>>getFavoriteAds:" + JSON.stringify({header1, params}))
+        const urlMisFavoritos = `http://www.millocal.com/api/v2/favoritos/favoritos.php?${qs.stringify(params)}`
+        console.log(">>>getFavoriteAds urlMisFavoritos:" + urlMisFavoritos)
         return axios({
           method: 'post',
           url: urlMisFavoritos,
-          data: params,
-          headers: header,
+          headers: header1,
           config: { withCredentials: true }
         })
       },
