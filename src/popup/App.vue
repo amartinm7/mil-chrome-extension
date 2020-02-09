@@ -50,10 +50,8 @@
         <div class="uk-width-auto">
         </div>
       </div>
-      <div>&nbsp;</div>
-      <div class="uk-container">
+      <div class="uk-container uk-padding-small">
         <form class="uk-form-stacked" v-on:submit.prevent="onAdSearch">
-          <div class="uk-margin">
             <div class="uk-inline">
               <span class="uk-form-icon" uk-icon="icon: search"></span>
               <input type="text" class="uk-input uk-form-width-large"
@@ -61,7 +59,6 @@
                      v-on:keyup.enter="onAdSearch"
                      v-model="searchFormData.keywords">
             </div>
-          </div>
         </form>
       </div>
 
@@ -94,7 +91,7 @@
     </section>
     <!-- end login -->
     <!-- items -->
-    <section class="uk-section" v-if="isLogged == true">
+    <section class="uk-section uk-section-xsmall" v-if="isLogged == true">
       <ul uk-tab>
         <li class="uk-active"><a href="#">
           Tus Anuncios
@@ -107,56 +104,77 @@
         <div class="uk-active">
           <article class="uk-comment" v-for="(ad, index) in ads" v-bind:todo="ad" v-bind:key="ad.id">
             <div class="uk-card uk-card-default uk-card-body uk-padding-small">
-              <div>&nbsp;</div>
-              <div>&nbsp;</div>
-              <div>&nbsp;</div>
-              <div class="uk-width-auto uk-flex uk-flex-top uk-flex-between">
-                <div class="uk-width-1-4 uk-height-small">
-                  <img width="80" height="80" v-bind:src="getFotoFromAd(ad)" class="uk-margin-auto">
-                </div>
-                <div class="uk-width-3-4">
-                  <a class="uk-link-reset" v-bind:href="getAdUrl(ad.idanuncio)" target="_blank">{{ad.titulo}}</a>
-                  <ul class="uk-margin-remove-top">
-                    <li><a v-bind:href="getAdUrl(ad.idanuncio)" target="_blank" class="uk-link-reset" style="text-transform: lowercase;">Hace {{ad.fecha}}</a></li>
-                    <li><a v-bind:href="getAdUrl(ad.idanuncio)" target="_blank" class="uk-link-reset" style="text-transform: lowercase;">Precio {{ad.precio}}</a></li>
-                  </ul>
-                  <span>{{sanitizeText(ad.texto)}}</span>
-                </div>
-              </div>
-              <div class="uk-card-badge">
+              <div class="uk-text-right">
                 <span class="uk-label"><a v-on:click.prevent.stop="onDoRenew(ad.idanuncio)" class="uk-link-reset">Renueva</a></span>
                 <span class="uk-label"><a v-bind:href="getBetUrl(ad.idanuncio)" target="_blank" class="uk-link-reset">Subasta</a></span>
+              </div>
+              <div class="uk-width-auto uk-flex uk-flex-top uk-flex-between">
+                <div class="uk-width-1-4 uk-height-max-small">
+                  <img v-bind:src="getFotoFromAd(ad)" class="uk-margin-auto">
+                </div>
+                <div class="uk-width-3-4 uk-padding-small">
+                  <div>
+                    <a class="uk-link-reset" v-bind:href="getAdUrl(ad.idanuncio)" target="_blank">{{ad.titulo}}</a>
+                  </div>
+                  <div>{{sanitizeText(ad.texto)}}</div>
+                  <div>&nbsp;</div>
+                  <div class="uk-flex uk-flex-column uk-text-right uk-width-auto">
+                    <div>
+                      <span class="uk-label-success">
+                        <a v-bind:href="getAdUrl(ad.idanuncio)" target="_blank" class="uk-link-reset" style="text-transform: lowercase;">Hace {{ad.fecha}}</a>
+                      </span>
+                    </div>
+                    <div>
+                      <span class="uk-label-warning">
+                        <a v-bind:href="getAdUrl(ad.idanuncio)" target="_blank" class="uk-link-reset" style="text-transform: lowercase;">Precio {{ad.precio}}</a>
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </article>
         </div>
-        <li>
-          <article class="uk-comment" v-for="(ad, index) in ads" v-bind:todo="ad" v-bind:key="ad.id">
-            <header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
-              <div class="uk-width-auto">
-                <a v-bind:href="getAdUrl(ad)" target="_blank" style="text-decoration:none;">
-                  <img class="uk-comment-avatar" v-bind:src="getFotoFromAd(ad)" width="80" height="80" alt="">
-                </a>
+        <div>
+          <article class="uk-comment" v-for="(ad, index) in favoriteAds" v-bind:todo="ad" v-bind:key="ad.id">
+            <div class="uk-card uk-card-default uk-card-body uk-padding-small">
+              <div class="uk-text-right">
+                <span class="uk-label"><a v-on:click.prevent.stop="onDoRenew(ad.idanuncio)" class="uk-link-reset">Renueva</a></span>
+                <span class="uk-label"><a v-bind:href="getBetUrl(ad.idanuncio)" target="_blank" class="uk-link-reset">Subasta</a></span>
               </div>
-              <div class="uk-width-expand">
-                <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" v-bind:href="getAdUrl(ad)" target="_blank">{{ad.titulo }}</a></h4>
-                <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-                  <li><a v-bind:href="getAdUrl(ad)" target="_blank" class="uk-link-reset">{{ad.fecha}}</a></li>
-                  <li><a v-bind:href="getAdUrl(ad)" target="_blank" class="uk-link-reset">{{ad.precio}}</a></li>
-                </ul>
+              <div class="uk-width-auto uk-flex uk-flex-top uk-flex-between">
+                <div class="uk-width-1-4 uk-height-max-small">
+                  <img v-bind:src="getFotoFromAd(ad)" class="uk-margin-auto">
+                </div>
+                <div class="uk-width-3-4 uk-padding-small">
+                  <div>
+                    <a class="uk-link-reset" v-bind:href="getAdUrl(ad.idanuncio)" target="_blank">{{ad.titulo}}</a>
+                  </div>
+                  <div>{{sanitizeText(ad.texto)}}</div>
+                  <div>&nbsp;</div>
+                  <div class="uk-flex uk-flex-column uk-text-right uk-width-auto">
+                    <div>
+                      <span class="uk-label-success">
+                        <a v-bind:href="getAdUrl(ad.idanuncio)" target="_blank" class="uk-link-reset" style="text-transform: lowercase;">Hace {{ad.fecha}}</a>
+                      </span>
+                    </div>
+                    <div>
+                      <span class="uk-label-warning">
+                        <a v-bind:href="getAdUrl(ad.idanuncio)" target="_blank" class="uk-link-reset" style="text-transform: lowercase;">Precio {{ad.precio}}</a>
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </header>
-            <div class="uk-comment-body">
-              <p>{{ad.texto}}</p>
             </div>
           </article>
-        </li>
+        </div>
       </div>
     </section>
 
     <section class="uk-section uk-section-xsmall">
-      <div class="uk-flex uk-flex-center">
-        <p>Descarga Milanuncios en tu móvil</p>
+      <div class="uk-width-auto uk-text-center uk-padding-small">
+        <div>Descarga Milanuncios en tu móvil</div>
       </div>
       <div class="uk-flex uk-flex-center uk-flex-around">
         <div class="uk-width-1-6">
@@ -177,8 +195,8 @@
     </section>
 
     <section class="uk-section uk-section-xsmall">
-      <div class="uk-flex uk-flex-center" style="width: 100%">
-        <p>Encuentranos en: </p>
+      <div class="uk-width-auto uk-text-center uk-padding-small">
+        <div>Encuentranos en: </div>
       </div>
       <div class="uk-flex uk-flex-center uk-flex-around">
         <div class="uk-width-1-5">
@@ -206,12 +224,9 @@
         <div class="uk-width-1-5">
         </div>
       </div>
-      <div class="uk-flex uk-flex-center" style="width: 100%">
-        <p>&nbsp;</p>
-        <p>Copyright © 2020 - Adevinta Spain S.L.U.</p>
-      </div>
-      <div class="uk-flex uk-flex-center" style="width: 100%">
-        <p>Todos los derechos reservados.</p>
+      <div class="uk-width-auto uk-text-center uk-padding-small">
+        <div>Copyright © 2020 - Adevinta Spain S.L.U.</div>
+        <div>Todos los derechos reservados.</div>
       </div>
     </section>
 
@@ -273,6 +288,7 @@
           {
             titulo: "",
             precio: "",
+            texto: "",
             fotos: [],
             fotos_thumb: []
           }
@@ -455,13 +471,19 @@
         })
       },
       getFavoriteAds: async function (header, params) {
-        console.log(">>>getFavoriteAds:" + JSON.stringify({header, params}))
-        const urlMisFavoritos = `http://www.millocal.com/api/v1/favoritos/favoritos.php?${qs.stringify(params)}`
+        const header1 = {
+          "mav": "2",
+          "Accept": "*/*",
+          "Cache-Control": "no-cache",
+          'Content-Type': 'application/x-www-form-urlencoded'
+        }
+        console.log(">>>getFavoriteAds:" + JSON.stringify({header1, params}))
+        const urlMisFavoritos = `http://www.millocal.com/api/v2/favoritos/favoritos.php?${qs.stringify(params)}`
+        console.log(">>>getFavoriteAds urlMisFavoritos:" + urlMisFavoritos)
         return axios({
           method: 'post',
           url: urlMisFavoritos,
-          data: params,
-          headers: header,
+          headers: header1,
           config: { withCredentials: true }
         })
       },
@@ -603,7 +625,6 @@
   .social-media-youtube:hover {
     background: url(https://scm-milanuncios-frontend-pro.milanuncios.com/statics/images/common/social-networks/ic-youtube-footer-hover.18e3d63e1c.svg) no-repeat;
   }
-
 /*
   div {
     background-color: lightgrey;;
@@ -611,7 +632,5 @@
     padding: 1px;
     margin: 1px;
   }
-  */
-
-
+*/
 </style>
