@@ -105,7 +105,7 @@
           <article class="uk-comment" v-for="(ad, index) in ads" v-bind:todo="ad" v-bind:key="ad.id">
             <div class="uk-card uk-card-default uk-card-body uk-padding-small">
               <div class="uk-text-right">
-                <span class="uk-label"><a v-on:click.prevent.stop="onDoRenew(ad.idanuncio)" class="uk-link-reset">Renueva</a></span>
+                <span class="uk-label" v-if="ad.computed_props.isRenewed == false"><a v-on:click.prevent.stop="onDoRenew(ad)" class="uk-link-reset">Renueva</a></span>
                 <span class="uk-label"><a v-bind:href="getBetUrl(ad.idanuncio)" target="_blank" class="uk-link-reset">Subasta</a></span>
               </div>
               <div class="uk-width-auto uk-flex uk-flex-top uk-flex-between">
@@ -139,8 +139,8 @@
           <article class="uk-comment" v-for="(ad, index) in favoriteAds" v-bind:todo="ad" v-bind:key="ad.id">
             <div class="uk-card uk-card-default uk-card-body uk-padding-small">
               <div class="uk-text-right">
-                <span class="uk-label"><a v-on:click.prevent.stop="onDoRenew(ad.idanuncio)" class="uk-link-reset">Renueva</a></span>
-                <span class="uk-label"><a v-bind:href="getBetUrl(ad.idanuncio)" target="_blank" class="uk-link-reset">Subasta</a></span>
+<!--                <span class="uk-label"><a v-on:click.prevent.stop="onDoRenew(ad.idanuncio)" class="uk-link-reset">Renuev</a></span>-->
+<!--                <span class="uk-label"><a v-bind:href="getBetUrl(ad.idanuncio)" target="_blank" class="uk-link-reset">Subasta</a></span>-->
               </div>
               <div class="uk-width-auto uk-flex uk-flex-top uk-flex-between">
                 <div class="uk-width-1-4 uk-height-max-small">
@@ -253,6 +253,7 @@
 <script>
   import axios from 'axios';
   import qs from 'querystring'
+  import transformer from './AdJsonToAdTransformer'
 
   export default {
     data() {
@@ -276,22 +277,8 @@
           createdAt: "01/01/2020"
         },
         ads:[
-          {
-            titulo: "",
-            precio: "",
-            texto: "",
-            fotos: [],
-            fotos_thumb: []
-          }
         ],
         favoriteAds:[
-          {
-            titulo: "",
-            precio: "",
-            texto: "",
-            fotos: [],
-            fotos_thumb: []
-          }
         ],
         savedSearchs: null,
       };
@@ -324,12 +311,14 @@
         const url = `https://www.milanuncios.com/anuncios/${this.searchFormData.keywords}.htm?fromSearch=1`
         window.open(url, '_blank');
       },
-      onDoRenew: async function(idanuncio){
+      onDoRenew: async function(ad){
         console.log(">>>onDoRenew")
         try {
-          await this.doRenewAd(idanuncio)
-          console.log(`>>>renewed ad ${{idanuncio}}`)
+          await this.doRenewAd(ad.idanuncio)
+          ad.computed_props.isRenewed = true
+          console.log(`>>>renewed ad ${ad.idanuncio}`)
         } catch (err) {
+          this.isRenewed = false
           console.log(JSON.stringify(err));
           console.log("ERROR: ====", err);
         }
@@ -402,7 +391,7 @@
         const { header, params } = await this.getHeaderAndQueryParams(apiTokenFinal)
         console.log("h&qp:" + JSON.stringify({ header, params }))
         const adsResponse = await this.getAds(header, params)
-        vm.ads = adsResponse.data.data.anuncios
+        vm.ads = transformer(adsResponse.data.data.anuncios)
         console.log(JSON.stringify(vm.ads))
         const favouriteAdsResponse = await this.getFavoriteAds(header, params)
         vm.favoriteAds = favouriteAdsResponse.data.data.anuncios
@@ -499,6 +488,7 @@
         })
       },
       doRenewAd: async function (adId) {
+        console.log(">>>doRenewAd")
         const vm = this
         const responseLoginWithCookie = await this.loginWithCookie()
         console.log(">>>loginWithCookie " + JSON.stringify(responseLoginWithCookie))
