@@ -1,6 +1,6 @@
-function Ad(jsonAd) {
-    console.log("jsonAdtoAd...")
-    const ad = {
+function YourAd(jsonAd) {
+    console.log("YourAd(jsonAd)...")
+    const yourAd = {
         idanuncio: jsonAd.idanuncio,
         titulo: jsonAd.titulo,
         precio: jsonAd.precio,
@@ -12,17 +12,17 @@ function Ad(jsonAd) {
             isRenewed: false
         }
     }
-    return ad
+    return yourAd
 }
 
-function AdJsonToAdTransformer (jsonAdList){
-    console.log("AdJsonToAdTransformer...")
+function YourAds (jsonAdList){
+    console.log("YourAds(jsonAdList)...")
     if (Array.isArray(jsonAdList)){
         return jsonAdList.map(function (jsonAd) {
-            return new Ad(jsonAd);
+            return new YourAd(jsonAd);
         })
     }
     return []
 }
 
-export default AdJsonToAdTransformer
+export default YourAds

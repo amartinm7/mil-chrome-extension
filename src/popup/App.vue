@@ -102,72 +102,10 @@
       </ul>
       <div class="uk-switcher">
         <div class="uk-active">
-          <article class="uk-comment" v-for="(ad, index) in ads" v-bind:todo="ad" v-bind:key="ad.id">
-            <div class="uk-card uk-card-default uk-card-body uk-padding-small">
-              <div class="uk-text-right">
-                <span class="uk-label" v-if="ad.computed_props.isRenewed == false"><a v-on:click.prevent.stop="onDoRenew(ad)" class="uk-link-reset">Renueva</a></span>
-                <span class="uk-label"><a v-bind:href="getBetUrl(ad.idanuncio)" target="_blank" class="uk-link-reset">Subasta</a></span>
-              </div>
-              <div class="uk-width-auto uk-flex uk-flex-top uk-flex-between">
-                <div class="uk-width-1-4 uk-height-max-small">
-                  <img v-bind:src="getFotoFromAd(ad)" class="uk-margin-auto">
-                </div>
-                <div class="uk-width-3-4 uk-padding-small">
-                  <div>
-                    <a class="uk-link-reset" v-bind:href="getAdUrl(ad.idanuncio)" target="_blank">{{ad.titulo}}</a>
-                  </div>
-                  <div>{{sanitizeText(ad.texto)}}</div>
-                  <div>&nbsp;</div>
-                  <div class="uk-flex uk-flex-column uk-text-right uk-width-auto">
-                    <div>
-                      <span class="uk-label-success">
-                        <a v-bind:href="getAdUrl(ad.idanuncio)" target="_blank" class="uk-link-reset" style="text-transform: lowercase;">Hace {{ad.fecha}}</a>
-                      </span>
-                    </div>
-                    <div>
-                      <span class="uk-label-warning">
-                        <a v-bind:href="getAdUrl(ad.idanuncio)" target="_blank" class="uk-link-reset" style="text-transform: lowercase;">Precio {{ad.precio}}</a>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
+          <your-ads-component v-bind:ads="ads"></your-ads-component>
         </div>
         <div>
-          <article class="uk-comment" v-for="(ad, index) in favoriteAds" v-bind:todo="ad" v-bind:key="ad.id">
-            <div class="uk-card uk-card-default uk-card-body uk-padding-small">
-              <div class="uk-text-right">
-<!--                <span class="uk-label"><a v-on:click.prevent.stop="onDoRenew(ad.idanuncio)" class="uk-link-reset">Renuev</a></span>-->
-<!--                <span class="uk-label"><a v-bind:href="getBetUrl(ad.idanuncio)" target="_blank" class="uk-link-reset">Subasta</a></span>-->
-              </div>
-              <div class="uk-width-auto uk-flex uk-flex-top uk-flex-between">
-                <div class="uk-width-1-4 uk-height-max-small">
-                  <img v-bind:src="getFotoFromAd(ad)" class="uk-margin-auto">
-                </div>
-                <div class="uk-width-3-4 uk-padding-small">
-                  <div>
-                    <a class="uk-link-reset" v-bind:href="getAdUrl(ad.idanuncio)" target="_blank">{{ad.titulo}}</a>
-                  </div>
-                  <div>{{sanitizeText(ad.texto)}}</div>
-                  <div>&nbsp;</div>
-                  <div class="uk-flex uk-flex-column uk-text-right uk-width-auto">
-                    <div>
-                      <span class="uk-label-success">
-                        <a v-bind:href="getAdUrl(ad.idanuncio)" target="_blank" class="uk-link-reset" style="text-transform: lowercase;">Hace {{ad.fecha}}</a>
-                      </span>
-                    </div>
-                    <div>
-                      <span class="uk-label-warning">
-                        <a v-bind:href="getAdUrl(ad.idanuncio)" target="_blank" class="uk-link-reset" style="text-transform: lowercase;">Precio {{ad.precio}}</a>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
+          <your-ads-component v-bind:ads="favoriteAds"></your-ads-component>
         </div>
       </div>
     </section>
@@ -251,281 +189,284 @@
 </template>
 
 <script>
-  import axios from 'axios';
-  import qs from 'querystring'
-  import transformer from './AdJsonToAdTransformer'
+import axios from 'axios';
+import qs from 'querystring'
+import YourAds from './domain/YourAds'
+import YourAdsComponent from "./component/yourAds/yourAdsComponent";
 
-  export default {
-    data() {
-      return {
-        isLogged: false,
-        isLoading: false,
-        isDisabled: false,
-        searchFormData: {
-          keywords: ""
+export default {
+  name: "app",
+  components: {YourAdsComponent},
+  data: function () {
+    return {
+      isLogged: false,
+      isLoading: false,
+      isDisabled: false,
+      searchFormData: {
+        keywords: ""
+      },
+      formData: {
+        email: "antonio.martin@schibsted.com",
+        password: "Schibsted18",
+        errors: {
+          invalidEmail: false,
+          invalidPassword: false
         },
-        formData: {
-          email: "antonio.martin@schibsted.com",
-          password: "Schibsted18",
-          errors: {
-            invalidEmail: false,
-            invalidPassword: false
-          },
-        },
-        logedUser: {
-          email: "",
-          createdAt: "01/01/2020"
-        },
-        ads:[
-        ],
-        favoriteAds:[
-        ],
-        savedSearchs: null,
-      };
+      },
+      logedUser: {
+        email: "",
+        createdAt: "01/01/2020"
+      },
+      ads:[
+      ],
+      favoriteAds:[
+      ],
+      savedSearchs: null
+    };
+  },
+  methods: {
+    getFotoFromAd: function (ad){
+      return ( ad.fotos_thumb != undefined && ad.fotos_thumb[0] != undefined ) ?  ad.fotos_thumb[0] : ""
     },
-    methods: {
-      getFotoFromAd: function (ad){
-        return ( ad.fotos_thumb != undefined && ad.fotos_thumb[0] != undefined ) ?  ad.fotos_thumb[0] : ""
-      },
-      getAdUrl: function (idanuncio) {
-        return `http://www.milanuncios.com/anuncios/r${idanuncio}.htm`
-      },
-      getBetUrl: function (idanuncio){
-        return `https://www.milanuncios.com/mis-anuncios/subastas/${idanuncio}`
-      },
-      getDate: function (){
-        return (this.logedUser != undefined ) ? new Date(this.logedUser.createdAt).toLocaleDateString() : ""
-      },
-      sanitizeText: function (text){
-        if (text.trim().length > 88 ) {
-          return (`${text.trim().substring(0,85)}...`)
-        }
-        return text.trim()
-      },
-      hasErrorsInLoginForm(){
-        this.formData.errors.invalidEmail = !this.formData.email || 0 === this.formData.email.length
-        this.formData.errors.invalidPassword = !this.formData.password || 0 === this.formData.email.password
-        return this.formData.errors.invalidEmail || this.formData.errors.invalidPassword
-      },
-      onAdSearch: function () {
-        const url = `https://www.milanuncios.com/anuncios/${this.searchFormData.keywords}.htm?fromSearch=1`
-        window.open(url, '_blank');
-      },
-      onDoRenew: async function(ad){
-        console.log(">>>onDoRenew")
-        try {
-          await this.doRenewAd(ad.idanuncio)
-          ad.computed_props.isRenewed = true
-          console.log(`>>>renewed ad ${ad.idanuncio}`)
-        } catch (err) {
-          this.isRenewed = false
-          console.log(JSON.stringify(err));
-          console.log("ERROR: ====", err);
-        }
-      },
-      onDoLogin: async function () {
-        console.log(">>>onDoLogin")
-        if ( this.hasErrorsInLoginForm() ){
-          console.log(">>>invalid credentials")
-          return
-        }
-        try {
-          await this.loadPage(this.formData)
-        } catch (err) {
-          this.formData.errors.invalidEmail = true
-          this.formData.errors.invalidPassword = true
-          console.log(JSON.stringify(err));
-          console.log("ERROR: ====", err);
-        }
-      },
-      onLoadPage: async function(){
-        const vm = this
-        console.log(">>>onLoadPage")
-        try {
-          const responseLoginWithCookie = await this.loginWithCookie()
-          console.log(">>>loginWithCookie " + JSON.stringify(responseLoginWithCookie))
-          let apiToken = responseLoginWithCookie.data.apiToken
-          vm.logedUser.email = responseLoginWithCookie.data.user.email
-          vm.logedUser.createdAt = responseLoginWithCookie.data.user.createdAt
-          const responseLoadPage = await this.loadPage(undefined, apiToken)
-          console.log(">>>responseLoadPage " + JSON.stringify(responseLoadPage))
-        } catch (err) {
-          console.log(JSON.stringify(err));
-          console.log("ERROR: ====", err);
-        }
-      },
-      loginWithCookie: function(){
-        console.log(">>>loginWithCookie")
-        const url = "https://www.milanuncios.com/api/v3/sessions/current"
-        const headers = {
-          "Content-Type": "application/json",
-          "mav": "2",
-          "Accept": "*/*",
-          "Cache-Control": "no-cache"
-        }
-
-        console.log(JSON.stringify(headers))
-
-        return axios({
-          method: 'get',
-          url: url,
-          headers: headers,
-          config: { withCredentials: true }
-        })
-      },
-      loadPage: async function (formData, apiToken) {
-        console.log(">>>loadPage")
-        const vm = this
-        let loginResponse = {}
-        let apiTokenFinal = apiToken
-        if (apiToken == undefined || apiToken.isEmpty) {
-          loginResponse = await this.doLogin()
-          console.log(">>>doLogin")
-          console.log(">>>cookies" + JSON.stringify(loginResponse.headers))
-          vm.logedUser.email = loginResponse.data.user.email
-          vm.logedUser.createdAt = loginResponse.data.user.createdAt
-          console.log(">>>loginResponse: " + JSON.stringify(loginResponse))
-          apiTokenFinal = loginResponse.data.session.apiToken
-        }
-        vm.isLogged = true
-        const { header, params } = await this.getHeaderAndQueryParams(apiTokenFinal)
-        console.log("h&qp:" + JSON.stringify({ header, params }))
-        const adsResponse = await this.getAds(header, params)
-        vm.ads = transformer(adsResponse.data.data.anuncios)
-        console.log(JSON.stringify(vm.ads))
-        const favouriteAdsResponse = await this.getFavoriteAds(header, params)
-        vm.favoriteAds = favouriteAdsResponse.data.data.anuncios
-        console.log(JSON.stringify(vm.favoriteAds))
-        const savedAdsResponse = await this.getSavedSearchs(header, params)
-        console.log(JSON.stringify(vm.savedSearchs))
-        vm.savedSearchs = savedAdsResponse.data.data.anuncios
-        return Promise.resolve(123)
-      },
-      doLogin: async function () {
-        console.log(">>>doLogin")
-        const url = "https://www.milanuncios.com/api/v3/logins"
-        const data = {
-          "identifier": this.formData.email,
-          "password": this.formData.password,
-          "rememberMe": "true"
-        }
-
-        const headers = {
-          "Content-Type": "application/json",
-          "mav": "2",
-          "Accept": "*/*",
-          "Cache-Control": "no-cache"
-        }
-
-        console.log(JSON.stringify(data))
-
-        return axios({
-          method: 'post',
-          url: url,
-          data: data,
-          headers: headers,
-          config: { withCredentials: true }
-        })
-
-      },
-      getHeaderAndQueryParams: async function(apiToken){
-        console.log(">>>getHeaderAndQueryParams")
-        const params =  {
-          "r": "30",
-          "p": "1",
-          "token": apiToken,
-          "tokenRenew": apiToken
-        }
-        const header = {
-          "mav": "2",
-          "Accept": "*/*",
-          "Cache-Control": "no-cache",
-          'Content-Type': 'application/json'
-        }
-        console.log(">>>getHeaderAndQueryParams:" + JSON.stringify({header, params}))
-        return new Promise(
-                (resolve, reject) => resolve( {header, params})
-        )
-      },
-      getAds: async function (header, params) {
-        console.log(">>>getAds:" + JSON.stringify({header, params}))
-        const urlMisAnuncios = `https://www.milanuncios.com/api/v2/misanuncios/misanuncios.php?${qs.stringify(params)}`
-        console.log(">>>getAds:" + urlMisAnuncios)
-        return axios({
-          method: 'post',
-          url: urlMisAnuncios,
-          data: params,
-          headers: header,
-          config: { withCredentials: true }
-        })
-      },
-      getFavoriteAds: async function (header, params) {
-        const header1 = {
-          "mav": "2",
-          "Accept": "*/*",
-          "Cache-Control": "no-cache",
-          'Content-Type': 'application/x-www-form-urlencoded'
-        }
-        console.log(">>>getFavoriteAds:" + JSON.stringify({header1, params}))
-        const urlMisFavoritos = `http://www.millocal.com/api/v2/favoritos/favoritos.php?${qs.stringify(params)}`
-        console.log(">>>getFavoriteAds urlMisFavoritos:" + urlMisFavoritos)
-        return axios({
-          method: 'post',
-          url: urlMisFavoritos,
-          headers: header1,
-          config: { withCredentials: true }
-        })
-      },
-      getSavedSearchs: async function (header, params) {
-        const url = `https://ms-ma--user-profiles.spain.schibsted.io/users/183565764/savedsearches/?${qs.stringify(params)}`
-        return axios({
-          method: 'get',
-          url: url,
-          data: params,
-          headers: header,
-          config: { withCredentials: true }
-          //[{"id":"e03f3ab9-7edb-4019-8b35-7c4e1e187446","userId":"183565764","title":"seat leon en Madrid","status":"ACTIVE","targeting":{"type":"coches","location":{"province":{"id":28}},"category":{"id":100664},"brand":"seat","model":"leon","price":{"from":6000.0,"to":42000.0},"year":{"from":2019.0,"to":2020.0}},"creationDate":"2020-01-28T08:27:32.374","updateDate":"2020-01-28T08:27:32.374"}]
-        })
-      },
-      doRenewAd: async function (adId) {
-        console.log(">>>doRenewAd")
-        const vm = this
+    getAdUrl: function (idanuncio) {
+      return `http://www.milanuncios.com/anuncios/r${idanuncio}.htm`
+    },
+    getBetUrl: function (idanuncio){
+      return `https://www.milanuncios.com/mis-anuncios/subastas/${idanuncio}`
+    },
+    getDate: function (){
+      return (this.logedUser != undefined ) ? new Date(this.logedUser.createdAt).toLocaleDateString() : ""
+    },
+    sanitizeText: function (text){
+      if (text.trim().length > 88 ) {
+        return (`${text.trim().substring(0,85)}...`)
+      }
+      return text.trim()
+    },
+    hasErrorsInLoginForm(){
+      this.formData.errors.invalidEmail = !this.formData.email || 0 === this.formData.email.length
+      this.formData.errors.invalidPassword = !this.formData.password || 0 === this.formData.email.password
+      return this.formData.errors.invalidEmail || this.formData.errors.invalidPassword
+    },
+    onAdSearch: function () {
+      const url = `https://www.milanuncios.com/anuncios/${this.searchFormData.keywords}.htm?fromSearch=1`
+      window.open(url, '_blank');
+    },
+    onDoRenew: async function(ad){
+      console.log(">>>onDoRenew")
+      try {
+        await this.doRenewAd(ad.idanuncio)
+        ad.computed_props.isRenewed = true
+        console.log(`>>>renewed ad ${ad.idanuncio}`)
+      } catch (err) {
+        this.isRenewed = false
+        console.log(JSON.stringify(err));
+        console.log("ERROR: ====", err);
+      }
+    },
+    onDoLogin: async function () {
+      console.log(">>>onDoLogin")
+      if ( this.hasErrorsInLoginForm() ){
+        console.log(">>>invalid credentials")
+        return
+      }
+      try {
+        await this.loadPage(this.formData)
+      } catch (err) {
+        this.formData.errors.invalidEmail = true
+        this.formData.errors.invalidPassword = true
+        console.log(JSON.stringify(err));
+        console.log("ERROR: ====", err);
+      }
+    },
+    onLoadPage: async function(){
+      const vm = this
+      console.log(">>>onLoadPage")
+      try {
         const responseLoginWithCookie = await this.loginWithCookie()
         console.log(">>>loginWithCookie " + JSON.stringify(responseLoginWithCookie))
         let apiToken = responseLoginWithCookie.data.apiToken
         vm.logedUser.email = responseLoginWithCookie.data.user.email
         vm.logedUser.createdAt = responseLoginWithCookie.data.user.createdAt
-        const { header, params } = await this.getHeaderAndQueryParams(apiToken)
-        console.log("h&qp:" + JSON.stringify({ header, params }))
-        const url = `https://www.milanuncios.com/api/v3/adrenew/${adId}`
-        return axios({
-          method: 'post',
-          url: url,
-          data: params,
-          headers: header,
-          config: { withCredentials: true }
-        })
-      },
-      onLogout: async function(){
-        const vm = this
-        const response = await this.logout()
-        vm.isLogged = false
-      },
-      logout: async function () {
-        const url = "https://www.milanuncios.com/api/v3/logout"
-        return axios({
-          method: 'post',
-          url: url,
-          config: { withCredentials: true }
-        })
-      },
+        const responseLoadPage = await this.loadPage(undefined, apiToken)
+        console.log(">>>responseLoadPage " + JSON.stringify(responseLoadPage))
+      } catch (err) {
+        console.log(JSON.stringify(err));
+        console.log("ERROR: ====", err);
+      }
     },
-    created() {
+    loginWithCookie: function(){
+      console.log(">>>loginWithCookie")
+      const url = "https://www.milanuncios.com/api/v3/sessions/current"
+      const headers = {
+        "Content-Type": "application/json",
+        "mav": "2",
+        "Accept": "*/*",
+        "Cache-Control": "no-cache"
+      }
+
+      console.log(JSON.stringify(headers))
+
+      return axios({
+        method: 'get',
+        url: url,
+        headers: headers,
+        config: { withCredentials: true }
+      })
     },
-    mounted: async function () {
-      await this.onLoadPage()
-    }
-  };
+    loadPage: async function (formData, apiToken) {
+      console.log(">>>loadPage")
+      const vm = this
+      let loginResponse = {}
+      let apiTokenFinal = apiToken
+      if (apiToken == undefined || apiToken.isEmpty) {
+        loginResponse = await this.doLogin()
+        console.log(">>>doLogin")
+        console.log(">>>cookies" + JSON.stringify(loginResponse.headers))
+        vm.logedUser.email = loginResponse.data.user.email
+        vm.logedUser.createdAt = loginResponse.data.user.createdAt
+        console.log(">>>loginResponse: " + JSON.stringify(loginResponse))
+        apiTokenFinal = loginResponse.data.session.apiToken
+      }
+      vm.isLogged = true
+      const { header, params } = await this.getHeaderAndQueryParams(apiTokenFinal)
+      console.log("h&qp:" + JSON.stringify({ header, params }))
+      const adsResponse = await this.getAds(header, params)
+      vm.ads = YourAds(adsResponse.data.data.anuncios)
+      console.log(JSON.stringify(vm.ads))
+      const favouriteAdsResponse = await this.getFavoriteAds(header, params)
+      vm.favoriteAds = favouriteAdsResponse.data.data.anuncios
+      console.log(JSON.stringify(vm.favoriteAds))
+      const savedAdsResponse = await this.getSavedSearchs(header, params)
+      console.log(JSON.stringify(vm.savedSearchs))
+      vm.savedSearchs = savedAdsResponse.data.data.anuncios
+      return Promise.resolve(123)
+    },
+    doLogin: async function () {
+      console.log(">>>doLogin")
+      const url = "https://www.milanuncios.com/api/v3/logins"
+      const data = {
+        "identifier": this.formData.email,
+        "password": this.formData.password,
+        "rememberMe": "true"
+      }
+
+      const headers = {
+        "Content-Type": "application/json",
+        "mav": "2",
+        "Accept": "*/*",
+        "Cache-Control": "no-cache"
+      }
+
+      console.log(JSON.stringify(data))
+
+      return axios({
+        method: 'post',
+        url: url,
+        data: data,
+        headers: headers,
+        config: { withCredentials: true }
+      })
+
+    },
+    getHeaderAndQueryParams: async function(apiToken){
+      console.log(">>>getHeaderAndQueryParams")
+      const params =  {
+        "r": "30",
+        "p": "1",
+        "token": apiToken,
+        "tokenRenew": apiToken
+      }
+      const header = {
+        "mav": "2",
+        "Accept": "*/*",
+        "Cache-Control": "no-cache",
+        'Content-Type': 'application/json'
+      }
+      console.log(">>>getHeaderAndQueryParams:" + JSON.stringify({header, params}))
+      return new Promise(
+              (resolve, reject) => resolve( {header, params})
+      )
+    },
+    getAds: async function (header, params) {
+      console.log(">>>getAds:" + JSON.stringify({header, params}))
+      const urlMisAnuncios = `https://www.milanuncios.com/api/v2/misanuncios/misanuncios.php?${qs.stringify(params)}`
+      console.log(">>>getAds:" + urlMisAnuncios)
+      return axios({
+        method: 'post',
+        url: urlMisAnuncios,
+        data: params,
+        headers: header,
+        config: { withCredentials: true }
+      })
+    },
+    getFavoriteAds: async function (header, params) {
+      const header1 = {
+        "mav": "2",
+        "Accept": "*/*",
+        "Cache-Control": "no-cache",
+        'Content-Type': 'application/x-www-form-urlencoded'
+      }
+      console.log(">>>getFavoriteAds:" + JSON.stringify({header1, params}))
+      const urlMisFavoritos = `http://www.millocal.com/api/v2/favoritos/favoritos.php?${qs.stringify(params)}`
+      console.log(">>>getFavoriteAds urlMisFavoritos:" + urlMisFavoritos)
+      return axios({
+        method: 'post',
+        url: urlMisFavoritos,
+        headers: header1,
+        config: { withCredentials: true }
+      })
+    },
+    getSavedSearchs: async function (header, params) {
+      const url = `https://ms-ma--user-profiles.spain.schibsted.io/users/183565764/savedsearches/?${qs.stringify(params)}`
+      return axios({
+        method: 'get',
+        url: url,
+        data: params,
+        headers: header,
+        config: { withCredentials: true }
+        //[{"id":"e03f3ab9-7edb-4019-8b35-7c4e1e187446","userId":"183565764","title":"seat leon en Madrid","status":"ACTIVE","targeting":{"type":"coches","location":{"province":{"id":28}},"category":{"id":100664},"brand":"seat","domain":"leon","price":{"from":6000.0,"to":42000.0},"year":{"from":2019.0,"to":2020.0}},"creationDate":"2020-01-28T08:27:32.374","updateDate":"2020-01-28T08:27:32.374"}]
+      })
+    },
+    doRenewAd: async function (adId) {
+      console.log(">>>doRenewAd")
+      const vm = this
+      const responseLoginWithCookie = await this.loginWithCookie()
+      console.log(">>>loginWithCookie " + JSON.stringify(responseLoginWithCookie))
+      let apiToken = responseLoginWithCookie.data.apiToken
+      vm.logedUser.email = responseLoginWithCookie.data.user.email
+      vm.logedUser.createdAt = responseLoginWithCookie.data.user.createdAt
+      const { header, params } = await this.getHeaderAndQueryParams(apiToken)
+      console.log("h&qp:" + JSON.stringify({ header, params }))
+      const url = `https://www.milanuncios.com/api/v3/adrenew/${adId}`
+      return axios({
+        method: 'post',
+        url: url,
+        data: params,
+        headers: header,
+        config: { withCredentials: true }
+      })
+    },
+    onLogout: async function(){
+      const vm = this
+      const response = await this.logout()
+      vm.isLogged = false
+    },
+    logout: async function () {
+      const url = "https://www.milanuncios.com/api/v3/logout"
+      return axios({
+        method: 'post',
+        url: url,
+        config: { withCredentials: true }
+      })
+    },
+  },
+  created() {
+  },
+  mounted: async function () {
+    await this.onLoadPage()
+  }
+};
 </script>
 
 <style>
