@@ -6,3 +6,4 @@
 .lock
 .pem
 package-lock.json
+coverage
