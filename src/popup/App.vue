@@ -92,19 +92,22 @@
     <!-- end login -->
     <!-- items -->
     <section class="uk-section uk-section-xsmall" v-if="isLogged == true">
-      <ul uk-tab>
-        <li class="uk-active"><a href="#">
-          Tus Anuncios
-        </a></li>
-        <li><a href="#">
-          Tus favoritos
-        </a></li>
+      <ul uk-tab class="uk-flex-around">
+        <li class="uk-active"><a href="#" uk-icon="icon: copy"></a>Tús Anuncios</li>
+        <li><a href="#" uk-icon="icon: heart"></a>Tús Favoritos</li>
+        <li><a href="#" uk-icon="icon: search"></a>Utl. Búsquedas</li>
       </ul>
       <div class="uk-switcher">
         <div class="uk-active">
           <your-ads-component v-bind:ads="ads"
                               v-bind:enable-renew="yourAdsComponent.enableRenew"
                               v-bind:enable-bets="yourAdsComponent.enableBets">
+          </your-ads-component>
+        </div>
+        <div>
+          <your-ads-component v-bind:ads="favoriteAds"
+                              v-bind:enable-renew="favouriteAdsComponent.enableRenew"
+                              v-bind:enable-bets="favouriteAdsComponent.enableBets">
           </your-ads-component>
         </div>
         <div>
@@ -552,12 +555,12 @@ export default {
   .social-media-youtube:hover {
     background: url(https://scm-milanuncios-frontend-pro.milanuncios.com/statics/images/common/social-networks/ic-youtube-footer-hover.18e3d63e1c.svg) no-repeat;
   }
-
+/** for debug styling
   div {
     background-color: lightgrey;;
     border: 1px solid green;
     padding: 1px;
     margin: 1px;
   }
-
+**/
 </style>
