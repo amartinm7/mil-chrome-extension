@@ -1,0 +1,85 @@
+[
+  {
+    "da": [
+      {
+        "d": "kms",
+        "v": "128.000",
+        "s": "128.000 kms"
+      },
+      {
+        "d": "cambio",
+        "v": "manual",
+        "s": "manual"
+      },
+      {
+        "d": "Puertas",
+        "v": "5",
+        "s": "5 puertas"
+      },
+      {
+        "d": "CV",
+        "v": "140",
+        "s": "140 CV"
+      },
+      {
+        "d": "combustible",
+        "v": "Diesel",
+        "s": "Diesel"
+      }
+    ],
+    "idanuncio": 324862907,
+    "userid": 845498,
+    "showAds": false,
+    "idcategoria": 855,
+    "categoryTree": {
+      "cat1": "10",
+      "cat1_nombre": "Motor",
+      "cat1_id": "1",
+      "cat2": "1",
+      "cat2_nombre": "Coches",
+      "cat2_id": "13",
+      "cat3": "112",
+      "cat3_nombre": "Volkswagen",
+      "cat3_id": "855",
+      "breadcrumb": "Motor>Coches>Volkswagen"
+    },
+    "contactable": true,
+    "usePhoneProxy": false,
+    "destacado": false,
+    "isNew": false,
+    "categoria": "volkswagen-de-segunda-mano",
+    "nombre": "Autos Mata",
+    "vendedor": "Profesional",
+    "precio": "14.500 €",
+    "demanda": false,
+    "titulo": "VOLKSWAGEN - TIGUAN SPORT",
+    "texto": "Volkswagen Tiguan Sport. Volkswagen Tiguan Sport 2.0 Tdi 140cv Pantalla Grande Rns 510,sensores de aparcamiento del/tras con control en pantalla,Park Assist ( aparca solo),ayuda en pendiente,volante multifuncion,ordenador grande,sensor de luces y lluvia,llanta 17 con ruedas nuevas,mantenimiento para entrega.Transferido. 1 año de Garantia. Posibilidad de financiacion.Muy buen estado.",
+    "telefono1": 606695499,
+    "telefono2": 985084985,
+    "provincia": "asturias",
+    "localidad": "Langreo",
+    "fecha": "2 días",
+    "fotos": [
+      "https://img.milanuncios.com/fg/3248/62/324862907_1.jpg?VersionId=thjJe7TWFOGea4ugOBDTJXRrIJwilWXg",
+      "https://img.milanuncios.com/fg/3248/62/324862907_2.jpg?VersionId=k5OhW1w_q5kTPqTIDnrpLMYkh.kYoNIH",
+      "https://img.milanuncios.com/fg/3248/62/324862907_3.jpg?VersionId=xfS3_RpvsaJTQC7D6Kc9YVDfBayNJFbv",
+      "https://img.milanuncios.com/fg/3248/62/324862907_4.jpg?VersionId=iN90t9xtkFMDlpGh7zAMLFF8JP2fJeLQ",
+      "https://img.milanuncios.com/fg/3248/62/324862907_5.jpg?VersionId=WD_UNqt5vTayEQkufARdfVHseWAghi71",
+      "https://img.milanuncios.com/fg/3248/62/324862907_6.jpg?VersionId=3t4dk718vyei1WTOWXe11D..4KQ0f0rt",
+      "https://img.milanuncios.com/fg/3248/62/324862907_7.jpg?VersionId=m_TngQQ8aMoJVlEa_YofGBMIYvpaRDId",
+      "https://img.milanuncios.com/fg/3248/62/324862907_8.jpg?VersionId=lKBWlviJrCbYBGf8l_jiFf_i5bveb1jO",
+      "https://img.milanuncios.com/fg/3248/62/324862907_9.jpg?VersionId=A7xso.lvuFkuET2MW_bHlRTRBkdrv7WI"
+    ],
+    "fotos_thumb": [
+      "https://img.milanuncios.com/fp/3248/62/324862907_1.jpg?VersionId=0PcHEVEJOFDO5ptTEwXJ86z.YI9hosrm",
+      "https://img.milanuncios.com/fp/3248/62/324862907_2.jpg?VersionId=BcSNtf8xBK_2P7fOPR_Btpp5OGm..uWY",
+      "https://img.milanuncios.com/fp/3248/62/324862907_3.jpg?VersionId=_akkdL2BcdiIRFxfBGc6ZNroa9wYpihH",
+      "https://img.milanuncios.com/fp/3248/62/324862907_4.jpg?VersionId=NIMOQofnORO9.MgI.KOPUEL0ujDssjfy",
+      "https://img.milanuncios.com/fp/3248/62/324862907_5.jpg?VersionId=p5EUqT8C5sgsORkjoLMG6G6ibItRVkka",
+      "https://img.milanuncios.com/fp/3248/62/324862907_6.jpg?VersionId=tTe9rne1OIYRMGgW618ApZpvcUEKzHRD",
+      "https://img.milanuncios.com/fp/3248/62/324862907_7.jpg?VersionId=uZwPFCjL_dAO.RcBPoqkyR5ggzDldt_5",
+      "https://img.milanuncios.com/fp/3248/62/324862907_8.jpg?VersionId=fsGm4toIHXTTwBKOpCAdfnBTeCR6U2wj",
+      "https://img.milanuncios.com/fp/3248/62/324862907_9.jpg?VersionId=ai.rBvEd_waWKmO3taqxtfkrutr0MR5_"
+    ]
+  },
+]

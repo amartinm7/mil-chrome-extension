@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="uk-section uk-section-xsmall">
+    <section class="uk-section uk-section-xsmall uk-padding-remove-bottom">
       <div class="uk-grid-small uk-flex-middle uk-flex-around" uk-grid>
         <div class="uk-width-auto" >
           <div class="uk-width-auto" v-show="isLogged == true">
@@ -13,7 +13,7 @@
                 </div>
                 <div class="uk-width-expand">
                   <h6 class="uk-card-subtitle uk-margin-remove-bottom">{{logedUser.email}}</h6>
-                  <p class="uk-text-meta uk-margin-remove-top">Usuario desde el {{ getDate() }}</p>
+                  <p class="uk-text-meta uk-margin-remove-top">{{ getUserDateMsg() }}</p>
                 </div>
                 <ul class="uk-nav uk-nav-default" uk-accordion="collapsible: false">
                   <li class="uk-nav-divider"></li>
@@ -92,20 +92,29 @@
     <!-- end login -->
     <!-- items -->
     <section class="uk-section uk-section-xsmall" v-if="isLogged == true">
-      <ul uk-tab>
-        <li class="uk-active"><a href="#">
-          Tus Anuncios
-        </a></li>
-        <li><a href="#">
-          Tus favoritos
-        </a></li>
+      <ul uk-tab class="uk-flex-around">
+        <li class="uk-active"><a href="#" uk-icon="icon: copy"></a>Tús Anuncios</li>
+        <li><a href="#" uk-icon="icon: heart"></a>Tús Favoritos</li>
+        <li><a href="#" uk-icon="icon: search"></a>Utl. Búsquedas</li>
       </ul>
       <div class="uk-switcher">
         <div class="uk-active">
-          <your-ads-component v-bind:ads="ads"></your-ads-component>
+          <your-ads-component v-bind:ads="ads"
+                              v-bind:enable-renew="yourAdsComponent.enableRenew"
+                              v-bind:enable-bets="yourAdsComponent.enableBets">
+          </your-ads-component>
         </div>
         <div>
-          <your-ads-component v-bind:ads="favoriteAds"></your-ads-component>
+          <your-ads-component v-bind:ads="favoriteAds"
+                              v-bind:enable-renew="favouriteAdsComponent.enableRenew"
+                              v-bind:enable-bets="favouriteAdsComponent.enableBets">
+          </your-ads-component>
+        </div>
+        <div>
+          <your-ads-component v-bind:ads="favoriteAds"
+                              v-bind:enable-renew="favouriteAdsComponent.enableRenew"
+                              v-bind:enable-bets="favouriteAdsComponent.enableBets">
+          </your-ads-component>
         </div>
       </div>
     </section>
@@ -192,6 +201,8 @@
 import axios from 'axios';
 import qs from 'querystring'
 import YourAds from './domain/YourAds'
+import YourFavouriteAds from './domain/YourFavouriteAds'
+
 import YourAdsComponent from "./component/yourAds/yourAdsComponent";
 
 export default {
@@ -199,6 +210,8 @@ export default {
   components: {YourAdsComponent},
   data: function () {
     return {
+      yourAdsComponent:{ enableRenew: true, enableBets: true},
+      favouriteAdsComponent:{ enableRenew: false, enableBets: false},
       isLogged: false,
       isLoading: false,
       isDisabled: false,
@@ -225,23 +238,13 @@ export default {
     };
   },
   methods: {
-    getFotoFromAd: function (ad){
-      return ( ad.fotos_thumb != undefined && ad.fotos_thumb[0] != undefined ) ?  ad.fotos_thumb[0] : ""
-    },
-    getAdUrl: function (idanuncio) {
-      return `http://www.milanuncios.com/anuncios/r${idanuncio}.htm`
-    },
-    getBetUrl: function (idanuncio){
-      return `https://www.milanuncios.com/mis-anuncios/subastas/${idanuncio}`
-    },
-    getDate: function (){
-      return (this.logedUser != undefined ) ? new Date(this.logedUser.createdAt).toLocaleDateString() : ""
-    },
-    sanitizeText: function (text){
-      if (text.trim().length > 88 ) {
-        return (`${text.trim().substring(0,85)}...`)
+    getUserDateMsg: function (){
+      try{
+        const strDate =  new Date(this.logedUser.createdAt).toLocaleDateString()
+        return (strDate.startsWith("Invalid")) ? "" : `Usuario desde el ${strDate}`
+      } catch (e) {
+        return ""
       }
-      return text.trim()
     },
     hasErrorsInLoginForm(){
       this.formData.errors.invalidEmail = !this.formData.email || 0 === this.formData.email.length
@@ -250,7 +253,7 @@ export default {
     },
     onAdSearch: function () {
       const url = `https://www.milanuncios.com/anuncios/${this.searchFormData.keywords}.htm?fromSearch=1`
-      window.open(url, '_blank');
+      window.open(url, '_blank')
     },
     onDoRenew: async function(ad){
       console.log(">>>onDoRenew")
@@ -334,8 +337,8 @@ export default {
       const adsResponse = await this.getAds(header, params)
       vm.ads = YourAds(adsResponse.data.data.anuncios)
       console.log(JSON.stringify(vm.ads))
-      const favouriteAdsResponse = await this.getFavoriteAds(header, params)
-      vm.favoriteAds = favouriteAdsResponse.data.data.anuncios
+      const favouriteAdsResponse = await this.getFavoriteAds(params)
+      vm.favoriteAds = YourFavouriteAds(favouriteAdsResponse.data.data.anuncios)
       console.log(JSON.stringify(vm.favoriteAds))
       const savedAdsResponse = await this.getSavedSearchs(header, params)
       console.log(JSON.stringify(vm.savedSearchs))
@@ -400,20 +403,21 @@ export default {
         config: { withCredentials: true }
       })
     },
-    getFavoriteAds: async function (header, params) {
-      const header1 = {
+    getFavoriteAds: async function (params) {
+      const headerFavourites = {
         "mav": "2",
         "Accept": "*/*",
         "Cache-Control": "no-cache",
         'Content-Type': 'application/x-www-form-urlencoded'
       }
-      console.log(">>>getFavoriteAds:" + JSON.stringify({header1, params}))
-      const urlMisFavoritos = `http://www.millocal.com/api/v2/favoritos/favoritos.php?${qs.stringify(params)}`
+      console.log(">>>getFavoriteAds:" + JSON.stringify({headerFavourites, params}))
+      const urlMisFavoritos = `https://www.milanuncios.com/api/v2/favoritos/favoritos.php`
       console.log(">>>getFavoriteAds urlMisFavoritos:" + urlMisFavoritos)
       return axios({
         method: 'post',
         url: urlMisFavoritos,
-        headers: header1,
+        headers: headerFavourites,
+        data: qs.stringify(params),
         config: { withCredentials: true }
       })
     },
@@ -556,12 +560,12 @@ export default {
   .social-media-youtube:hover {
     background: url(https://scm-milanuncios-frontend-pro.milanuncios.com/statics/images/common/social-networks/ic-youtube-footer-hover.18e3d63e1c.svg) no-repeat;
   }
-/*
+/** for debug styling
   div {
     background-color: lightgrey;;
     border: 1px solid green;
     padding: 1px;
     margin: 1px;
   }
-*/
+**/
 </style>

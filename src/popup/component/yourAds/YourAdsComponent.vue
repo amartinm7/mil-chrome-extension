@@ -3,16 +3,18 @@
     <article class="uk-comment" v-for="(ad, index) in ads" v-bind:todo="ad" v-bind:key="ad.id">
         <div class="uk-card uk-card-default uk-card-body uk-padding-small">
             <div class="uk-text-right">
-                <span class="uk-label" v-if="ad.computed_props.isRenewed == false"><a v-on:click.prevent.stop="onDoRenew(ad)" class="uk-link-reset">Renueva</a></span>
-                <span class="uk-label"><a v-bind:href="getBetUrl(ad.idanuncio)" target="_blank" class="uk-link-reset">Subasta</a></span>
+                <span class="uk-label" v-if="enableRenew == true"><a v-on:click.prevent.stop="onDoRenew(ad)" class="uk-link-reset">Renueva</a></span>
+                <span class="uk-label" v-if="enableBets == true"><a v-bind:href="getBetUrl(ad.idanuncio)" target="_blank" class="uk-link-reset">Subasta</a></span>
             </div>
             <div class="uk-width-auto uk-flex uk-flex-top uk-flex-between">
                 <div class="uk-width-1-4 uk-height-max-small">
-                    <img v-bind:src="getFotoFromAd(ad)" class="uk-margin-auto">
+                    <a class="uk-link-reset" v-bind:href="getAdUrl(ad.idanuncio)" target="_blank">
+                        <img v-bind:src="getFotoFromAd(ad)" class="uk-margin-auto">
+                    </a>
                 </div>
                 <div class="uk-width-3-4 uk-padding-small">
                     <div>
-                        <a class="uk-link-reset" v-bind:href="getAdUrl(ad.idanuncio)" target="_blank">{{ad.titulo}}</a>
+                        <a class="uk-link-reset" v-bind:href="getAdUrl(ad.idanuncio)" target="_blank">{{sanitizeTitle(ad.titulo)}}</a>
                     </div>
                     <div>{{sanitizeText(ad.texto)}}</div>
                     <div>&nbsp;</div>
@@ -41,7 +43,9 @@ export default {
     props: {
         ads: {
             type: Array
-        }
+        },
+        enableRenew: Boolean,
+        enableBets: Boolean
     },
     data: function () {
         return {
@@ -56,6 +60,12 @@ export default {
         },
         getBetUrl: function (idanuncio){
             return `https://www.milanuncios.com/mis-anuncios/subastas/${idanuncio}`
+        },
+        sanitizeTitle: function (text){
+            if (text.trim().length > 36 ) {
+                return (`${text.trim().substring(0,33)}...`)
+            }
+            return text.trim()
         },
         sanitizeText: function (text){
             if (text.trim().length > 88 ) {
