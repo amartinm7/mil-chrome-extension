@@ -225,23 +225,8 @@ export default {
     };
   },
   methods: {
-    getFotoFromAd: function (ad){
-      return ( ad.fotos_thumb != undefined && ad.fotos_thumb[0] != undefined ) ?  ad.fotos_thumb[0] : ""
-    },
-    getAdUrl: function (idanuncio) {
-      return `http://www.milanuncios.com/anuncios/r${idanuncio}.htm`
-    },
-    getBetUrl: function (idanuncio){
-      return `https://www.milanuncios.com/mis-anuncios/subastas/${idanuncio}`
-    },
     getDate: function (){
       return (this.logedUser != undefined ) ? new Date(this.logedUser.createdAt).toLocaleDateString() : ""
-    },
-    sanitizeText: function (text){
-      if (text.trim().length > 88 ) {
-        return (`${text.trim().substring(0,85)}...`)
-      }
-      return text.trim()
     },
     hasErrorsInLoginForm(){
       this.formData.errors.invalidEmail = !this.formData.email || 0 === this.formData.email.length
