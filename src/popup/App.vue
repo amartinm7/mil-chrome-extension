@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="uk-section uk-section-xsmall">
+    <section class="uk-section uk-section-xsmall uk-padding-remove-bottom">
       <div class="uk-grid-small uk-flex-middle uk-flex-around" uk-grid>
         <div class="uk-width-auto" >
           <div class="uk-width-auto" v-show="isLogged == true">
@@ -552,12 +552,12 @@ export default {
   .social-media-youtube:hover {
     background: url(https://scm-milanuncios-frontend-pro.milanuncios.com/statics/images/common/social-networks/ic-youtube-footer-hover.18e3d63e1c.svg) no-repeat;
   }
-/*
+
   div {
     background-color: lightgrey;;
     border: 1px solid green;
     padding: 1px;
     margin: 1px;
   }
-*/
+
 </style>
