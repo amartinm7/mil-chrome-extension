@@ -13,7 +13,7 @@
                 </div>
                 <div class="uk-width-expand">
                   <h6 class="uk-card-subtitle uk-margin-remove-bottom">{{logedUser.email}}</h6>
-                  <p class="uk-text-meta uk-margin-remove-top">Usuario desde el {{ getDate() }}</p>
+                  <p class="uk-text-meta uk-margin-remove-top">{{ getUserDateMsg() }}</p>
                 </div>
                 <ul class="uk-nav uk-nav-default" uk-accordion="collapsible: false">
                   <li class="uk-nav-divider"></li>
@@ -238,8 +238,13 @@ export default {
     };
   },
   methods: {
-    getDate: function (){
-      return (this.logedUser != undefined ) ? new Date(this.logedUser.createdAt).toLocaleDateString() : ""
+    getUserDateMsg: function (){
+      try{
+        const strDate =  new Date(this.logedUser.createdAt).toLocaleDateString()
+        return (strDate.startsWith("Invalid")) ? "" : `Usuario desde el ${strDate}`
+      } catch (e) {
+        return ""
+      }
     },
     hasErrorsInLoginForm(){
       this.formData.errors.invalidEmail = !this.formData.email || 0 === this.formData.email.length
@@ -248,7 +253,7 @@ export default {
     },
     onAdSearch: function () {
       const url = `https://www.milanuncios.com/anuncios/${this.searchFormData.keywords}.htm?fromSearch=1`
-      window.open(url, '_blank');
+      window.open(url, '_blank')
     },
     onDoRenew: async function(ad){
       console.log(">>>onDoRenew")
