@@ -203,7 +203,7 @@ import qs from 'querystring'
 import MyAds from './domain/MyAds'
 import MyFavouriteAds from './domain/MyFavouriteAds'
 
-import MyAdsComponent from "./component/yourAds/MyAdsComponent";
+import MyAdsComponent from "./component/myAds/MyAdsComponent";
 
 export default {
   name: "app",
