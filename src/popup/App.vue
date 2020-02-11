@@ -93,8 +93,8 @@
     <!-- items -->
     <section class="uk-section uk-section-xsmall" v-if="isLogged == true">
       <ul uk-tab class="uk-flex-around">
-        <li class="uk-active"><a href="#" uk-icon="icon: copy"></a>Tús Anuncios</li>
-        <li><a href="#" uk-icon="icon: heart"></a>Tús Favoritos</li>
+        <li class="uk-active"><a href="#" uk-icon="icon: copy"></a>Mis Anuncios</li>
+        <li><a href="#" uk-icon="icon: heart"></a>Mis Favoritos</li>
         <li><a href="#" uk-icon="icon: search"></a>Utl. Búsquedas</li>
       </ul>
       <div class="uk-switcher">
