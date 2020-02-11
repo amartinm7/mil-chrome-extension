@@ -39,7 +39,7 @@
 <script>
 
 export default {
-    name: 'yourAdsComponent',
+    name: 'myAdsComponent',
     props: {
         ads: {
             type: Array
@@ -80,7 +80,7 @@ export default {
     created() {
     },
     mounted: async function () {
-        console.log(">>>yourAdsComponent loading your ads")
+        console.log(">>>myAdsComponent loading your ads")
     }
 }
 </script>

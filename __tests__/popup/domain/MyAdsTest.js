@@ -1,7 +1,7 @@
 const assert = require("assert")
-import yourAds from '../../src/popup/domain/YourAds'
+import myAds from '../../../src/popup/domain/MyAds'
 
-console.log("welcome! youAds test")
+console.log("welcome! MyAds test")
 
 describe('jsonAdToAdTransformer', function() {
     describe('transform', function() {
@@ -15,7 +15,7 @@ describe('jsonAdToAdTransformer', function() {
                 fotos: ["https...", "http..."],
                 fotos_thumb: ["https...", "http..."],
             }]
-            const expectedYourAds = [{
+            const expectedMyAds = [{
                 idanuncio: "1",
                 titulo: "titulo",
                 precio: "1000",
@@ -27,12 +27,12 @@ describe('jsonAdToAdTransformer', function() {
                     isRenewed: false
                 }
             }]
-            expect(yourAds(givenJsonAd)).toEqual(expectedYourAds)
+            expect(myAds(givenJsonAd)).toEqual(expectedMyAds)
         })
     })
     describe('bye', function() {
         it('should return an empty ad', function() {
-            expect(yourAds("")).toEqual([])
+            expect(myAds("")).toEqual([])
         })
     })
 })
