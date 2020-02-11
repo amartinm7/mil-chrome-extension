@@ -99,22 +99,22 @@
       </ul>
       <div class="uk-switcher">
         <div class="uk-active">
-          <your-ads-component v-bind:ads="ads"
-                              v-bind:enable-renew="yourAdsComponent.enableRenew"
-                              v-bind:enable-bets="yourAdsComponent.enableBets">
-          </your-ads-component>
+          <my-ads-component v-bind:ads="ads"
+                              v-bind:enable-renew="myAdsComponent.enableRenew"
+                              v-bind:enable-bets="myAdsComponent.enableBets">
+          </my-ads-component>
         </div>
         <div>
-          <your-ads-component v-bind:ads="favoriteAds"
+          <my-ads-component v-bind:ads="favoriteAds"
                               v-bind:enable-renew="favouriteAdsComponent.enableRenew"
                               v-bind:enable-bets="favouriteAdsComponent.enableBets">
-          </your-ads-component>
+          </my-ads-component>
         </div>
         <div>
-          <your-ads-component v-bind:ads="favoriteAds"
+          <my-ads-component v-bind:ads="favoriteAds"
                               v-bind:enable-renew="favouriteAdsComponent.enableRenew"
                               v-bind:enable-bets="favouriteAdsComponent.enableBets">
-          </your-ads-component>
+          </my-ads-component>
         </div>
       </div>
     </section>
@@ -200,17 +200,17 @@
 <script>
 import axios from 'axios';
 import qs from 'querystring'
-import YourAds from './domain/YourAds'
-import YourFavouriteAds from './domain/YourFavouriteAds'
+import MyAds from './domain/MyAds'
+import MyFavouriteAds from './domain/MyFavouriteAds'
 
-import YourAdsComponent from "./component/yourAds/yourAdsComponent";
+import MyAdsComponent from "./component/yourAds/MyAdsComponent";
 
 export default {
   name: "app",
-  components: {YourAdsComponent},
+  components: {MyAdsComponent},
   data: function () {
     return {
-      yourAdsComponent:{ enableRenew: true, enableBets: true},
+      myAdsComponent:{ enableRenew: true, enableBets: true},
       favouriteAdsComponent:{ enableRenew: false, enableBets: false},
       isLogged: false,
       isLoading: false,
@@ -335,10 +335,11 @@ export default {
       const { header, params } = await this.getHeaderAndQueryParams(apiTokenFinal)
       console.log("h&qp:" + JSON.stringify({ header, params }))
       const adsResponse = await this.getAds(header, params)
-      vm.ads = YourAds(adsResponse.data.data.anuncios)
+      console.log(JSON.stringify(adsResponse))
+      vm.ads = MyAds(adsResponse.data.data.anuncios)
       console.log(JSON.stringify(vm.ads))
       const favouriteAdsResponse = await this.getFavoriteAds(params)
-      vm.favoriteAds = YourFavouriteAds(favouriteAdsResponse.data.data.anuncios)
+      vm.favoriteAds = MyFavouriteAds(favouriteAdsResponse.data.data.anuncios)
       console.log(JSON.stringify(vm.favoriteAds))
       const savedAdsResponse = await this.getSavedSearchs(header, params)
       console.log(JSON.stringify(vm.savedSearchs))

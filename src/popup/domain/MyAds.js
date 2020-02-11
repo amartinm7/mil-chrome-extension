@@ -1,6 +1,6 @@
-function YourFavouriteAd(jsonAd) {
-    console.log("YourFavouriteAd(jsonAd)...")
-    const yourAd = {
+function MyAd(jsonAd) {
+    console.log("MyAd(jsonAd)...")
+    const myAd = {
         idanuncio: jsonAd.idanuncio,
         titulo: jsonAd.titulo,
         precio: jsonAd.precio,
@@ -12,17 +12,17 @@ function YourFavouriteAd(jsonAd) {
             isRenewed: false
         }
     }
-    return yourAd
+    return myAd
 }
 
-function YourFavouriteAds (jsonAdList){
-    console.log("YourFavouriteAds(jsonAdList)...")
+function MyAds (jsonAdList){
+    console.log("MyAds(jsonAdList)...")
     if (Array.isArray(jsonAdList)){
         return jsonAdList.map(function (jsonAd) {
-            return new YourFavouriteAd(jsonAd);
+            return new MyAd(jsonAd);
         })
     }
     return []
 }
 
-export default YourFavouriteAds
+export default MyAds
