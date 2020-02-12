@@ -1,5 +1,5 @@
 import getMyFavouriteAdsService from "../../../src/popup/application/GetMyFavouriteAdsService"
-import findAllMyFavouritesAds from "../../../src/popup/framework/GetMyFavouritesAdsRepository"
+import findAllMyFavouritesAds from "../../../src/popup/framework/repository/GetMyFavouritesAdsRepository"
 import global from "../global.json"
 const assert = require("assert")
 

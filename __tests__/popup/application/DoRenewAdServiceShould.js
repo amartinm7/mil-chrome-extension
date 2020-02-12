@@ -1,8 +1,8 @@
-import doLogin from "../../../src/popup/framework/DoLogin"
+import doLogin from "../../../src/popup/framework/repository/DoLogin"
 import doRenewAdService from '../../../src/popup/application/DoRenewAdService'
-import doRenewAd from "../../../src/popup/framework/DoRenewAd"
+import doRenewAd from "../../../src/popup/framework/repository/DoRenewAd"
 import global from "../global.json"
-import doLoginWithCurrentCookies from "../../../src/popup/framework/DoLoginWithCurrentCookies"
+import doLoginWithCurrentCookies from "../../../src/popup/framework/repository/DoLoginWithCurrentCookies"
 const assert = require("assert")
 
 console.log("welcome! DoRenewService test")

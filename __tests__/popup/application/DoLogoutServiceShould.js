@@ -1,5 +1,5 @@
 import doLogoutService from "../../../src/popup/application/DoLogoutService"
-import doLogout from "../../../src/popup/framework/DoLogout"
+import doLogout from "../../../src/popup/framework/repository/DoLogout"
 const assert = require("assert")
 
 console.log("welcome! DoLogoutService test")

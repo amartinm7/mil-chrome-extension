@@ -1,6 +1,6 @@
 const assert = require("assert")
-import findAll from '../../../src/popup/framework/GetMyAdsRepository'
-import global from "../global.json"
+import findAll from '../../../../src/popup/framework/repository/GetMyAdsRepository'
+import global from "../../global.json"
 
 console.log("welcome! GetMyAdsRepository test")
 
