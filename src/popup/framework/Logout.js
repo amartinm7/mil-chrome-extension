@@ -1,6 +1,6 @@
 import axios from "axios";
 
-function logout(apiToken) {
+async function logout(apiToken) {
     console.log(">>>logout")
     const url = "https://www.milanuncios.com/api/v3/logout"
     return axios({
