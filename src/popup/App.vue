@@ -228,7 +228,7 @@ export default {
       },
       logedUser: {
         email: "",
-        createdAt: "01/01/2020"
+        createdAt: ""
       },
       ads:[
       ],
