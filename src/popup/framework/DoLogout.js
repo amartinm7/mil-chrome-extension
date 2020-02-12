@@ -1,7 +1,7 @@
 import axios from "axios";
 
-async function logout(apiToken) {
-    console.log(">>>logout")
+async function doLogout(apiToken) {
+    console.log(">>>doLogout")
     const url = "https://www.milanuncios.com/api/v3/logout"
     return axios({
         method: 'post',
@@ -10,4 +10,4 @@ async function logout(apiToken) {
     })
 }
 
-export default logout
+export default doLogout

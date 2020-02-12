@@ -7,7 +7,6 @@ async function getHeaderAndData (email, password){
         "password": password,
         "rememberMe": "true"
     }
-
     const header = {
         "Content-Type": "application/json",
         "mav": "2",
@@ -20,13 +19,12 @@ async function getHeaderAndData (email, password){
     )
 }
 
-async function login(credentials) {
+async function doLogin(credentials) {
     console.log(">>>login")
     const {email, password} = credentials
     const url = "https://www.milanuncios.com/api/v3/logins"
     const  {header, data}  = await getHeaderAndData(email, password)
     console.log(JSON.stringify({header, data}))
-
     return axios({
         method: 'post',
         url: url,
@@ -36,4 +34,4 @@ async function login(credentials) {
     })
 }
 
-export default login
+export default doLogin
