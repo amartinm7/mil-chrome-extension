@@ -1,13 +1,18 @@
+import {Credentials} from "../../domain/Credentials";
+
 class DoLoginService {
     constructor(doLogin) {
         this.doLogin = doLogin
     }
     async execute (doLoginServiceRequest) {
         console.log(">>>doLoginService")
-        const loginResponse = await this.doLogin(doLoginServiceRequest.credentials)
+        const loginResponse = await this.doLogin(toCredentialsDomain(doLoginServiceRequest.credentials))
         console.log(JSON.stringify(loginResponse.data))
         return toDoLoginServiceResponse(loginResponse)
     }
+}
+function  toCredentialsDomain({email, password}) {
+    return new Credentials(email, password)
 }
 
 function toDoLoginServiceResponse(loginResponse) {
