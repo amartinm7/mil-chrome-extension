@@ -63,7 +63,7 @@
       </div>
 
     </section>
-    <!-- login -->
+    <!-- user -->
     <section class="uk-section uk-section-xsmall" v-if="isLogged == false">
       <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m">
         <div class="uk-container">
@@ -89,7 +89,7 @@
         </div>
       </div>
     </section>
-    <!-- end login -->
+    <!-- end user -->
     <!-- items -->
     <section class="uk-section uk-section-xsmall" v-if="isLogged == true">
       <ul uk-tab class="uk-flex-around">
@@ -199,10 +199,11 @@
 <script>
 import axios from 'axios';
 import qs from 'querystring'
-import MyAds from './domain/MyAds'
-import MyFavouriteAds from './domain/MyFavouriteAds'
-
+import MyAds from './domain/ad/MyAds'
+import MyFavouriteAds from './domain/ad/MyFavouriteAds'
 import MyAdsComponent from "./component/myAds/MyAdsComponent";
+import TransformToMyAdsService from "./framework/transformers/TransformToMyAdsService";
+import TransformToMyFavouriteAdsService from "./framework/transformers/TransformToMyFavouriteAdsService";
 
 export default {
   name: "app",
@@ -323,7 +324,7 @@ export default {
       let apiTokenFinal = apiToken
       if (apiToken == undefined || apiToken.isEmpty) {
         loginResponse = await this.doLogin()
-        console.log(">>>doLogin")
+        console.log(">>>doLoginRepository")
         console.log(">>>cookies" + JSON.stringify(loginResponse.headers))
         vm.logedUser.email = loginResponse.data.user.email
         vm.logedUser.createdAt = loginResponse.data.user.createdAt
@@ -335,10 +336,10 @@ export default {
       console.log("h&qp:" + JSON.stringify({ header, params }))
       const adsResponse = await this.getAds(header, params)
       console.log(JSON.stringify(adsResponse))
-      vm.ads = MyAds(adsResponse.data.data.anuncios)
+      vm.ads = new TransformToMyAdsService().toMyAds(adsResponse.data.data.anuncios)
       console.log(JSON.stringify(vm.ads))
       const favouriteAdsResponse = await this.getFavoriteAds(params)
-      vm.favoriteAds = MyFavouriteAds(favouriteAdsResponse.data.data.anuncios)
+      vm.favoriteAds = new TransformToMyFavouriteAdsService().toMyFavouriteAds(favouriteAdsResponse.data.data.anuncios)
       console.log(JSON.stringify(vm.favoriteAds))
       const savedAdsResponse = await this.getSavedSearchs(header, params)
       console.log(JSON.stringify(vm.savedSearchs))
@@ -346,7 +347,7 @@ export default {
       return Promise.resolve(123)
     },
     doLogin: async function () {
-      console.log(">>>doLogin")
+      console.log(">>>doLoginRepository")
       const url = "https://www.milanuncios.com/api/v3/logins"
       const data = {
         "identifier": this.formData.email,

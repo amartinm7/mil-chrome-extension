@@ -1,4 +1,4 @@
-import MyFavouriteAds from "../../domain/MyFavouriteAds";
+import MyFavouriteAds from "../../domain/ad/MyFavouriteAds";
 
 export default class TransformToMyFavouriteAdsService {
     constructor() {

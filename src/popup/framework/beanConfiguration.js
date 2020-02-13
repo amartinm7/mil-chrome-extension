@@ -1,7 +1,7 @@
-import doLoginService from "../application/login/DoLoginService";
+import doLoginService from "../application/user/DoLoginService";
 
-import doLogin from "./repository/DoLogin";
+import doLoginRepository from "./repository/user/DoLoginRepository";
 
 export default beanConfiguration = {
-    doLoginService: doLoginService(doLogin, credentials)
+    doLoginService: doLoginService(doLoginRepository, credentials)
 }

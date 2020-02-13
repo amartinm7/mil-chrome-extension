@@ -1,4 +1,4 @@
-import MyAds from "../../domain/MyAds";
+import MyAds from "../../domain/ad/MyAds";
 
 export default class TransformToMyAdsService {
     constructor() {
