@@ -1,7 +1,7 @@
-import qs from "querystring";
 import axios from "axios";
+import qs from "querystring";
 
-export default class GetMyAdsRepository {
+export default class GetMyFavouriteAdsRepository {
     constructor() {
     }
 
@@ -16,7 +16,7 @@ export default class GetMyAdsRepository {
             "mav": "2",
             "Accept": "*/*",
             "Cache-Control": "no-cache",
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/x-www-form-urlencoded'
         }
         console.log(">>>getHeaderAndQueryParams:" + JSON.stringify({header, params}))
         return new Promise(
@@ -24,25 +24,24 @@ export default class GetMyAdsRepository {
         )
     }
 
-    async getAds (header, params) {
-        console.log(">>>getAds:" + JSON.stringify({header, params}))
-        const urlMisAnuncios = `https://www.milanuncios.com/api/v2/misanuncios/misanuncios.php?${qs.stringify(params)}`
-        console.log(">>>getAds:" + urlMisAnuncios)
+    async getFavoriteAds (header, params) {
+        console.log(">>>getFavoriteAds:" + JSON.stringify({header, params}))
+        const urlMisFavoritos = `https://www.milanuncios.com/api/v2/favoritos/favoritos.php`
+        console.log(">>>getFavoriteAds urlMisFavoritos:" + urlMisFavoritos)
         return axios({
             method: 'post',
-            url: urlMisAnuncios,
-            data: params,
+            url: urlMisFavoritos,
             headers: header,
+            data: qs.stringify(params),
             config: { withCredentials: true }
         })
     }
 
-    async findAllAdsByUserId (apiToken) {
-        console.log(">>>loadPage")
+    async findAllMyFavouritesAds(apiToken) {
         if (apiToken === undefined || apiToken === ""){ return }
         const {header, params} = await this.getHeaderAndQueryParams(apiToken)
         console.log("getHeaderAndQueryParams:" + JSON.stringify({header, params}))
-        const adsResponse = await this.getAds(header, params)
+        const adsResponse = await this.getFavoriteAds(header, params)
         return new Promise(
             (resolve, reject) => resolve( adsResponse))
     }
