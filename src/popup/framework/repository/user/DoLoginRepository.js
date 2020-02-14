@@ -4,7 +4,7 @@ export default class DoLoginRepository {
     constructor() {
     }
 
-    async getHeaderAndData(email, password) {
+    async _getHeaderAndData(email, password) {
         console.log(">>>getHeaderAndData")
         const data = {
             "identifier": email,
@@ -27,7 +27,7 @@ export default class DoLoginRepository {
         console.log(">>>user")
         const {email, password} = credentials
         const url = "https://www.milanuncios.com/api/v3/logins"
-        const {header, data} = await this.getHeaderAndData(email, password)
+        const {header, data} = await this._getHeaderAndData(email, password)
         console.log(JSON.stringify({header, data}))
         return axios({
             method: 'post',

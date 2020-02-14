@@ -1,12 +1,12 @@
 class DoLoginService {
     constructor(doLoginRepository, transformToCredentialsService) {
-        this.doLoginRepository = doLoginRepository
-        this.transformToCredentialsService = transformToCredentialsService
+        this._doLoginRepository = doLoginRepository
+        this._transformToCredentialsService = transformToCredentialsService
     }
     async execute (doLoginServiceRequest) {
         console.log(">>>doLoginService")
-        const loginResponse = await this.doLoginRepository.doLogin(
-            this.transformToCredentialsService.toCredentials(doLoginServiceRequest.credentials)
+        const loginResponse = await this._doLoginRepository.doLogin(
+            this._transformToCredentialsService.toCredentials(doLoginServiceRequest.credentials)
         )
         console.log(JSON.stringify(loginResponse.data))
         return toDoLoginServiceResponse(loginResponse)

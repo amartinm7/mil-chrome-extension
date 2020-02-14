@@ -1,14 +1,14 @@
 class GetMyFavouriteAdsService{
     constructor(getMyFavouriteAdsRepository, transformToMyFavouriteAdsService) {
-        this.getMyFavouriteAdsRepository = getMyFavouriteAdsRepository
-        this.transformToMyFavouriteAdsService = transformToMyFavouriteAdsService
+        this._getMyFavouriteAdsRepository = getMyFavouriteAdsRepository
+        this._transformToMyFavouriteAdsService = transformToMyFavouriteAdsService
     }
 
     async execute (getMyFavouriteAdsServiceRequest) {
         console.log(">>>GetMyFavouriteAdsService")
         if (!!getMyFavouriteAdsServiceRequest.apiToken == false){ return }
-        const adsResponse = await this.getMyFavouriteAdsRepository.findAllMyFavouritesAds(getMyFavouriteAdsServiceRequest.apiToken)
-        const ads = new GetMyFavouriteAdsServiceResponse( this.transformToMyFavouriteAdsService.toMyFavouriteAds(adsResponse.data.data.anuncios) )
+        const adsResponse = await this._getMyFavouriteAdsRepository.findAllMyFavouritesAds(getMyFavouriteAdsServiceRequest.apiToken)
+        const ads = new GetMyFavouriteAdsServiceResponse( this._transformToMyFavouriteAdsService.toMyFavouriteAds(adsResponse.data.data.anuncios) )
         console.log(JSON.stringify(ads))
         return ads
     }

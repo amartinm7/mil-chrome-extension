@@ -199,11 +199,13 @@
 <script>
 import axios from 'axios';
 import qs from 'querystring'
-import MyAds from './domain/ad/MyAds'
-import MyFavouriteAds from './domain/ad/MyFavouriteAds'
 import MyAdsComponent from "./component/myAds/MyAdsComponent";
 import TransformToMyAdsService from "./framework/transformers/TransformToMyAdsService";
 import TransformToMyFavouriteAdsService from "./framework/transformers/TransformToMyFavouriteAdsService";
+import ServiceFactoryBean from "./framework/ServiceFactoryBean"
+import {GetMyAdsServiceRequest} from "./application/ad/GetMyAdsService";
+import {GetMyFavouriteAdsServiceRequest} from "./application/ad/GetMyFavouriteAdsService";
+
 
 export default {
   name: "app",
@@ -323,28 +325,23 @@ export default {
       let loginResponse = {}
       let apiTokenFinal = apiToken
       if (apiToken == undefined || apiToken.isEmpty) {
-        loginResponse = await this.doLogin()
-        console.log(">>>doLoginRepository")
-        console.log(">>>cookies" + JSON.stringify(loginResponse.headers))
-        vm.logedUser.email = loginResponse.data.user.email
-        vm.logedUser.createdAt = loginResponse.data.user.createdAt
-        console.log(">>>loginResponse: " + JSON.stringify(loginResponse))
-        apiTokenFinal = loginResponse.data.session.apiToken
+        const doLoginServiceResponse = await ServiceFactoryBean.doLoginService().execute()
+        vm.logedUser.email = doLoginServiceResponse.email
+        vm.logedUser.createdAt = doLoginServiceResponse.createdAt
+        apiTokenFinal = doLoginServiceResponse.apiToken
       }
       vm.isLogged = true
-      const { header, params } = await this.getHeaderAndQueryParams(apiTokenFinal)
-      console.log("h&qp:" + JSON.stringify({ header, params }))
-      const adsResponse = await this.getAds(header, params)
-      console.log(JSON.stringify(adsResponse))
-      vm.ads = new TransformToMyAdsService().toMyAds(adsResponse.data.data.anuncios)
-      console.log(JSON.stringify(vm.ads))
-      const favouriteAdsResponse = await this.getFavoriteAds(params)
-      vm.favoriteAds = new TransformToMyFavouriteAdsService().toMyFavouriteAds(favouriteAdsResponse.data.data.anuncios)
-      console.log(JSON.stringify(vm.favoriteAds))
+
+      const getMyAdsServiceResponse = await ServiceFactoryBean.getMyAdsService().execute(new GetMyAdsServiceRequest(apiToken))
+      vm.ads = getMyAdsServiceResponse.ads
+      const getMyFavouriteAdsServiceResponse = await ServiceFactoryBean.getMyFavouriteAdsService().execute(new GetMyFavouriteAdsServiceRequest(apiToken))
+      vm.favoriteAds = getMyFavouriteAdsServiceResponse.ads
+
+      /*
       const savedAdsResponse = await this.getSavedSearchs(header, params)
       console.log(JSON.stringify(vm.savedSearchs))
       vm.savedSearchs = savedAdsResponse.data.data.anuncios
-      return Promise.resolve(123)
+       */
     },
     doLogin: async function () {
       console.log(">>>doLoginRepository")

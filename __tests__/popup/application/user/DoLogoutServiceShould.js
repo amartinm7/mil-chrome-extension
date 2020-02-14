@@ -15,12 +15,12 @@ describe('DoLogoutService', function() {
     describe('DoLogoutRepository', function() {
         it('should return a valid response', async function() {
             //GIVEN
-            const mockedAds = {}
+            const mockedDoLogoutRepositoryResponse = {}
             //WHEN
             const expected = new DoLogoutServiceResponse({})
-            const mockDoLoginRepository = jest.fn();
-            DoLoginRepository.prototype.doLogin = mockDoLoginRepository
-            mockDoLoginRepository.mockReturnValue(Promise.resolve(mockedAds))
+            const mockDoLogoutRepository = jest.fn();
+            DoLogoutRepository.prototype.doLogin = mockDoLogoutRepository
+            mockDoLogoutRepository.mockReturnValue(Promise.resolve(mockedDoLogoutRepositoryResponse))
             const doLogoutResponse = await new DoLogoutService(
                 new DoLogoutRepository()
             ).execute(

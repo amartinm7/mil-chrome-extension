@@ -5,7 +5,7 @@ export default class GetMyAdsRepository {
     constructor() {
     }
 
-    async getHeaderAndQueryParams (apiToken){
+    async _getHeaderAndQueryParams (apiToken){
         console.log(">>>getHeaderAndQueryParams")
         const params =  {
             "r": "30",
@@ -24,7 +24,7 @@ export default class GetMyAdsRepository {
         )
     }
 
-    async getAds (header, params) {
+    async _getAds (header, params) {
         console.log(">>>getAds:" + JSON.stringify({header, params}))
         const urlMisAnuncios = `https://www.milanuncios.com/api/v2/misanuncios/misanuncios.php?${qs.stringify(params)}`
         console.log(">>>getAds:" + urlMisAnuncios)
@@ -40,9 +40,9 @@ export default class GetMyAdsRepository {
     async findAllAdsByUserId (apiToken) {
         console.log(">>>loadPage")
         if (apiToken === undefined || apiToken === ""){ return }
-        const {header, params} = await this.getHeaderAndQueryParams(apiToken)
+        const {header, params} = await this._getHeaderAndQueryParams(apiToken)
         console.log("getHeaderAndQueryParams:" + JSON.stringify({header, params}))
-        const adsResponse = await this.getAds(header, params)
+        const adsResponse = await this._getAds(header, params)
         return new Promise(
             (resolve, reject) => resolve( adsResponse))
     }

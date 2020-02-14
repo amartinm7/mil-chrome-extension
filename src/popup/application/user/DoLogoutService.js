@@ -1,10 +1,10 @@
 class DoLogoutService {
     constructor(doLogoutRepository) {
-        this.doLogoutRepository = doLogoutRepository
+        this._doLogoutRepository = doLogoutRepository
     }
     async execute(doLogoutRequest) {
         console.log(">>>doLogoutService")
-        const response = await this.doLogoutRepository.doLogout(doLogoutRequest.apiToken)
+        const response = await this._doLogoutRepository.doLogout(doLogoutRequest.apiToken)
         console.log(JSON.stringify(response))
         return new DoLogoutServiceResponse({})
     }

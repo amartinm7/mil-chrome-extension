@@ -5,8 +5,8 @@ import TransformToMyAdsService from "../../../../src/popup/framework/transformer
 import global from "../../global";
 import {DoRenewAdService, DoRenewAdServiceRequest} from "../../../../src/popup/application/ad/DoRenewAdService";
 import DoLoginRepository from "../../../../src/popup/framework/repository/user/DoLoginRepository";
-import DoLoginWithCurrentCookiesRepository
-    from "../../../../src/popup/framework/repository/user/DoLoginWithCurrentCookiesRepository";
+import DoLoginWithCookiesRepository
+    from "../../../../src/popup/framework/repository/user/DoLoginWithCookiesRepository";
 
 const assert = require("assert")
 
@@ -27,13 +27,13 @@ describe('DoRenewAdService', function() {
             const mockDoRenewAdRepository = jest.fn();
             DoLoginRepository.prototype.doRenewAd = mockDoLoginRepository;
             mockDoLoginRepository.mockReturnValue(Promise.resolve(mockedAds));
-            DoLoginWithCurrentCookiesRepository.prototype.doRenewAd = mockDoLoginWithCurrentCookiesRepository;
+            DoLoginWithCookiesRepository.prototype.doRenewAd = mockDoLoginWithCurrentCookiesRepository;
             mockDoLoginWithCurrentCookiesRepository.mockReturnValue(Promise.resolve(mockedAds));
             DoRenewAdRepository.prototype.doRenewAd = mockDoRenewAdRepository;
             mockDoRenewAdRepository.mockReturnValue(Promise.resolve(mockedAds));
             const doRenewAdServiceResponse = await new DoRenewAdService(
                 new DoLoginRepository(),
-                new DoLoginWithCurrentCookiesRepository(),
+                new DoLoginWithCookiesRepository(),
                 new DoRenewAdRepository()
             ).execute(
                 new DoRenewAdServiceRequest({credentials: global.credentials, ad: global.ad})

@@ -2,7 +2,7 @@ import axios from "axios"
 import qs from 'querystring'
 
 export default class DoRenewAdRepository {
-    async getHeaderAndQueryParams (apiToken){
+    async _getHeaderAndQueryParams (apiToken){
         console.log(">>>getHeaderAndQueryParams")
         const params =  {
             "r": "30",
@@ -25,7 +25,7 @@ export default class DoRenewAdRepository {
     async doRenewAd (apiToken, adId) {
         console.log(">>>doRenewAd")
         const vm = this
-        const { header, params } = await this.getHeaderAndQueryParams(apiToken)
+        const { header, params } = await this._getHeaderAndQueryParams(apiToken)
         console.log("h&qp:" + JSON.stringify({ header, params }))
         const url = `https://www.milanuncios.com/api/v3/adrenew/${adId}`
         return axios({

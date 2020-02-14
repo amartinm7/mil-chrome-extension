@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export default class DoLoginWithCurrentCookiesRepository {
+export default class DoLoginWithCookiesRepository {
     constructor() {
     }
     async doLoginWithCurrentCookies() {

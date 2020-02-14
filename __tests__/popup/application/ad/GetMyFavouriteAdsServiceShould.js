@@ -13,7 +13,7 @@ describe('GetMyFavouriteAdsService', function() {
     describe('getMyFavouritesAdsRepository', function() {
         it('should return a valid ad', async function() {
             //GIVEN
-            const mockedAds = {
+            const mockedMyFavouriteAdsRepositoryResponse = {
                 data: {
                     data:{
                         anuncios: [
@@ -28,7 +28,7 @@ describe('GetMyFavouriteAdsService', function() {
             }
             const mockGetMyFavouriteAdsRepository = jest.fn();
             GetMyFavouriteAdsRepository.prototype.findAllMyFavouritesAds = mockGetMyFavouriteAdsRepository;
-            mockGetMyFavouriteAdsRepository.mockReturnValue(Promise.resolve(mockedAds));
+            mockGetMyFavouriteAdsRepository.mockReturnValue(Promise.resolve(mockedMyFavouriteAdsRepositoryResponse));
             const ads = await new GetMyFavouriteAdsService(
                 new GetMyFavouriteAdsRepository(),
                 new TransformToMyFavouriteAdsService()

@@ -1,14 +1,14 @@
 class GetMyAdsService{
     constructor(getMyAdsRepository, transformToMyAdsService) {
-        this.getMyAdsRepository = getMyAdsRepository
-        this.transformToMyAdsService = transformToMyAdsService
+        this._getMyAdsRepository = getMyAdsRepository
+        this._transformToMyAdsService = transformToMyAdsService
     }
 
     async execute (getMyAdsServiceRequest) {
         console.log(">>>getMyAdsService")
         if (!!getMyAdsServiceRequest.apiToken == false){ return }
-        const adsResponse = await this.getMyAdsRepository.findAllAdsByUserId(getMyAdsServiceRequest.apiToken)
-        const ads = new GetMyAdsServiceResponse( this.transformToMyAdsService.toMyAds(adsResponse.data.data.anuncios) )
+        const adsResponse = await this._getMyAdsRepository.findAllAdsByUserId(getMyAdsServiceRequest.apiToken)
+        const ads = new GetMyAdsServiceResponse( this._transformToMyAdsService.toMyAds(adsResponse.data.data.anuncios) )
         console.log(JSON.stringify(ads))
         return ads
     }

@@ -5,7 +5,7 @@ export default class GetMyFavouriteAdsRepository {
     constructor() {
     }
 
-    async getHeaderAndQueryParams (apiToken){
+    async _getHeaderAndQueryParams (apiToken){
         console.log(">>>getHeaderAndQueryParams")
         const params =  {
             "r": "30",
@@ -24,7 +24,7 @@ export default class GetMyFavouriteAdsRepository {
         )
     }
 
-    async getFavoriteAds (header, params) {
+    async _getFavoriteAds (header, params) {
         console.log(">>>getFavoriteAds:" + JSON.stringify({header, params}))
         const urlMisFavoritos = `https://www.milanuncios.com/api/v2/favoritos/favoritos.php`
         console.log(">>>getFavoriteAds urlMisFavoritos:" + urlMisFavoritos)
@@ -39,9 +39,9 @@ export default class GetMyFavouriteAdsRepository {
 
     async findAllMyFavouritesAds(apiToken) {
         if (apiToken === undefined || apiToken === ""){ return }
-        const {header, params} = await this.getHeaderAndQueryParams(apiToken)
+        const {header, params} = await this._getHeaderAndQueryParams(apiToken)
         console.log("getHeaderAndQueryParams:" + JSON.stringify({header, params}))
-        const adsResponse = await this.getFavoriteAds(header, params)
+        const adsResponse = await this._getFavoriteAds(header, params)
         return new Promise(
             (resolve, reject) => resolve( adsResponse))
     }

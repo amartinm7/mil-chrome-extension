@@ -16,7 +16,7 @@ describe('DoLoginService', function() {
     describe('user', function() {
         it('should return a valid response', async function() {
             //GIVEN
-            const mockedAds = {
+            const mockedDoLoginRepositoryResponse = {
                 data: {
                     user:{
                         email: 'antonio.martin@schibsted.com',
@@ -35,7 +35,7 @@ describe('DoLoginService', function() {
             })
             const mockDoLoginRepository = jest.fn();
             DoLoginRepository.prototype.doLogin = mockDoLoginRepository;
-            mockDoLoginRepository.mockReturnValue(Promise.resolve(mockedAds));
+            mockDoLoginRepository.mockReturnValue(Promise.resolve(mockedDoLoginRepositoryResponse));
             const doLoginServiceResponse = await new DoLoginService(
                 new DoLoginRepository(), new TransformToCredentialsService()
             ).execute(
