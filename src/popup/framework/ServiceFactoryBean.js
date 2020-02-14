@@ -12,6 +12,7 @@ import TransformToMyAdsService from "./transformers/TransformToMyAdsService";
 import {GetMyFavouriteAdsService} from "../application/ad/GetMyFavouriteAdsService";
 import GetMyFavouriteAdsRepository from "./repository/ad/GetMyFavouriteAdsRepository";
 import TransformToMyFavouriteAdsService from "./transformers/TransformToMyFavouriteAdsService";
+import {DoLoginWithCookiesService} from "../application/user/DoLoginWithCookiesService";
 
 let instance = null
 
@@ -19,6 +20,7 @@ export default class ServiceFactoryBean{
     constructor() {
         console.log(">>>Init ServiceFactoryBean")
         this._doLoginService = new DoLoginService(new DoLoginRepository(), new TransformToCredentialsService()),
+        this._doLoginWithCookiesService = new DoLoginWithCookiesService(new DoLoginRepository(), new DoLoginWithCookiesRepository(), new TransformToCredentialsService()),
         this._doLogoutService =  new DoLogoutService(new DoLogoutRepository()),
         this._doRenewAdService = new DoRenewAdService(new DoLoginRepository(), new DoLoginWithCookiesRepository(), new DoRenewAdRepository()),
         this._getMyAdsService = new GetMyAdsService(new GetMyAdsRepository(), new TransformToMyAdsService())
@@ -34,6 +36,10 @@ export default class ServiceFactoryBean{
 
     static doLoginService() {
         return this.getInstance()._doLoginService
+    }
+
+    static doLoginWithCookiesService() {
+        return this.getInstance()._doLoginWithCookiesService
     }
 
     static doLogoutService() {

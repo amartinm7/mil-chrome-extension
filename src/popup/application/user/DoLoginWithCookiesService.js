@@ -7,13 +7,13 @@ class DoLoginWithCookiesService {
     async execute (doLoginWithCookiesServiceRequest) {
         console.log(">>>DoLoginWithCookiesService")
         try {
-            const apiToken = await this._executeDoLoginWithCookies()
-            return toDoLoginWithCookiesServiceResponse(apiToken)
+            return await this._executeDoLoginWithCookies()
         } catch (e) {
-            const apiToken = await this._executeDoLogin(
-                this._transformToCredentialsService.toCredentials(doLoginWithCookiesServiceRequest.credentials)
+            return await this._executeDoLogin(
+                this._transformToCredentialsService.toCredentials(
+                    { email: doLoginWithCookiesServiceRequest.email, password: doLoginWithCookiesServiceRequest.password }
+                )
             )
-            return toDoLoginWithCookiesServiceResponse(apiToken)
         }
     }
 
@@ -21,35 +21,38 @@ class DoLoginWithCookiesService {
         console.log(">>>_executeDoLoginWithCookies")
         const doLoginWitCookiesResponse = await this._doLoginWithCookiesRepository.doLoginWithCurrentCookies()
         console.log(JSON.stringify(doLoginWitCookiesResponse))
-        const apiToken = doLoginWitCookiesResponse.data.apiToken
-        return apiToken
+        return new DoLoginWithCookiesServiceResponse({apiToken: doLoginWitCookiesResponse.data.apiToken})
     }
 
     async _executeDoLogin(credentials){
         console.log(">>>_executeDoLogin")
         const doLoginRepositoryResponse = await this._doLoginRepository.doLogin(credentials)
         console.log(JSON.stringify(doLoginRepositoryResponse))
-        const apiToken = doLoginRepositoryResponse.data.session.apiToken
-        return apiToken
+        return new DoLoginWithCookiesServiceResponse({
+            email: doLoginRepositoryResponse.data.user.email,
+            createdAt: doLoginRepositoryResponse.data.user.createdAt,
+            apiToken: doLoginRepositoryResponse.data.session.apiToken
+        })
     }
 }
 
 class DoLoginWithCookiesServiceRequest {
-    constructor(credentials) {
-        this.credentials = credentials
+    constructor({email, password}) {
+        this.email = email,
+        this.password = password
     }
 }
 
 class DoLoginWithCookiesServiceResponse {
-    constructor({apiToken}) {
-        this.apiToken = apiToken
+    constructor({email, createdAt, apiToken}) {
+        this.logedUser = {
+            email: (email)? email : "",
+            createdAt: (createdAt)? createdAt : "",
+        },
+        this.session = {
+            apiToken: apiToken
+        }
     }
-}
-
-function toDoLoginWithCookiesServiceResponse(apiToken) {
-    return new DoLoginWithCookiesServiceResponse ({
-        apiToken: apiToken
-    })
 }
 
 export {

@@ -36,7 +36,9 @@ describe('DoLoginService', function() {
             }
             //WHEN
             const expected = new DoLoginWithCookiesServiceResponse({
-                'apiToken': 'apiToken'
+                email: "",
+                createdAt: "",
+                apiToken:'apiToken'
             })
             const mockDoLoginRepository = jest.fn();
             DoLoginRepository.prototype.doLogin = mockDoLoginRepository;
@@ -56,6 +58,7 @@ describe('DoLoginService', function() {
             expect(doLoginWithCookiesServiceResponse).not.toBeUndefined()
             expect(doLoginWithCookiesServiceResponse).toEqual(expected)
         })
+
         it('should return a login valid response', async function() {
             //GIVEN
             const mockedDoLoginRepositoryResponse = {
@@ -76,7 +79,9 @@ describe('DoLoginService', function() {
             }
             //WHEN
             const expected = new DoLoginWithCookiesServiceResponse({
-                'apiToken': 'apiToken'
+                email: 'antonio.martin@schibsted.com',
+                createdAt: '2020-02-13T00:32:59+0100',
+                apiToken:'apiToken'
             })
             const mockDoLoginRepository = jest.fn();
             DoLoginRepository.prototype.doLogin = mockDoLoginRepository;

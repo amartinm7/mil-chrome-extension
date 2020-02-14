@@ -205,6 +205,7 @@ import TransformToMyFavouriteAdsService from "./framework/transformers/Transform
 import ServiceFactoryBean from "./framework/ServiceFactoryBean"
 import {GetMyAdsServiceRequest} from "./application/ad/GetMyAdsService";
 import {GetMyFavouriteAdsServiceRequest} from "./application/ad/GetMyFavouriteAdsService";
+import {DoLoginWithCookiesServiceRequest} from "./application/user/DoLoginWithCookiesService";
 
 
 export default {
@@ -228,6 +229,16 @@ export default {
           invalidPassword: false
         },
       },
+      current: {
+        logedUser: {
+          email: "",
+          createdAt: ""
+        },
+        session: {
+          apiToken: ""
+        }
+      },
+
       logedUser: {
         email: "",
         createdAt: ""
@@ -323,18 +334,20 @@ export default {
       console.log(">>>loadPage")
       const vm = this
       let loginResponse = {}
-      let apiTokenFinal = apiToken
-      if (apiToken == undefined || apiToken.isEmpty) {
-        const doLoginServiceResponse = await ServiceFactoryBean.doLoginService().execute()
-        vm.logedUser.email = doLoginServiceResponse.email
-        vm.logedUser.createdAt = doLoginServiceResponse.createdAt
-        apiTokenFinal = doLoginServiceResponse.apiToken
-      }
+      const doLoginServiceResponse = await ServiceFactoryBean.doLoginWithCookiesService().execute(
+            new DoLoginWithCookiesServiceRequest({...formData}
+          )
+      )
+      vm.logedUser = doLoginServiceResponse.logedUser
+      vm.current = doLoginServiceResponse
       vm.isLogged = true
-
-      const getMyAdsServiceResponse = await ServiceFactoryBean.getMyAdsService().execute(new GetMyAdsServiceRequest(apiToken))
+      const getMyAdsServiceResponse = await ServiceFactoryBean.getMyAdsService().execute(
+              new GetMyAdsServiceRequest(doLoginServiceResponse.session.apiToken)
+      )
       vm.ads = getMyAdsServiceResponse.ads
-      const getMyFavouriteAdsServiceResponse = await ServiceFactoryBean.getMyFavouriteAdsService().execute(new GetMyFavouriteAdsServiceRequest(apiToken))
+      const getMyFavouriteAdsServiceResponse = await ServiceFactoryBean.getMyFavouriteAdsService().execute(
+              new GetMyFavouriteAdsServiceRequest(doLoginServiceResponse.session.apiToken)
+      )
       vm.favoriteAds = getMyFavouriteAdsServiceResponse.ads
 
       /*
