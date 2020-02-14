@@ -1,3 +1,5 @@
+import Current from "../../domain/user/Current";
+
 class DoLoginService {
     constructor(doLoginRepository, transformToCredentialsService) {
         this._doLoginRepository = doLoginRepository
@@ -21,13 +23,7 @@ class DoLoginServiceRequest {
 
 class DoLoginServiceResponse {
     constructor({email, createdAt, apiToken}) {
-        this.logedUser = {
-            email: email,
-            createdAt: createdAt
-        }
-        this.session = {
-            apiToken:  apiToken
-        }
+        this.current = new Current({email, createdAt, apiToken})
     }
 }
 

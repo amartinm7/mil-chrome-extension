@@ -1,3 +1,5 @@
+import Current from "../../domain/user/Current";
+
 class DoLoginWithCookiesService {
     constructor(doLoginRepository, doLoginWithCookiesRepository, transformToCredentialsService) {
         this._doLoginRepository = doLoginRepository
@@ -27,7 +29,7 @@ class DoLoginWithCookiesService {
     async _executeDoLogin(credentials){
         console.log(">>>_executeDoLogin")
         const doLoginRepositoryResponse = await this._doLoginRepository.doLogin(credentials)
-        console.log(JSON.stringify(doLoginRepositoryResponse))
+        console.log(JSON.stringify(doLoginRepositoryResponse.data))
         return new DoLoginWithCookiesServiceResponse({
             email: doLoginRepositoryResponse.data.user.email,
             createdAt: doLoginRepositoryResponse.data.user.createdAt,
@@ -45,13 +47,7 @@ class DoLoginWithCookiesServiceRequest {
 
 class DoLoginWithCookiesServiceResponse {
     constructor({email, createdAt, apiToken}) {
-        this.logedUser = {
-            email: (email)? email : "",
-            createdAt: (createdAt)? createdAt : "",
-        },
-        this.session = {
-            apiToken: apiToken
-        }
+        this.current = new Current({email, createdAt, apiToken})
     }
 }
 

@@ -8,7 +8,7 @@ class GetMyFavouriteAdsService{
         console.log(">>>GetMyFavouriteAdsService")
         if (!!getMyFavouriteAdsServiceRequest.apiToken == false){ return }
         const adsResponse = await this._getMyFavouriteAdsRepository.findAllMyFavouritesAds(getMyFavouriteAdsServiceRequest.apiToken)
-        const ads = new GetMyFavouriteAdsServiceResponse( this._transformToMyFavouriteAdsService.toMyFavouriteAds(adsResponse.data.data.anuncios) )
+        const ads = new GetMyFavouriteAdsServiceResponse( {ads: this._transformToMyFavouriteAdsService.toMyFavouriteAds(adsResponse.data.data.anuncios)} )
         console.log(JSON.stringify(ads))
         return ads
     }
@@ -21,7 +21,7 @@ class GetMyFavouriteAdsServiceRequest{
 }
 
 class GetMyFavouriteAdsServiceResponse{
-    constructor(ads) {
+    constructor({ads}) {
         this.ads = ads
     }
 }

@@ -206,6 +206,8 @@ import ServiceFactoryBean from "./framework/ServiceFactoryBean"
 import {GetMyAdsServiceRequest} from "./application/ad/GetMyAdsService";
 import {GetMyFavouriteAdsServiceRequest} from "./application/ad/GetMyFavouriteAdsService";
 import {DoLoginWithCookiesServiceRequest} from "./application/user/DoLoginWithCookiesService";
+import {LoadPageController, LoadPageControllerRequest} from "./framework/controller/LoadPageController";
+import {DoRenewAdController, DoRenewAdControllerRequest} from "./framework/controller/DoRenewAdController";
 
 
 export default {
@@ -271,7 +273,7 @@ export default {
     onDoRenew: async function(ad){
       console.log(">>>onDoRenew")
       try {
-        await this.doRenewAd(ad.idanuncio)
+        this.doRenewAd(ad.idanuncio)
         ad.computed_props.isRenewed = true
         console.log(`>>>renewed ad ${ad.idanuncio}`)
       } catch (err) {
@@ -289,148 +291,32 @@ export default {
       try {
         await this.loadPage(this.formData)
       } catch (err) {
+        console.log(">>>login errors")
         this.formData.errors.invalidEmail = true
         this.formData.errors.invalidPassword = true
         console.log(JSON.stringify(err));
         console.log("ERROR: ====", err);
       }
     },
-    onLoadPage: async function(){
-      const vm = this
+    onLoadPage: function(){
       console.log(">>>onLoadPage")
       try {
-        const responseLoginWithCookie = await this.loginWithCookie()
-        console.log(">>>loginWithCookie " + JSON.stringify(responseLoginWithCookie))
-        let apiToken = responseLoginWithCookie.data.apiToken
-        vm.logedUser.email = responseLoginWithCookie.data.user.email
-        vm.logedUser.createdAt = responseLoginWithCookie.data.user.createdAt
-        const responseLoadPage = await this.loadPage(undefined, apiToken)
-        console.log(">>>responseLoadPage " + JSON.stringify(responseLoadPage))
+        this.loadPage(this.formData)
       } catch (err) {
         console.log(JSON.stringify(err));
         console.log("ERROR: ====", err);
       }
     },
-    loginWithCookie: function(){
-      console.log(">>>loginWithCookie")
-      const url = "https://www.milanuncios.com/api/v3/sessions/current"
-      const headers = {
-        "Content-Type": "application/json",
-        "mav": "2",
-        "Accept": "*/*",
-        "Cache-Control": "no-cache"
-      }
-
-      console.log(JSON.stringify(headers))
-
-      return axios({
-        method: 'get',
-        url: url,
-        headers: headers,
-        config: { withCredentials: true }
-      })
-    },
-    loadPage: async function (formData, apiToken) {
+    loadPage: async function (formData) {
       console.log(">>>loadPage")
-      const vm = this
-      let loginResponse = {}
-      const doLoginServiceResponse = await ServiceFactoryBean.doLoginWithCookiesService().execute(
-            new DoLoginWithCookiesServiceRequest({...formData}
-          )
+      const loadPageControllerResponse = await new LoadPageController().execute(
+          new LoadPageControllerRequest({...formData})
       )
-      vm.logedUser = doLoginServiceResponse.logedUser
-      vm.current = doLoginServiceResponse
-      vm.isLogged = true
-      const getMyAdsServiceResponse = await ServiceFactoryBean.getMyAdsService().execute(
-              new GetMyAdsServiceRequest(doLoginServiceResponse.session.apiToken)
-      )
-      vm.ads = getMyAdsServiceResponse.ads
-      const getMyFavouriteAdsServiceResponse = await ServiceFactoryBean.getMyFavouriteAdsService().execute(
-              new GetMyFavouriteAdsServiceRequest(doLoginServiceResponse.session.apiToken)
-      )
-      vm.favoriteAds = getMyFavouriteAdsServiceResponse.ads
-
-      /*
-      const savedAdsResponse = await this.getSavedSearchs(header, params)
-      console.log(JSON.stringify(vm.savedSearchs))
-      vm.savedSearchs = savedAdsResponse.data.data.anuncios
-       */
-    },
-    doLogin: async function () {
-      console.log(">>>doLoginRepository")
-      const url = "https://www.milanuncios.com/api/v3/logins"
-      const data = {
-        "identifier": this.formData.email,
-        "password": this.formData.password,
-        "rememberMe": "true"
-      }
-
-      const headers = {
-        "Content-Type": "application/json",
-        "mav": "2",
-        "Accept": "*/*",
-        "Cache-Control": "no-cache"
-      }
-
-      console.log(JSON.stringify(data))
-
-      return axios({
-        method: 'post',
-        url: url,
-        data: data,
-        headers: headers,
-        config: { withCredentials: true }
-      })
-
-    },
-    getHeaderAndQueryParams: async function(apiToken){
-      console.log(">>>getHeaderAndQueryParams")
-      const params =  {
-        "r": "30",
-        "p": "1",
-        "token": apiToken,
-        "tokenRenew": apiToken
-      }
-      const header = {
-        "mav": "2",
-        "Accept": "*/*",
-        "Cache-Control": "no-cache",
-        'Content-Type': 'application/json'
-      }
-      console.log(">>>getHeaderAndQueryParams:" + JSON.stringify({header, params}))
-      return new Promise(
-              (resolve, reject) => resolve( {header, params})
-      )
-    },
-    getAds: async function (header, params) {
-      console.log(">>>getAds:" + JSON.stringify({header, params}))
-      const urlMisAnuncios = `https://www.milanuncios.com/api/v2/misanuncios/misanuncios.php?${qs.stringify(params)}`
-      console.log(">>>getAds:" + urlMisAnuncios)
-      return axios({
-        method: 'post',
-        url: urlMisAnuncios,
-        data: params,
-        headers: header,
-        config: { withCredentials: true }
-      })
-    },
-    getFavoriteAds: async function (params) {
-      const headerFavourites = {
-        "mav": "2",
-        "Accept": "*/*",
-        "Cache-Control": "no-cache",
-        'Content-Type': 'application/x-www-form-urlencoded'
-      }
-      console.log(">>>getFavoriteAds:" + JSON.stringify({headerFavourites, params}))
-      const urlMisFavoritos = `https://www.milanuncios.com/api/v2/favoritos/favoritos.php`
-      console.log(">>>getFavoriteAds urlMisFavoritos:" + urlMisFavoritos)
-      return axios({
-        method: 'post',
-        url: urlMisFavoritos,
-        headers: headerFavourites,
-        data: qs.stringify(params),
-        config: { withCredentials: true }
-      })
+      this.logedUser = loadPageControllerResponse.current.logedUser
+      this.current = loadPageControllerResponse.current
+      this.isLogged = true
+      this.ads = loadPageControllerResponse.ads
+      this.favoriteAds = loadPageControllerResponse.favouriteAds
     },
     getSavedSearchs: async function (header, params) {
       const url = `https://ms-ma--user-profiles.spain.schibsted.io/users/183565764/savedsearches/?${qs.stringify(params)}`
@@ -445,22 +331,10 @@ export default {
     },
     doRenewAd: async function (adId) {
       console.log(">>>doRenewAd")
-      const vm = this
-      const responseLoginWithCookie = await this.loginWithCookie()
-      console.log(">>>loginWithCookie " + JSON.stringify(responseLoginWithCookie))
-      let apiToken = responseLoginWithCookie.data.apiToken
-      vm.logedUser.email = responseLoginWithCookie.data.user.email
-      vm.logedUser.createdAt = responseLoginWithCookie.data.user.createdAt
-      const { header, params } = await this.getHeaderAndQueryParams(apiToken)
-      console.log("h&qp:" + JSON.stringify({ header, params }))
-      const url = `https://www.milanuncios.com/api/v3/adrenew/${adId}`
-      return axios({
-        method: 'post',
-        url: url,
-        data: params,
-        headers: header,
-        config: { withCredentials: true }
-      })
+      const doRenewAdControllerResponse = await new DoRenewAdController().execute(
+              new DoRenewAdControllerRequest({ email: this.formData.email, password: this.formData.password, adId} )
+      )
+      console.log(">>>doRenewAdControllerResponse")
     },
     onLogout: async function(){
       const vm = this

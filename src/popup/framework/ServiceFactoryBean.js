@@ -5,7 +5,7 @@ import {DoLogoutService} from "../application/user/DoLogoutService";
 import DoLogoutRepository from "./repository/user/DoLogoutRepository";
 import {DoRenewAdService} from "../application/ad/DoRenewAdService";
 import DoLoginWithCookiesRepository from "./repository/user/DoLoginWithCookiesRepository";
-import DoRenewAdRepository from "./repository/ad/DoRenewAdRepository";
+import {DoRenewAdRepository} from "./repository/ad/DoRenewAdRepository";
 import {GetMyAdsService} from "../application/ad/GetMyAdsService";
 import GetMyAdsRepository from "./repository/ad/GetMyAdsRepository";
 import TransformToMyAdsService from "./transformers/TransformToMyAdsService";

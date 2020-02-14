@@ -1,8 +1,8 @@
-export default class LoginUser {
+export default class Current {
     constructor({email, createdAt, apiToken}){
         this.logedUser = {
-            email: email,
-            createdAt: createdAt
+            email: (email) ? email : "",
+            createdAt: (createdAt) ? createdAt : ""
         }
         this.session = {
             apiToken:  apiToken
