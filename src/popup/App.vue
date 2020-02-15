@@ -200,15 +200,9 @@
 import axios from 'axios';
 import qs from 'querystring'
 import MyAdsComponent from "./component/myAds/MyAdsComponent";
-import TransformToMyAdsService from "./framework/transformers/TransformToMyAdsService";
-import TransformToMyFavouriteAdsService from "./framework/transformers/TransformToMyFavouriteAdsService";
-import ServiceFactoryBean from "./framework/ServiceFactoryBean"
-import {GetMyAdsServiceRequest} from "./application/ad/GetMyAdsService";
-import {GetMyFavouriteAdsServiceRequest} from "./application/ad/GetMyFavouriteAdsService";
-import {DoLoginWithCookiesServiceRequest} from "./application/user/DoLoginWithCookiesService";
 import {LoadPageController, LoadPageControllerRequest} from "./framework/controller/LoadPageController";
 import {DoRenewAdController, DoRenewAdControllerRequest} from "./framework/controller/DoRenewAdController";
-
+import {DoLogoutController, DoLogoutControllerRequest} from "./framework/controller/DoLogoutController";
 
 export default {
   name: "app",
@@ -273,7 +267,9 @@ export default {
     onDoRenew: async function(ad){
       console.log(">>>onDoRenew")
       try {
-        this.doRenewAd(ad.idanuncio)
+        const doRenewAdControllerResponse = await new DoRenewAdController().execute(
+                new DoRenewAdControllerRequest({ email: this.formData.email, password: this.formData.password, adId: ad.idanuncio} )
+        )
         ad.computed_props.isRenewed = true
         console.log(`>>>renewed ad ${ad.idanuncio}`)
       } catch (err) {
@@ -318,6 +314,11 @@ export default {
       this.ads = loadPageControllerResponse.ads
       this.favoriteAds = loadPageControllerResponse.favouriteAds
     },
+    onLogout: async function(){
+      const vm = this
+      const doLogoutControllerResponse = await new DoLogoutController().execute(new DoLogoutControllerRequest() )
+      vm.isLogged = false
+    },
     getSavedSearchs: async function (header, params) {
       const url = `https://ms-ma--user-profiles.spain.schibsted.io/users/183565764/savedsearches/?${qs.stringify(params)}`
       return axios({
@@ -327,26 +328,6 @@ export default {
         headers: header,
         config: { withCredentials: true }
         //[{"id":"e03f3ab9-7edb-4019-8b35-7c4e1e187446","userId":"183565764","title":"seat leon en Madrid","status":"ACTIVE","targeting":{"type":"coches","location":{"province":{"id":28}},"category":{"id":100664},"brand":"seat","domain":"leon","price":{"from":6000.0,"to":42000.0},"year":{"from":2019.0,"to":2020.0}},"creationDate":"2020-01-28T08:27:32.374","updateDate":"2020-01-28T08:27:32.374"}]
-      })
-    },
-    doRenewAd: async function (adId) {
-      console.log(">>>doRenewAd")
-      const doRenewAdControllerResponse = await new DoRenewAdController().execute(
-              new DoRenewAdControllerRequest({ email: this.formData.email, password: this.formData.password, adId} )
-      )
-      console.log(">>>doRenewAdControllerResponse")
-    },
-    onLogout: async function(){
-      const vm = this
-      const response = await this.logout()
-      vm.isLogged = false
-    },
-    logout: async function () {
-      const url = "https://www.milanuncios.com/api/v3/logout"
-      return axios({
-        method: 'post',
-        url: url,
-        config: { withCredentials: true }
       })
     },
   },

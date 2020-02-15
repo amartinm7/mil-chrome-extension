@@ -4,7 +4,6 @@ import {DoLogoutServiceRequest} from "../../application/user/DoLogoutService";
 class DoLogoutController{
     async execute( DoLogoutController ){
         console.log(">>>DoLogoutController")
-        const vm = this
         const doLoginServiceResponse = await ServiceFactoryBean.doLogoutService().execute(
             new DoLogoutServiceRequest({})
         )
