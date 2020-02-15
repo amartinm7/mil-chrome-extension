@@ -1,21 +1,16 @@
 import Current from "../../domain/user/Current";
 
 class DoLoginWithCookiesService {
-    constructor(doLoginRepository, doLoginWithCookiesRepository, transformToCredentialsService) {
-        this._doLoginRepository = doLoginRepository
+    constructor(doLoginWithCookiesRepository) {
         this._doLoginWithCookiesRepository = doLoginWithCookiesRepository
-        this._transformToCredentialsService = transformToCredentialsService
     }
     async execute (doLoginWithCookiesServiceRequest) {
         console.log(">>>DoLoginWithCookiesService")
         try {
             return await this._executeDoLoginWithCookies()
-        } catch (e) {
-            return await this._executeDoLogin(
-                this._transformToCredentialsService.toCredentials(
-                    { email: doLoginWithCookiesServiceRequest.email, password: doLoginWithCookiesServiceRequest.password }
-                )
-            )
+        } catch (err) {
+            console.log(JSON.stringify(err));
+            console.log("ERROR: ====", err);
         }
     }
 
@@ -24,17 +19,6 @@ class DoLoginWithCookiesService {
         const doLoginWitCookiesResponse = await this._doLoginWithCookiesRepository.doLoginWithCurrentCookies()
         console.log(JSON.stringify(doLoginWitCookiesResponse))
         return new DoLoginWithCookiesServiceResponse({apiToken: doLoginWitCookiesResponse.data.apiToken})
-    }
-
-    async _executeDoLogin(credentials){
-        console.log(">>>_executeDoLogin")
-        const doLoginRepositoryResponse = await this._doLoginRepository.doLogin(credentials)
-        console.log(JSON.stringify(doLoginRepositoryResponse.data))
-        return new DoLoginWithCookiesServiceResponse({
-            email: doLoginRepositoryResponse.data.user.email,
-            createdAt: doLoginRepositoryResponse.data.user.createdAt,
-            apiToken: doLoginRepositoryResponse.data.session.apiToken
-        })
     }
 }
 

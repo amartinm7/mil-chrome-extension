@@ -52,13 +52,13 @@
       </div>
       <div class="uk-container uk-padding-small">
         <form class="uk-form-stacked" v-on:submit.prevent="onAdSearch">
-            <div class="uk-inline">
-              <span class="uk-form-icon" uk-icon="icon: search"></span>
-              <input type="text" class="uk-input uk-form-width-large"
-                     placeholder="¿que buscas?"
-                     v-on:keyup.enter="onAdSearch"
-                     v-model="searchFormData.keywords">
-            </div>
+          <div class="uk-inline">
+            <span class="uk-form-icon" uk-icon="icon: search"></span>
+            <input type="text" class="uk-input uk-form-width-large"
+                   placeholder="¿que buscas?"
+                   v-on:keyup.enter="onAdSearch"
+                   v-model="searchFormData.keywords">
+          </div>
         </form>
       </div>
 
@@ -100,20 +100,20 @@
       <div class="uk-switcher">
         <div class="uk-active">
           <my-ads-component v-bind:ads="ads"
-                              v-bind:enable-renew="myAdsComponent.enableRenew"
-                              v-bind:enable-bets="myAdsComponent.enableBets">
+                            v-bind:enable-renew="myAdsComponent.enableRenew"
+                            v-bind:enable-bets="myAdsComponent.enableBets">
           </my-ads-component>
         </div>
         <div>
           <my-ads-component v-bind:ads="favoriteAds"
-                              v-bind:enable-renew="favouriteAdsComponent.enableRenew"
-                              v-bind:enable-bets="favouriteAdsComponent.enableBets">
+                            v-bind:enable-renew="favouriteAdsComponent.enableRenew"
+                            v-bind:enable-bets="favouriteAdsComponent.enableBets">
           </my-ads-component>
         </div>
         <div>
           <my-ads-component v-bind:ads="favoriteAds"
-                              v-bind:enable-renew="favouriteAdsComponent.enableRenew"
-                              v-bind:enable-bets="favouriteAdsComponent.enableBets">
+                            v-bind:enable-renew="favouriteAdsComponent.enableRenew"
+                            v-bind:enable-bets="favouriteAdsComponent.enableBets">
           </my-ads-component>
         </div>
       </div>
@@ -197,146 +197,146 @@
 </template>
 
 <script>
-import axios from 'axios';
-import qs from 'querystring'
-import MyAdsComponent from "./component/myAds/MyAdsComponent";
-import {LoadPageController, LoadPageControllerRequest} from "./framework/controller/LoadPageController";
-import {DoRenewAdController, DoRenewAdControllerRequest} from "./framework/controller/DoRenewAdController";
-import {DoLogoutController, DoLogoutControllerRequest} from "./framework/controller/DoLogoutController";
+  import axios from 'axios';
+  import qs from 'querystring'
+  import MyAdsComponent from "./component/myAds/MyAdsComponent";
+  import {LoadPageController, LoadPageControllerRequest} from "./framework/controller/LoadPageController";
+  import {DoRenewAdController, DoRenewAdControllerRequest} from "./framework/controller/DoRenewAdController";
+  import {DoLogoutController, DoLogoutControllerRequest} from "./framework/controller/DoLogoutController";
 
-export default {
-  name: "app",
-  components: {MyAdsComponent},
-  data: function () {
-    return {
-      myAdsComponent:{ enableRenew: true, enableBets: true},
-      favouriteAdsComponent:{ enableRenew: false, enableBets: false},
-      isLogged: false,
-      isLoading: false,
-      isDisabled: false,
-      searchFormData: {
-        keywords: ""
-      },
-      formData: {
-        email: "antonio.martin@schibsted.com",
-        password: "Schibsted18",
-        errors: {
-          invalidEmail: false,
-          invalidPassword: false
+  export default {
+    name: "app",
+    components: {MyAdsComponent},
+    data: function () {
+      return {
+        myAdsComponent:{ enableRenew: true, enableBets: true},
+        favouriteAdsComponent:{ enableRenew: false, enableBets: false},
+        isLogged: false,
+        isLoading: false,
+        isDisabled: false,
+        searchFormData: {
+          keywords: ""
         },
-      },
-      current: {
+        formData: {
+          email: "antonio.martin@schibsted.com",
+          password: "Schibsted18",
+          errors: {
+            invalidEmail: false,
+            invalidPassword: false
+          },
+        },
+        current: {
+          logedUser: {
+            email: "",
+            createdAt: ""
+          },
+          session: {
+            apiToken: ""
+          }
+        },
+
         logedUser: {
           email: "",
           createdAt: ""
         },
-        session: {
-          apiToken: ""
+        ads:[
+        ],
+        favoriteAds:[
+        ],
+        savedSearchs: null
+      };
+    },
+    methods: {
+      getUserDateMsg: function (){
+        try{
+          const strDate =  new Date(this.logedUser.createdAt).toLocaleDateString()
+          return (strDate.startsWith("Invalid")) ? "" : `Usuario desde el ${strDate}`
+        } catch (e) {
+          return ""
         }
       },
-
-      logedUser: {
-        email: "",
-        createdAt: ""
+      hasErrorsInLoginForm(){
+        this.formData.errors.invalidEmail = !this.formData.email || 0 === this.formData.email.length
+        this.formData.errors.invalidPassword = !this.formData.password || 0 === this.formData.email.password
+        return this.formData.errors.invalidEmail || this.formData.errors.invalidPassword
       },
-      ads:[
-      ],
-      favoriteAds:[
-      ],
-      savedSearchs: null
-    };
-  },
-  methods: {
-    getUserDateMsg: function (){
-      try{
-        const strDate =  new Date(this.logedUser.createdAt).toLocaleDateString()
-        return (strDate.startsWith("Invalid")) ? "" : `Usuario desde el ${strDate}`
-      } catch (e) {
-        return ""
-      }
-    },
-    hasErrorsInLoginForm(){
-      this.formData.errors.invalidEmail = !this.formData.email || 0 === this.formData.email.length
-      this.formData.errors.invalidPassword = !this.formData.password || 0 === this.formData.email.password
-      return this.formData.errors.invalidEmail || this.formData.errors.invalidPassword
-    },
-    onAdSearch: function () {
-      const url = `https://www.milanuncios.com/anuncios/${this.searchFormData.keywords}.htm?fromSearch=1`
-      window.open(url, '_blank')
-    },
-    onDoRenew: async function(ad){
-      console.log(">>>onDoRenew")
-      try {
-        const doRenewAdControllerResponse = await new DoRenewAdController().execute(
-                new DoRenewAdControllerRequest({ email: this.formData.email, password: this.formData.password, adId: ad.idanuncio} )
+      onAdSearch: function () {
+        const url = `https://www.milanuncios.com/anuncios/${this.searchFormData.keywords}.htm?fromSearch=1`
+        window.open(url, '_blank')
+      },
+      onDoRenew: async function(ad){
+        console.log(">>>onDoRenew")
+        try {
+          const doRenewAdControllerResponse = await new DoRenewAdController().execute(
+                  new DoRenewAdControllerRequest({ email: this.formData.email, password: this.formData.password, adId: ad.idanuncio} )
+          )
+          ad.computed_props.isRenewed = true
+          console.log(`>>>renewed ad ${ad.idanuncio}`)
+        } catch (err) {
+          this.isRenewed = false
+          console.log(JSON.stringify(err));
+          console.log("ERROR: ====", err);
+        }
+      },
+      onDoLogin: async function () {
+        console.log(">>>onDoLogin")
+        if ( this.hasErrorsInLoginForm() ){
+          console.log(">>>invalid credentials")
+          return
+        }
+        try {
+          await this.loadPage(this.formData)
+        } catch (err) {
+          console.log(">>>login errors")
+          this.formData.errors.invalidEmail = true
+          this.formData.errors.invalidPassword = true
+          console.log(JSON.stringify(err));
+          console.log("ERROR: ====", err);
+        }
+      },
+      onLoadPage: function(){
+        console.log(">>>onLoadPage")
+        try {
+          this.loadPage(this.formData)
+        } catch (err) {
+          console.log(JSON.stringify(err));
+          console.log("ERROR: ====", err);
+        }
+      },
+      loadPage: async function (formData) {
+        console.log(">>>loadPage")
+        const loadPageControllerResponse = await new LoadPageController().execute(
+                new LoadPageControllerRequest({...formData})
         )
-        ad.computed_props.isRenewed = true
-        console.log(`>>>renewed ad ${ad.idanuncio}`)
-      } catch (err) {
-        this.isRenewed = false
-        console.log(JSON.stringify(err));
-        console.log("ERROR: ====", err);
-      }
+        this.logedUser = loadPageControllerResponse.current.logedUser
+        this.current = loadPageControllerResponse.current
+        this.isLogged = true
+        this.ads = loadPageControllerResponse.ads
+        this.favoriteAds = loadPageControllerResponse.favouriteAds
+      },
+      onLogout: async function(){
+        const vm = this
+        const doLogoutControllerResponse = await new DoLogoutController().execute(new DoLogoutControllerRequest() )
+        vm.isLogged = false
+      },
+      getSavedSearchs: async function (header, params) {
+        const url = `https://ms-ma--user-profiles.spain.schibsted.io/users/183565764/savedsearches/?${qs.stringify(params)}`
+        return axios({
+          method: 'get',
+          url: url,
+          data: params,
+          headers: header,
+          config: { withCredentials: true }
+          //[{"id":"e03f3ab9-7edb-4019-8b35-7c4e1e187446","userId":"183565764","title":"seat leon en Madrid","status":"ACTIVE","targeting":{"type":"coches","location":{"province":{"id":28}},"category":{"id":100664},"brand":"seat","domain":"leon","price":{"from":6000.0,"to":42000.0},"year":{"from":2019.0,"to":2020.0}},"creationDate":"2020-01-28T08:27:32.374","updateDate":"2020-01-28T08:27:32.374"}]
+        })
+      },
     },
-    onDoLogin: async function () {
-      console.log(">>>onDoLogin")
-      if ( this.hasErrorsInLoginForm() ){
-        console.log(">>>invalid credentials")
-        return
-      }
-      try {
-        await this.loadPage(this.formData)
-      } catch (err) {
-        console.log(">>>login errors")
-        this.formData.errors.invalidEmail = true
-        this.formData.errors.invalidPassword = true
-        console.log(JSON.stringify(err));
-        console.log("ERROR: ====", err);
-      }
+    created() {
     },
-    onLoadPage: function(){
-      console.log(">>>onLoadPage")
-      try {
-        this.loadPage(this.formData)
-      } catch (err) {
-        console.log(JSON.stringify(err));
-        console.log("ERROR: ====", err);
-      }
-    },
-    loadPage: async function (formData) {
-      console.log(">>>loadPage")
-      const loadPageControllerResponse = await new LoadPageController().execute(
-          new LoadPageControllerRequest({...formData})
-      )
-      this.logedUser = loadPageControllerResponse.current.logedUser
-      this.current = loadPageControllerResponse.current
-      this.isLogged = true
-      this.ads = loadPageControllerResponse.ads
-      this.favoriteAds = loadPageControllerResponse.favouriteAds
-    },
-    onLogout: async function(){
-      const vm = this
-      const doLogoutControllerResponse = await new DoLogoutController().execute(new DoLogoutControllerRequest() )
-      vm.isLogged = false
-    },
-    getSavedSearchs: async function (header, params) {
-      const url = `https://ms-ma--user-profiles.spain.schibsted.io/users/183565764/savedsearches/?${qs.stringify(params)}`
-      return axios({
-        method: 'get',
-        url: url,
-        data: params,
-        headers: header,
-        config: { withCredentials: true }
-        //[{"id":"e03f3ab9-7edb-4019-8b35-7c4e1e187446","userId":"183565764","title":"seat leon en Madrid","status":"ACTIVE","targeting":{"type":"coches","location":{"province":{"id":28}},"category":{"id":100664},"brand":"seat","domain":"leon","price":{"from":6000.0,"to":42000.0},"year":{"from":2019.0,"to":2020.0}},"creationDate":"2020-01-28T08:27:32.374","updateDate":"2020-01-28T08:27:32.374"}]
-      })
-    },
-  },
-  created() {
-  },
-  mounted: async function () {
-    await this.onLoadPage()
-  }
-};
+    mounted: async function () {
+      await this.onLoadPage()
+    }
+  };
 </script>
 
 <style>
@@ -426,12 +426,12 @@ export default {
   .social-media-youtube:hover {
     background: url(https://scm-milanuncios-frontend-pro.milanuncios.com/statics/images/common/social-networks/ic-youtube-footer-hover.18e3d63e1c.svg) no-repeat;
   }
-/** for debug styling
-  div {
-    background-color: lightgrey;;
-    border: 1px solid green;
-    padding: 1px;
-    margin: 1px;
-  }
-**/
+  /** for debug styling
+    div {
+      background-color: lightgrey;;
+      border: 1px solid green;
+      padding: 1px;
+      margin: 1px;
+    }
+  **/
 </style>
