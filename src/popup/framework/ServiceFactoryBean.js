@@ -13,18 +13,41 @@ import {GetMyFavouriteAdsService} from "../application/ad/GetMyFavouriteAdsServi
 import GetMyFavouriteAdsRepository from "./repository/ad/GetMyFavouriteAdsRepository";
 import TransformToMyFavouriteAdsService from "./transformers/TransformToMyFavouriteAdsService";
 import {DoLoginWithCookiesService} from "../application/user/DoLoginWithCookiesService";
+import {DoLoginWithBothService} from "../application/user/DoLoginWithBothService";
 
 let instance = null
 
 export default class ServiceFactoryBean{
     constructor() {
         console.log(">>>Init ServiceFactoryBean")
-        this._doLoginService = new DoLoginService(new DoLoginRepository(), new TransformToCredentialsService()),
-        this._doLoginWithCookiesService = new DoLoginWithCookiesService(new DoLoginWithCookiesRepository()),
-        this._doLogoutService =  new DoLogoutService(new DoLogoutRepository()),
-        this._doRenewAdService = new DoRenewAdService(new DoLoginRepository(), new DoLoginWithCookiesRepository(), new DoRenewAdRepository()),
-        this._getMyAdsService = new GetMyAdsService(new GetMyAdsRepository(), new TransformToMyAdsService())
-        this._getMyFavouriteAdsService = new GetMyFavouriteAdsService(new GetMyFavouriteAdsRepository(), new TransformToMyFavouriteAdsService())
+        this._doLoginService = new DoLoginService(
+            new DoLoginRepository(),
+            new TransformToCredentialsService()
+        )
+        this._doLoginWithCookiesService = new DoLoginWithCookiesService(
+            new DoLoginWithCookiesRepository()
+        )
+        this._doLoginWithBothService = new DoLoginWithBothService(
+            new DoLoginRepository(),
+            new DoLoginWithCookiesRepository(),
+            new TransformToCredentialsService()
+        )
+        this._doLogoutService =  new DoLogoutService(
+            new DoLogoutRepository()
+        )
+        this._doRenewAdService = new DoRenewAdService(
+            new DoLoginRepository(),
+            new DoLoginWithCookiesRepository(),
+            new DoRenewAdRepository()
+        )
+        this._getMyAdsService = new GetMyAdsService(
+            new GetMyAdsRepository(),
+            new TransformToMyAdsService()
+        )
+        this._getMyFavouriteAdsService = new GetMyFavouriteAdsService(
+            new GetMyFavouriteAdsRepository(),
+            new TransformToMyFavouriteAdsService()
+        )
     }
 
     static getInstance(){
@@ -40,6 +63,10 @@ export default class ServiceFactoryBean{
 
     static doLoginWithCookiesService() {
         return this.getInstance()._doLoginWithCookiesService
+    }
+
+    static doLoginWithBothService() {
+        return this.getInstance()._doLoginWithBothService
     }
 
     static doLogoutService() {
