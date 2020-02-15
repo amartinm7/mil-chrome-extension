@@ -7,11 +7,11 @@ class DoLoginService {
     }
     async execute (doLoginServiceRequest) {
         console.log(">>>doLoginService")
-        const loginResponse = await this._doLoginRepository.doLogin(
+        const doLoginServiceResponse = await this._doLoginRepository.doLogin(
             this._transformToCredentialsService.toCredentials(doLoginServiceRequest.credentials)
         )
-        console.log(`>>>DoLoginService... ${JSON.stringify(loginResponse)}`)
-        return toDoLoginServiceResponse(loginResponse)
+        console.log(`>>>doLoginServiceResponse... ${JSON.stringify(doLoginServiceResponse)}`)
+        return toDoLoginServiceResponse(doLoginServiceResponse)
     }
 }
 

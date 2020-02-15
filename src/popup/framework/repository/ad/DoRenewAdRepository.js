@@ -14,7 +14,8 @@ class DoRenewAdRepository {
             "mav": "2",
             "Accept": "*/*",
             "Cache-Control": "no-cache",
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'authorization': apiToken
         }
         console.log(">>>getHeaderAndQueryParams:" + JSON.stringify({header, params}))
         return new Promise(
@@ -27,11 +28,11 @@ class DoRenewAdRepository {
         const vm = this
         const { header, params } = await this._getHeaderAndQueryParams(doRenewAdRepositoryRequest.apiToken)
         console.log("h&qp:" + JSON.stringify({ header, params }))
-        const url = `https://www.milanuncios.com/api/v3/adrenew/${doRenewAdRepositoryRequest.adId}`
+        const url = `https://www.milanuncios.com/api/v3/ads/${doRenewAdRepositoryRequest.adId}/renew`
         return axios({
             method: 'post',
             url: url,
-            data: params,
+            data: qs.stringify(params),
             headers: header,
             config: { withCredentials: true }
         })
@@ -40,10 +41,9 @@ class DoRenewAdRepository {
 
 class DoRenewAdRepositoryRequest{
     constructor({apiToken, adId}) {
-        this.apiToken = apiToken
+        this.apiToken = apiToken,
         this.adId = adId
     }
-
 }
 
 export {

@@ -12,7 +12,7 @@ export default class DoLoginWithCookiesRepository {
             "Accept": "*/*",
             "Cache-Control": "no-cache"
         }
-        console.log(JSON.stringify(headers))
+        console.log(`>>>doLoginWithCurrentCookies ${JSON.stringify({headers})}`)
         return axios({
             method: 'get',
             url: url,

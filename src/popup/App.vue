@@ -265,20 +265,6 @@
         const url = `https://www.milanuncios.com/anuncios/${this.searchFormData.keywords}.htm?fromSearch=1`
         window.open(url, '_blank')
       },
-      onDoRenew: async function(ad){
-        console.log(">>>onDoRenew")
-        try {
-          const doRenewAdControllerResponse = await new DoRenewAdController().execute(
-                  new DoRenewAdControllerRequest({ email: this.formData.email, password: this.formData.password, adId: ad.idanuncio} )
-          )
-          ad.computed_props.isRenewed = true
-          console.log(`>>>renewed ad ${ad.idanuncio}`)
-        } catch (err) {
-          this.isRenewed = false
-          console.log(JSON.stringify(err));
-          console.log("ERROR: ====", err);
-        }
-      },
       onDoLogin: async function () {
         console.log(">>>onDoLogin")
         if ( this.hasErrorsInLoginForm() ){

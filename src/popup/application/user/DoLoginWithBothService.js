@@ -22,14 +22,14 @@ class DoLoginWithBothService {
     async _executeDoLoginWithCookies(){
         console.log(">>>_executeDoLoginWithCookies")
         const doLoginWitCookiesResponse = await this._doLoginWithCookiesRepository.doLoginWithCurrentCookies()
-        console.log(JSON.stringify(doLoginWitCookiesResponse))
+        console.log(`>>>doLoginWitCookiesResponse ${JSON.stringify(doLoginWitCookiesResponse)}`)
         return new DoLoginWithBothServiceResponse({apiToken: doLoginWitCookiesResponse.data.apiToken})
     }
 
     async _executeDoLogin(credentials){
         console.log(">>>_executeDoLogin")
         const doLoginRepositoryResponse = await this._doLoginRepository.doLogin(credentials)
-        console.log(JSON.stringify(doLoginRepositoryResponse.data))
+        console.log(`>>> doLoginRepositoryResponse ${JSON.stringify(doLoginRepositoryResponse)}`)
         return new DoLoginWithBothServiceResponse({
             email: doLoginRepositoryResponse.data.user.email,
             createdAt: doLoginRepositoryResponse.data.user.createdAt,
