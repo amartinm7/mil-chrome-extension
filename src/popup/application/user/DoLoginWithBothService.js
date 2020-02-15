@@ -29,7 +29,7 @@ class DoLoginWithBothService {
     async _executeDoLogin(credentials){
         console.log(">>>_executeDoLogin")
         const doLoginRepositoryResponse = await this._doLoginRepository.doLogin(credentials)
-        console.log(`>>> doLoginRepositoryResponse ${JSON.stringify(doLoginRepositoryResponse)}`)
+        console.log(`>>> doLoginRepositoryResponse ${JSON.stringify(doLoginRepositoryResponse.data)}`)
         return new DoLoginWithBothServiceResponse({
             email: doLoginRepositoryResponse.data.user.email,
             createdAt: doLoginRepositoryResponse.data.user.createdAt,
