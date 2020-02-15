@@ -10,7 +10,7 @@ class DoLoginService {
         const loginResponse = await this._doLoginRepository.doLogin(
             this._transformToCredentialsService.toCredentials(doLoginServiceRequest.credentials)
         )
-        console.log(JSON.stringify(loginResponse.data))
+        console.log(`>>>DoLoginService... ${JSON.stringify(loginResponse)}`)
         return toDoLoginServiceResponse(loginResponse)
     }
 }
@@ -22,8 +22,8 @@ class DoLoginServiceRequest {
 }
 
 class DoLoginServiceResponse {
-    constructor({email, createdAt, apiToken}) {
-        this.current = new Current({email, createdAt, apiToken})
+    constructor({email, createdAt, apiToken, sessionId}) {
+        this.current = new Current({email, createdAt, apiToken, sessionId})
     }
 }
 
@@ -31,7 +31,8 @@ function toDoLoginServiceResponse(loginResponse) {
     return new DoLoginServiceResponse ({
         email: loginResponse.data.user.email,
         createdAt: loginResponse.data.user.createdAt,
-        apiToken: loginResponse.data.session.apiToken
+        apiToken: loginResponse.data.session.apiToken,
+        sessionId: loginResponse.data.session.id
     })
 }
 

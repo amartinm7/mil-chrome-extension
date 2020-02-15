@@ -27,7 +27,8 @@ describe('LoadPageController', function() {
                         createdAt: '2020-02-13T00:32:59+0100'
                     },
                     session: {
-                        apiToken:'apiToken'
+                        apiToken:'apiToken',
+                        id: 'sessionId'
                     }
                 }
             }
@@ -35,7 +36,8 @@ describe('LoadPageController', function() {
             const expectedDoLoginServiceResponse = new DoLoginServiceResponse({
                 email: "antonio.martin@schibsted.com",
                 createdAt: "2020-02-13T00:32:59+0100",
-                apiToken:'apiToken'
+                apiToken:'apiToken',
+                sessionId: 'sessionId'
             })
             //WHEN
             const mockDoLoginRepository = jest.fn();
