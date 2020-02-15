@@ -203,6 +203,7 @@
   import {LoadPageController, LoadPageControllerRequest} from "./framework/controller/LoadPageController";
   import {DoRenewAdController, DoRenewAdControllerRequest} from "./framework/controller/DoRenewAdController";
   import {DoLogoutController, DoLogoutControllerRequest} from "./framework/controller/DoLogoutController";
+  import {DoLoginController, DoLoginControllerRequest} from "./framework/controller/DoLoginController";
 
   export default {
     name: "app",
@@ -285,7 +286,7 @@
           return
         }
         try {
-          await this.loadPage(this.formData)
+          await this.login(this.formData)
         } catch (err) {
           console.log(">>>login errors")
           this.formData.errors.invalidEmail = true
@@ -302,6 +303,17 @@
           console.log(JSON.stringify(err));
           console.log("ERROR: ====", err);
         }
+      },
+      login: async function (formData) {
+        console.log(">>>loadPage")
+        const doLoginControllerResponse = await new DoLoginController().execute(
+                new DoLoginControllerRequest({...formData})
+        )
+        this.logedUser = doLoginControllerResponse.current.logedUser
+        this.current = doLoginControllerResponse.current
+        this.isLogged = true
+        this.ads = doLoginControllerResponse.ads
+        this.favoriteAds = doLoginControllerResponse.favouriteAds
       },
       loadPage: async function (formData) {
         console.log(">>>loadPage")

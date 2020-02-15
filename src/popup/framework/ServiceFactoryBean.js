@@ -20,7 +20,7 @@ export default class ServiceFactoryBean{
     constructor() {
         console.log(">>>Init ServiceFactoryBean")
         this._doLoginService = new DoLoginService(new DoLoginRepository(), new TransformToCredentialsService()),
-        this._doLoginWithCookiesService = new DoLoginWithCookiesService(new DoLoginRepository(), new DoLoginWithCookiesRepository(), new TransformToCredentialsService()),
+        this._doLoginWithCookiesService = new DoLoginWithCookiesService(new DoLoginWithCookiesRepository()),
         this._doLogoutService =  new DoLogoutService(new DoLogoutRepository()),
         this._doRenewAdService = new DoRenewAdService(new DoLoginRepository(), new DoLoginWithCookiesRepository(), new DoRenewAdRepository()),
         this._getMyAdsService = new GetMyAdsService(new GetMyAdsRepository(), new TransformToMyAdsService())

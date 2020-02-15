@@ -1,6 +1,4 @@
-
 import global from "../../global"
-import DoLoginRepository from "../../../../src/popup/framework/repository/user/DoLoginRepository";
 import {
     LoadPageController,
     LoadPageControllerRequest, LoadPageControllerResponse
@@ -21,17 +19,6 @@ describe('LoadPageController', function() {
     describe('execute', function() {
         it('should return a valid response', async function() {
             //GIVEN
-            const mockedDoLoginRepositoryResponse = {
-                data: {
-                    user:{
-                        email: 'antonio.martin@schibsted.com',
-                        createdAt: '2020-02-13T00:32:59+0100'
-                    },
-                    session: {
-                        apiToken:'apiToken'
-                    }
-                }
-            }
             const mockedDoLoginWithCookiesRepositoryResponse = {
                 data: {
                     apiToken:'apiToken'
@@ -43,13 +30,9 @@ describe('LoadPageController', function() {
                 createdAt: "",
                 apiToken:'apiToken'
             })
-            const mockDoLoginRepository = jest.fn();
-            DoLoginRepository.prototype.doLogin = mockDoLoginRepository;
-            mockDoLoginRepository.mockReturnValue(Promise.resolve(mockedDoLoginRepositoryResponse));
             const mockDoLoginWithCookiesRepository = jest.fn();
             DoLoginWithCookiesRepository.prototype.doLoginWithCurrentCookies = mockDoLoginWithCookiesRepository;
             mockDoLoginWithCookiesRepository.mockReturnValue(Promise.resolve(mockedDoLoginWithCookiesRepositoryResponse));
-
             //GIVEN
             const mockedAds = {
                 data: {
@@ -68,7 +51,6 @@ describe('LoadPageController', function() {
             const mockGetMyAdsRepository = jest.fn();
             GetMyAdsRepository.prototype.findAllAdsByUserId = mockGetMyAdsRepository;
             mockGetMyAdsRepository.mockReturnValue(Promise.resolve(mockedAds));
-
 
             const mockedMyFavouriteAdsRepositoryResponse = {
                 data: {
