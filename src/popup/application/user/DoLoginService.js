@@ -1,3 +1,5 @@
+import Current from "../../domain/user/Current";
+
 class DoLoginService {
     constructor(doLoginRepository, transformToCredentialsService) {
         this._doLoginRepository = doLoginRepository
@@ -5,11 +7,11 @@ class DoLoginService {
     }
     async execute (doLoginServiceRequest) {
         console.log(">>>doLoginService")
-        const loginResponse = await this._doLoginRepository.doLogin(
+        const doLoginServiceResponse = await this._doLoginRepository.doLogin(
             this._transformToCredentialsService.toCredentials(doLoginServiceRequest.credentials)
         )
-        console.log(JSON.stringify(loginResponse.data))
-        return toDoLoginServiceResponse(loginResponse)
+        console.log(`>>>doLoginServiceResponse... ${JSON.stringify(doLoginServiceResponse)}`)
+        return toDoLoginServiceResponse(doLoginServiceResponse)
     }
 }
 
@@ -20,14 +22,8 @@ class DoLoginServiceRequest {
 }
 
 class DoLoginServiceResponse {
-    constructor({email, createdAt, apiToken}) {
-        this.logedUser = {
-            email: email,
-            createdAt: createdAt
-        }
-        this.session = {
-            apiToken:  apiToken
-        }
+    constructor({email, createdAt, apiToken, sessionId}) {
+        this.current = new Current({email, createdAt, apiToken, sessionId})
     }
 }
 
@@ -35,7 +31,8 @@ function toDoLoginServiceResponse(loginResponse) {
     return new DoLoginServiceResponse ({
         email: loginResponse.data.user.email,
         createdAt: loginResponse.data.user.createdAt,
-        apiToken: loginResponse.data.session.apiToken
+        apiToken: loginResponse.data.session.apiToken,
+        sessionId: loginResponse.data.session.id
     })
 }
 

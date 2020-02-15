@@ -1,5 +1,4 @@
 import global from "../../global"
-import DoLoginRepository from "../../../../src/popup/framework/repository/user/DoLoginRepository"
 import {
     DoLogoutService,
     DoLogoutServiceRequest,
@@ -9,7 +8,6 @@ import DoLogoutRepository from "../../../../src/popup/framework/repository/user/
 const assert = require("assert")
 
 console.log("welcome! DoLogoutService test")
-jest.mock("../../../../src/popup/framework/repository/user/DoLogoutRepository")
 
 describe('DoLogoutService', function() {
     describe('DoLogoutRepository', function() {
@@ -19,12 +17,12 @@ describe('DoLogoutService', function() {
             //WHEN
             const expected = new DoLogoutServiceResponse({})
             const mockDoLogoutRepository = jest.fn();
-            DoLogoutRepository.prototype.doLogin = mockDoLogoutRepository
+            DoLogoutRepository.prototype.doLogout = mockDoLogoutRepository
             mockDoLogoutRepository.mockReturnValue(Promise.resolve(mockedDoLogoutRepositoryResponse))
             const doLogoutResponse = await new DoLogoutService(
                 new DoLogoutRepository()
             ).execute(
-                new DoLogoutServiceRequest({apiToken: global.apiToken})
+                new DoLogoutServiceRequest()
             )
             console.log(JSON.stringify(doLogoutResponse))
             //ASSERTS

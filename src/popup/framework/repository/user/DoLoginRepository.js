@@ -28,7 +28,7 @@ export default class DoLoginRepository {
         const {email, password} = credentials
         const url = "https://www.milanuncios.com/api/v3/logins"
         const {header, data} = await this._getHeaderAndData(email, password)
-        console.log(JSON.stringify({header, data}))
+        console.log(`>>>doLogin ${JSON.stringify({header, data})}`)
         return axios({
             method: 'post',
             url: url,

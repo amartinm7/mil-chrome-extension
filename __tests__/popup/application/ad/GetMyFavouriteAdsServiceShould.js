@@ -1,13 +1,16 @@
-import {GetMyFavouriteAdsService, GetMyFavouriteAdsServiceRequest} from "../../../../src/popup/application/ad/GetMyFavouriteAdsService"
+import {
+    GetMyFavouriteAdsService,
+    GetMyFavouriteAdsServiceRequest,
+    GetMyFavouriteAdsServiceResponse
+} from "../../../../src/popup/application/ad/GetMyFavouriteAdsService"
 import global from "../../global.json"
 import MyAds from "../../../../src/popup/domain/ad/MyAds"
 import GetMyFavouriteAdsRepository from "../../../../src/popup/framework/repository/ad/GetMyFavouriteAdsRepository"
 import TransformToMyFavouriteAdsService from "../../../../src/popup/framework/transformers/TransformToMyFavouriteAdsService"
+import MyFavouriteAds from "../../../../src/popup/domain/ad/MyFavouriteAds";
 const assert = require("assert")
 
 console.log("welcome! GetMyFavouriteAdsService test")
-
-jest.mock("../../../../src/popup/framework/repository/ad/GetMyFavouriteAdsRepository");
 
 describe('GetMyFavouriteAdsService', function() {
     describe('getMyFavouritesAdsRepository', function() {
@@ -23,9 +26,9 @@ describe('GetMyFavouriteAdsService', function() {
                 }
             }
             //WHEN
-            const expectedAds = {
-                "ads": [ new MyAds({'idanuncio':'1', 'titulo':'titulo', 'precio':'100', 'fecha': 'fecha', 'texto':'texto','fotos':[], 'fotos_thumb':[] })]
-            }
+            const expectedAds = new GetMyFavouriteAdsServiceResponse({
+                "ads": [ new MyFavouriteAds({'idanuncio':'1', 'titulo':'titulo', 'precio':'100', 'fecha': 'fecha', 'texto':'texto','fotos':[], 'fotos_thumb':[] })]
+            })
             const mockGetMyFavouriteAdsRepository = jest.fn();
             GetMyFavouriteAdsRepository.prototype.findAllMyFavouritesAds = mockGetMyFavouriteAdsRepository;
             mockGetMyFavouriteAdsRepository.mockReturnValue(Promise.resolve(mockedMyFavouriteAdsRepositoryResponse));

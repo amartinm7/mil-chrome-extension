@@ -38,7 +38,9 @@
 </template>
 <script>
 
-export default {
+    import {DoRenewAdController, DoRenewAdControllerRequest} from "../../framework/controller/DoRenewAdController";
+
+    export default {
     name: 'myAdsComponent',
     props: {
         ads: {
@@ -73,9 +75,25 @@ export default {
             }
             return text.trim()
         },
-        onDoRenew: function (ad) {
-            console.log("onDoRenew")
-        }
+        onDoRenew: async function(ad){
+            console.log(">>>onDoRenew")
+            try {
+                const doRenewAdControllerResponse = await new DoRenewAdController().execute(
+                    new DoRenewAdControllerRequest({
+                        email: "",
+                        password: "",
+                        adId: ad.idanuncio
+                    })
+                )
+                console.log(`>>>${JSON.stringify(doRenewAdControllerResponse)}`)
+                ad.computed_props.isRenewed = true
+                console.log(`>>>renewed ad ${ad.idanuncio}`)
+            } catch (err) {
+                this.isRenewed = false
+                console.log(JSON.stringify(err));
+                console.log("ERROR: ====", err);
+            }
+        },
     },
     created() {
     },

@@ -23,7 +23,8 @@ describe('DoLoginService', function() {
                         createdAt: '2020-02-13T00:32:59+0100'
                     },
                     session: {
-                        apiToken:'apiToken'
+                        apiToken:'apiToken',
+                        id: 'sessionId'
                     }
                 }
             }
@@ -31,7 +32,8 @@ describe('DoLoginService', function() {
             const expected = new DoLoginServiceResponse({
                 'email':'antonio.martin@schibsted.com',
                 'createdAt':'2020-02-13T00:32:59+0100',
-                'apiToken': 'apiToken'
+                'apiToken': 'apiToken',
+                'sessionId': 'sessionId'
             })
             const mockDoLoginRepository = jest.fn();
             DoLoginRepository.prototype.doLogin = mockDoLoginRepository;

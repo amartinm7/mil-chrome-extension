@@ -1,13 +1,15 @@
 import MyAds from "../../../../src/popup/domain/ad/MyAds";
 const assert = require("assert")
-import {GetMyAdsService, GetMyAdsServiceRequest} from '../../../../src/popup/application/ad/GetMyAdsService'
+import {
+    GetMyAdsService,
+    GetMyAdsServiceRequest,
+    GetMyAdsServiceResponse
+} from '../../../../src/popup/application/ad/GetMyAdsService'
 import GetMyAdsRepository from "../../../../src/popup/framework/repository/ad/GetMyAdsRepository"
 import global from "../../global.json"
 import TransformToMyAdsService from "../../../../src/popup/framework/transformers/TransformToMyAdsService"
 
 console.log("welcome! GetYourAdsService test")
-
-jest.mock("../../../../src/popup/framework/repository/ad/GetMyAdsRepository");
 
 describe('GetMyAdsService', function() {
     describe('findAll', function() {
@@ -23,9 +25,10 @@ describe('GetMyAdsService', function() {
                 }
             }
             //WHEN
-            const expectedAds = {
+            const expectedAds = new GetMyAdsServiceResponse({
                 "ads": [ new MyAds({'idanuncio':'1', 'titulo':'titulo', 'precio':'100', 'fecha': 'fecha', 'texto':'texto','fotos':[], 'fotos_thumb':[] })]
-            }
+            })
+
             const mockGetMyAdsRepository = jest.fn();
             GetMyAdsRepository.prototype.findAllAdsByUserId = mockGetMyAdsRepository;
             mockGetMyAdsRepository.mockReturnValue(Promise.resolve(mockedAds));
