@@ -12,6 +12,7 @@
                     <span :uk-toggle="getUkToogleClassNameByIndex(index)" uk-icon="icon: thumbnails"></span>
                 </div>
             </div>
+            <div class="uk-width-auto">&nbsp;</div>
             <div :class="getToogleClassesNameByIndex(index)">
                 <div class="uk-width-1-4 uk-height-max-small">
                     <a class="uk-link-reset" v-bind:href="getAdUrl(ad.idanuncio)" target="_blank">
