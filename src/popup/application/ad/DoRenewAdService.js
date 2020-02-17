@@ -11,18 +11,20 @@ class DoRenewAdService {
             await this._doRenewAdRepository.doRenewAd(
                 new DoRenewAdRepositoryRequest({...doRenewAdServiceRequest})
             )
-            console.log(`>>>renewed ad ${doRenewAdServiceRequest.adId}`)
+            console.log(`>>>renewed ad with success ${doRenewAdServiceRequest.adId}`)
         } catch (e) {
-            console.log(JSON.stringify(e))
+            console.log(`>>>renewed with error ${JSON.stringify(e)}`)
         }
+        console.log(">>>finished renew ad")
         return new DoRenewAdServiceResponse() //TODO
     }
 }
 
 class DoRenewAdServiceRequest {
-    constructor({apiToken, adId}) {
+    constructor({apiToken, adId, sessionId}) {
         this.apiToken = apiToken
         this.adId = adId
+        this.sessionId = sessionId
     }
 }
 

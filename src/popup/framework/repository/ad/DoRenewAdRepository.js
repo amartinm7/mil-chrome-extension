@@ -2,7 +2,7 @@ import axios from "axios"
 import qs from 'querystring'
 
 class DoRenewAdRepository {
-    async _getHeaderAndQueryParams (apiToken){
+    async _getHeaderAndQueryParams (apiToken,sessionId){
         console.log(">>>getHeaderAndQueryParams")
         const params =  {
             "r": "30",
@@ -15,9 +15,9 @@ class DoRenewAdRepository {
             "Accept": "*/*",
             "Cache-Control": "no-cache",
             'Content-Type': 'application/json',
-            'authorization': apiToken
+            'authorization': `Session ${sessionId}`
         }
-        console.log(">>>getHeaderAndQueryParams:" + JSON.stringify({header, params}))
+        console.log(">>>DoRenewAdRepository.getHeaderAndQueryParams:" + JSON.stringify({header, params}))
         return new Promise(
             (resolve, reject) => resolve( {header, params})
         )
@@ -26,7 +26,7 @@ class DoRenewAdRepository {
     async doRenewAd (doRenewAdRepositoryRequest) {
         console.log(">>>doRenewAd")
         const vm = this
-        const { header, params } = await this._getHeaderAndQueryParams(doRenewAdRepositoryRequest.apiToken)
+        const { header, params } = await this._getHeaderAndQueryParams(doRenewAdRepositoryRequest.apiToken, doRenewAdRepositoryRequest.sessionId)
         console.log("h&qp:" + JSON.stringify({ header, params }))
         const url = `https://www.milanuncios.com/api/v3/ads/${doRenewAdRepositoryRequest.adId}/renew`
         return axios({

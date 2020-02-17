@@ -4,9 +4,9 @@ import {DoLoginWithBothServiceRequest} from "../../application/user/DoLoginWithB
 
 class DoRenewAdController{
     async execute( doNewAdControllerRequest ){
-        console.log(">>>DoNewAdController")
+        console.log(">>>DoRenewAdService")
         const vm = this
-        const doLoginWithBothServiceRequest = await ServiceFactoryBean.doLoginWithBothService().execute(
+        const doLoginWithBothServiceResponse = await ServiceFactoryBean.doLoginWithBothService().execute(
             new DoLoginWithBothServiceRequest({
                 email: doNewAdControllerRequest.email,
                 password: doNewAdControllerRequest.password
@@ -15,8 +15,9 @@ class DoRenewAdController{
 
         await ServiceFactoryBean.doRenewAdService().execute(
             new DoRenewAdServiceRequest({
-                apiToken: doLoginWithBothServiceRequest.current.session.apiToken,
-                adId: doNewAdControllerRequest.adId
+                apiToken: doLoginWithBothServiceResponse.current.session.apiToken,
+                adId: doNewAdControllerRequest.adId,
+                sessionId: doLoginWithBothServiceResponse.current.session.id
             })
         )
 

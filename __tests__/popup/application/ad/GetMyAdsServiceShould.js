@@ -19,14 +19,36 @@ describe('GetMyAdsService', function() {
                 data: {
                     data:{
                         anuncios: [
-                            {'idanuncio':'1', 'titulo':'titulo', 'precio':'100', 'fecha': 'fecha', 'texto':'texto','fotos':[], 'fotos_thumb':[] }
+                            {
+                                'idanuncio':'1',
+                                'titulo':'titulo',
+                                'precio':'100',
+                                'fecha': 'fecha',
+                                'texto':'texto',
+                                'fotos':[],
+                                'fotos_thumb':[],
+                                'localidad': 'Leganes',
+                                'provincia': 'Madrid',
+                                'categoria': 'alfombra'
+                            }
                         ]
                     }
                 }
             }
             //WHEN
             const expectedAds = new GetMyAdsServiceResponse({
-                "ads": [ new MyAds({'idanuncio':'1', 'titulo':'titulo', 'precio':'100', 'fecha': 'fecha', 'texto':'texto','fotos':[], 'fotos_thumb':[] })]
+                "ads": [ new MyAds({
+                    'idanuncio':'1',
+                    'titulo':'titulo',
+                    'precio':'100',
+                    'fecha': 'fecha',
+                    'texto':'texto',
+                    'fotos':[],
+                    'fotos_thumb':[],
+                    'localidad': 'Leganes',
+                    'provincia': 'Madrid',
+                    'categoria': 'alfombra'
+                })]
             })
 
             const mockGetMyAdsRepository = jest.fn();
