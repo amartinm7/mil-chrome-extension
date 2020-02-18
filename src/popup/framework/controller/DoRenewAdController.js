@@ -6,13 +6,14 @@ class DoRenewAdController{
     async execute( doNewAdControllerRequest ){
         console.log(">>>DoRenewAdService")
         const vm = this
+        console.log(">>>DoRenewAdController.doLoginWithBothService")
         const doLoginWithBothServiceResponse = await ServiceFactoryBean.doLoginWithBothService().execute(
             new DoLoginWithBothServiceRequest({
                 email: doNewAdControllerRequest.email,
                 password: doNewAdControllerRequest.password
             })
         )
-
+        console.log(">>>DoRenewAdController.doRenewAdService")
         await ServiceFactoryBean.doRenewAdService().execute(
             new DoRenewAdServiceRequest({
                 apiToken: doLoginWithBothServiceResponse.current.session.apiToken,
@@ -20,7 +21,7 @@ class DoRenewAdController{
                 sessionId: doLoginWithBothServiceResponse.current.session.id
             })
         )
-
+        console.log(">>>DoRenewAdService ends")
         return new DoRenewAdControllerResponse()
     }
 }

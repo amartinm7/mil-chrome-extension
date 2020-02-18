@@ -119,95 +119,21 @@
       </div>
     </section>
 
-    <section class="uk-section uk-section-xsmall">
-      <div class="uk-width-auto uk-text-center uk-padding-small">
-        <div>Descarga Milanuncios en tu móvil</div>
-      </div>
-      <div class="uk-flex uk-flex-center uk-flex-around">
-        <div class="uk-width-1-6">
-        </div>
-        <div class="">
-          <a href="https://go.onelink.me/app/1ee638ce" target="_blank" rel="noopener noreferrer">
-            <div class="social-media-google-store"/>
-          </a>
-        </div>
-        <div>
-          <a href="https://go.onelink.me/app/751615a1" target="_blank" rel="noopener noreferrer">
-            <div class="social-media-apple-store"/>
-          </a>
-        </div>
-        <div class="uk-width-1-6">
-        </div>
-      </div>
-    </section>
-
-    <section class="uk-section uk-section-xsmall">
-      <div class="uk-width-auto uk-text-center uk-padding-small">
-        <div>Encuentranos en: </div>
-      </div>
-      <div class="uk-flex uk-flex-center uk-flex-around">
-        <div class="uk-width-1-5">
-        </div>
-        <div class="uk-width-auto ">
-          <a href="https://www.facebook.com/Milanuncios/" target="_blank" rel="noopener noreferrer">
-            <div class="social-media-facebook"/>
-          </a>
-        </div>
-        <div class="uk-width-auto">
-          <a href="https://twitter.com/milanuncios" target="_blank" rel="noopener noreferrer">
-            <div class="social-media-twitter"/>
-          </a>
-        </div>
-        <div class="uk-width-auto">
-          <a href="https://www.instagram.com/milanuncios/" target="_blank" rel="noopener noreferrer">
-            <div class="social-media-instagram"/>
-          </a>
-        </div>
-        <div class="uk-width-auto">
-          <a href="https://www.youtube.com/channel/UCw6Jn6QF5L9NXYkr_XNFMCQ" target="_blank" rel="noopener noreferrer">
-            <div class="social-media-youtube"/>
-          </a>
-        </div>
-        <div class="uk-width-1-5">
-        </div>
-      </div>
-      <div class="uk-width-auto uk-text-center uk-padding-small">
-        <div>Copyright © 2020 - Adevinta Spain S.L.U.</div>
-        <div>Todos los derechos reservados.</div>
-      </div>
-    </section>
-
-    <section class="uk-section uk-section-xsmall">
-      <div class="uk-position-relative uk-visible-toggle uk-light" >
-        <a class="uk-button uk-button-default" href="#modal-center" uk-toggle>
-          <img src="https://scm-milanuncios-frontend-pro.milanuncios.com/statics/images/banners/carsCampaign/carsCampaignBannerMobile_bg.b97cbb6439.jpg">
-        </a>
-      </div>
-      <div id="modal-center" class="uk-flex-top" uk-modal>
-        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
-          <button class="uk-modal-close-default" type="button" uk-close></button>
-          <iframe src="https://www.youtube-nocookie.com/embed/KKrEUft8p4g?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1"
-                  width="1920" height="1080"
-                  frameborder="0" uk-responsive
-                  uk-video="automute: true"></iframe>
-        </div>
-      </div>
-    </section>
+    <!-- social media first iteration-->
+    <my-social-media-component></my-social-media-component>
   </div>
 </template>
 
 <script>
-  import axios from 'axios';
-  import qs from 'querystring'
   import MyAdsComponent from "./component/myAds/MyAdsComponent";
+  import MySocialMediaComponent from "./component/socialMedia/SocialMediaComponent";
   import {LoadPageController, LoadPageControllerRequest} from "./framework/controller/LoadPageController";
-  import {DoRenewAdController, DoRenewAdControllerRequest} from "./framework/controller/DoRenewAdController";
   import {DoLogoutController, DoLogoutControllerRequest} from "./framework/controller/DoLogoutController";
   import {DoLoginController, DoLoginControllerRequest} from "./framework/controller/DoLoginController";
 
   export default {
     name: "app",
-    components: {MyAdsComponent},
+    components: {MyAdsComponent, MySocialMediaComponent},
     data: function () {
       return {
         myAdsComponent:{ enableRenew: true, enableBets: true},
@@ -317,17 +243,17 @@
         const doLogoutControllerResponse = await new DoLogoutController().execute(new DoLogoutControllerRequest() )
         vm.isLogged = false
       },
-      getSavedSearchs: async function (header, params) {
-        const url = `https://ms-ma--user-profiles.spain.schibsted.io/users/183565764/savedsearches/?${qs.stringify(params)}`
-        return axios({
-          method: 'get',
-          url: url,
-          data: params,
-          headers: header,
-          config: { withCredentials: true }
-          //[{"id":"e03f3ab9-7edb-4019-8b35-7c4e1e187446","userId":"183565764","title":"seat leon en Madrid","status":"ACTIVE","targeting":{"type":"coches","location":{"province":{"id":28}},"category":{"id":100664},"brand":"seat","domain":"leon","price":{"from":6000.0,"to":42000.0},"year":{"from":2019.0,"to":2020.0}},"creationDate":"2020-01-28T08:27:32.374","updateDate":"2020-01-28T08:27:32.374"}]
-        })
-      },
+      // getSavedSearchs: async function (header, params) {
+      //   const url = `https://ms-ma--user-profiles.spain.schibsted.io/users/183565764/savedsearches/?${qs.stringify(params)}`
+      //   return axios({
+      //     method: 'get',
+      //     url: url,
+      //     data: params,
+      //     headers: header,
+      //     config: { withCredentials: true }
+      //     //[{"id":"e03f3ab9-7edb-4019-8b35-7c4e1e187446","userId":"183565764","title":"seat leon en Madrid","status":"ACTIVE","targeting":{"type":"coches","location":{"province":{"id":28}},"category":{"id":100664},"brand":"seat","domain":"leon","price":{"from":6000.0,"to":42000.0},"year":{"from":2019.0,"to":2020.0}},"creationDate":"2020-01-28T08:27:32.374","updateDate":"2020-01-28T08:27:32.374"}]
+      //   })
+      //},
     },
     created() {
     },
@@ -424,6 +350,45 @@
   .social-media-youtube:hover {
     background: url(https://scm-milanuncios-frontend-pro.milanuncios.com/statics/images/common/social-networks/ic-youtube-footer-hover.18e3d63e1c.svg) no-repeat;
   }
+
+  .social-media {
+    opacity: 1;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .social-media:hover {
+    opacity: .5;
+    transition: opacity .2s ease-out;
+    -moz-transition: opacity .2s ease-out;
+    -webkit-transition: opacity .2s ease-out;
+    -o-transition: opacity .2s ease-out;
+  }
+
+  .social-media-habitaclia {
+    background-image: url(https://pbs.twimg.com/profile_images/1191255789467570176/bRiejI5I_reasonably_small.jpg);
+  }
+
+  .social-media-fotocasa {
+    background-image: url(https://pbs.twimg.com/profile_images/1038004057510760448/FWelhF5o_reasonably_small.jpg);
+  }
+
+  .social-media-cochesnet {
+    background-image: url(https://pbs.twimg.com/profile_images/1021333453730664449/MLnUoeiJ_reasonably_small.jpg);
+  }
+
+  .social-media-motosnet {
+    background-image: url("https://pbs.twimg.com/profile_images/1021334353178243074/j_iUQG4I_reasonably_small.jpg");
+  }
+
+  .social-media-infojobs {
+    background-image: url("https://pbs.twimg.com/profile_images/1078929979814170624/rwC8Rsvq_reasonably_small.jpg");
+  }
+
   /** for debug styling
     div {
       background-color: lightgrey;;

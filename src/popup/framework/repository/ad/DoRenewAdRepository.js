@@ -3,19 +3,17 @@ import qs from 'querystring'
 
 class DoRenewAdRepository {
     async _getHeaderAndQueryParams (apiToken,sessionId){
-        console.log(">>>getHeaderAndQueryParams")
+        console.log(">>>DoRenewAdRepository.getHeaderAndQueryParams")
         const params =  {
-            "r": "30",
-            "p": "1",
-            "token": apiToken,
-            "tokenRenew" : apiToken
+            "tokenRenew" : ''
         }
         const header = {
             "mav": "2",
             "Accept": "*/*",
             "Cache-Control": "no-cache",
             'Content-Type': 'application/json',
-            'authorization': `Session ${sessionId}`
+            'token': `Basic ${apiToken}`,
+            'Authorization': apiToken
         }
         console.log(">>>DoRenewAdRepository.getHeaderAndQueryParams:" + JSON.stringify({header, params}))
         return new Promise(
@@ -24,18 +22,20 @@ class DoRenewAdRepository {
     }
 
     async doRenewAd (doRenewAdRepositoryRequest) {
-        console.log(">>>doRenewAd")
+        console.log(">>>DoRenewAdRepository.doRenewAd")
         const vm = this
         const { header, params } = await this._getHeaderAndQueryParams(doRenewAdRepositoryRequest.apiToken, doRenewAdRepositoryRequest.sessionId)
         console.log("h&qp:" + JSON.stringify({ header, params }))
-        const url = `https://www.milanuncios.com/api/v3/ads/${doRenewAdRepositoryRequest.adId}/renew`
-        return axios({
+        const url = `https://www.milanuncios.com/api/v3/adrenew/${doRenewAdRepositoryRequest.adId}`
+        const axiosRequest = {
             method: 'post',
             url: url,
-            data: qs.stringify(params),
+            data: params,
             headers: header,
             config: { withCredentials: true }
-        })
+        }
+        console.log(`axiosRequest: ${JSON.stringify(axiosRequest)}`)
+        return axios(axiosRequest)
     }
 }
 

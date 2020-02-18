@@ -2,9 +2,9 @@ export default class MyFavouriteAds {
     constructor({idanuncio, titulo, precio, fecha, texto,fotos, fotos_thumb, localidad, provincia, categoria}) {
         this.idanuncio= idanuncio
         this.titulo= titulo
-        this.precio= precio
+        this.precio= (!!precio)? precio : "0 €"
         this.fecha= fecha
-        this. texto= texto
+        this.texto= texto
         this.fotos= fotos
         this.fotos_thumb= fotos_thumb,
         this.localidad = localidad,

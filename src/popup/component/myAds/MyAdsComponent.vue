@@ -143,6 +143,23 @@
 }
 </script>
 <style>
+
+    .uk-icon:hover, .uk-label:hover, .uk-label-success:hover, .uk-label-warning:hover, .uk-label-danger:hover {
+        opacity: .5;
+        transition: opacity .2s ease-out;
+        -moz-transition: opacity .2s ease-out;
+        -webkit-transition: opacity .2s ease-out;
+        -o-transition: opacity .2s ease-out;
+    }
+
+    .uk-icon:active, .uk-label:active, .uk-label-success:active, .uk-label-warning:active, .uk-label-danger:active {
+        opacity: .1;
+        transition: opacity .2s ease-out;
+        -moz-transition: opacity .2s ease-out;
+        -webkit-transition: opacity .2s ease-out;
+        -o-transition: opacity .2s ease-out;
+    }
+
     /** for debug styling
       div {
         background-color: lightgrey;;

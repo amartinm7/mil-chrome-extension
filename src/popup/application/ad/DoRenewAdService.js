@@ -8,12 +8,12 @@ class DoRenewAdService {
     async execute(doRenewAdServiceRequest) {
         console.log(">>>DoRenewAdService")
         try {
-            await this._doRenewAdRepository.doRenewAd(
+            const doRenewAdRepositoryResponse = await this._doRenewAdRepository.doRenewAd(
                 new DoRenewAdRepositoryRequest({...doRenewAdServiceRequest})
             )
-            console.log(`>>>renewed ad with success ${doRenewAdServiceRequest.adId}`)
+            console.log(`>>>DoRenewAdService.renewed ad with success ${JSON.stringify(doRenewAdRepositoryResponse)}`)
         } catch (e) {
-            console.log(`>>>renewed with error ${JSON.stringify(e)}`)
+            console.error(`>>>DoRenewAdService.renewed with error ${JSON.stringify(e)}`)
         }
         console.log(">>>finished renew ad")
         return new DoRenewAdServiceResponse() //TODO
