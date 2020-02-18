@@ -25,7 +25,7 @@ describe('DoRenewAdService', function() {
             const doRenewAdServiceResponse = await new DoRenewAdService(
                 new DoRenewAdRepository()
             ).execute(
-                new DoRenewAdServiceRequest({apiToken: global.apiToken, adId: global.ad.idanuncio})
+                new DoRenewAdServiceRequest({apiToken: global.apiToken, adId: global.ad.idanuncio, sessionId: global.sessionId})
             )
             console.log(JSON.stringify(doRenewAdServiceResponse))
             //ASSERTS
