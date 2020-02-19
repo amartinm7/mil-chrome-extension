@@ -12,7 +12,7 @@
                   <img class="uk-border-circle" width="40" height="40" src="https://sw25672.smartweb-static.com/upload_dir/shop/category/images-_sjove-tegninger-af-dyr_.w293.h293.fill.png">
                 </div>
                 <div class="uk-width-expand">
-                  <h6 class="uk-card-subtitle uk-margin-remove-bottom">{{logedUser.email}}</h6>
+                  <h6 class="uk-card-subtitle uk-margin-remove-bottom">{{current.logedUser.email}}</h6>
                   <p class="uk-text-meta uk-margin-remove-top">{{ getUserDateMsg() }}</p>
                 </div>
                 <ul class="uk-nav uk-nav-default" uk-accordion="collapsible: false">
@@ -163,11 +163,6 @@
             apiToken: ""
           }
         },
-
-        logedUser: {
-          email: "",
-          createdAt: ""
-        },
         ads:[
         ],
         favoriteAds:[
@@ -178,7 +173,7 @@
     methods: {
       getUserDateMsg: function (){
         try{
-          const strDate =  new Date(this.logedUser.createdAt).toLocaleDateString()
+          const strDate =  new Date(this.current.logedUser.createdAt).toLocaleDateString()
           return (strDate.startsWith("Invalid")) ? "" : `Usuario desde el ${strDate}`
         } catch (e) {
           return ""
@@ -223,7 +218,6 @@
         const doLoginControllerResponse = await new DoLoginController().execute(
                 new DoLoginControllerRequest({...formData})
         )
-        this.logedUser = doLoginControllerResponse.current.logedUser
         this.current = doLoginControllerResponse.current
         this.isLogged = true
         this.ads = doLoginControllerResponse.ads
