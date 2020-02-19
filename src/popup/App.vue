@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div uk-scrollspy="cls: uk-animation-fade; target: .ma-scroll-spy-effect; delay: 200; repeat: true">
     <section class="uk-section uk-section-xsmall uk-padding-remove-bottom">
       <div class="uk-grid-small uk-flex-middle uk-flex-around" uk-grid>
         <div class="uk-width-auto" >
@@ -61,7 +61,6 @@
           </div>
         </form>
       </div>
-
     </section>
     <!-- user -->
     <section class="uk-section uk-section-xsmall" v-if="isLogged == false">
@@ -101,19 +100,22 @@
         <div class="uk-active">
           <my-ads-component v-bind:ads="ads"
                             v-bind:enable-renew="myAdsComponent.enableRenew"
-                            v-bind:enable-bets="myAdsComponent.enableBets">
+                            v-bind:enable-bets="myAdsComponent.enableBets"
+                            class="ma-scroll-spy-effect">
           </my-ads-component>
         </div>
         <div>
           <my-ads-component v-bind:ads="favoriteAds"
                             v-bind:enable-renew="favouriteAdsComponent.enableRenew"
-                            v-bind:enable-bets="favouriteAdsComponent.enableBets">
+                            v-bind:enable-bets="favouriteAdsComponent.enableBets"
+                            class="ma-scroll-spy-effect">
           </my-ads-component>
         </div>
         <div>
           <my-ads-component v-bind:ads="favoriteAds"
                             v-bind:enable-renew="favouriteAdsComponent.enableRenew"
-                            v-bind:enable-bets="favouriteAdsComponent.enableBets">
+                            v-bind:enable-bets="favouriteAdsComponent.enableBets"
+                            class="ma-scroll-spy-effect">
           </my-ads-component>
         </div>
       </div>
@@ -272,6 +274,9 @@
     top: 30px !important;
     right: 50px !important;
     font-size: 8px;
+  }
+
+  .ma-scroll-spy-effect{
   }
 
   .ma-NavigationHeader-logoLink {

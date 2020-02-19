@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="ma-scroll-spy-effect">
     <article class="uk-comment" v-for="(ad, index) in ads" v-bind:todo="ad" v-bind:key="ad.id">
         <div class="uk-card uk-card-default uk-card-body uk-padding-small">
             <div class="uk-flex">
