@@ -34,7 +34,7 @@
                         <div class="uk-flex">
                             <div class="uk-width-1-2 uk-text-left">
                                 <a class="uk-link-reset" v-bind:href="getAdUrlByProvincia(ad.categoria,ad.provincia)" target="_blank">
-                                    <div class="uk-icon" uk-icon="icon: location"></div>{{sanitizeTitle(ad.localidad)}}
+                                    <div class="uk-icon" uk-icon="icon: location"></div>{{sanitizeMunicipality(ad)}}
                                 </a>
                             </div>
                             <div class="uk-width-1-2">
@@ -99,6 +99,9 @@
         },
         getBetUrl: function (idanuncio){
             return `https://www.milanuncios.com/mis-anuncios/subastas/${idanuncio}`
+        },
+        sanitizeMunicipality: function (ad){
+            return (ad.localidad === undefined || ad.localidad === '') ? ad.provincia : ad.localidad
         },
         sanitizeTitle: function (text){
             if (!!text == false){
