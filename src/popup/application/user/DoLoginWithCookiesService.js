@@ -18,7 +18,10 @@ class DoLoginWithCookiesService {
         console.log(">>>_executeDoLoginWithCookies")
         const doLoginWitCookiesResponse = await this._doLoginWithCookiesRepository.doLoginWithCurrentCookies()
         console.log(`>>> doLoginWitCookiesResponse ${JSON.stringify(doLoginWitCookiesResponse)}`)
-        return new DoLoginWithCookiesServiceResponse({apiToken: doLoginWitCookiesResponse.data.apiToken})
+        return new DoLoginWithCookiesServiceResponse({
+            apiToken: doLoginWitCookiesResponse.data.apiToken,
+            email: doLoginWitCookiesResponse.data.user.email
+        })
     }
 }
 
