@@ -1,4 +1,3 @@
-import ServiceFactoryBean from "../ServiceFactoryBean";
 import {GetMyAdsServiceRequest} from "../../application/ad/GetMyAdsService";
 import {GetMyFavouriteAdsServiceRequest} from "../../application/ad/GetMyFavouriteAdsService";
 import {DoLoginServiceRequest} from "../../application/user/DoLoginService";
