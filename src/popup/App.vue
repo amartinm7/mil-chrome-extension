@@ -50,6 +50,7 @@
         <div class="uk-width-auto">
         </div>
       </div>
+      <!-- searcher -->
       <div class="uk-container uk-padding-small">
         <form class="uk-form-stacked" v-on:submit.prevent="onAdSearch">
           <div class="uk-inline">
@@ -61,6 +62,7 @@
           </div>
         </form>
       </div>
+      <!-- end searcher -->
     </section>
     <!-- user -->
     <section class="uk-section uk-section-xsmall" v-if="isLogged == false">
