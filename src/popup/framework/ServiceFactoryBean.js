@@ -14,6 +14,8 @@ import GetMyFavouriteAdsRepository from "./repository/ad/GetMyFavouriteAdsReposi
 import TransformToMyFavouriteAdsService from "./transformers/TransformToMyFavouriteAdsService";
 import {DoLoginWithCookiesService} from "../application/user/DoLoginWithCookiesService";
 import {DoLoginWithBothService} from "../application/user/DoLoginWithBothService";
+import {SaveStorageRepository} from "./repository/storage/SaveStorageRepository";
+import {SaveStorageService} from "../application/storage/SaveStorageService";
 
 let instance = null
 
@@ -36,8 +38,6 @@ export default class ServiceFactoryBean{
             new DoLogoutRepository()
         )
         this._doRenewAdService = new DoRenewAdService(
-            new DoLoginRepository(),
-            new DoLoginWithCookiesRepository(),
             new DoRenewAdRepository()
         )
         this._getMyAdsService = new GetMyAdsService(
@@ -47,6 +47,9 @@ export default class ServiceFactoryBean{
         this._getMyFavouriteAdsService = new GetMyFavouriteAdsService(
             new GetMyFavouriteAdsRepository(),
             new TransformToMyFavouriteAdsService()
+        )
+        this._saveStorageService = new SaveStorageService(
+            new SaveStorageRepository()
         )
     }
 
@@ -83,5 +86,9 @@ export default class ServiceFactoryBean{
 
     static getMyFavouriteAdsService() {
         return this.getInstance()._getMyFavouriteAdsService
+    }
+
+    static saveStorageService() {
+        return this.getInstance()._saveStorageService
     }
 }

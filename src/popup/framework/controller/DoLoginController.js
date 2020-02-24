@@ -4,20 +4,25 @@ import {GetMyFavouriteAdsServiceRequest} from "../../application/ad/GetMyFavouri
 import {DoLoginServiceRequest} from "../../application/user/DoLoginService";
 
 class DoLoginController {
+    constructor(doLoginService, getMyAdsService, getMyFavouriteAdsService) {
+        this._doLoginService = doLoginService
+        this._getMyAdsService = getMyAdsService
+        this._getMyFavouriteAdsService = getMyFavouriteAdsService
+    }
 
     async execute( doLoginControllerRequest ){
         console.log(">>>DoLoginController")
         const vm = this
 
-        const doLoginServiceResponse = await ServiceFactoryBean.doLoginService().execute(
+        const doLoginServiceResponse = await this._doLoginService.execute(
                 new DoLoginServiceRequest({...doLoginControllerRequest})
         )
 
-        const getMyAdsServiceResponse = await ServiceFactoryBean.getMyAdsService().execute(
+        const getMyAdsServiceResponse = await this._getMyAdsService.execute(
             new GetMyAdsServiceRequest(doLoginServiceResponse.current.session.apiToken)
         )
 
-        const getMyFavouriteAdsServiceResponse = await ServiceFactoryBean.getMyFavouriteAdsService().execute(
+        const getMyFavouriteAdsServiceResponse = await this._getMyFavouriteAdsService.execute(
             new GetMyFavouriteAdsServiceRequest(doLoginServiceResponse.current.session.apiToken)
         )
 

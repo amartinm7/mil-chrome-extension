@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div uk-scrollspy="cls: uk-animation-fade; target: .ma-scroll-spy-effect; delay: 200; repeat: true">
     <section class="uk-section uk-section-xsmall uk-padding-remove-bottom">
       <div class="uk-grid-small uk-flex-middle uk-flex-around" uk-grid>
         <div class="uk-width-auto" >
@@ -12,7 +12,7 @@
                   <img class="uk-border-circle" width="40" height="40" src="https://sw25672.smartweb-static.com/upload_dir/shop/category/images-_sjove-tegninger-af-dyr_.w293.h293.fill.png">
                 </div>
                 <div class="uk-width-expand">
-                  <h6 class="uk-card-subtitle uk-margin-remove-bottom">{{logedUser.email}}</h6>
+                  <h6 class="uk-card-subtitle uk-margin-remove-bottom">{{current.logedUser.email}}</h6>
                   <p class="uk-text-meta uk-margin-remove-top">{{ getUserDateMsg() }}</p>
                 </div>
                 <ul class="uk-nav uk-nav-default" uk-accordion="collapsible: false">
@@ -50,6 +50,7 @@
         <div class="uk-width-auto">
         </div>
       </div>
+      <!-- searcher -->
       <div class="uk-container uk-padding-small">
         <form class="uk-form-stacked" v-on:submit.prevent="onAdSearch">
           <div class="uk-inline">
@@ -61,7 +62,7 @@
           </div>
         </form>
       </div>
-
+      <!-- end searcher -->
     </section>
     <!-- user -->
     <section class="uk-section uk-section-xsmall" v-if="isLogged == false">
@@ -101,19 +102,22 @@
         <div class="uk-active">
           <my-ads-component v-bind:ads="ads"
                             v-bind:enable-renew="myAdsComponent.enableRenew"
-                            v-bind:enable-bets="myAdsComponent.enableBets">
+                            v-bind:enable-bets="myAdsComponent.enableBets"
+                            class="ma-scroll-spy-effect">
           </my-ads-component>
         </div>
         <div>
           <my-ads-component v-bind:ads="favoriteAds"
                             v-bind:enable-renew="favouriteAdsComponent.enableRenew"
-                            v-bind:enable-bets="favouriteAdsComponent.enableBets">
+                            v-bind:enable-bets="favouriteAdsComponent.enableBets"
+                            class="ma-scroll-spy-effect">
           </my-ads-component>
         </div>
         <div>
           <my-ads-component v-bind:ads="favoriteAds"
                             v-bind:enable-renew="favouriteAdsComponent.enableRenew"
-                            v-bind:enable-bets="favouriteAdsComponent.enableBets">
+                            v-bind:enable-bets="favouriteAdsComponent.enableBets"
+                            class="ma-scroll-spy-effect">
           </my-ads-component>
         </div>
       </div>
@@ -127,9 +131,11 @@
 <script>
   import MyAdsComponent from "./component/myAds/MyAdsComponent";
   import MySocialMediaComponent from "./component/socialMedia/SocialMediaComponent";
-  import {LoadPageController, LoadPageControllerRequest} from "./framework/controller/LoadPageController";
-  import {DoLogoutController, DoLogoutControllerRequest} from "./framework/controller/DoLogoutController";
-  import {DoLoginController, DoLoginControllerRequest} from "./framework/controller/DoLoginController";
+  import ControllerFacadeFactoryBean from "./framework/ControllerFacadeFactoryBean";
+  import {LoadPageControllerRequest} from "./framework/controller/LoadPageController";
+  import {DoLoginControllerRequest} from "./framework/controller/DoLoginController";
+  import {DoLogoutControllerRequest} from "./framework/controller/DoLogoutController";
+  const chromeExtension = chrome
 
   export default {
     name: "app",
@@ -161,11 +167,6 @@
             apiToken: ""
           }
         },
-
-        logedUser: {
-          email: "",
-          createdAt: ""
-        },
         ads:[
         ],
         favoriteAds:[
@@ -176,7 +177,7 @@
     methods: {
       getUserDateMsg: function (){
         try{
-          const strDate =  new Date(this.logedUser.createdAt).toLocaleDateString()
+          const strDate = new Date(this.current.logedUser.createdAt).toLocaleDateString()
           return (strDate.startsWith("Invalid")) ? "" : `Usuario desde el ${strDate}`
         } catch (e) {
           return ""
@@ -218,10 +219,9 @@
       },
       login: async function (formData) {
         console.log(">>>loadPage")
-        const doLoginControllerResponse = await new DoLoginController().execute(
+        const doLoginControllerResponse = await ControllerFacadeFactoryBean.doLoginController().execute(
                 new DoLoginControllerRequest({...formData})
         )
-        this.logedUser = doLoginControllerResponse.current.logedUser
         this.current = doLoginControllerResponse.current
         this.isLogged = true
         this.ads = doLoginControllerResponse.ads
@@ -229,7 +229,7 @@
       },
       loadPage: async function (formData) {
         console.log(">>>loadPage")
-        const loadPageControllerResponse = await new LoadPageController().execute(
+        const loadPageControllerResponse = await ControllerFacadeFactoryBean.loadPageController().execute(
                 new LoadPageControllerRequest({...formData})
         )
         this.logedUser = loadPageControllerResponse.current.logedUser
@@ -240,7 +240,9 @@
       },
       onLogout: async function(){
         const vm = this
-        const doLogoutControllerResponse = await new DoLogoutController().execute(new DoLogoutControllerRequest() )
+        const doLogoutControllerResponse = await ControllerFacadeFactoryBean.doLogoutController().execute(
+                new DoLogoutControllerRequest()
+        )
         vm.isLogged = false
       },
       // getSavedSearchs: async function (header, params) {
@@ -258,6 +260,8 @@
     created() {
     },
     mounted: async function () {
+      console.log(">>>SaveStorageRepository execute localstorage")
+      await ControllerFacadeFactoryBean.saveStorageController().execute()
       await this.onLoadPage()
     }
   };
@@ -272,6 +276,9 @@
     top: 30px !important;
     right: 50px !important;
     font-size: 8px;
+  }
+
+  .ma-scroll-spy-effect{
   }
 
   .ma-NavigationHeader-logoLink {

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="ma-scroll-spy-effect">
         <section class="uk-section uk-section-xsmall">
             <div class="uk-width-auto uk-text-center uk-padding-small">
                 <div>Descarga Milanuncios en tu móvil</div>

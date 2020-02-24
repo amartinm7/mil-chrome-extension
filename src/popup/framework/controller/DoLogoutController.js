@@ -2,9 +2,12 @@ import ServiceFactoryBean from "../ServiceFactoryBean";
 import {DoLogoutServiceRequest} from "../../application/user/DoLogoutService";
 
 class DoLogoutController{
-    async execute( DoLogoutController ){
+    constructor() {
+        this._doLogoutService = ServiceFactoryBean.doLogoutService()
+    }
+    async execute( doLogoutControllerRequest ){
         console.log(">>>DoLogoutController")
-        const doLoginServiceResponse = await ServiceFactoryBean.doLogoutService().execute(
+        const doLogoutServiceResponse = await this._doLogoutService.execute(
             new DoLogoutServiceRequest({})
         )
         return new DoLogoutControllerResponse()
