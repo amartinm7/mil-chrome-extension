@@ -3,18 +3,23 @@ import {DoRenewAdServiceRequest} from "../../application/ad/DoRenewAdService";
 import {DoLoginWithBothServiceRequest} from "../../application/user/DoLoginWithBothService";
 
 class DoRenewAdController{
+    constructor(doLoginWithBothService, doRenewAdService) {
+        this._doLoginWithBothService = doLoginWithBothService
+        this._doRenewAdService = doRenewAdService
+    }
+
     async execute( doNewAdControllerRequest ){
         console.log(">>>DoRenewAdService")
         const vm = this
         console.log(">>>DoRenewAdController.doLoginWithBothService")
-        const doLoginWithBothServiceResponse = await ServiceFactoryBean.doLoginWithBothService().execute(
+        const doLoginWithBothServiceResponse = await this._doLoginWithBothService().execute(
             new DoLoginWithBothServiceRequest({
                 email: doNewAdControllerRequest.email,
                 password: doNewAdControllerRequest.password
             })
         )
         console.log(">>>DoRenewAdController.doRenewAdService")
-        await ServiceFactoryBean.doRenewAdService().execute(
+        await this._doRenewAdService().execute(
             new DoRenewAdServiceRequest({
                 apiToken: doLoginWithBothServiceResponse.current.session.apiToken,
                 adId: doNewAdControllerRequest.adId,

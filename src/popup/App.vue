@@ -129,9 +129,11 @@
 <script>
   import MyAdsComponent from "./component/myAds/MyAdsComponent";
   import MySocialMediaComponent from "./component/socialMedia/SocialMediaComponent";
-  import {LoadPageController, LoadPageControllerRequest} from "./framework/controller/LoadPageController";
-  import {DoLogoutController, DoLogoutControllerRequest} from "./framework/controller/DoLogoutController";
-  import {DoLoginController, DoLoginControllerRequest} from "./framework/controller/DoLoginController";
+  import ControllerFacadeFactoryBean from "./framework/ControllerFacadeFactoryBean";
+  import {LoadPageControllerRequest} from "./framework/controller/LoadPageController";
+  import {DoLoginControllerRequest} from "./framework/controller/DoLoginController";
+  import {DoLogoutControllerRequest} from "./framework/controller/DoLogoutController";
+  const chromeExtension = chrome
 
   export default {
     name: "app",
@@ -173,7 +175,7 @@
     methods: {
       getUserDateMsg: function (){
         try{
-          const strDate =  new Date(this.current.logedUser.createdAt).toLocaleDateString()
+          const strDate = new Date(this.current.logedUser.createdAt).toLocaleDateString()
           return (strDate.startsWith("Invalid")) ? "" : `Usuario desde el ${strDate}`
         } catch (e) {
           return ""
@@ -215,7 +217,7 @@
       },
       login: async function (formData) {
         console.log(">>>loadPage")
-        const doLoginControllerResponse = await new DoLoginController().execute(
+        const doLoginControllerResponse = await ControllerFacadeFactoryBean.doLoginController().execute(
                 new DoLoginControllerRequest({...formData})
         )
         this.current = doLoginControllerResponse.current
@@ -225,7 +227,7 @@
       },
       loadPage: async function (formData) {
         console.log(">>>loadPage")
-        const loadPageControllerResponse = await new LoadPageController().execute(
+        const loadPageControllerResponse = await ControllerFacadeFactoryBean.loadPageController().execute(
                 new LoadPageControllerRequest({...formData})
         )
         this.logedUser = loadPageControllerResponse.current.logedUser
@@ -236,7 +238,9 @@
       },
       onLogout: async function(){
         const vm = this
-        const doLogoutControllerResponse = await new DoLogoutController().execute(new DoLogoutControllerRequest() )
+        const doLogoutControllerResponse = await ControllerFacadeFactoryBean.doLogoutController().execute(
+                new DoLogoutControllerRequest()
+        )
         vm.isLogged = false
       },
       // getSavedSearchs: async function (header, params) {
@@ -254,6 +258,8 @@
     created() {
     },
     mounted: async function () {
+      console.log(">>>SaveStorageRepository execute localstorage")
+      await ControllerFacadeFactoryBean.saveStorageController().execute()
       await this.onLoadPage()
     }
   };

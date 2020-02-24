@@ -55,3 +55,10 @@ https://www.akinjide.me/2019/automate-chrome-extension-deployment/
 
 rest client online
 https://restninja.io
+
+
+dependencies: 
+- npm install chrome-storage
+- npm install mock-local-storage --save-dev
+- npm install window-mock --save-dev
+

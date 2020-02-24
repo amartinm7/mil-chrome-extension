@@ -4,20 +4,25 @@ import {GetMyAdsServiceRequest} from "../../application/ad/GetMyAdsService";
 import {GetMyFavouriteAdsServiceRequest} from "../../application/ad/GetMyFavouriteAdsService";
 
 class LoadPageController {
+    constructor(doLoginWithCookiesService, getMyAdsService, getMyFavouriteAdsService) {
+        this._doLoginWithCookiesService = doLoginWithCookiesService
+        this._getMyAdsService = getMyAdsService
+        this._getMyFavouriteAdsService = getMyFavouriteAdsService
+    }
 
     async execute( loadPageControllerRequest ){
         console.log(">>>LoadPageController")
         const vm = this
 
-        const doLoginServiceResponse = await ServiceFactoryBean.doLoginWithCookiesService().execute(
+        const doLoginServiceResponse = await this._doLoginWithCookiesService.execute(
                 new DoLoginWithCookiesServiceRequest({...loadPageControllerRequest})
         )
 
-        const getMyAdsServiceResponse = await ServiceFactoryBean.getMyAdsService().execute(
+        const getMyAdsServiceResponse = await this._getMyAdsService.execute(
             new GetMyAdsServiceRequest(doLoginServiceResponse.current.session.apiToken)
         )
 
-        const getMyFavouriteAdsServiceResponse = await ServiceFactoryBean.getMyFavouriteAdsService().execute(
+        const getMyFavouriteAdsServiceResponse = await this._getMyFavouriteAdsService.execute(
             new GetMyFavouriteAdsServiceRequest(doLoginServiceResponse.current.session.apiToken)
         )
 
