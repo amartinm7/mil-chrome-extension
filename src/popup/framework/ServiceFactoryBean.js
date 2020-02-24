@@ -20,7 +20,7 @@ import {SaveStorageService} from "../application/storage/SaveStorageService";
 let instance = null
 
 export default class ServiceFactoryBean{
-    constructor(chrome) {
+    constructor() {
         console.log(">>>Init ServiceFactoryBean")
         this._doLoginService = new DoLoginService(
             new DoLoginRepository(),
@@ -55,7 +55,7 @@ export default class ServiceFactoryBean{
 
     static getInstance(){
         if (!instance) {
-            instance = new ServiceFactoryBean(chrome);
+            instance = new ServiceFactoryBean();
         }
         return instance
     }

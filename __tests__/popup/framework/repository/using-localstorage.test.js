@@ -4,9 +4,8 @@ let window = new WindowMock();
 global.window = {}
 import 'mock-local-storage'
 window.localStorage = global.localStorage
-
+window.global = global
 //after that you can use it import ./using-localstorage.test.js
-
 
 
 
@@ -15,3 +14,11 @@ window.localStorage = global.localStorage
 // Storage.configure({
 //     scope: "local", // or "sync"
 // });
+
+describe('LoadPageController', function() {
+    describe('execute', function() {
+        it('should return a true', async function() {
+            console.log("void test")
+        })
+    })
+})

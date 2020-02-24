@@ -12,14 +12,14 @@ class DoRenewAdController{
         console.log(">>>DoRenewAdService")
         const vm = this
         console.log(">>>DoRenewAdController.doLoginWithBothService")
-        const doLoginWithBothServiceResponse = await this._doLoginWithBothService().execute(
+        const doLoginWithBothServiceResponse = await this._doLoginWithBothService.execute(
             new DoLoginWithBothServiceRequest({
                 email: doNewAdControllerRequest.email,
                 password: doNewAdControllerRequest.password
             })
         )
         console.log(">>>DoRenewAdController.doRenewAdService")
-        await this._doRenewAdService().execute(
+        await this._doRenewAdService.execute(
             new DoRenewAdServiceRequest({
                 apiToken: doLoginWithBothServiceResponse.current.session.apiToken,
                 adId: doNewAdControllerRequest.adId,

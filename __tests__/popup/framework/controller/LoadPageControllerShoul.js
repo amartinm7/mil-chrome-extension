@@ -13,7 +13,13 @@ import {GetMyAdsServiceResponse} from "../../../../src/popup/application/ad/GetM
 import MyFavouriteAds from "../../../../src/popup/domain/ad/MyFavouriteAds";
 const assert = require("assert")
 
+import '../repository/using-localstorage.test.js'
+import {SaveStorageRepository} from "../../../../src/popup/framework/repository/storage/SaveStorageRepository";
+import ControllerFacadeFactoryBean from "../../../../src/popup/framework/ControllerFacadeFactoryBean";
+SaveStorageRepository.prototype.$chromeExtensionRef = global
+
 console.log("welcome! DoLoginService test")
+
 
 describe('LoadPageController', function() {
     describe('execute', function() {
@@ -74,7 +80,7 @@ describe('LoadPageController', function() {
 
             )
 
-            const loadPageControllerResponse = await new LoadPageController().execute(
+            const loadPageControllerResponse = await ControllerFacadeFactoryBean.loadPageController().execute(
                 new LoadPageControllerRequest({...global.credentials})
             )
             console.log(JSON.stringify(loadPageControllerResponse))
