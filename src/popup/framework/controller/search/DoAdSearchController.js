@@ -1,3 +1,5 @@
+import qs from 'querystring'
+
 class DoAdSearchController {
     constructor(saveStorageService) {
         this._saveStorageService = saveStorageService
@@ -6,8 +8,12 @@ class DoAdSearchController {
     async execute(doAdSearchControllerRequest){
         const sanitizedKeyword = this._sanitizeKeyword(doAdSearchControllerRequest.keywords)
         console.log("sanitizedKeyword " + sanitizedKeyword)
+        const sanitizedKeywordWithoutHasta = this._getHasta(sanitizedKeyword)
+        console.log(JSON.stringify(sanitizedKeywordWithoutHasta))
+        const sanitizedKeywordWithoutDesde = this._getDesde(sanitizedKeywordWithoutHasta)
+        console.log(JSON.stringify(sanitizedKeywordWithoutDesde))
         //saveStorageService.execute()
-        const url = this._composeUrl(sanitizedKeyword)
+        const url = this._composeUrl(sanitizedKeywordWithoutDesde)
         console.log("url " + JSON.stringify(url))
         return new DoAdSearchControllerResponse({ url })
     }
@@ -16,25 +22,48 @@ class DoAdSearchController {
         return keywords.split(" ").join("-")
     }
 
-    // _getDesde(sanitizedKeyword){
-    //     if ( sanitizedKeyword.includes("-desde-") ) {
-    //         const desde = sanitizedKeyword.substring(sanitizedKeyword.indexOf("-desde-"))
-    //         return {
-    //             sanitizedKeyword:
-    //         }
-    //     }
-    // }
+    _getDesde(sanitizedKeywordWithoutHasta){
+        if ( sanitizedKeywordWithoutHasta.sanitizedKeyword.includes("-desde-") ) {
+            const sanitizedKeywordWithoutDesde = sanitizedKeywordWithoutHasta.sanitizedKeyword.substring(0,sanitizedKeywordWithoutHasta.sanitizedKeyword.indexOf("-desde-"))
+            const desde = sanitizedKeywordWithoutHasta.sanitizedKeyword.substring(sanitizedKeywordWithoutHasta.sanitizedKeyword.indexOf("-desde-")).split("-")[2]
+            return {
+                "sanitizedKeyword": sanitizedKeywordWithoutDesde,
+                "price": Object.assign({}, sanitizedKeywordWithoutHasta.price, {desde})
+            }
+        }
+        return {
+            "sanitizedKeyword": sanitizedKeywordWithoutHasta.sanitizedKeyword,
+            "price": sanitizedKeywordWithoutHasta.price
+        }
+    }
 
-    _composeUrl(sanitizedKeyword){
+    _getHasta(sanitizedKeyword){
+        if ( sanitizedKeyword.includes("-hasta-") ) {
+            const sanitizedKeywordWithoutDesde = sanitizedKeyword.substring(0,sanitizedKeyword.indexOf("-hasta-"))
+            const hasta = sanitizedKeyword.substring(sanitizedKeyword.indexOf("-hasta-")).split("-")[2]
+            return {
+                "sanitizedKeyword": sanitizedKeywordWithoutDesde,
+                "price": {
+                    "hasta": hasta
+                }
+            }
+        }
+        return {
+            "sanitizedKeyword": sanitizedKeyword,
+            "price": {}
+        }
+    }
+
+    _composeUrl(sanitizedKeywordWithoutDesde){
         const url = "https://www.milanuncios.com/anuncios"
-        if ( sanitizedKeyword.includes("-en-") ) {
+        if ( sanitizedKeywordWithoutDesde.sanitizedKeyword.includes("-en-") ) {
             // caso citroen c3 puretech en madrid
-            const productSlugger = sanitizedKeyword.substring(0,sanitizedKeyword.indexOf("-en-")) + ".htm?fromSearch=1"
-            const locationSlugger = sanitizedKeyword.substring(sanitizedKeyword.indexOf("-en-"))
-            return url + locationSlugger + "/" + productSlugger
+            const productSlugger = sanitizedKeywordWithoutDesde.sanitizedKeyword.substring(0,sanitizedKeywordWithoutDesde.sanitizedKeyword.indexOf("-en-"))
+            const locationSlugger = sanitizedKeywordWithoutDesde.sanitizedKeyword.substring(sanitizedKeywordWithoutDesde.sanitizedKeyword.indexOf("-en-"))
+            return `${url}${locationSlugger}/${productSlugger}.htm?fromSearch=1&${qs.stringify(sanitizedKeywordWithoutDesde.price)}`
         } else {
             //caso general
-            return url + "/" +  sanitizedKeyword + ".htm?fromSearch=1"
+            return `${url}/${sanitizedKeywordWithoutDesde.sanitizedKeyword}.htm?fromSearch=1&${qs.stringify(sanitizedKeywordWithoutDesde.price)}`
         }
     }
 }

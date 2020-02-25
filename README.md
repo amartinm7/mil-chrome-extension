@@ -50,6 +50,9 @@ https://getuikit.com/docs/introduction
 
 https://semantic-ui.com/introduction/getting-started.html
 
+endpoint para ciudades de españa
+https://public.opendatasoft.com/explore/dataset/espana-municipios/api/?location=5,36.12825,-6.91667&basemap=jawg.streets&dataChart=eyJxdWVyaWVzIjpbeyJjb25maWciOnsiZGF0YXNldCI6ImVzcGFuYS1tdW5pY2lwaW9zIiwib3B0aW9ucyI6e319LCJjaGFydHMiOlt7ImFsaWduTW9udGgiOnRydWUsInR5cGUiOiJjb2x1bW4iLCJmdW5jIjoiQVZHIiwieUF4aXMiOiJpZF8wIiwic2NpZW50aWZpY0Rpc3BsYXkiOnRydWUsImNvbG9yIjoiI0ZGNTE1QSJ9XSwieEF4aXMiOiJjb21tdW5pZGFkX2F1dG9ub21hIiwibWF4cG9pbnRzIjo1MCwic29ydCI6IiJ9XSwidGltZXNjYWxlIjoiIiwiZGlzcGxheUxlZ2VuZCI6dHJ1ZSwiYWxpZ25Nb250aCI6dHJ1ZX0%3D
+
 deploy chrome store
 https://www.akinjide.me/2019/automate-chrome-extension-deployment/
 
