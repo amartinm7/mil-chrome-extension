@@ -56,7 +56,7 @@
           <div class="uk-inline">
             <span class="uk-form-icon" uk-icon="icon: search"></span>
             <input type="text" class="uk-input uk-form-width-large"
-                   placeholder="¿que buscas?"
+                   placeholder="¿que buscas?... citroen c3 puretech en madrid"
                    v-on:keyup.enter="onAdSearch"
                    v-model="searchFormData.keywords">
           </div>
@@ -135,6 +135,7 @@
   import {LoadPageControllerRequest} from "./framework/controller/LoadPageController";
   import {DoLoginControllerRequest} from "./framework/controller/DoLoginController";
   import {DoLogoutControllerRequest} from "./framework/controller/DoLogoutController";
+  import {DoAdSearchControllerRequest} from "./framework/controller/search/DoAdSearchController";
   const chromeExtension = chrome
 
   export default {
@@ -188,9 +189,12 @@
         this.formData.errors.invalidPassword = !this.formData.password || 0 === this.formData.email.password
         return this.formData.errors.invalidEmail || this.formData.errors.invalidPassword
       },
-      onAdSearch: function () {
-        const url = `https://www.milanuncios.com/anuncios/${this.searchFormData.keywords}.htm?fromSearch=1`
-        window.open(url, '_blank')
+      onAdSearch: async function () {
+        const doAdSearchControllerResponse = await ControllerFacadeFactoryBean.doAdSearchController().execute(
+                new DoAdSearchControllerRequest({keywords: this.searchFormData.keywords})
+        )
+        console.log(doAdSearchControllerResponse.url)
+        window.open(doAdSearchControllerResponse.url, '_blank')
       },
       onDoLogin: async function () {
         console.log(">>>onDoLogin")
