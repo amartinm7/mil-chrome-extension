@@ -64,6 +64,7 @@
 <script>
 
     import {DoRenewAdController, DoRenewAdControllerRequest} from "../../framework/controller/DoRenewAdController";
+    import ControllerFacadeFactoryBean from "../../framework/ControllerFacadeFactoryBean";
 
     export default {
     name: 'myAdsComponent',
@@ -121,7 +122,7 @@
         onDoRenew: async function(ad){
             console.log(">>>onDoRenew")
             try {
-                const doRenewAdControllerResponse = await new DoRenewAdController().execute(
+                const doRenewAdControllerResponse = await ControllerFacadeFactoryBean.doRenewAdController().execute(
                     new DoRenewAdControllerRequest({
                         email: "",
                         password: "",

@@ -26,7 +26,7 @@ class DoRenewAdController{
                 sessionId: doLoginWithBothServiceResponse.current.session.id
             })
         )
-        console.log(">>>DoRenewAdService ends")
+        console.log(">>>DoRenewAdService ends with sucess!!")
         return new DoRenewAdControllerResponse()
     }
 }
