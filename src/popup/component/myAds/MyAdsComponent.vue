@@ -6,13 +6,24 @@
                 <div class="uk-width-1-4">
                     <span class="uk-label-danger">&nbsp;Ref {{ad.idanuncio}}&nbsp;</span>
                 </div>
-                <div class="uk-text-right uk-width-3-4">
-                    <span class="uk-label" v-if="enableRenew == true"><a v-on:click.prevent.stop="onDoRenew(ad)" class="uk-link-reset">Renueva</a></span>
-                    <span class="uk-label" v-if="enableBets == true"><a v-bind:href="getBetUrl(ad.idanuncio)" target="_blank" class="uk-link-reset">Subasta</a></span>
-                    <span :uk-toggle="getUkToogleClassNameByIndex(index)" uk-icon="icon: thumbnails"></span>
+                <div class="uk-flex uk-flex-right uk-width-3-4">
+                    <div v-if="enableRenew == true">
+                        <a v-on:click.prevent.stop="onDoRenew(ad)" class="uk-link-reset">
+                            <span class="uk-icon" uk-icon="icon: refresh" uk-tooltip="Renueva tu anuncio"></span>
+                        </a>
+                    </div>
+                    <div class="uk-width-auto">&nbsp;</div>
+                    <div v-if="enableBets == true">
+                        <a v-bind:href="getBetUrl(ad.idanuncio)" target="_blank" class="uk-link-reset">
+                            <span class="uk-icon" uk-icon="icon: future" uk-tooltip="Posiciona tu anuncio"></span>
+                        </a>
+                    </div>
+                    <div class="uk-width-auto">&nbsp;</div>
+                    <div :uk-toggle="getUkToogleClassNameByIndex(index)">
+                        <span class="uk-icon" uk-icon="icon: thumbnails" uk-tooltip="Galeria"></span>
+                    </div>
                 </div>
             </div>
-            <div class="uk-width-auto">&nbsp;</div>
             <div :class="getToogleClassesNameByIndex(index)">
                 <div class="uk-width-1-4 uk-height-max-small">
                     <a class="uk-link-reset" v-bind:href="getAdUrl(ad.idanuncio)" target="_blank">
@@ -32,9 +43,10 @@
                           </span>
                         </div>
                         <div class="uk-flex">
-                            <div class="uk-width-1-2 uk-text-left">
+                            <div class="uk-width-1-2 uk-text-left" :uk-tooltip="getAdTitleByLocation(ad.categoria,ad.provincia)">
                                 <a class="uk-link-reset" v-bind:href="getAdUrlByProvincia(ad.categoria,ad.provincia)" target="_blank">
-                                    <div class="uk-icon" uk-icon="icon: location"></div>{{sanitizeMunicipality(ad)}}
+                                    <div class="uk-icon" uk-icon="icon: location">
+                                    </div>{{sanitizeMunicipality(ad)}}
                                 </a>
                             </div>
                             <div class="uk-width-1-2">
@@ -94,6 +106,9 @@
         },
         getAdUrl: function (idanuncio) {
             return `http://www.milanuncios.com/anuncios/r${idanuncio}.htm`
+        },
+        getAdTitleByLocation: function (slugger, provincia) {
+            return `${slugger.replace(/-/g, " ")} en ${provincia}`
         },
         getAdUrlByProvincia: function (slugger, provincia) {
             return `http://www.milanuncios.com/${slugger}-en-${provincia}/`
@@ -164,6 +179,20 @@
         -o-transition: opacity .2s ease-out;
     }
 
+    .icon-spinner {
+        animation: spin-animation 0.5s 2s;
+        display: inline-block;
+    }
+
+    @keyframes spin-animation {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(359deg);
+        }
+    }
+
     /** for debug styling
       div {
         background-color: lightgrey;;
@@ -171,5 +200,5 @@
         padding: 1px;
         margin: 1px;
       }
-       for debug styling **/
+      for debug styling **/
 </style>

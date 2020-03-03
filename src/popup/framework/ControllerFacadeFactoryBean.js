@@ -5,6 +5,7 @@ import {DoLogoutController} from "./controller/DoLogoutController";
 import {LoadPageController} from "./controller/LoadPageController";
 import {DoRenewAdController} from "./controller/DoRenewAdController";
 import {DoAdSearchController} from "./controller/search/DoAdSearchController";
+import {GetAdStatsController} from "./controller/search/GetAdStatsController";
 
 let instance = null
 
@@ -40,6 +41,10 @@ export default class ControllerFacadeFactoryBean {
         this._doAdSearchController = new DoAdSearchController(
             ServiceFactoryBean.saveStorageService(),
         )
+
+        this._getAdStatsController = new GetAdStatsController(
+            ServiceFactoryBean.getAdStatsService()
+        )
     }
 
     static getInstance() {
@@ -71,5 +76,9 @@ export default class ControllerFacadeFactoryBean {
 
     static doAdSearchController() {
         return this.getInstance()._doAdSearchController
+    }
+
+    static getAdStatsController() {
+        return this.getInstance()._getAdStatsController
     }
 }

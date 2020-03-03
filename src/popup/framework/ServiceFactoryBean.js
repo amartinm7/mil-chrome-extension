@@ -16,6 +16,8 @@ import {DoLoginWithCookiesService} from "../application/user/DoLoginWithCookiesS
 import {DoLoginWithBothService} from "../application/user/DoLoginWithBothService";
 import {SaveStorageRepository} from "./repository/storage/SaveStorageRepository";
 import {SaveStorageService} from "../application/storage/SaveStorageService";
+import {GetAdStatsRepository} from "./repository/ad/GetAdStatsRepository";
+import {GetAdStatsService} from "../application/ad/GetAdStatsService";
 
 let instance = null
 
@@ -50,6 +52,9 @@ export default class ServiceFactoryBean{
         )
         this._saveStorageService = new SaveStorageService(
             new SaveStorageRepository()
+        )
+        this._getAdStatsService = new GetAdStatsService(
+            new GetAdStatsRepository()
         )
     }
 
@@ -90,5 +95,9 @@ export default class ServiceFactoryBean{
 
     static saveStorageService() {
         return this.getInstance()._saveStorageService
+    }
+
+    static getAdStatsService() {
+        return this.getInstance()._getAdStatsService
     }
 }
