@@ -1,23 +1,23 @@
-import global from "../../global"
-import DoLoginRepository from "../../../../src/popup/framework/repository/user/DoLoginRepository";
-import TransformToCredentialsService from "../../../../src/popup/framework/transformers/TransformToCredentialsService";
-import DoLoginWithCookiesRepository
-    from "../../../../src/popup/framework/repository/user/DoLoginWithCookiesRepository";
+import {DoLoginRepository} from "../../../../src/popup/nodejs/framework/repository/user/DoLoginRepository";
+import {DoLoginWithCookiesRepository} from "../../../../src/popup/nodejs/framework/repository/user/DoLoginWithCookiesRepository";
 import {
     DoLoginWithBothService,
-    DoLoginWithBothServiceRequest,
-    DoLoginWithBothServiceResponse
-} from "../../../../src/popup/application/user/DoLoginWithBothService";
+    DoLoginWithBothServiceRequest, DoLoginWithBothServiceResponse
+} from "../../../../src/popup/nodejs/application/user/DoLoginWithBothService";
+
 const assert = require("assert")
 
-console.log("welcome! DoLoginService test")
-
-jest.mock("../../../../src/popup/framework/repository/user/DoLoginRepository");
+console.log("welcome! DoLoginWithBothService test")
 
 describe('DoLoginWithBothService', function() {
     describe('user', function() {
         it('should return a valid response', async function() {
             //GIVEN
+            const givenCredentials = {
+                email: "antonio.martin@schibsted.com",
+                password: "Schibsted18"
+            }
+
             const mockedDoLoginRepositoryResponse = {
                 data: {
                     user:{
@@ -48,10 +48,9 @@ describe('DoLoginWithBothService', function() {
             mockDoLoginWithCookiesRepository.mockReturnValue(Promise.resolve(mockedDoLoginWithCookiesRepositoryResponse));
             const doLoginWithBothServiceResponse = await new DoLoginWithBothService(
                 new DoLoginRepository(),
-                new DoLoginWithCookiesRepository(),
-                new TransformToCredentialsService()
+                new DoLoginWithCookiesRepository()
             ).execute(
-                new DoLoginWithBothServiceRequest({...global.credentials})
+                new DoLoginWithBothServiceRequest({...givenCredentials})
             )
             console.log(JSON.stringify(doLoginWithBothServiceResponse))
             //ASSERTS
@@ -61,6 +60,11 @@ describe('DoLoginWithBothService', function() {
 
         it('should return a login valid response', async function() {
             //GIVEN
+            const givenCredentials = {
+                email: "antonio.martin@schibsted.com",
+                password: "Schibsted18"
+            }
+
             const mockedDoLoginRepositoryResponse = {
                 data: {
                     user:{
@@ -91,10 +95,9 @@ describe('DoLoginWithBothService', function() {
             mockDoLoginWithCookiesRepository.mockReturnValue(Promise.reject(mockedDoLoginWithCookiesRepositoryResponse));
             const doLoginWithBothServiceResponse = await new DoLoginWithBothService(
                 new DoLoginRepository(),
-                new DoLoginWithCookiesRepository(),
-                new TransformToCredentialsService()
+                new DoLoginWithCookiesRepository()
             ).execute(
-                new DoLoginWithBothServiceRequest({...global.credentials})
+                new DoLoginWithBothServiceRequest({...givenCredentials})
             )
             console.log(JSON.stringify(doLoginWithBothServiceResponse))
             //ASSERTS

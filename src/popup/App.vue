@@ -131,11 +131,11 @@
 <script>
   import MyAdsComponent from "./component/myAds/MyAdsComponent";
   import MySocialMediaComponent from "./component/socialMedia/SocialMediaComponent";
-  import ControllerFacadeFactoryBean from "./framework/ControllerFacadeFactoryBean";
-  import {LoadPageControllerRequest} from "./framework/controller/LoadPageController";
-  import {DoLoginControllerRequest} from "./framework/controller/DoLoginController";
-  import {DoLogoutControllerRequest} from "./framework/controller/DoLogoutController";
-  import {DoAdSearchControllerRequest} from "./framework/controller/search/DoAdSearchController";
+  import ControllerFacadeFactoryBean from "./nodejs/framework/ControllerFacadeFactoryBean";
+  import {LoadPageControllerRequest} from "./nodejs/framework/controller/ad/LoadPageController";
+  import {DoLoginControllerRequest} from "./nodejs/framework/controller/user/DoLoginController";
+  import {DoLogoutControllerRequest} from "./nodejs/framework/controller/user/DoLogoutController";
+  import {DoAdSearchControllerRequest} from "./nodejs/framework/controller/ad/search/DoAdSearchController";
   const chromeExtension = chrome
 
   export default {
@@ -226,10 +226,7 @@
         const doLoginControllerResponse = await ControllerFacadeFactoryBean.doLoginController().execute(
                 new DoLoginControllerRequest({...formData})
         )
-        this.current = doLoginControllerResponse.current
-        this.isLogged = true
-        this.ads = doLoginControllerResponse.ads
-        this.favoriteAds = doLoginControllerResponse.favouriteAds
+        this.loadPage(formData)
       },
       loadPage: async function (formData) {
         console.log(">>>loadPage")
@@ -257,7 +254,7 @@
       //     data: params,
       //     headers: header,
       //     config: { withCredentials: true }
-      //     //[{"id":"e03f3ab9-7edb-4019-8b35-7c4e1e187446","userId":"183565764","title":"seat leon en Madrid","status":"ACTIVE","targeting":{"type":"coches","location":{"province":{"id":28}},"category":{"id":100664},"brand":"seat","domain":"leon","price":{"from":6000.0,"to":42000.0},"year":{"from":2019.0,"to":2020.0}},"creationDate":"2020-01-28T08:27:32.374","updateDate":"2020-01-28T08:27:32.374"}]
+      //     //[{"id":"e03f3ab9-7edb-4019-8b35-7c4e1e187446","userId":"183565764","title":"seat leon en Madrid","status":"ACTIVE","targeting":{"type":"coches","location":{"province":{"id":28}},"category":{"id":100664},"brand":"seat","adomain":"leon","price":{"from":6000.0,"to":42000.0},"year":{"from":2019.0,"to":2020.0}},"creationDate":"2020-01-28T08:27:32.374","updateDate":"2020-01-28T08:27:32.374"}]
       //   })
       //},
     },

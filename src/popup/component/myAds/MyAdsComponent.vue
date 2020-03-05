@@ -75,8 +75,8 @@
 </template>
 <script>
 
-    import {DoRenewAdController, DoRenewAdControllerRequest} from "../../framework/controller/DoRenewAdController";
-    import ControllerFacadeFactoryBean from "../../framework/ControllerFacadeFactoryBean";
+    import {DoRenewAdController, DoRenewAdControllerRequest} from "../../nodejs/framework/controller/ad/renew/DoRenewAdController";
+    import ControllerFacadeFactoryBean from "../../nodejs/framework/ControllerFacadeFactoryBean";
 
     export default {
     name: 'myAdsComponent',

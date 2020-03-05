@@ -199,8 +199,8 @@
 <script>
 import axios from 'axios';
 import qs from 'querystring'
-import MyAds from './domain/ad/MyAds'
-import MyFavouriteAds from './domain/ad/MyFavouriteAds'
+import MyAds from './nodejs/adomain/ad/MyAds'
+import MyFavouriteAds from './nodejs/adomain/ad/MyFavouriteAds'
 
 import MyAdsComponent from "./component/myAds/MyAdsComponent";
 
@@ -429,7 +429,7 @@ export default {
         data: params,
         headers: header,
         config: { withCredentials: true }
-        //[{"id":"e03f3ab9-7edb-4019-8b35-7c4e1e187446","userId":"183565764","title":"seat leon en Madrid","status":"ACTIVE","targeting":{"type":"coches","location":{"province":{"id":28}},"category":{"id":100664},"brand":"seat","domain":"leon","price":{"from":6000.0,"to":42000.0},"year":{"from":2019.0,"to":2020.0}},"creationDate":"2020-01-28T08:27:32.374","updateDate":"2020-01-28T08:27:32.374"}]
+        //[{"id":"e03f3ab9-7edb-4019-8b35-7c4e1e187446","userId":"183565764","title":"seat leon en Madrid","status":"ACTIVE","targeting":{"type":"coches","location":{"province":{"id":28}},"category":{"id":100664},"brand":"seat","adomain":"leon","price":{"from":6000.0,"to":42000.0},"year":{"from":2019.0,"to":2020.0}},"creationDate":"2020-01-28T08:27:32.374","updateDate":"2020-01-28T08:27:32.374"}]
       })
     },
     doRenewAd: async function (adId) {
