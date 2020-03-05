@@ -1,21 +1,22 @@
-import global from "../../global"
-import DoLoginWithCookiesRepository
-    from "../../../../src/popup/framework/repository/user/DoLoginWithCookiesRepository"
+import {DoLoginWithCookiesRepository} from "../../../../src/popup/nodejs/framework/repository/user/DoLoginWithCookiesRepository";
 import {
     DoLoginWithCookiesService,
-    DoLoginWithCookiesServiceRequest,
-    DoLoginWithCookiesServiceResponse
-} from "../../../../src/popup/application/user/DoLoginWithCookiesService"
+    DoLoginWithCookiesServiceRequest, DoLoginWithCookiesServiceResponse
+} from "../../../../src/popup/nodejs/application/user/DoLoginWithCookiesService";
+
 const assert = require("assert")
 
-console.log("welcome! DoLoginService test")
-
-jest.mock("../../../../src/popup/framework/repository/user/DoLoginRepository")
+console.log("welcome! DoLoginWithCookiesService test")
 
 describe('DoLoginWithCookiesService', function() {
     describe('user', function() {
         it('should return a valid response', async function() {
             //GIVEN
+            const givenCredentials = {
+                email: "antonio.martin@schibsted.com",
+                password: "Schibsted18"
+            }
+
             const mockedDoLoginWithCookiesRepositoryResponse = {
                 data: {
                     apiToken:'apiToken'
@@ -33,7 +34,7 @@ describe('DoLoginWithCookiesService', function() {
             const doLoginWithCookiesServiceResponse = await new DoLoginWithCookiesService(
                 new DoLoginWithCookiesRepository()
             ).execute(
-                new DoLoginWithCookiesServiceRequest({...global.credentials})
+                new DoLoginWithCookiesServiceRequest({...givenCredentials})
             )
             console.log(JSON.stringify(doLoginWithCookiesServiceResponse))
             //ASSERTS

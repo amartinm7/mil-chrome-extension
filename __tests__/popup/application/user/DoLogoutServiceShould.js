@@ -1,10 +1,10 @@
-import global from "../../global"
 import {
     DoLogoutService,
     DoLogoutServiceRequest,
     DoLogoutServiceResponse
-} from "../../../../src/popup/application/user/DoLogoutService"
-import DoLogoutRepository from "../../../../src/popup/framework/repository/user/DoLogoutRepository"
+} from "../../../../src/popup/nodejs/application/user/DoLogoutService";
+import {DoLogoutRepository} from "../../../../src/popup/nodejs/framework/repository/user/DoLogoutRepository";
+
 const assert = require("assert")
 
 console.log("welcome! DoLogoutService test")

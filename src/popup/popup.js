@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App'
-import ServiceFactoryBean from "./framework/ServiceFactoryBean";
-import {SaveStorageRepository} from "./framework/repository/storage/SaveStorageRepository";
+import ServiceFactoryBean from "./nodejs/framework/ServiceFactoryBean";
+import {SaveStorageRepository} from "./nodejs/framework/repository/storage/SaveStorageRepository";
 
 const Vuikit = require ('../dist-uikit/uikit.min.js')
 const VuikitIcons = require ('../dist-uikit/uikit-icons.min.js')

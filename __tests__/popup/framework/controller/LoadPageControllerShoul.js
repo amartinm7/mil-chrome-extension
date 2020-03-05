@@ -1,45 +1,47 @@
-import global from "../../global"
+import {DoLoginWithCookiesRepository} from "../../../../src/popup/nodejs/framework/repository/user/DoLoginWithCookiesRepository";
+import {GetMyAdsServiceResponse} from "../../../../src/popup/nodejs/application/ad/GetMyAdsService";
+import {GetMyAdsRepository} from "../../../../src/popup/nodejs/framework/repository/ad/GetMyAdsRepository";
+import {GetMyFavouriteAdsServiceResponse} from "../../../../src/popup/nodejs/application/ad/GetMyFavouriteAdsService";
+import MyFavouriteAds from "../../../../src/popup/nodejs/adomain/ad/MyFavouriteAds";
+import {GetMyFavouriteAdsRepository} from "../../../../src/popup/nodejs/framework/repository/ad/GetMyFavouriteAdsRepository";
 import {
-    LoadPageController,
-    LoadPageControllerRequest, LoadPageControllerResponse
-} from "../../../../src/popup/framework/controller/LoadPageController";
-import {DoLoginWithCookiesServiceResponse} from "../../../../src/popup/application/user/DoLoginWithCookiesService";
-import DoLoginWithCookiesRepository from "../../../../src/popup/framework/repository/user/DoLoginWithCookiesRepository";
-import MyAds from "../../../../src/popup/domain/ad/MyAds";
-import GetMyAdsRepository from "../../../../src/popup/framework/repository/ad/GetMyAdsRepository";
-import GetMyFavouriteAdsRepository from "../../../../src/popup/framework/repository/ad/GetMyFavouriteAdsRepository";
-import {GetMyFavouriteAdsServiceResponse} from "../../../../src/popup/application/ad/GetMyFavouriteAdsService";
-import {GetMyAdsServiceResponse} from "../../../../src/popup/application/ad/GetMyAdsService";
-import MyFavouriteAds from "../../../../src/popup/domain/ad/MyFavouriteAds";
+    LoadPageControllerRequest,
+    LoadPageControllerResponse
+} from "../../../../src/popup/nodejs/framework/controller/ad/LoadPageController";
+import ControllerFacadeFactoryBean from "../../../../src/popup/nodejs/framework/ControllerFacadeFactoryBean";
+import {DoLoginWithCookiesServiceResponse} from "../../../../src/popup/nodejs/application/user/DoLoginWithCookiesService";
+import MyAds from "../../../../src/popup/nodejs/adomain/ad/MyAds";
+
 const assert = require("assert")
 
-import '../repository/using-localstorage.test.js'
-import {SaveStorageRepository} from "../../../../src/popup/framework/repository/storage/SaveStorageRepository";
-import ControllerFacadeFactoryBean from "../../../../src/popup/framework/ControllerFacadeFactoryBean";
-SaveStorageRepository.prototype.$chromeExtensionRef = global
-
-console.log("welcome! DoLoginService test")
-
+console.log("welcome! LoadPageController test")
 
 describe('LoadPageController', function() {
     describe('execute', function() {
         it('should return a valid response', async function() {
             //GIVEN
-            const mockedDoLoginWithCookiesRepositoryResponse = {
-                data: {
-                    apiToken:'apiToken'
-                }
+            const givenCredentials = {
+                email: "antonio.martin@schibsted.com",
+                password: "Schibsted18"
             }
+
             //WHEN
             const expectedDoLoginWithCookiesServiceResponse = new DoLoginWithCookiesServiceResponse({
                 email: "",
                 createdAt: "",
                 apiToken:'apiToken'
             })
+
+            //MOCK
+            const mockedDoLoginWithCookiesRepositoryResponse = {
+                data: {
+                    apiToken:'apiToken'
+                }
+            }
             const mockDoLoginWithCookiesRepository = jest.fn();
             DoLoginWithCookiesRepository.prototype.doLoginWithCurrentCookies = mockDoLoginWithCookiesRepository;
             mockDoLoginWithCookiesRepository.mockReturnValue(Promise.resolve(mockedDoLoginWithCookiesRepositoryResponse));
-            //GIVEN
+
             const mockedAds = {
                 data: {
                     data:{
@@ -75,13 +77,14 @@ describe('LoadPageController', function() {
             GetMyFavouriteAdsRepository.prototype.findAllMyFavouritesAds = mockGetMyFavouriteAdsRepository;
             mockGetMyFavouriteAdsRepository.mockReturnValue(Promise.resolve(mockedMyFavouriteAdsRepositoryResponse));
 
-            const expected = new LoadPageControllerResponse(
-                {current: expectedDoLoginWithCookiesServiceResponse.current, ads: expectedAds.ads, favouriteAds: expectedFavouriteAds.ads}
-
-            )
+            const expected = new LoadPageControllerResponse({
+                current: expectedDoLoginWithCookiesServiceResponse.current,
+                ads: expectedAds.ads,
+                favouriteAds: expectedFavouriteAds.ads
+            })
 
             const loadPageControllerResponse = await ControllerFacadeFactoryBean.loadPageController().execute(
-                new LoadPageControllerRequest({...global.credentials})
+                new LoadPageControllerRequest({...givenCredentials})
             )
             console.log(JSON.stringify(loadPageControllerResponse))
             //ASSERTS

@@ -1,21 +1,24 @@
+import {DoLoginRepository} from "../../../../src/popup/nodejs/framework/repository/user/DoLoginRepository";
 import {
     DoLoginService,
     DoLoginServiceRequest,
     DoLoginServiceResponse
-} from "../../../../src/popup/application/user/DoLoginService"
-import global from "../../global"
-import DoLoginRepository from "../../../../src/popup/framework/repository/user/DoLoginRepository";
-import TransformToCredentialsService from "../../../../src/popup/framework/transformers/TransformToCredentialsService";
+} from "../../../../src/popup/nodejs/application/user/DoLoginService";
+
 const assert = require("assert")
 
 console.log("welcome! DoLoginService test")
 
-jest.mock("../../../../src/popup/framework/repository/user/DoLoginRepository");
 
 describe('DoLoginService', function() {
     describe('user', function() {
         it('should return a valid response', async function() {
             //GIVEN
+            const givenCredentials = {
+                email: "antonio.martin@schibsted.com",
+                password: "Schibsted18"
+            }
+
             const mockedDoLoginRepositoryResponse = {
                 data: {
                     user:{
@@ -39,9 +42,9 @@ describe('DoLoginService', function() {
             DoLoginRepository.prototype.doLogin = mockDoLoginRepository;
             mockDoLoginRepository.mockReturnValue(Promise.resolve(mockedDoLoginRepositoryResponse));
             const doLoginServiceResponse = await new DoLoginService(
-                new DoLoginRepository(), new TransformToCredentialsService()
+                new DoLoginRepository()
             ).execute(
-                new DoLoginServiceRequest(global.credentials)
+                new DoLoginServiceRequest(givenCredentials)
             )
             console.log(JSON.stringify(doLoginServiceResponse))
             //ASSERTS
