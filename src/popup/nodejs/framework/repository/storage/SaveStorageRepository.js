@@ -1,7 +1,7 @@
 
 class SaveStorageRepository{
     constructor(storage) {
-        if (storage) {
+        if (this.$chromeExtensionRef.storage === undefined || this.$chromeExtensionRef.storage == null){
             this._storage = storage
         } else {
             this._storage = this.$chromeExtensionRef.storage
