@@ -252,6 +252,12 @@
           console.log(`renewed ${idAnuncio}!`)
           vm.onLoadPage()
         });
+
+        // to stop listening events
+        // this.$eventBus.off('reloadPage', function (idAnuncio) {
+        //   console.log(`renewed ${idAnuncio}!`)
+        // });
+
       }
       // getSavedSearchs: async function (header, params) {
       //   const url = `https://ms-ma--user-profiles.spain.schibsted.io/users/183565764/savedsearches/?${qs.stringify(params)}`
