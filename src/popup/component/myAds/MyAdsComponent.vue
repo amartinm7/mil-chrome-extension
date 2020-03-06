@@ -9,18 +9,18 @@
                 <div class="uk-flex uk-flex-right uk-width-3-4">
                     <div v-if="enableRenew == true">
                         <a v-on:click.prevent.stop="onDoRenew(ad)" class="uk-link-reset">
-                            <span class="uk-icon" uk-icon="icon: refresh" uk-tooltip="Renueva tu anuncio"></span>
+                            <span class="uk-icon ma-spin-icon" uk-icon="icon: refresh" uk-tooltip="Renueva tu anuncio"></span>
                         </a>
                     </div>
                     <div class="uk-width-auto">&nbsp;</div>
                     <div v-if="enableBets == true">
                         <a v-bind:href="getBetUrl(ad.idanuncio)" target="_blank" class="uk-link-reset">
-                            <span class="uk-icon" uk-icon="icon: future" uk-tooltip="Posiciona tu anuncio"></span>
+                            <span class="uk-icon ma-spin-icon" uk-icon="icon: future" uk-tooltip="Posiciona tu anuncio"></span>
                         </a>
                     </div>
                     <div class="uk-width-auto">&nbsp;</div>
                     <div :uk-toggle="getUkToogleClassNameByIndex(index)">
-                        <span class="uk-icon" uk-icon="icon: thumbnails" uk-tooltip="Galeria"></span>
+                        <span class="uk-icon ma-spin-icon" uk-icon="icon: thumbnails" uk-tooltip="Galeria"></span>
                     </div>
                 </div>
             </div>
@@ -177,20 +177,6 @@
         -moz-transition: opacity .2s ease-out;
         -webkit-transition: opacity .2s ease-out;
         -o-transition: opacity .2s ease-out;
-    }
-
-    .icon-spinner {
-        animation: spin-animation 0.5s 2s;
-        display: inline-block;
-    }
-
-    @keyframes spin-animation {
-        0% {
-            transform: rotate(0deg);
-        }
-        100% {
-            transform: rotate(359deg);
-        }
     }
 
     /** for debug styling

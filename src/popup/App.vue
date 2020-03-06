@@ -397,6 +397,60 @@
     background-image: url("https://pbs.twimg.com/profile_images/1078929979814170624/rwC8Rsvq_reasonably_small.jpg");
   }
 
+
+  .ma-spin-icon {
+    animation: spin-animation-in 1s;
+    display: inline-block;
+  }
+
+ .ma-spin-icon:hover {
+    animation: spin-animation-out 1s infinite linear;
+    display: inline-block;
+  }
+
+
+  @keyframes spin-animation-out {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(718deg);
+    }
+  }
+
+  @keyframes spin-animation-in {
+    from {
+      transform: rotate(718deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+
+  /** spin horizontally **/
+  .ma-spin-horizontally{
+    animation: spin-horizontally-out 1s linear;
+  }
+
+  @keyframes spin-horizontally-out {
+    from{
+      transform:rotateX(0deg);
+      transform-style: preserve-3d;
+    }
+  }
+
+  .ma-spin-horizontally:hover{
+    animation: spin-horizontally-in 1s infinite linear;
+  }
+
+  @keyframes spin-horizontally-in {
+    to{
+      transform:rotateX(359deg);
+      transform-style: preserve-3d;
+    }
+  }
+  /** spin horizontally **/
+
   /** for debug styling
     div {
       background-color: lightgrey;;
