@@ -3,7 +3,7 @@ class DoLoginRepository {
         this._axios = axios
     }
 
-    async _getHeaderAndData(email, password) {
+    async _getHeaderAndData({email, password}) {
         console.log(">>>getHeaderAndData")
         const data = {
             "identifier": email,
@@ -23,9 +23,9 @@ class DoLoginRepository {
     }
 
     async doLogin(doLoginRepositoryRequest) {
-        console.log(">>>user")
+        console.log(">>>doLogin")
         const url = "https://www.milanuncios.com/api/v3/logins"
-        const {header, data} = await this._getHeaderAndData( ...doLoginRepositoryRequest )
+        const {header, data} = await this._getHeaderAndData({...doLoginRepositoryRequest})
         console.log(`>>>doLogin ${JSON.stringify({header, data})}`)
         const axiosRequest = {
             method: 'post',

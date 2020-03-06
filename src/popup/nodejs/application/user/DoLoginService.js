@@ -9,7 +9,7 @@ class DoLoginService {
     async execute (doLoginServiceRequest) {
         console.log(">>>doLoginService")
         const doLoginServiceResponse = await this._doLoginRepository.doLogin(
-            new DoLoginRepositoryRequest(doLoginServiceRequest.email, doLoginServiceRequest.password)
+            new DoLoginRepositoryRequest({...doLoginServiceRequest})
         )
         console.log(`>>>doLoginServiceResponse... ${JSON.stringify(doLoginServiceResponse)}`)
         return toDoLoginServiceResponse(doLoginServiceResponse)
@@ -17,7 +17,7 @@ class DoLoginService {
 }
 
 class DoLoginServiceRequest {
-    constructor(email, password) {
+    constructor({email, password}) {
         this.email = email
         this.password = password
     }
