@@ -2,8 +2,8 @@ import {
     DoRenewAdService,
     DoRenewAdServiceRequest,
     DoRenewAdServiceResponse
-} from "../../../../../src/popup/nodejs/application/ad/DoRenewAdService";
-import {DoRenewAdRepository} from "../../../../../src/popup/nodejs/framework/repository/ad/DoRenewAdRepository";
+} from "../../../../../src/popup/backend/application/ad/DoRenewAdService";
+import {DoRenewAdRepository} from "../../../../../src/popup/backend/framework/repository/ad/DoRenewAdRepository";
 
 const assert = require("assert")
 

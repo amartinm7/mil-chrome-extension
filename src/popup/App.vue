@@ -131,11 +131,11 @@
 <script>
   import MyAdsComponent from "./component/myAds/MyAdsComponent";
   import MySocialMediaComponent from "./component/socialMedia/SocialMediaComponent";
-  import ControllerFacadeFactoryBean from "./nodejs/framework/ControllerFacadeFactoryBean";
-  import {LoadPageControllerRequest} from "./nodejs/framework/controller/ad/LoadPageController";
-  import {DoLoginControllerRequest} from "./nodejs/framework/controller/user/DoLoginController";
-  import {DoLogoutControllerRequest} from "./nodejs/framework/controller/user/DoLogoutController";
-  import {DoAdSearchControllerRequest} from "./nodejs/framework/controller/ad/search/DoAdSearchController";
+  import ControllerFacadeFactoryBean from "./backend/framework/ControllerFacadeFactoryBean";
+  import {LoadPageControllerRequest} from "./backend/framework/controller/ad/LoadPageController";
+  import {DoLoginControllerRequest} from "./backend/framework/controller/user/DoLoginController";
+  import {DoLogoutControllerRequest} from "./backend/framework/controller/user/DoLogoutController";
+  import {DoAdSearchControllerRequest} from "./backend/framework/controller/ad/search/DoAdSearchController";
   const chromeExtension = chrome
 
   export default {
@@ -246,6 +246,13 @@
         )
         vm.isLogged = false
       },
+      declareEventsOverEventBus: async function(){
+        const vm = this
+        this.$eventBus.$on('reloadPage', function (idAnuncio) {
+          console.log(`renewed ${idAnuncio}!`)
+          vm.onLoadPage()
+        });
+      }
       // getSavedSearchs: async function (header, params) {
       //   const url = `https://ms-ma--user-profiles.spain.schibsted.io/users/183565764/savedsearches/?${qs.stringify(params)}`
       //   return axios({
@@ -264,6 +271,7 @@
       console.log(">>>SaveStorageRepository execute localstorage")
       await ControllerFacadeFactoryBean.saveStorageController().execute()
       await this.onLoadPage()
+      this.declareEventsOverEventBus()
     }
   };
 </script>

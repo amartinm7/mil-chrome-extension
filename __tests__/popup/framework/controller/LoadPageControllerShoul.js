@@ -1,16 +1,16 @@
-import {DoLoginWithCookiesRepository} from "../../../../src/popup/nodejs/framework/repository/user/DoLoginWithCookiesRepository";
-import {GetMyAdsServiceResponse} from "../../../../src/popup/nodejs/application/ad/GetMyAdsService";
-import {GetMyAdsRepository} from "../../../../src/popup/nodejs/framework/repository/ad/GetMyAdsRepository";
-import {GetMyFavouriteAdsServiceResponse} from "../../../../src/popup/nodejs/application/ad/GetMyFavouriteAdsService";
-import MyFavouriteAds from "../../../../src/popup/nodejs/adomain/ad/MyFavouriteAds";
-import {GetMyFavouriteAdsRepository} from "../../../../src/popup/nodejs/framework/repository/ad/GetMyFavouriteAdsRepository";
+import {DoLoginWithCookiesRepository} from "../../../../src/popup/backend/framework/repository/user/DoLoginWithCookiesRepository";
+import {GetMyAdsServiceResponse} from "../../../../src/popup/backend/application/ad/GetMyAdsService";
+import {GetMyAdsRepository} from "../../../../src/popup/backend/framework/repository/ad/GetMyAdsRepository";
+import {GetMyFavouriteAdsServiceResponse} from "../../../../src/popup/backend/application/ad/GetMyFavouriteAdsService";
+import MyFavouriteAds from "../../../../src/popup/backend/adomain/ad/MyFavouriteAds";
+import {GetMyFavouriteAdsRepository} from "../../../../src/popup/backend/framework/repository/ad/GetMyFavouriteAdsRepository";
 import {
     LoadPageControllerRequest,
     LoadPageControllerResponse
-} from "../../../../src/popup/nodejs/framework/controller/ad/LoadPageController";
-import ControllerFacadeFactoryBean from "../../../../src/popup/nodejs/framework/ControllerFacadeFactoryBean";
-import {DoLoginWithCookiesServiceResponse} from "../../../../src/popup/nodejs/application/user/DoLoginWithCookiesService";
-import MyAds from "../../../../src/popup/nodejs/adomain/ad/MyAds";
+} from "../../../../src/popup/backend/framework/controller/ad/LoadPageController";
+import ControllerFacadeFactoryBean from "../../../../src/popup/backend/framework/ControllerFacadeFactoryBean";
+import {DoLoginWithCookiesServiceResponse} from "../../../../src/popup/backend/application/user/DoLoginWithCookiesService";
+import MyAds from "../../../../src/popup/backend/adomain/ad/MyAds";
 
 const assert = require("assert")
 

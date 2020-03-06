@@ -199,8 +199,8 @@
 <script>
 import axios from 'axios';
 import qs from 'querystring'
-import MyAds from './nodejs/adomain/ad/MyAds'
-import MyFavouriteAds from './nodejs/adomain/ad/MyFavouriteAds'
+import MyAds from './backend/adomain/ad/MyAds'
+import MyFavouriteAds from './backend/adomain/ad/MyFavouriteAds'
 
 import MyAdsComponent from "./component/myAds/MyAdsComponent";
 

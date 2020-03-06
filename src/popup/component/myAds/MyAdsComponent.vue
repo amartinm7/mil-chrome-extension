@@ -45,7 +45,7 @@
                         <div class="uk-flex">
                             <div class="uk-width-1-2 uk-text-left" :uk-tooltip="getAdTitleByLocation(ad.categoria,ad.provincia)">
                                 <a class="uk-link-reset" v-bind:href="getAdUrlByProvincia(ad.categoria,ad.provincia)" target="_blank">
-                                    <div class="uk-icon" uk-icon="icon: location">
+                                    <div class="uk-icon ma-spin-horizontally" uk-icon="icon: location">
                                     </div>{{sanitizeMunicipality(ad)}}
                                 </a>
                             </div>
@@ -75,8 +75,8 @@
 </template>
 <script>
 
-    import {DoRenewAdController, DoRenewAdControllerRequest} from "../../nodejs/framework/controller/ad/renew/DoRenewAdController";
-    import ControllerFacadeFactoryBean from "../../nodejs/framework/ControllerFacadeFactoryBean";
+    import {DoRenewAdController, DoRenewAdControllerRequest} from "../../backend/framework/controller/ad/renew/DoRenewAdController";
+    import ControllerFacadeFactoryBean from "../../backend/framework/ControllerFacadeFactoryBean";
 
     export default {
     name: 'myAdsComponent',
@@ -136,6 +136,7 @@
         },
         onDoRenew: async function(ad){
             console.log(">>>onDoRenew")
+            const vm = this
             try {
                 const doRenewAdControllerResponse = await ControllerFacadeFactoryBean.doRenewAdController().execute(
                     new DoRenewAdControllerRequest({
@@ -147,6 +148,7 @@
                 console.log(`>>>${JSON.stringify(doRenewAdControllerResponse)}`)
                 ad.computed_props.isRenewed = true
                 console.log(`>>>renewed ad ${ad.idanuncio}`)
+                vm.$eventBus.$emit("reloadPage", ad.idanuncio)
             } catch (err) {
                 this.isRenewed = false
                 console.log(JSON.stringify(err));
