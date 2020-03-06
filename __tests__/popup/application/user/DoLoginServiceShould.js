@@ -1,9 +1,9 @@
-import {DoLoginRepository} from "../../../../src/popup/nodejs/framework/repository/user/DoLoginRepository";
+import {DoLoginRepository} from "../../../../src/popup/backend/framework/repository/user/DoLoginRepository";
 import {
     DoLoginService,
     DoLoginServiceRequest,
     DoLoginServiceResponse
-} from "../../../../src/popup/nodejs/application/user/DoLoginService";
+} from "../../../../src/popup/backend/application/user/DoLoginService";
 
 const assert = require("assert")
 

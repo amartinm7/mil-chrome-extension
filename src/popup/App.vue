@@ -131,11 +131,11 @@
 <script>
   import MyAdsComponent from "./component/myAds/MyAdsComponent";
   import MySocialMediaComponent from "./component/socialMedia/SocialMediaComponent";
-  import ControllerFacadeFactoryBean from "./nodejs/framework/ControllerFacadeFactoryBean";
-  import {LoadPageControllerRequest} from "./nodejs/framework/controller/ad/LoadPageController";
-  import {DoLoginControllerRequest} from "./nodejs/framework/controller/user/DoLoginController";
-  import {DoLogoutControllerRequest} from "./nodejs/framework/controller/user/DoLogoutController";
-  import {DoAdSearchControllerRequest} from "./nodejs/framework/controller/ad/search/DoAdSearchController";
+  import ControllerFacadeFactoryBean from "./backend/framework/ControllerFacadeFactoryBean";
+  import {LoadPageControllerRequest} from "./backend/framework/controller/ad/LoadPageController";
+  import {DoLoginControllerRequest} from "./backend/framework/controller/user/DoLoginController";
+  import {DoLogoutControllerRequest} from "./backend/framework/controller/user/DoLogoutController";
+  import {DoAdSearchControllerRequest} from "./backend/framework/controller/ad/search/DoAdSearchController";
   const chromeExtension = chrome
 
   export default {
@@ -246,6 +246,19 @@
         )
         vm.isLogged = false
       },
+      declareEventsOverEventBus: async function(){
+        const vm = this
+        this.$eventBus.$on('reloadPage', function (idAnuncio) {
+          console.log(`renewed ${idAnuncio}!`)
+          vm.onLoadPage()
+        });
+
+        // to stop listening events
+        // this.$eventBus.off('reloadPage', function (idAnuncio) {
+        //   console.log(`renewed ${idAnuncio}!`)
+        // });
+
+      }
       // getSavedSearchs: async function (header, params) {
       //   const url = `https://ms-ma--user-profiles.spain.schibsted.io/users/183565764/savedsearches/?${qs.stringify(params)}`
       //   return axios({
@@ -264,6 +277,7 @@
       console.log(">>>SaveStorageRepository execute localstorage")
       await ControllerFacadeFactoryBean.saveStorageController().execute()
       await this.onLoadPage()
+      this.declareEventsOverEventBus()
     }
   };
 </script>
@@ -396,6 +410,60 @@
   .social-media-infojobs {
     background-image: url("https://pbs.twimg.com/profile_images/1078929979814170624/rwC8Rsvq_reasonably_small.jpg");
   }
+
+
+  .ma-spin-icon {
+    animation: spin-animation-in 1s;
+    display: inline-block;
+  }
+
+ .ma-spin-icon:hover {
+    animation: spin-animation-out 1s infinite linear;
+    display: inline-block;
+  }
+
+
+  @keyframes spin-animation-out {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(718deg);
+    }
+  }
+
+  @keyframes spin-animation-in {
+    from {
+      transform: rotate(718deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+
+  /** spin horizontally **/
+  .ma-spin-horizontally{
+    animation: spin-horizontally-out 1s linear;
+  }
+
+  @keyframes spin-horizontally-out {
+    from{
+      transform:rotateX(0deg);
+      transform-style: preserve-3d;
+    }
+  }
+
+  .ma-spin-horizontally:hover{
+    animation: spin-horizontally-in 1s infinite linear;
+  }
+
+  @keyframes spin-horizontally-in {
+    to{
+      transform:rotateX(359deg);
+      transform-style: preserve-3d;
+    }
+  }
+  /** spin horizontally **/
 
   /** for debug styling
     div {

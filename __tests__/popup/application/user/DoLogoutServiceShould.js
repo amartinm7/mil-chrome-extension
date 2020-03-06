@@ -2,8 +2,8 @@ import {
     DoLogoutService,
     DoLogoutServiceRequest,
     DoLogoutServiceResponse
-} from "../../../../src/popup/nodejs/application/user/DoLogoutService";
-import {DoLogoutRepository} from "../../../../src/popup/nodejs/framework/repository/user/DoLogoutRepository";
+} from "../../../../src/popup/backend/application/user/DoLogoutService";
+import {DoLogoutRepository} from "../../../../src/popup/backend/framework/repository/user/DoLogoutRepository";
 
 const assert = require("assert")
 

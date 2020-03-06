@@ -1,6 +1,6 @@
 const assert = require("assert")
-import ControllerFacadeFactoryBean from "../../../../../../src/popup/nodejs/framework/ControllerFacadeFactoryBean";
-import {DoAdSearchControllerRequest} from "../../../../../../src/popup/nodejs/framework/controller/ad/search/DoAdSearchController";
+import ControllerFacadeFactoryBean from "../../../../../../src/popup/backend/framework/ControllerFacadeFactoryBean";
+import {DoAdSearchControllerRequest} from "../../../../../../src/popup/backend/framework/controller/ad/search/DoAdSearchController";
 
 console.log("welcome! DoAdSearchController test")
 

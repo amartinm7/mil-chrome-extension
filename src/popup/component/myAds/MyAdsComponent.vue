@@ -9,18 +9,18 @@
                 <div class="uk-flex uk-flex-right uk-width-3-4">
                     <div v-if="enableRenew == true">
                         <a v-on:click.prevent.stop="onDoRenew(ad)" class="uk-link-reset">
-                            <span class="uk-icon" uk-icon="icon: refresh" uk-tooltip="Renueva tu anuncio"></span>
+                            <span class="uk-icon ma-spin-icon" uk-icon="icon: refresh" uk-tooltip="Renueva tu anuncio"></span>
                         </a>
                     </div>
                     <div class="uk-width-auto">&nbsp;</div>
                     <div v-if="enableBets == true">
                         <a v-bind:href="getBetUrl(ad.idanuncio)" target="_blank" class="uk-link-reset">
-                            <span class="uk-icon" uk-icon="icon: future" uk-tooltip="Posiciona tu anuncio"></span>
+                            <span class="uk-icon ma-spin-icon" uk-icon="icon: future" uk-tooltip="Posiciona tu anuncio"></span>
                         </a>
                     </div>
                     <div class="uk-width-auto">&nbsp;</div>
                     <div :uk-toggle="getUkToogleClassNameByIndex(index)">
-                        <span class="uk-icon" uk-icon="icon: thumbnails" uk-tooltip="Galeria"></span>
+                        <span class="uk-icon ma-spin-icon" uk-icon="icon: thumbnails" uk-tooltip="Galeria"></span>
                     </div>
                 </div>
             </div>
@@ -45,7 +45,7 @@
                         <div class="uk-flex">
                             <div class="uk-width-1-2 uk-text-left" :uk-tooltip="getAdTitleByLocation(ad.categoria,ad.provincia)">
                                 <a class="uk-link-reset" v-bind:href="getAdUrlByProvincia(ad.categoria,ad.provincia)" target="_blank">
-                                    <div class="uk-icon" uk-icon="icon: location">
+                                    <div class="uk-icon ma-spin-horizontally" uk-icon="icon: location">
                                     </div>{{sanitizeMunicipality(ad)}}
                                 </a>
                             </div>
@@ -75,8 +75,8 @@
 </template>
 <script>
 
-    import {DoRenewAdController, DoRenewAdControllerRequest} from "../../nodejs/framework/controller/ad/renew/DoRenewAdController";
-    import ControllerFacadeFactoryBean from "../../nodejs/framework/ControllerFacadeFactoryBean";
+    import {DoRenewAdController, DoRenewAdControllerRequest} from "../../backend/framework/controller/ad/renew/DoRenewAdController";
+    import ControllerFacadeFactoryBean from "../../backend/framework/ControllerFacadeFactoryBean";
 
     export default {
     name: 'myAdsComponent',
@@ -136,6 +136,7 @@
         },
         onDoRenew: async function(ad){
             console.log(">>>onDoRenew")
+            const vm = this
             try {
                 const doRenewAdControllerResponse = await ControllerFacadeFactoryBean.doRenewAdController().execute(
                     new DoRenewAdControllerRequest({
@@ -147,6 +148,7 @@
                 console.log(`>>>${JSON.stringify(doRenewAdControllerResponse)}`)
                 ad.computed_props.isRenewed = true
                 console.log(`>>>renewed ad ${ad.idanuncio}`)
+                vm.$eventBus.$emit("reloadPage", ad.idanuncio)
             } catch (err) {
                 this.isRenewed = false
                 console.log(JSON.stringify(err));
@@ -177,20 +179,6 @@
         -moz-transition: opacity .2s ease-out;
         -webkit-transition: opacity .2s ease-out;
         -o-transition: opacity .2s ease-out;
-    }
-
-    .icon-spinner {
-        animation: spin-animation 0.5s 2s;
-        display: inline-block;
-    }
-
-    @keyframes spin-animation {
-        0% {
-            transform: rotate(0deg);
-        }
-        100% {
-            transform: rotate(359deg);
-        }
     }
 
     /** for debug styling

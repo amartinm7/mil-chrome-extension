@@ -1,10 +1,10 @@
-import {DoRenewAdRepository} from "../../../../../../src/popup/nodejs/framework/repository/ad/DoRenewAdRepository";
-import ControllerFacadeFactoryBean from "../../../../../../src/popup/nodejs/framework/ControllerFacadeFactoryBean";
+import {DoRenewAdRepository} from "../../../../../../src/popup/backend/framework/repository/ad/DoRenewAdRepository";
+import ControllerFacadeFactoryBean from "../../../../../../src/popup/backend/framework/ControllerFacadeFactoryBean";
 import {
     DoRenewAdControllerRequest,
     DoRenewAdControllerResponse
-} from "../../../../../../src/popup/nodejs/framework/controller/ad/renew/DoRenewAdController";
-import {DoLoginWithBothService} from "../../../../../../src/popup/nodejs/application/user/DoLoginWithBothService";
+} from "../../../../../../src/popup/backend/framework/controller/ad/renew/DoRenewAdController";
+import {DoLoginWithBothService} from "../../../../../../src/popup/backend/application/user/DoLoginWithBothService";
 
 const assert = require("assert")
 

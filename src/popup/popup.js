@@ -1,11 +1,14 @@
 import Vue from 'vue'
 import App from './App'
-import ServiceFactoryBean from "./nodejs/framework/ServiceFactoryBean";
-import {SaveStorageRepository} from "./nodejs/framework/repository/storage/SaveStorageRepository";
+import {SaveStorageRepository} from "./backend/framework/repository/storage/SaveStorageRepository";
 
 const Vuikit = require ('../dist-uikit/uikit.min.js')
 const VuikitIcons = require ('../dist-uikit/uikit-icons.min.js')
 const VuikitCss = require ('../dist-uikit/uikit.min.css')
+
+// setting up a global bus... next steps global bus vs vuex
+import { EventBus } from './event-bus.js';
+Vue.prototype.$eventBus = EventBus
 
 // register globally
 Vue.component('Vuikit', Vuikit)

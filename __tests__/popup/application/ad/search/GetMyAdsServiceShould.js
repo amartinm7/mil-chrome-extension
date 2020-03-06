@@ -1,10 +1,10 @@
-import {GetMyAdsRepository} from "../../../../../src/popup/nodejs/framework/repository/ad/GetMyAdsRepository";
+import {GetMyAdsRepository} from "../../../../../src/popup/backend/framework/repository/ad/GetMyAdsRepository";
 import {
     GetMyAdsService,
     GetMyAdsServiceRequest,
     GetMyAdsServiceResponse
-} from "../../../../../src/popup/nodejs/application/ad/GetMyAdsService";
-import MyAds from "../../../../../src/popup/nodejs/adomain/ad/MyAds";
+} from "../../../../../src/popup/backend/application/ad/GetMyAdsService";
+import MyAds from "../../../../../src/popup/backend/adomain/ad/MyAds";
 
 const assert = require("assert")
 

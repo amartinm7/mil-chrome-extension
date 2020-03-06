@@ -1,9 +1,9 @@
 import {
     GetMyFavouriteAdsService, GetMyFavouriteAdsServiceRequest,
     GetMyFavouriteAdsServiceResponse
-} from "../../../../../src/popup/nodejs/application/ad/GetMyFavouriteAdsService";
-import MyAds from "../../../../../src/popup/nodejs/adomain/ad/MyAds";
-import {GetMyFavouriteAdsRepository} from "../../../../../src/popup/nodejs/framework/repository/ad/GetMyFavouriteAdsRepository";
+} from "../../../../../src/popup/backend/application/ad/GetMyFavouriteAdsService";
+import MyAds from "../../../../../src/popup/backend/adomain/ad/MyAds";
+import {GetMyFavouriteAdsRepository} from "../../../../../src/popup/backend/framework/repository/ad/GetMyFavouriteAdsRepository";
 
 const assert = require("assert")
 

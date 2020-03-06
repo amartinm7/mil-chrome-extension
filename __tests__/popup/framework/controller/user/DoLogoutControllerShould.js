@@ -1,11 +1,11 @@
 import {
     DoLogoutControllerRequest,
     DoLogoutControllerResponse
-} from "../../../../../src/popup/nodejs/framework/controller/user/DoLogoutController";
+} from "../../../../../src/popup/backend/framework/controller/user/DoLogoutController";
 
 const assert = require("assert")
-import ControllerFacadeFactoryBean from "../../../../../src/popup/nodejs/framework/ControllerFacadeFactoryBean";
-import {DoLogoutRepository} from "../../../../../src/popup/nodejs/framework/repository/user/DoLogoutRepository";
+import ControllerFacadeFactoryBean from "../../../../../src/popup/backend/framework/ControllerFacadeFactoryBean";
+import {DoLogoutRepository} from "../../../../../src/popup/backend/framework/repository/user/DoLogoutRepository";
 
 console.log("welcome! DoLogoutController test")
 

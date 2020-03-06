@@ -1,9 +1,9 @@
 const assert = require("assert")
-import ControllerFacadeFactoryBean from "../../../../../../src/popup/nodejs/framework/ControllerFacadeFactoryBean";
+import ControllerFacadeFactoryBean from "../../../../../../src/popup/backend/framework/ControllerFacadeFactoryBean";
 import '../../../repository/using-localstorage.test.js'
-import {GetAdStatsControllerRequest} from "../../../../../../src/popup/nodejs/framework/controller/ad/stats/GetAdStatsController";
-import RepositoryFactoryBean from "../../../../../../src/popup/nodejs/framework/RepositoryFactoryBean";
-import {GetAdStatsRepository} from "../../../../../../src/popup/nodejs/framework/repository/ad/GetAdStatsRepository";
+import {GetAdStatsControllerRequest} from "../../../../../../src/popup/backend/framework/controller/ad/stats/GetAdStatsController";
+import RepositoryFactoryBean from "../../../../../../src/popup/backend/framework/RepositoryFactoryBean";
+import {GetAdStatsRepository} from "../../../../../../src/popup/backend/framework/repository/ad/GetAdStatsRepository";
 
 console.log("welcome! GetAdStatsController test")
 

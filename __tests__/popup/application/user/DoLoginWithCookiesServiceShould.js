@@ -1,8 +1,8 @@
-import {DoLoginWithCookiesRepository} from "../../../../src/popup/nodejs/framework/repository/user/DoLoginWithCookiesRepository";
+import {DoLoginWithCookiesRepository} from "../../../../src/popup/backend/framework/repository/user/DoLoginWithCookiesRepository";
 import {
     DoLoginWithCookiesService,
     DoLoginWithCookiesServiceRequest, DoLoginWithCookiesServiceResponse
-} from "../../../../src/popup/nodejs/application/user/DoLoginWithCookiesService";
+} from "../../../../src/popup/backend/application/user/DoLoginWithCookiesService";
 
 const assert = require("assert")
 

@@ -1,7 +1,7 @@
-import {DoLoginRepository} from "../../../../../src/popup/nodejs/framework/repository/user/DoLoginRepository";
-import {DoLoginControllerRequest} from "../../../../../src/popup/nodejs/framework/controller/user/DoLoginController";
-import ControllerFacadeFactoryBean from "../../../../../src/popup/nodejs/framework/ControllerFacadeFactoryBean";
-import {DoLoginServiceResponse} from "../../../../../src/popup/nodejs/application/user/DoLoginService";
+import {DoLoginRepository} from "../../../../../src/popup/backend/framework/repository/user/DoLoginRepository";
+import {DoLoginControllerRequest} from "../../../../../src/popup/backend/framework/controller/user/DoLoginController";
+import ControllerFacadeFactoryBean from "../../../../../src/popup/backend/framework/ControllerFacadeFactoryBean";
+import {DoLoginServiceResponse} from "../../../../../src/popup/backend/application/user/DoLoginService";
 
 const assert = require("assert")
 

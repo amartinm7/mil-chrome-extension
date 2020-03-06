@@ -9,12 +9,12 @@
                 </div>
                 <div class="">
                     <a href="https://go.onelink.me/app/1ee638ce" target="_blank" rel="noopener noreferrer">
-                        <div class="social-media-google-store"/>
+                        <div class="social-media-google-store ma-spin-horizontally"/>
                     </a>
                 </div>
                 <div>
                     <a href="https://go.onelink.me/app/751615a1" target="_blank" rel="noopener noreferrer">
-                        <div class="social-media-apple-store"/>
+                        <div class="social-media-apple-store ma-spin-horizontally"/>
                     </a>
                 </div>
                 <div class="uk-width-1-6">
@@ -31,22 +31,22 @@
                 </div>
                 <div class="uk-width-auto ">
                     <a href="https://www.facebook.com/Milanuncios/" target="_blank" rel="noopener noreferrer">
-                        <div class="social-media-facebook"/>
+                        <div class="social-media-facebook ma-spin-icon"/>
                     </a>
                 </div>
                 <div class="uk-width-auto">
                     <a href="https://twitter.com/milanuncios" target="_blank" rel="noopener noreferrer">
-                        <div class="social-media-twitter"/>
+                        <div class="social-media-twitter ma-spin-icon"/>
                     </a>
                 </div>
                 <div class="uk-width-auto">
                     <a href="https://www.instagram.com/milanuncios/" target="_blank" rel="noopener noreferrer">
-                        <div class="social-media-instagram"/>
+                        <div class="social-media-instagram ma-spin-icon"/>
                     </a>
                 </div>
                 <div class="uk-width-auto">
                     <a href="https://www.youtube.com/channel/UCw6Jn6QF5L9NXYkr_XNFMCQ" target="_blank" rel="noopener noreferrer">
-                        <div class="social-media-youtube"/>
+                        <div class="social-media-youtube ma-spin-icon"/>
                     </a>
                 </div>
                 <div class="uk-width-1-5">
@@ -63,27 +63,27 @@
                 </div>
                 <div class="uk-width-auto">
                     <a href="https://www.habitaclia.com/" target="_blank" rel="noopener noreferrer">
-                        <div class="social-media social-media-habitaclia"/>
+                        <div class="social-media social-media-habitaclia ma-spin-icon"/>
                     </a>
                 </div>
                 <div class="uk-width-auto">
                     <a href="https://www.fotocasa.es" target="_blank" rel="noopener noreferrer">
-                        <div class="social-media social-media-fotocasa"/>
+                        <div class="social-media social-media-fotocasa ma-spin-icon"/>
                     </a>
                 </div>
                 <div class="uk-width-auto">
                     <a href="https://www.coches.net/" target="_blank" rel="noopener noreferrer">
-                        <div class="social-media social-media-cochesnet"/>
+                        <div class="social-media social-media-cochesnet ma-spin-icon"/>
                     </a>
                 </div>
                 <div class="uk-width-auto">
                     <a href="https://motos.coches.net/" target="_blank" rel="noopener noreferrer">
-                        <div class="social-media social-media-motosnet"/>
+                        <div class="social-media social-media-motosnet ma-spin-icon"/>
                     </a>
                 </div>
                 <div class="uk-width-auto">
                     <a href="https://www.infojobs.net" target="_blank" rel="noopener noreferrer">
-                        <div class="social-media social-media-infojobs"/>
+                        <div class="social-media social-media-infojobs ma-spin-icon"/>
                     </a>
                 </div>
                 <div class="uk-width-1-6">
@@ -212,6 +212,8 @@ export default {
     .social-media-infojobs {
         background-image: url("https://pbs.twimg.com/profile_images/1078929979814170624/rwC8Rsvq_reasonably_small.jpg");
     }
+
+
 
     /** for debug styling
       div {
