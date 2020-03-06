@@ -224,7 +224,7 @@
       login: async function (formData) {
         console.log(">>>loadPage")
         const doLoginControllerResponse = await ControllerFacadeFactoryBean.doLoginController().execute(
-                new DoLoginControllerRequest({...formData})
+            new DoLoginControllerRequest({...formData})
         )
         this.loadPage(formData)
       },

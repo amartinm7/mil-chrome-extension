@@ -1,4 +1,3 @@
-import ServiceFactoryBean from "../../ServiceFactoryBean";
 import {DoLoginWithCookiesServiceRequest} from "../../../application/user/DoLoginWithCookiesService";
 import {GetMyAdsServiceRequest} from "../../../application/ad/GetMyAdsService";
 import {GetMyFavouriteAdsServiceRequest} from "../../../application/ad/GetMyFavouriteAdsService";
