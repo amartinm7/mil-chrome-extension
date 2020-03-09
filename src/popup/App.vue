@@ -44,7 +44,7 @@
         </div>
         <div class="uk-width-auto uk-padding-remove">
           <a href="http://milanuncios.com" target="_blank" style="text-decoration:none;" class="ma-NavigationHeader-logoLink">
-            <img src="https://scm-milanuncios-frontend-pro.milanuncios.com/statics/images/common/logo.2676833a05.svg">
+            <img class="ma-image" src="https://scm-milanuncios-frontend-pro.milanuncios.com/statics/images/common/logo.2676833a05.svg">
           </a>
         </div>
         <div class="uk-width-auto">
@@ -123,12 +123,19 @@
       </div>
     </section>
 
+    <section class="uk-section uk-section-xsmall" v-if="isLogged == true">
+
+      <my-ads-cards v-bind:ads="ads" class="ma-scroll-spy-effect">
+      </my-ads-cards>
+
+    </section>
     <!-- social media first iteration-->
     <my-social-media-component></my-social-media-component>
   </div>
 </template>
 
 <script>
+  import MyAdsCards from "./component/myAds/MyAdsCard";
   import MyAdsComponent from "./component/myAds/MyAdsComponent";
   import MySocialMediaComponent from "./component/socialMedia/SocialMediaComponent";
   import ControllerFacadeFactoryBean from "./backend/framework/ControllerFacadeFactoryBean";
@@ -140,7 +147,7 @@
 
   export default {
     name: "app",
-    components: {MyAdsComponent, MySocialMediaComponent},
+    components: {MyAdsComponent, MySocialMediaComponent, MyAdsCards},
     data: function () {
       return {
         myAdsComponent:{ enableRenew: true, enableBets: true},
@@ -462,6 +469,14 @@
       transform:rotateX(359deg);
       transform-style: preserve-3d;
     }
+  }
+
+  .ma-image:hover {
+    opacity: .5;
+    transition: opacity .2s ease-out;
+    -moz-transition: opacity .2s ease-out;
+    -webkit-transition: opacity .2s ease-out;
+    -o-transition: opacity .2s ease-out;
   }
   /** spin horizontally **/
 
