@@ -1,0 +1,28 @@
+[debug] [2020-03-10T13:27:19.033Z] ----------------------------------------------------------------------
+[debug] [2020-03-10T13:27:19.035Z] Command:       /Users/antonio.martin/.nvm/versions/node/v11.11.0/bin/node /Users/antonio.martin/.nvm/versions/node/v11.11.0/bin/firebase init
+[debug] [2020-03-10T13:27:19.035Z] CLI Version:   7.14.0
+[debug] [2020-03-10T13:27:19.035Z] Platform:      darwin
+[debug] [2020-03-10T13:27:19.035Z] Node Version:  v11.11.0
+[debug] [2020-03-10T13:27:19.039Z] Time:          Tue Mar 10 2020 14:27:19 GMT+0100 (Central European Standard Time)
+[debug] [2020-03-10T13:27:19.039Z] ----------------------------------------------------------------------
+[debug] [2020-03-10T13:27:19.039Z] 
+[debug] [2020-03-10T13:27:19.046Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-03-10T13:27:19.046Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/antonio.martin/ideaProjectsGitHub/chromeExtensions/mil-chrome-extension/src
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 

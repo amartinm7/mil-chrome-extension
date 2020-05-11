@@ -22,7 +22,8 @@
     "cookies",
     "https://www.milanuncios.com/*",
     "https://*/",
-    "storage"
+    "storage",
+    "notifications"
   ],
   "content_security_policy": "script-src 'self' 'unsafe-eval' 'popup.js' 'strict-dynamic’; object-src 'self' 'unsafe-eval'"
 }
