@@ -90,10 +90,4 @@ Application Server Keys
 
 Application server keys are used to idenitfy your application server with a push service.
 
-Public Key
-
-BC-0S0bhKam53v4yqPWwfsGT1FEU_vfgVWD7djtV9h_cSmox6FiGo6RiXUQg9J0GjW3tOcMoHQgjytmS3uHj_VY
-Private Key
-
-_0iVhdtwklrxMOHz-dctLNFv1hRyOmaMwOt6z8xdyMs
 
