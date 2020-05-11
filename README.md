@@ -1,3 +1,4 @@
+[![BCH compliance](https://bettercodehub.com/edge/badge/amartinm7/mil-chrome-extension?branch=master)](https://bettercodehub.com/)
 #  Chrome-ext mil-ads companion
 
 ![Chrome-ext](./_images/title.png "Chrome ext with Vue")
@@ -64,4 +65,35 @@ dependencies:
 - npm install chrome-storage
 - npm install mock-local-storage --save-dev
 - npm install window-mock --save-dev
+
+
+formatDate(val) {
+        if (!val) { return '-' }
+        let date = val.toDate()
+        return moment(date).fromNow()
+    },
+import moment from 'moment'
+
+
+//webserver as chrome extension
+https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=es
+
+npm install -g http-server
+http-server
+
+Obtén claves del servidor de la app
+
+Para trabajar con este code lab, tienes que generar claves del servidor de la app, cosa que podemos hacer con este sitio complementario: https://web-push-codelab.glitch.me/
+
+
+Application Server Keys
+
+Application server keys are used to idenitfy your application server with a push service.
+
+Public Key
+
+BC-0S0bhKam53v4yqPWwfsGT1FEU_vfgVWD7djtV9h_cSmox6FiGo6RiXUQg9J0GjW3tOcMoHQgjytmS3uHj_VY
+Private Key
+
+_0iVhdtwklrxMOHz-dctLNFv1hRyOmaMwOt6z8xdyMs
 
