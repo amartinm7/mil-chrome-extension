@@ -6,9 +6,11 @@ import {GetAdStatsRepository} from "./repository/ad/GetAdStatsRepository";
 import {GetMyAdsRepository} from "./repository/ad/GetMyAdsRepository";
 import {GetMyFavouriteAdsRepository} from "./repository/ad/GetMyFavouriteAdsRepository";
 import {SaveStorageRepository} from "./repository/storage/SaveStorageRepository";
+import {GetCategoriesSuggestedRepository} from "./repository/category/GetCategoriesSuggestedRepository";
 
 //framework dependencies
 const axios = require ("axios")
+const fetch = require('node-fetch')
 const querystring = require ("querystring")
 const storage = require("chrome-storage")
 
@@ -16,7 +18,7 @@ let instance = null
 
 export default class RepositoryFactoryBean{
 
-    constructor({axios, querystring, storage}) {
+    constructor({axios, querystring, storage, fetch}) {
         console.log(">>>Init RepositoryFactoryBean")
         this._doRenewAdRepository = new DoRenewAdRepository(axios)
 
@@ -33,6 +35,8 @@ export default class RepositoryFactoryBean{
         this._doLoginWithCookiesRepository = new DoLoginWithCookiesRepository(axios)
 
         this._doLogoutRepository = new DoLogoutRepository(axios)
+
+        this._getCategoriesSuggestedRepository = new GetCategoriesSuggestedRepository(axios, querystring, fetch)
     }
 
     static getInstance(){
@@ -46,7 +50,8 @@ export default class RepositoryFactoryBean{
         return {
             axios,
             querystring,
-            storage
+            storage,
+            fetch
         }
     }
 
@@ -82,4 +87,7 @@ export default class RepositoryFactoryBean{
         return this.getInstance()._doLogoutRepository
     }
 
+    static getCategoriesSuggestedRepository() {
+        return this.getInstance()._getCategoriesSuggestedRepository
+    }
 }

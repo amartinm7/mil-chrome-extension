@@ -4,7 +4,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         const options = {
             type: "basic",
             title: "My notification",
-            message: "hello world",
+            message: "hello world dude xsd!",
             iconUrl: "icons/icon_128.png"
         }
         chrome.notifications.create(options, function () {

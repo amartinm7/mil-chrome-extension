@@ -198,7 +198,7 @@ export default {
     }
 
     .social-media-fotocasa {
-        background-image: url(https://pbs.twimg.com/profile_images/1038004057510760448/FWelhF5o_reasonably_small.jpg);
+        background-image: url(https://pbs.twimg.com/profile_images/1191255789467570176/bRiejI5I_reasonably_small.jpg);
     }
 
     .social-media-cochesnet {

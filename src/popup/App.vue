@@ -52,13 +52,22 @@
       </div>
       <!-- searcher -->
       <div class="uk-container uk-padding-small">
+        <div class="uk-margin">
+        </div>
         <form class="uk-form-stacked" v-on:submit.prevent="onAdSearch">
           <div class="uk-inline">
             <span class="uk-form-icon" uk-icon="icon: search"></span>
-            <input type="text" class="uk-input uk-form-width-large"
+            <input type="search" class="uk-input uk-form-width-large"
                    placeholder="¿que buscas?... citroen c3 puretech en madrid"
                    v-on:keyup.enter="onAdSearch"
                    v-model="searchFormData.keywords">
+            <div uk-dropdown="mode: click" id="suggestedCategoriesDD">
+              <ul class="uk-nav uk-dropdown-nav">
+                <li v-for="item in searchData" :key="item.url">
+                  <a @click="onAdSearchUrl(item.url)">{{item.name}}</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </form>
       </div>
@@ -143,6 +152,9 @@
   import {DoLoginControllerRequest} from "./backend/framework/controller/user/DoLoginController";
   import {DoLogoutControllerRequest} from "./backend/framework/controller/user/DoLogoutController";
   import {DoAdSearchControllerRequest} from "./backend/framework/controller/ad/search/DoAdSearchController";
+  import _ from 'lodash'
+  import {GetCategoriesSuggestedControllerRequest} from "./backend/framework/controller/category/GetCategoriesSuggestedController";
+
   const chromeExtension = chrome
 
   export default {
@@ -179,8 +191,15 @@
         ],
         favoriteAds:[
         ],
-        savedSearchs: null
+        savedSearchs: null,
+        searchData: [{name: 'visita milanuncios!', url: 'https://milanuncios.com'}]
       };
+    },
+    watch: {
+      ['searchFormData.keywords']: function (newKeyword, oldKeyword) {
+        console.log("watch keywords... " + newKeyword)
+        this.getCategoriesSuggested()
+      }
     },
     methods: {
       getUserDateMsg: function (){
@@ -201,7 +220,12 @@
                 new DoAdSearchControllerRequest({keywords: this.searchFormData.keywords})
         )
         console.log(doAdSearchControllerResponse.url)
-        window.open(doAdSearchControllerResponse.url, '_blank')
+        window.open(doAdSearchControllerResponse.url, '_self')
+      },
+      onAdSearchUrl: function (url) {
+        console.log(url)
+        // window.location.href(url)
+        window.open(url, '_blank')
       },
       onDoLogin: async function () {
         console.log(">>>onDoLogin")
@@ -259,13 +283,11 @@
           console.log(`renewed ${idAnuncio}!`)
           vm.onLoadPage()
         });
-
         // to stop listening events
         // this.$eventBus.off('reloadPage', function (idAnuncio) {
         //   console.log(`renewed ${idAnuncio}!`)
         // });
-
-      }
+      },
       // getSavedSearchs: async function (header, params) {
       //   const url = `https://ms-ma--user-profiles.spain.schibsted.io/users/183565764/savedsearches/?${qs.stringify(params)}`
       //   return axios({
@@ -277,16 +299,58 @@
       //     //[{"id":"e03f3ab9-7edb-4019-8b35-7c4e1e187446","userId":"183565764","title":"seat leon en Madrid","status":"ACTIVE","targeting":{"type":"coches","location":{"province":{"id":28}},"category":{"id":100664},"brand":"seat","adomain":"leon","price":{"from":6000.0,"to":42000.0},"year":{"from":2019.0,"to":2020.0}},"creationDate":"2020-01-28T08:27:32.374","updateDate":"2020-01-28T08:27:32.374"}]
       //   })
       //},
+      getCategoriesSuggested: _.debounce(async function() {
+        console.log("getCategoriesSuggested")
+        const vm = this
+        if ( vm.searchFormData.keywords.length < 3 ) {
+          vm.searchData = [{name: 'visita milanuncios!', url: 'https://milanuncios.com'}]
+          return
+        }
+        vm.searchData = []
+        console.log(`current session ${vm.current}`)
+        const getCategoriesSuggestedControllerResponse = await ControllerFacadeFactoryBean.getCategoriesSuggestedController().execute(
+            new GetCategoriesSuggestedControllerRequest(vm.current.session.apiToken, vm.searchFormData.keywords)
+        )
+        console.log(getCategoriesSuggestedControllerResponse)
+        getCategoriesSuggestedControllerResponse
+            .suggestedCategories.forEach(item => vm.searchData.push({ name: item.joinCategoryFilters(), url:item.joinFilters() }))
+        console.log('>>>searchData ' + this.searchData)
+        console.log('>>>searchData ' + this.searchData.length)
+        if (vm.searchData.length == 0) {
+          vm.searchData = [{name: 'visita milanuncios!', url: 'https://milanuncios.com'}]
+        }
+        /*
+        this.searchData.push(
+            {name: 'audi', url: 'https://milanuncios.com/audi-de-segunda-mano'},
+            {name: 'audi tt', url: 'https://milanuncios.com/audi-tt-de-segunda-mano'},
+            {name: 'audi A2', url: 'https://milanuncios.com/audi-a2-de-segunda-mano'},
+            {name: 'audi A3', url: 'https://milanuncios.com/audi-a3-segunda-mano'},
+            {name: 'audi A4', url: 'https://milanuncios.com/audi-a4-segunda-mano'}
+        )*/
+      }, 1000)
     },
-    created() {
+    created: function() {
     },
     mounted: async function () {
       console.log(">>>SaveStorageRepository execute localstorage")
       await ControllerFacadeFactoryBean.saveStorageController().execute()
       await this.onLoadPage()
-      this.declareEventsOverEventBus()
+      await this.declareEventsOverEventBus()
+      UIkit.util.on('suggestedCategoriesDD', 'shown', function () {
+        console.log('suggestedCategoriesDD')
+      });
+      UIkit.util.on('suggestedCategoriesDD', 'beforeshow', function () {
+        console.log('suggestedCategoriesDD beforeshow')
+      });
+      UIkit.util.on('suggestedCategoriesDD', 'toggle', function () {
+        console.log('suggestedCategoriesDD toggle')
+      });
+      UIkit.util.on('suggestedCategoriesDD', 'shown', function () {
+        console.log('suggestedCategoriesDD')
+      });
     }
   };
+
 </script>
 
 <style>
@@ -403,7 +467,7 @@
   }
 
   .social-media-fotocasa {
-    background-image: url(https://pbs.twimg.com/profile_images/1038004057510760448/FWelhF5o_reasonably_small.jpg);
+    background-image: url(https://www.fotocasa.es/blog/wp-content/uploads/2018/09/Favicon-nuevo.png);
   }
 
   .social-media-cochesnet {
