@@ -6,6 +6,7 @@ import {LoadPageController} from "./controller/ad/LoadPageController";
 import {DoRenewAdController} from "./controller/ad/renew/DoRenewAdController";
 import {DoAdSearchController} from "./controller/ad/search/DoAdSearchController";
 import {GetAdStatsController} from "./controller/ad/stats/GetAdStatsController";
+import {GetCategoriesSuggestedController} from "./controller/category/GetCategoriesSuggestedController";
 
 let instance = null
 
@@ -43,6 +44,10 @@ export default class ControllerFacadeFactoryBean {
         this._getAdStatsController = new GetAdStatsController(
             ServiceFactoryBean.getAdStatsService()
         )
+
+        this._getCategoriesSuggestedController = new GetCategoriesSuggestedController(
+            ServiceFactoryBean.getCategoriesSuggestedService()
+        )
     }
 
     static getInstance() {
@@ -78,5 +83,9 @@ export default class ControllerFacadeFactoryBean {
 
     static getAdStatsController() {
         return this.getInstance()._getAdStatsController
+    }
+
+    static getCategoriesSuggestedController() {
+        return this.getInstance()._getCategoriesSuggestedController
     }
 }

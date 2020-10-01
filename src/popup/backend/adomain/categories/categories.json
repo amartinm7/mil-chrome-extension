@@ -1,0 +1,9398 @@
+[
+  {
+    "idcategoria": 1,
+    "cat1": 10,
+    "cat2": 0,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Motor",
+    "slugger": "motor"
+  },
+  {
+    "idcategoria": 2,
+    "cat1": 70,
+    "cat2": 0,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Informática",
+    "slugger": "informatica-segunda-mano"
+  },
+  {
+    "idcategoria": 3,
+    "cat1": 30,
+    "cat2": 0,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Empleo",
+    "slugger": "ofertas-de-empleo"
+  },
+  {
+    "idcategoria": 9,
+    "cat1": 80,
+    "cat2": 0,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Imagen y Sonido",
+    "slugger": "imagen-y-sonido"
+  },
+  {
+    "idcategoria": 10,
+    "cat1": 70,
+    "cat2": 8,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Componentes",
+    "slugger": "componentes-de-segunda-mano"
+  },
+  {
+    "idcategoria": 11,
+    "cat1": 70,
+    "cat2": 5,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Impresoras",
+    "slugger": "impresoras"
+  },
+  {
+    "idcategoria": 13,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Coches",
+    "slugger": "coches-de-segunda-mano"
+  },
+  {
+    "idcategoria": 14,
+    "cat1": 10,
+    "cat2": 20,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Motos",
+    "slugger": "motos-de-segunda-mano"
+  },
+  {
+    "idcategoria": 15,
+    "cat1": 10,
+    "cat2": 12,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Todoterreno",
+    "slugger": "todoterreno-de-ocasion"
+  },
+  {
+    "idcategoria": 16,
+    "cat1": 10,
+    "cat2": 40,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Furgonetas",
+    "slugger": "furgonetas-de-segunda-mano"
+  },
+  {
+    "idcategoria": 17,
+    "cat1": 10,
+    "cat2": 50,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Camiones",
+    "slugger": "camiones-usados"
+  },
+  {
+    "idcategoria": 18,
+    "cat1": 10,
+    "cat2": 60,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Autobuses",
+    "slugger": "autobuses-usados"
+  },
+  {
+    "idcategoria": 22,
+    "cat1": 10,
+    "cat2": 20,
+    "cat3": 2,
+    "cat4": 0,
+    "nombre": "Ciclomotores",
+    "slugger": "ciclomotores-de-segunda-mano"
+  },
+  {
+    "idcategoria": 23,
+    "cat1": 10,
+    "cat2": 20,
+    "cat3": 3,
+    "cat4": 0,
+    "nombre": "Scooters",
+    "slugger": "scooters-de-segunda-mano"
+  },
+  {
+    "idcategoria": 24,
+    "cat1": 10,
+    "cat2": 20,
+    "cat3": 4,
+    "cat4": 0,
+    "nombre": "Motos de carretera",
+    "slugger": "motos-de-carretera"
+  },
+  {
+    "idcategoria": 25,
+    "cat1": 10,
+    "cat2": 20,
+    "cat3": 5,
+    "cat4": 0,
+    "nombre": "Motos de cross",
+    "slugger": "motos-de-cross"
+  },
+  {
+    "idcategoria": 26,
+    "cat1": 10,
+    "cat2": 20,
+    "cat3": 7,
+    "cat4": 0,
+    "nombre": "Accesorios",
+    "slugger": "accesorios-para-motos"
+  },
+  {
+    "idcategoria": 28,
+    "cat1": 70,
+    "cat2": 1,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Ordenadores",
+    "slugger": "ordenadores-de-segunda-mano"
+  },
+  {
+    "idcategoria": 29,
+    "cat1": 70,
+    "cat2": 3,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Portátiles",
+    "slugger": "portatiles-de-segunda-mano"
+  },
+  {
+    "idcategoria": 30,
+    "cat1": 110,
+    "cat2": 0,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Casa y Jardín",
+    "slugger": "casa-y-jardin"
+  },
+  {
+    "idcategoria": 31,
+    "cat1": 150,
+    "cat2": 0,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Deportes y náutica",
+    "slugger": "deportes-nautica"
+  },
+  {
+    "idcategoria": 32,
+    "cat1": 20,
+    "cat2": 0,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Inmobiliaria",
+    "slugger": "inmobiliaria"
+  },
+  {
+    "idcategoria": 39,
+    "cat1": 100,
+    "cat2": 0,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Juegos",
+    "slugger": "juegos"
+  },
+  {
+    "idcategoria": 40,
+    "cat1": 40,
+    "cat2": 0,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Formación y libros",
+    "slugger": "formacion"
+  },
+  {
+    "idcategoria": 43,
+    "cat1": 120,
+    "cat2": 0,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Moda y complementos",
+    "slugger": "moda-y-complementos"
+  },
+  {
+    "idcategoria": 44,
+    "cat1": 140,
+    "cat2": 0,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Aficiones y ocio",
+    "slugger": "aficiones"
+  },
+  {
+    "idcategoria": 46,
+    "cat1": 10,
+    "cat2": 70,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Caravanas",
+    "slugger": "caravanas-de-segunda-mano"
+  },
+  {
+    "idcategoria": 47,
+    "cat1": 10,
+    "cat2": 18,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Recambios y accesorios",
+    "slugger": "recambios-y-accesorios"
+  },
+  {
+    "idcategoria": 48,
+    "cat1": 10,
+    "cat2": 18,
+    "cat3": 2,
+    "cat4": 0,
+    "nombre": "Motores",
+    "slugger": "motores-de-segunda-mano"
+  },
+  {
+    "idcategoria": 49,
+    "cat1": 10,
+    "cat2": 18,
+    "cat3": 1,
+    "cat4": 0,
+    "nombre": "Llantas",
+    "slugger": "llantas-de-aleacion"
+  },
+  {
+    "idcategoria": 50,
+    "cat1": 10,
+    "cat2": 18,
+    "cat3": 3,
+    "cat4": 0,
+    "nombre": "Remolques",
+    "slugger": "remolques"
+  },
+  {
+    "idcategoria": 51,
+    "cat1": 10,
+    "cat2": 180,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Otros",
+    "slugger": "otros-motor"
+  },
+  {
+    "idcategoria": 52,
+    "cat1": 10,
+    "cat2": 18,
+    "cat3": 5,
+    "cat4": 0,
+    "nombre": "Autorradios",
+    "slugger": "autorradios"
+  },
+  {
+    "idcategoria": 53,
+    "cat1": 10,
+    "cat2": 150,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Maquinaria",
+    "slugger": "maquinaria"
+  },
+  {
+    "idcategoria": 54,
+    "cat1": 10,
+    "cat2": 150,
+    "cat3": 2,
+    "cat4": 0,
+    "nombre": "Maquinaria Agrícola",
+    "slugger": "maquinaria-agricola"
+  },
+  {
+    "idcategoria": 55,
+    "cat1": 10,
+    "cat2": 150,
+    "cat3": 1,
+    "cat4": 0,
+    "nombre": "Vehículos industriales",
+    "slugger": "vehiculos-industriales"
+  },
+  {
+    "idcategoria": 56,
+    "cat1": 10,
+    "cat2": 150,
+    "cat3": 1,
+    "cat4": 1,
+    "nombre": "Carretillas elevadoras",
+    "slugger": "carretillas-elevadoras"
+  },
+  {
+    "idcategoria": 57,
+    "cat1": 10,
+    "cat2": 150,
+    "cat3": 1,
+    "cat4": 2,
+    "nombre": "Grúas",
+    "slugger": "gruas"
+  },
+  {
+    "idcategoria": 58,
+    "cat1": 10,
+    "cat2": 150,
+    "cat3": 2,
+    "cat4": 1,
+    "nombre": "Tractores",
+    "slugger": "tractores-usados"
+  },
+  {
+    "idcategoria": 59,
+    "cat1": 10,
+    "cat2": 150,
+    "cat3": 2,
+    "cat4": 2,
+    "nombre": "Remolques agricolas",
+    "slugger": "remolques-agricolas"
+  },
+  {
+    "idcategoria": 60,
+    "cat1": 10,
+    "cat2": 150,
+    "cat3": 2,
+    "cat4": 3,
+    "nombre": "Cosechadoras",
+    "slugger": "cosechadoras"
+  },
+  {
+    "idcategoria": 61,
+    "cat1": 10,
+    "cat2": 100,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Quads",
+    "slugger": "quads"
+  },
+  {
+    "idcategoria": 62,
+    "cat1": 10,
+    "cat2": 110,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Karts",
+    "slugger": "venta-de-karts"
+  },
+  {
+    "idcategoria": 63,
+    "cat1": 10,
+    "cat2": 120,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Tuning",
+    "slugger": "tuning"
+  },
+  {
+    "idcategoria": 64,
+    "cat1": 10,
+    "cat2": 14,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Coches clasicos",
+    "slugger": "venta-de-coches-clasicos"
+  },
+  {
+    "idcategoria": 65,
+    "cat1": 70,
+    "cat2": 2,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Monitores",
+    "slugger": "monitores-de-segunda-mano"
+  },
+  {
+    "idcategoria": 66,
+    "cat1": 70,
+    "cat2": 8,
+    "cat3": 1,
+    "cat4": 0,
+    "nombre": "Discos Duros",
+    "slugger": "discos-duros"
+  },
+  {
+    "idcategoria": 67,
+    "cat1": 70,
+    "cat2": 8,
+    "cat3": 2,
+    "cat4": 0,
+    "nombre": "Procesadores",
+    "slugger": "procesadores"
+  },
+  {
+    "idcategoria": 68,
+    "cat1": 70,
+    "cat2": 8,
+    "cat3": 3,
+    "cat4": 0,
+    "nombre": "Grabadoras",
+    "slugger": "grabadoras"
+  },
+  {
+    "idcategoria": 69,
+    "cat1": 70,
+    "cat2": 8,
+    "cat3": 4,
+    "cat4": 0,
+    "nombre": "Placas base",
+    "slugger": "placas-base"
+  },
+  {
+    "idcategoria": 70,
+    "cat1": 70,
+    "cat2": 8,
+    "cat3": 5,
+    "cat4": 0,
+    "nombre": "Tarjetas gráficas",
+    "slugger": "tarjetas-graficas"
+  },
+  {
+    "idcategoria": 71,
+    "cat1": 70,
+    "cat2": 8,
+    "cat3": 7,
+    "cat4": 0,
+    "nombre": "Otros",
+    "slugger": "otros-componentes"
+  },
+  {
+    "idcategoria": 72,
+    "cat1": 70,
+    "cat2": 7,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "PDA",
+    "slugger": "pda"
+  },
+  {
+    "idcategoria": 78,
+    "cat1": 70,
+    "cat2": 6,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Mac",
+    "slugger": "apple-macintosh"
+  },
+  {
+    "idcategoria": 80,
+    "cat1": 70,
+    "cat2": 15,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Software",
+    "slugger": "software"
+  },
+  {
+    "idcategoria": 81,
+    "cat1": 80,
+    "cat2": 5,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Imagen",
+    "slugger": "imagen"
+  },
+  {
+    "idcategoria": 82,
+    "cat1": 80,
+    "cat2": 10,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Sonido",
+    "slugger": "sonido"
+  },
+  {
+    "idcategoria": 83,
+    "cat1": 90,
+    "cat2": 0,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Telefonía",
+    "slugger": "telefonia"
+  },
+  {
+    "idcategoria": 84,
+    "cat1": 80,
+    "cat2": 15,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Música",
+    "slugger": "musica"
+  },
+  {
+    "idcategoria": 85,
+    "cat1": 80,
+    "cat2": 5,
+    "cat3": 1,
+    "cat4": 0,
+    "nombre": "Televisores",
+    "slugger": "televisores"
+  },
+  {
+    "idcategoria": 86,
+    "cat1": 80,
+    "cat2": 5,
+    "cat3": 2,
+    "cat4": 0,
+    "nombre": "Reproductores de DVD",
+    "slugger": "reproductores-de-dvd"
+  },
+  {
+    "idcategoria": 87,
+    "cat1": 80,
+    "cat2": 5,
+    "cat3": 3,
+    "cat4": 0,
+    "nombre": "Reproductores multimedia",
+    "slugger": "reproductores-de-divx"
+  },
+  {
+    "idcategoria": 88,
+    "cat1": 80,
+    "cat2": 5,
+    "cat3": 4,
+    "cat4": 0,
+    "nombre": "Reproductores VHS",
+    "slugger": "videos-vhs"
+  },
+  {
+    "idcategoria": 89,
+    "cat1": 80,
+    "cat2": 5,
+    "cat3": 5,
+    "cat4": 0,
+    "nombre": "Videocámaras",
+    "slugger": "videocamaras"
+  },
+  {
+    "idcategoria": 90,
+    "cat1": 80,
+    "cat2": 5,
+    "cat3": 6,
+    "cat4": 0,
+    "nombre": "Películas",
+    "slugger": "peliculas"
+  },
+  {
+    "idcategoria": 91,
+    "cat1": 80,
+    "cat2": 5,
+    "cat3": 6,
+    "cat4": 1,
+    "nombre": "VHS",
+    "slugger": "videos"
+  },
+  {
+    "idcategoria": 92,
+    "cat1": 80,
+    "cat2": 5,
+    "cat3": 6,
+    "cat4": 2,
+    "nombre": "DVD",
+    "slugger": "peliculas-en-dvd"
+  },
+  {
+    "idcategoria": 93,
+    "cat1": 80,
+    "cat2": 1,
+    "cat3": 5,
+    "cat4": 0,
+    "nombre": "Cámaras digitales",
+    "slugger": "camaras-digitales"
+  },
+  {
+    "idcategoria": 94,
+    "cat1": 80,
+    "cat2": 5,
+    "cat3": 8,
+    "cat4": 0,
+    "nombre": "Antenas y decodificadores",
+    "slugger": "antenas-parabolicas"
+  },
+  {
+    "idcategoria": 95,
+    "cat1": 80,
+    "cat2": 10,
+    "cat3": 1,
+    "cat4": 1,
+    "nombre": "Equipos completos",
+    "slugger": "equipos-hi-fi"
+  },
+  {
+    "idcategoria": 96,
+    "cat1": 80,
+    "cat2": 10,
+    "cat3": 1,
+    "cat4": 2,
+    "nombre": "Amplificadores",
+    "slugger": "amplificadores"
+  },
+  {
+    "idcategoria": 97,
+    "cat1": 80,
+    "cat2": 10,
+    "cat3": 1,
+    "cat4": 3,
+    "nombre": "Altavoces",
+    "slugger": "altavoces"
+  },
+  {
+    "idcategoria": 99,
+    "cat1": 80,
+    "cat2": 10,
+    "cat3": 5,
+    "cat4": 0,
+    "nombre": "Minicadenas",
+    "slugger": "minicadenas"
+  },
+  {
+    "idcategoria": 100,
+    "cat1": 80,
+    "cat2": 10,
+    "cat3": 6,
+    "cat4": 0,
+    "nombre": "Minidisc",
+    "slugger": "minidisc"
+  },
+  {
+    "idcategoria": 101,
+    "cat1": 80,
+    "cat2": 10,
+    "cat3": 1,
+    "cat4": 0,
+    "nombre": "Equipos de sonido",
+    "slugger": "equipos-de-sonido"
+  },
+  {
+    "idcategoria": 102,
+    "cat1": 80,
+    "cat2": 10,
+    "cat3": 1,
+    "cat4": 4,
+    "nombre": "Sintonizadores",
+    "slugger": "sindonizadores-de-radio"
+  },
+  {
+    "idcategoria": 103,
+    "cat1": 80,
+    "cat2": 10,
+    "cat3": 1,
+    "cat4": 5,
+    "nombre": "Tocadiscos",
+    "slugger": "tocadiscos"
+  },
+  {
+    "idcategoria": 104,
+    "cat1": 80,
+    "cat2": 5,
+    "cat3": 9,
+    "cat4": 0,
+    "nombre": "Proyectores",
+    "slugger": "videoproyectores"
+  },
+  {
+    "idcategoria": 105,
+    "cat1": 80,
+    "cat2": 10,
+    "cat3": 1,
+    "cat4": 6,
+    "nombre": "Otros",
+    "slugger": "otros-equipos-de-sonido"
+  },
+  {
+    "idcategoria": 106,
+    "cat1": 80,
+    "cat2": 5,
+    "cat3": 1,
+    "cat4": 2,
+    "nombre": "Plasma",
+    "slugger": "televisores-de-plasma"
+  },
+  {
+    "idcategoria": 107,
+    "cat1": 80,
+    "cat2": 5,
+    "cat3": 1,
+    "cat4": 3,
+    "nombre": "Tft - Lcd",
+    "slugger": "televisores-tft-lcd"
+  },
+  {
+    "idcategoria": 108,
+    "cat1": 80,
+    "cat2": 10,
+    "cat3": 7,
+    "cat4": 0,
+    "nombre": "Home Cinema",
+    "slugger": "home-cinema"
+  },
+  {
+    "idcategoria": 109,
+    "cat1": 80,
+    "cat2": 10,
+    "cat3": 8,
+    "cat4": 0,
+    "nombre": "Reproductores mp3 y mp4",
+    "slugger": "reproductores-de-mp3"
+  },
+  {
+    "idcategoria": 110,
+    "cat1": 80,
+    "cat2": 10,
+    "cat3": 9,
+    "cat4": 0,
+    "nombre": "Mesas de mezclas",
+    "slugger": "mesas-de-mezclas"
+  },
+  {
+    "idcategoria": 111,
+    "cat1": 90,
+    "cat2": 1,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Móviles",
+    "slugger": "moviles"
+  },
+  {
+    "idcategoria": 112,
+    "cat1": 90,
+    "cat2": 1,
+    "cat3": 1,
+    "cat4": 0,
+    "nombre": "Teléfonos móviles",
+    "slugger": "telefonos-moviles"
+  },
+  {
+    "idcategoria": 114,
+    "cat1": 90,
+    "cat2": 1,
+    "cat3": 15,
+    "cat4": 0,
+    "nombre": "Manos libres",
+    "slugger": "manos-libres"
+  },
+  {
+    "idcategoria": 115,
+    "cat1": 90,
+    "cat2": 1,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Fundas",
+    "slugger": "fundas-para-moviles"
+  },
+  {
+    "idcategoria": 116,
+    "cat1": 90,
+    "cat2": 1,
+    "cat3": 45,
+    "cat4": 0,
+    "nombre": "Otros",
+    "slugger": "otros-accesorios-para-moviles"
+  },
+  {
+    "idcategoria": 117,
+    "cat1": 90,
+    "cat2": 10,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Teléfonos inalámbricos",
+    "slugger": "telefonos-inalambricos"
+  },
+  {
+    "idcategoria": 118,
+    "cat1": 90,
+    "cat2": 15,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Fax",
+    "slugger": "fax"
+  },
+  {
+    "idcategoria": 119,
+    "cat1": 90,
+    "cat2": 20,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Centralitas",
+    "slugger": "centralitas-telefonicas"
+  },
+  {
+    "idcategoria": 120,
+    "cat1": 80,
+    "cat2": 5,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Fotocopiadoras",
+    "slugger": "fotocopiadoras"
+  },
+  {
+    "idcategoria": 121,
+    "cat1": 80,
+    "cat2": 5,
+    "cat3": 11,
+    "cat4": 0,
+    "nombre": "Maquinas de escribir",
+    "slugger": "maquinas-de-escribir"
+  },
+  {
+    "idcategoria": 122,
+    "cat1": 20,
+    "cat2": 1,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Pisos",
+    "slugger": "pisos"
+  },
+  {
+    "idcategoria": 123,
+    "cat1": 20,
+    "cat2": 1,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Apartamentos",
+    "slugger": "apartamentos"
+  },
+  {
+    "idcategoria": 124,
+    "cat1": 20,
+    "cat2": 1,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Chalets",
+    "slugger": "chalets"
+  },
+  {
+    "idcategoria": 125,
+    "cat1": 20,
+    "cat2": 1,
+    "cat3": 40,
+    "cat4": 0,
+    "nombre": "Áticos",
+    "slugger": "aticos"
+  },
+  {
+    "idcategoria": 126,
+    "cat1": 20,
+    "cat2": 1,
+    "cat3": 50,
+    "cat4": 0,
+    "nombre": "Estudios",
+    "slugger": "estudios"
+  },
+  {
+    "idcategoria": 127,
+    "cat1": 20,
+    "cat2": 1,
+    "cat3": 60,
+    "cat4": 0,
+    "nombre": "Lofts",
+    "slugger": "lofts"
+  },
+  {
+    "idcategoria": 128,
+    "cat1": 20,
+    "cat2": 7,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Locales comerciales",
+    "slugger": "locales-comerciales"
+  },
+  {
+    "idcategoria": 129,
+    "cat1": 20,
+    "cat2": 8,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Oficinas",
+    "slugger": "oficinas"
+  },
+  {
+    "idcategoria": 130,
+    "cat1": 20,
+    "cat2": 9,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Naves Industriales",
+    "slugger": "naves-industriales"
+  },
+  {
+    "idcategoria": 131,
+    "cat1": 20,
+    "cat2": 1,
+    "cat3": 10,
+    "cat4": 1,
+    "nombre": "Venta de pisos",
+    "slugger": "venta-de-pisos"
+  },
+  {
+    "idcategoria": 132,
+    "cat1": 20,
+    "cat2": 1,
+    "cat3": 10,
+    "cat4": 2,
+    "nombre": "Alquiler de pisos",
+    "slugger": "alquiler-de-pisos"
+  },
+  {
+    "idcategoria": 133,
+    "cat1": 20,
+    "cat2": 1,
+    "cat3": 10,
+    "cat4": 3,
+    "nombre": "Compartir piso",
+    "slugger": "pisos-compartidos"
+  },
+  {
+    "idcategoria": 134,
+    "cat1": 20,
+    "cat2": 1,
+    "cat3": 20,
+    "cat4": 1,
+    "nombre": "Alquiler apartamentos",
+    "slugger": "alquiler-de-apartamentos"
+  },
+  {
+    "idcategoria": 135,
+    "cat1": 20,
+    "cat2": 1,
+    "cat3": 20,
+    "cat4": 2,
+    "nombre": "Venta apartamentos",
+    "slugger": "venta-de-apartamentos"
+  },
+  {
+    "idcategoria": 136,
+    "cat1": 20,
+    "cat2": 7,
+    "cat3": 1,
+    "cat4": 0,
+    "nombre": "Alquiler de locales",
+    "slugger": "alquiler-de-locales-comerciales"
+  },
+  {
+    "idcategoria": 137,
+    "cat1": 20,
+    "cat2": 7,
+    "cat3": 2,
+    "cat4": 0,
+    "nombre": "Venta de locales",
+    "slugger": "venta-de-locales-comerciales"
+  },
+  {
+    "idcategoria": 138,
+    "cat1": 20,
+    "cat2": 1,
+    "cat3": 30,
+    "cat4": 1,
+    "nombre": "Alquiler de chalets",
+    "slugger": "alquiler-de-chalets"
+  },
+  {
+    "idcategoria": 139,
+    "cat1": 20,
+    "cat2": 1,
+    "cat3": 30,
+    "cat4": 2,
+    "nombre": "Venta de chalets",
+    "slugger": "venta-de-chalets"
+  },
+  {
+    "idcategoria": 140,
+    "cat1": 20,
+    "cat2": 1,
+    "cat3": 40,
+    "cat4": 1,
+    "nombre": "Alquiler de áticos",
+    "slugger": "alquiler-de-aticos"
+  },
+  {
+    "idcategoria": 141,
+    "cat1": 20,
+    "cat2": 1,
+    "cat3": 40,
+    "cat4": 2,
+    "nombre": "Venta de áticos",
+    "slugger": "venta-de-aticos"
+  },
+  {
+    "idcategoria": 142,
+    "cat1": 20,
+    "cat2": 1,
+    "cat3": 50,
+    "cat4": 1,
+    "nombre": "Alquiler de estudios",
+    "slugger": "alquiler-de-estudios"
+  },
+  {
+    "idcategoria": 143,
+    "cat1": 20,
+    "cat2": 1,
+    "cat3": 50,
+    "cat4": 2,
+    "nombre": "Venta de estudios",
+    "slugger": "venta-de-estudios"
+  },
+  {
+    "idcategoria": 144,
+    "cat1": 20,
+    "cat2": 1,
+    "cat3": 60,
+    "cat4": 1,
+    "nombre": "Alquiler de lofts",
+    "slugger": "alquiler-de-lofts"
+  },
+  {
+    "idcategoria": 145,
+    "cat1": 20,
+    "cat2": 1,
+    "cat3": 60,
+    "cat4": 2,
+    "nombre": "Venta de lofts",
+    "slugger": "venta-de-lofts"
+  },
+  {
+    "idcategoria": 146,
+    "cat1": 20,
+    "cat2": 8,
+    "cat3": 1,
+    "cat4": 0,
+    "nombre": "Alquiler de oficinas",
+    "slugger": "alquiler-de-oficinas"
+  },
+  {
+    "idcategoria": 147,
+    "cat1": 20,
+    "cat2": 8,
+    "cat3": 2,
+    "cat4": 0,
+    "nombre": "Venta de oficinas",
+    "slugger": "venta-de-oficinas"
+  },
+  {
+    "idcategoria": 148,
+    "cat1": 20,
+    "cat2": 9,
+    "cat3": 1,
+    "cat4": 0,
+    "nombre": "Alquiler de naves",
+    "slugger": "alquiler-de-naves-industriales"
+  },
+  {
+    "idcategoria": 149,
+    "cat1": 20,
+    "cat2": 9,
+    "cat3": 2,
+    "cat4": 0,
+    "nombre": "Venta de naves",
+    "slugger": "venta-de-naves-industriales"
+  },
+  {
+    "idcategoria": 150,
+    "cat1": 20,
+    "cat2": 10,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Terrenos",
+    "slugger": "terrenos"
+  },
+  {
+    "idcategoria": 151,
+    "cat1": 20,
+    "cat2": 10,
+    "cat3": 1,
+    "cat4": 0,
+    "nombre": "Fincas rústicas",
+    "slugger": "fincas-rusticas"
+  },
+  {
+    "idcategoria": 152,
+    "cat1": 20,
+    "cat2": 10,
+    "cat3": 2,
+    "cat4": 0,
+    "nombre": "Parcelas rústicas",
+    "slugger": "parcelas"
+  },
+  {
+    "idcategoria": 153,
+    "cat1": 20,
+    "cat2": 10,
+    "cat3": 3,
+    "cat4": 0,
+    "nombre": "Solares",
+    "slugger": "solares"
+  },
+  {
+    "idcategoria": 154,
+    "cat1": 20,
+    "cat2": 10,
+    "cat3": 1,
+    "cat4": 1,
+    "nombre": "Alquiler de fincas",
+    "slugger": "alquiler-de-fincas"
+  },
+  {
+    "idcategoria": 155,
+    "cat1": 20,
+    "cat2": 10,
+    "cat3": 1,
+    "cat4": 2,
+    "nombre": "Venta de fincas",
+    "slugger": "venta-de-fincas"
+  },
+  {
+    "idcategoria": 156,
+    "cat1": 20,
+    "cat2": 1,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Viviendas",
+    "slugger": "viviendas"
+  },
+  {
+    "idcategoria": 157,
+    "cat1": 80,
+    "cat2": 5,
+    "cat3": 1,
+    "cat4": 1,
+    "nombre": "Convencionales",
+    "slugger": "televisores-convencionales"
+  },
+  {
+    "idcategoria": 159,
+    "cat1": 10,
+    "cat2": 18,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Otros",
+    "slugger": "otros-recambios"
+  },
+  {
+    "idcategoria": 160,
+    "cat1": 20,
+    "cat2": 11,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Plazas de garaje",
+    "slugger": "plazas-de-garaje"
+  },
+  {
+    "idcategoria": 161,
+    "cat1": 90,
+    "cat2": 1,
+    "cat3": 1,
+    "cat4": 110,
+    "nombre": "Alcatel",
+    "slugger": "moviles-alcatel"
+  },
+  {
+    "idcategoria": 162,
+    "cat1": 90,
+    "cat2": 1,
+    "cat3": 1,
+    "cat4": 40,
+    "nombre": "LG",
+    "slugger": "moviles-lg"
+  },
+  {
+    "idcategoria": 164,
+    "cat1": 90,
+    "cat2": 1,
+    "cat3": 1,
+    "cat4": 48,
+    "nombre": "Motorola",
+    "slugger": "moviles-motorola"
+  },
+  {
+    "idcategoria": 166,
+    "cat1": 90,
+    "cat2": 1,
+    "cat3": 1,
+    "cat4": 56,
+    "nombre": "Nokia",
+    "slugger": "moviles-nokia"
+  },
+  {
+    "idcategoria": 170,
+    "cat1": 90,
+    "cat2": 1,
+    "cat3": 1,
+    "cat4": 64,
+    "nombre": "Samsung",
+    "slugger": "moviles-samsung"
+  },
+  {
+    "idcategoria": 173,
+    "cat1": 90,
+    "cat2": 1,
+    "cat3": 1,
+    "cat4": 72,
+    "nombre": "Sony",
+    "slugger": "moviles-sony-ericsson"
+  },
+  {
+    "idcategoria": 175,
+    "cat1": 90,
+    "cat2": 1,
+    "cat3": 1,
+    "cat4": 200,
+    "nombre": "Otras marcas",
+    "slugger": "otros-moviles"
+  },
+  {
+    "idcategoria": 176,
+    "cat1": 90,
+    "cat2": 1,
+    "cat3": 25,
+    "cat4": 0,
+    "nombre": "Tarjetas prepago",
+    "slugger": "tarjetas-prepago"
+  },
+  {
+    "idcategoria": 177,
+    "cat1": 90,
+    "cat2": 1,
+    "cat3": 40,
+    "cat4": 0,
+    "nombre": "Baterías",
+    "slugger": "baterias-moviles"
+  },
+  {
+    "idcategoria": 178,
+    "cat1": 90,
+    "cat2": 1,
+    "cat3": 35,
+    "cat4": 0,
+    "nombre": "cargadores",
+    "slugger": "cargadores-de-moviles"
+  },
+  {
+    "idcategoria": 179,
+    "cat1": 90,
+    "cat2": 1,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Cables",
+    "slugger": "cables-de-moviles"
+  },
+  {
+    "idcategoria": 180,
+    "cat1": 90,
+    "cat2": 25,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Contestadores",
+    "slugger": "contestadores-automaticos"
+  },
+  {
+    "idcategoria": 181,
+    "cat1": 20,
+    "cat2": 7,
+    "cat3": 3,
+    "cat4": 0,
+    "nombre": "Traspaso",
+    "slugger": "traspasos"
+  },
+  {
+    "idcategoria": 182,
+    "cat1": 20,
+    "cat2": 11,
+    "cat3": 1,
+    "cat4": 0,
+    "nombre": "Alquiler de garajes",
+    "slugger": "alquiler-de-garajes"
+  },
+  {
+    "idcategoria": 183,
+    "cat1": 20,
+    "cat2": 11,
+    "cat3": 2,
+    "cat4": 0,
+    "nombre": "Venta de garajes",
+    "slugger": "venta-de-garajes"
+  },
+  {
+    "idcategoria": 184,
+    "cat1": 50,
+    "cat2": 0,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Servicios",
+    "slugger": "servicios"
+  },
+  {
+    "idcategoria": 185,
+    "cat1": 60,
+    "cat2": 0,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Negocios",
+    "slugger": "negocios"
+  },
+  {
+    "idcategoria": 188,
+    "cat1": 30,
+    "cat2": 2,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Administración",
+    "slugger": "personal-de-administracion"
+  },
+  {
+    "idcategoria": 189,
+    "cat1": 30,
+    "cat2": 4,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Arquitectos",
+    "slugger": "arquitectos"
+  },
+  {
+    "idcategoria": 190,
+    "cat1": 30,
+    "cat2": 5,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Artes y diseño",
+    "slugger": "artistas-y-disenadores"
+  },
+  {
+    "idcategoria": 191,
+    "cat1": 30,
+    "cat2": 2,
+    "cat3": 2,
+    "cat4": 0,
+    "nombre": "Recepcionistas",
+    "slugger": "recepcionistas"
+  },
+  {
+    "idcategoria": 193,
+    "cat1": 30,
+    "cat2": 7,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Comerciales",
+    "slugger": "comerciales"
+  },
+  {
+    "idcategoria": 194,
+    "cat1": 30,
+    "cat2": 9,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Construcción",
+    "slugger": "construccion"
+  },
+  {
+    "idcategoria": 195,
+    "cat1": 30,
+    "cat2": 10,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Consultores",
+    "slugger": "consultores"
+  },
+  {
+    "idcategoria": 196,
+    "cat1": 30,
+    "cat2": 11,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Contables",
+    "slugger": "contables"
+  },
+  {
+    "idcategoria": 197,
+    "cat1": 30,
+    "cat2": 12,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Control de calidad",
+    "slugger": "control-de-calidad"
+  },
+  {
+    "idcategoria": 198,
+    "cat1": 30,
+    "cat2": 13,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Directivos-Gerentes",
+    "slugger": "directivos-y-gerentes"
+  },
+  {
+    "idcategoria": 199,
+    "cat1": 30,
+    "cat2": 14,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Educación",
+    "slugger": "profesores-y-formadores"
+  },
+  {
+    "idcategoria": 201,
+    "cat1": 30,
+    "cat2": 15,
+    "cat3": 1,
+    "cat4": 0,
+    "nombre": "Auditores",
+    "slugger": "auditores"
+  },
+  {
+    "idcategoria": 202,
+    "cat1": 30,
+    "cat2": 15,
+    "cat3": 2,
+    "cat4": 0,
+    "nombre": "Banca",
+    "slugger": "banca"
+  },
+  {
+    "idcategoria": 203,
+    "cat1": 30,
+    "cat2": 15,
+    "cat3": 3,
+    "cat4": 0,
+    "nombre": "Bolsa",
+    "slugger": "bolsa"
+  },
+  {
+    "idcategoria": 204,
+    "cat1": 30,
+    "cat2": 15,
+    "cat3": 4,
+    "cat4": 0,
+    "nombre": "Seguros",
+    "slugger": "seguros"
+  },
+  {
+    "idcategoria": 205,
+    "cat1": 30,
+    "cat2": 15,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Finanzas",
+    "slugger": "finanzas"
+  },
+  {
+    "idcategoria": 207,
+    "cat1": 30,
+    "cat2": 16,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Informáticos",
+    "slugger": "informaticos"
+  },
+  {
+    "idcategoria": 208,
+    "cat1": 30,
+    "cat2": 17,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Ingenieros",
+    "slugger": "ingenieros"
+  },
+  {
+    "idcategoria": 209,
+    "cat1": 30,
+    "cat2": 18,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Investigadores",
+    "slugger": "investigadores-y-cientificos"
+  },
+  {
+    "idcategoria": 210,
+    "cat1": 30,
+    "cat2": 1,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Abogados",
+    "slugger": "abogados-y-juristas"
+  },
+  {
+    "idcategoria": 212,
+    "cat1": 30,
+    "cat2": 19,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Marketing",
+    "slugger": "marketing"
+  },
+  {
+    "idcategoria": 214,
+    "cat1": 30,
+    "cat2": 32,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Otras",
+    "slugger": "otras-empleo"
+  },
+  {
+    "idcategoria": 215,
+    "cat1": 30,
+    "cat2": 22,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Periodistas",
+    "slugger": "periodistas"
+  },
+  {
+    "idcategoria": 216,
+    "cat1": 30,
+    "cat2": 23,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Publicidad",
+    "slugger": "publicidad"
+  },
+  {
+    "idcategoria": 217,
+    "cat1": 30,
+    "cat2": 24,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Recursos Humanos",
+    "slugger": "recursos-humanos"
+  },
+  {
+    "idcategoria": 218,
+    "cat1": 30,
+    "cat2": 5,
+    "cat3": 5,
+    "cat4": 0,
+    "nombre": "Restauradores",
+    "slugger": "restauradores"
+  },
+  {
+    "idcategoria": 219,
+    "cat1": 30,
+    "cat2": 25,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Sanidad",
+    "slugger": "medicos-y-farmaceuticos"
+  },
+  {
+    "idcategoria": 220,
+    "cat1": 30,
+    "cat2": 2,
+    "cat3": 1,
+    "cat4": 0,
+    "nombre": "Secretarias",
+    "slugger": "secretarias"
+  },
+  {
+    "idcategoria": 221,
+    "cat1": 30,
+    "cat2": 31,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Vigilantes-Porteros",
+    "slugger": "vigilantes-y-porteros"
+  },
+  {
+    "idcategoria": 222,
+    "cat1": 30,
+    "cat2": 27,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Servicios sociales",
+    "slugger": "servicios-sociales"
+  },
+  {
+    "idcategoria": 223,
+    "cat1": 30,
+    "cat2": 28,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Traductores",
+    "slugger": "traductores"
+  },
+  {
+    "idcategoria": 224,
+    "cat1": 30,
+    "cat2": 30,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Turismo",
+    "slugger": "turismo"
+  },
+  {
+    "idcategoria": 225,
+    "cat1": 30,
+    "cat2": 5,
+    "cat3": 1,
+    "cat4": 0,
+    "nombre": "Diseñadores web",
+    "slugger": "disenadores-web"
+  },
+  {
+    "idcategoria": 226,
+    "cat1": 30,
+    "cat2": 5,
+    "cat3": 2,
+    "cat4": 0,
+    "nombre": "Diseñadores de moda",
+    "slugger": "disenadores-de-moda"
+  },
+  {
+    "idcategoria": 227,
+    "cat1": 30,
+    "cat2": 5,
+    "cat3": 3,
+    "cat4": 0,
+    "nombre": "Diseñadores gráficos",
+    "slugger": "disenadores-graficos"
+  },
+  {
+    "idcategoria": 228,
+    "cat1": 30,
+    "cat2": 5,
+    "cat3": 4,
+    "cat4": 0,
+    "nombre": "Músicos",
+    "slugger": "musicos"
+  },
+  {
+    "idcategoria": 229,
+    "cat1": 30,
+    "cat2": 2,
+    "cat3": 3,
+    "cat4": 0,
+    "nombre": "Administrativos",
+    "slugger": "administrativos"
+  },
+  {
+    "idcategoria": 230,
+    "cat1": 30,
+    "cat2": 15,
+    "cat3": 5,
+    "cat4": 0,
+    "nombre": "Economistas",
+    "slugger": "economistas"
+  },
+  {
+    "idcategoria": 231,
+    "cat1": 30,
+    "cat2": 29,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Transportistas",
+    "slugger": "transportistas"
+  },
+  {
+    "idcategoria": 232,
+    "cat1": 30,
+    "cat2": 20,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Mensajeros",
+    "slugger": "mensajeros"
+  },
+  {
+    "idcategoria": 233,
+    "cat1": 30,
+    "cat2": 6,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Cocineros-Camareros",
+    "slugger": "cocineros-y-camareros"
+  },
+  {
+    "idcategoria": 234,
+    "cat1": 30,
+    "cat2": 21,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Oficios profesion.",
+    "slugger": "oficios-profesionales"
+  },
+  {
+    "idcategoria": 235,
+    "cat1": 50,
+    "cat2": 10,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Para personas",
+    "slugger": "servicios-para-personas"
+  },
+  {
+    "idcategoria": 238,
+    "cat1": 50,
+    "cat2": 10,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Belleza",
+    "slugger": "belleza"
+  },
+  {
+    "idcategoria": 239,
+    "cat1": 50,
+    "cat2": 10,
+    "cat3": 40,
+    "cat4": 0,
+    "nombre": "Organización de fiestas",
+    "slugger": "organizacion-de-fiestas"
+  },
+  {
+    "idcategoria": 240,
+    "cat1": 50,
+    "cat2": 10,
+    "cat3": 50,
+    "cat4": 0,
+    "nombre": "Dentistas",
+    "slugger": "dentistas"
+  },
+  {
+    "idcategoria": 241,
+    "cat1": 50,
+    "cat2": 10,
+    "cat3": 60,
+    "cat4": 0,
+    "nombre": "Despedidas de soltero",
+    "slugger": "despedidas-de-soltero"
+  },
+  {
+    "idcategoria": 242,
+    "cat1": 50,
+    "cat2": 10,
+    "cat3": 70,
+    "cat4": 0,
+    "nombre": "Floristerías",
+    "slugger": "floristerias"
+  },
+  {
+    "idcategoria": 243,
+    "cat1": 50,
+    "cat2": 10,
+    "cat3": 80,
+    "cat4": 0,
+    "nombre": "Fotógrafos",
+    "slugger": "fotografos"
+  },
+  {
+    "idcategoria": 244,
+    "cat1": 50,
+    "cat2": 10,
+    "cat3": 90,
+    "cat4": 0,
+    "nombre": "Gimnasios",
+    "slugger": "gimnasios"
+  },
+  {
+    "idcategoria": 245,
+    "cat1": 50,
+    "cat2": 10,
+    "cat3": 100,
+    "cat4": 0,
+    "nombre": "Masajistas",
+    "slugger": "masajistas"
+  },
+  {
+    "idcategoria": 246,
+    "cat1": 50,
+    "cat2": 10,
+    "cat3": 110,
+    "cat4": 0,
+    "nombre": "Modistas",
+    "slugger": "modistas"
+  },
+  {
+    "idcategoria": 247,
+    "cat1": 50,
+    "cat2": 10,
+    "cat3": 120,
+    "cat4": 0,
+    "nombre": "Niñeras y cuidadores",
+    "slugger": "nineras-y-cuidadores"
+  },
+  {
+    "idcategoria": 249,
+    "cat1": 50,
+    "cat2": 10,
+    "cat3": 140,
+    "cat4": 0,
+    "nombre": "Videntes",
+    "slugger": "videntes"
+  },
+  {
+    "idcategoria": 250,
+    "cat1": 50,
+    "cat2": 20,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Para el hogar",
+    "slugger": "servicios-para-el-hogar"
+  },
+  {
+    "idcategoria": 251,
+    "cat1": 50,
+    "cat2": 20,
+    "cat3": 55,
+    "cat4": 0,
+    "nombre": "Decoradores",
+    "slugger": "decoradores"
+  },
+  {
+    "idcategoria": 252,
+    "cat1": 50,
+    "cat2": 20,
+    "cat3": 61,
+    "cat4": 0,
+    "nombre": "Desinsectación",
+    "slugger": "desinsectacion"
+  },
+  {
+    "idcategoria": 253,
+    "cat1": 50,
+    "cat2": 20,
+    "cat3": 68,
+    "cat4": 0,
+    "nombre": "Guardamuebles",
+    "slugger": "guardamuebles"
+  },
+  {
+    "idcategoria": 254,
+    "cat1": 50,
+    "cat2": 20,
+    "cat3": 70,
+    "cat4": 0,
+    "nombre": "Limpieza",
+    "slugger": "empresas-de-limpieza"
+  },
+  {
+    "idcategoria": 255,
+    "cat1": 50,
+    "cat2": 20,
+    "cat3": 71,
+    "cat4": 0,
+    "nombre": "Mudanzas",
+    "slugger": "mudanzas"
+  },
+  {
+    "idcategoria": 257,
+    "cat1": 50,
+    "cat2": 20,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Antenistas",
+    "slugger": "antenistas"
+  },
+  {
+    "idcategoria": 258,
+    "cat1": 50,
+    "cat2": 20,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Carpinteros",
+    "slugger": "carpinteros"
+  },
+  {
+    "idcategoria": 259,
+    "cat1": 50,
+    "cat2": 20,
+    "cat3": 200,
+    "cat4": 0,
+    "nombre": "Reformas",
+    "slugger": "reformas"
+  },
+  {
+    "idcategoria": 262,
+    "cat1": 50,
+    "cat2": 20,
+    "cat3": 60,
+    "cat4": 0,
+    "nombre": "Desatrancos",
+    "slugger": "desatrancos"
+  },
+  {
+    "idcategoria": 263,
+    "cat1": 50,
+    "cat2": 20,
+    "cat3": 73,
+    "cat4": 0,
+    "nombre": "Pintores",
+    "slugger": "pintores"
+  },
+  {
+    "idcategoria": 266,
+    "cat1": 50,
+    "cat2": 20,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Cerrajeros",
+    "slugger": "cerrajeros"
+  },
+  {
+    "idcategoria": 267,
+    "cat1": 50,
+    "cat2": 20,
+    "cat3": 40,
+    "cat4": 0,
+    "nombre": "Climatización",
+    "slugger": "climatizacion"
+  },
+  {
+    "idcategoria": 268,
+    "cat1": 50,
+    "cat2": 20,
+    "cat3": 50,
+    "cat4": 0,
+    "nombre": "Cristaleros",
+    "slugger": "cristaleros"
+  },
+  {
+    "idcategoria": 269,
+    "cat1": 50,
+    "cat2": 20,
+    "cat3": 205,
+    "cat4": 0,
+    "nombre": "Tejados y fachadas",
+    "slugger": "reparacion-de-tejados-y-fachadas"
+  },
+  {
+    "idcategoria": 270,
+    "cat1": 50,
+    "cat2": 20,
+    "cat3": 62,
+    "cat4": 0,
+    "nombre": "Electricistas",
+    "slugger": "electricistas"
+  },
+  {
+    "idcategoria": 271,
+    "cat1": 50,
+    "cat2": 20,
+    "cat3": 64,
+    "cat4": 0,
+    "nombre": "Electrodomésticos",
+    "slugger": "reparacion-de-electrodomesticos"
+  },
+  {
+    "idcategoria": 273,
+    "cat1": 50,
+    "cat2": 20,
+    "cat3": 67,
+    "cat4": 0,
+    "nombre": "Fontaneros",
+    "slugger": "fontaneros"
+  },
+  {
+    "idcategoria": 277,
+    "cat1": 50,
+    "cat2": 20,
+    "cat3": 210,
+    "cat4": 0,
+    "nombre": "Toldos",
+    "slugger": "toldos"
+  },
+  {
+    "idcategoria": 278,
+    "cat1": 50,
+    "cat2": 20,
+    "cat3": 220,
+    "cat4": 0,
+    "nombre": "Otros",
+    "slugger": "otros-servicios-de-reformas"
+  },
+  {
+    "idcategoria": 279,
+    "cat1": 50,
+    "cat2": 20,
+    "cat3": 75,
+    "cat4": 0,
+    "nombre": "Persianistas",
+    "slugger": "persianistas"
+  },
+  {
+    "idcategoria": 280,
+    "cat1": 50,
+    "cat2": 30,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Para empresas",
+    "slugger": "servicios-para-la-empresas"
+  },
+  {
+    "idcategoria": 281,
+    "cat1": 50,
+    "cat2": 30,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Asesorías",
+    "slugger": "asesorias"
+  },
+  {
+    "idcategoria": 282,
+    "cat1": 50,
+    "cat2": 30,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Diseño y reprografía",
+    "slugger": "diseno-y-reprografia"
+  },
+  {
+    "idcategoria": 283,
+    "cat1": 50,
+    "cat2": 30,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Escaparatistas",
+    "slugger": "escaparatistas"
+  },
+  {
+    "idcategoria": 284,
+    "cat1": 50,
+    "cat2": 30,
+    "cat3": 5,
+    "cat4": 0,
+    "nombre": "Abogados",
+    "slugger": "abogados"
+  },
+  {
+    "idcategoria": 286,
+    "cat1": 50,
+    "cat2": 30,
+    "cat3": 15,
+    "cat4": 0,
+    "nombre": "Detectives",
+    "slugger": "detectives"
+  },
+  {
+    "idcategoria": 289,
+    "cat1": 50,
+    "cat2": 30,
+    "cat3": 90,
+    "cat4": 0,
+    "nombre": "Traducciones",
+    "slugger": "traducciones"
+  },
+  {
+    "idcategoria": 290,
+    "cat1": 50,
+    "cat2": 30,
+    "cat3": 100,
+    "cat4": 0,
+    "nombre": "Otros",
+    "slugger": "otros-servicios-de-empresa"
+  },
+  {
+    "idcategoria": 292,
+    "cat1": 50,
+    "cat2": 20,
+    "cat3": 69,
+    "cat4": 0,
+    "nombre": "Informáticos",
+    "slugger": "servicios-informaticos"
+  },
+  {
+    "idcategoria": 293,
+    "cat1": 40,
+    "cat2": 50,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Cursos",
+    "slugger": "cursos"
+  },
+  {
+    "idcategoria": 294,
+    "cat1": 40,
+    "cat2": 50,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Cursos de buceo",
+    "slugger": "cursos-de-buceo"
+  },
+  {
+    "idcategoria": 295,
+    "cat1": 40,
+    "cat2": 50,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Cursos de cocina",
+    "slugger": "cursos-de-cocina"
+  },
+  {
+    "idcategoria": 296,
+    "cat1": 40,
+    "cat2": 50,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Cursos de contabilidad",
+    "slugger": "cursos-de-contabilidad"
+  },
+  {
+    "idcategoria": 297,
+    "cat1": 40,
+    "cat2": 50,
+    "cat3": 40,
+    "cat4": 0,
+    "nombre": "Cursos de estética",
+    "slugger": "cursos-de-estetica"
+  },
+  {
+    "idcategoria": 298,
+    "cat1": 40,
+    "cat2": 50,
+    "cat3": 50,
+    "cat4": 0,
+    "nombre": "Cursos de ofimática",
+    "slugger": "cursos-de-ofimatica"
+  },
+  {
+    "idcategoria": 299,
+    "cat1": 40,
+    "cat2": 50,
+    "cat3": 60,
+    "cat4": 0,
+    "nombre": "Cursos de fotografía",
+    "slugger": "cursos-de-fotografia"
+  },
+  {
+    "idcategoria": 300,
+    "cat1": 40,
+    "cat2": 50,
+    "cat3": 70,
+    "cat4": 0,
+    "nombre": "Cursos de guitarra",
+    "slugger": "cursos-de-guitarra"
+  },
+  {
+    "idcategoria": 301,
+    "cat1": 40,
+    "cat2": 50,
+    "cat3": 80,
+    "cat4": 0,
+    "nombre": "Cursos de informática",
+    "slugger": "cursos-de-informatica"
+  },
+  {
+    "idcategoria": 302,
+    "cat1": 40,
+    "cat2": 50,
+    "cat3": 90,
+    "cat4": 0,
+    "nombre": "Cursos de marketing",
+    "slugger": "cursos-de-marketing"
+  },
+  {
+    "idcategoria": 303,
+    "cat1": 40,
+    "cat2": 50,
+    "cat3": 100,
+    "cat4": 0,
+    "nombre": "Cursos de masaje",
+    "slugger": "cursos-de-masaje"
+  },
+  {
+    "idcategoria": 304,
+    "cat1": 40,
+    "cat2": 50,
+    "cat3": 110,
+    "cat4": 0,
+    "nombre": "Cursos de mecanografía",
+    "slugger": "cursos-de-mecanografia"
+  },
+  {
+    "idcategoria": 305,
+    "cat1": 40,
+    "cat2": 50,
+    "cat3": 120,
+    "cat4": 0,
+    "nombre": "Cursos de pintura",
+    "slugger": "cursos-de-pintura"
+  },
+  {
+    "idcategoria": 306,
+    "cat1": 40,
+    "cat2": 50,
+    "cat3": 130,
+    "cat4": 0,
+    "nombre": "Cursos de protocolo",
+    "slugger": "cursos-de-protocolo"
+  },
+  {
+    "idcategoria": 307,
+    "cat1": 40,
+    "cat2": 50,
+    "cat3": 140,
+    "cat4": 0,
+    "nombre": "Escuelas de aviación",
+    "slugger": "escuelas-de-aviacion"
+  },
+  {
+    "idcategoria": 308,
+    "cat1": 40,
+    "cat2": 50,
+    "cat3": 150,
+    "cat4": 0,
+    "nombre": "Escuelas de baile",
+    "slugger": "escuelas-de-baile"
+  },
+  {
+    "idcategoria": 309,
+    "cat1": 40,
+    "cat2": 50,
+    "cat3": 160,
+    "cat4": 0,
+    "nombre": "Escuelas de turismo y hosteleria",
+    "slugger": "escuelas-de-turismo"
+  },
+  {
+    "idcategoria": 310,
+    "cat1": 40,
+    "cat2": 50,
+    "cat3": 115,
+    "cat4": 0,
+    "nombre": "Cursos de piano",
+    "slugger": "cursos-de-piano"
+  },
+  {
+    "idcategoria": 311,
+    "cat1": 40,
+    "cat2": 50,
+    "cat3": 180,
+    "cat4": 0,
+    "nombre": "Otros Cursos",
+    "slugger": "otros-cursos"
+  },
+  {
+    "idcategoria": 312,
+    "cat1": 40,
+    "cat2": 40,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Master",
+    "slugger": "master-y-posgrado"
+  },
+  {
+    "idcategoria": 313,
+    "cat1": 40,
+    "cat2": 40,
+    "cat3": 70,
+    "cat4": 0,
+    "nombre": "Prevencion de riesgos",
+    "slugger": "master-prevencion-de-riegos-laborales"
+  },
+  {
+    "idcategoria": 314,
+    "cat1": 40,
+    "cat2": 40,
+    "cat3": 80,
+    "cat4": 0,
+    "nombre": "Recursos humanos",
+    "slugger": "master-recursos-humanos"
+  },
+  {
+    "idcategoria": 315,
+    "cat1": 40,
+    "cat2": 40,
+    "cat3": 40,
+    "cat4": 0,
+    "nombre": "Master en finanzas",
+    "slugger": "master-en-finanzas"
+  },
+  {
+    "idcategoria": 316,
+    "cat1": 40,
+    "cat2": 40,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Comercio exterior",
+    "slugger": "master-comercio-exterior"
+  },
+  {
+    "idcategoria": 317,
+    "cat1": 40,
+    "cat2": 40,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Comunicación",
+    "slugger": "master-en-comunicacion"
+  },
+  {
+    "idcategoria": 318,
+    "cat1": 40,
+    "cat2": 40,
+    "cat3": 100,
+    "cat4": 0,
+    "nombre": "Otros Masters",
+    "slugger": "otros-masters"
+  },
+  {
+    "idcategoria": 319,
+    "cat1": 40,
+    "cat2": 60,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Oposiciones",
+    "slugger": "oposiciones"
+  },
+  {
+    "idcategoria": 320,
+    "cat1": 40,
+    "cat2": 70,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Autoescuelas",
+    "slugger": "autoescuelas"
+  },
+  {
+    "idcategoria": 321,
+    "cat1": 40,
+    "cat2": 10,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Clases particulares",
+    "slugger": "clases-particulares"
+  },
+  {
+    "idcategoria": 322,
+    "cat1": 40,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Primaria/Secundaria",
+    "slugger": "primaria-secundaria"
+  },
+  {
+    "idcategoria": 323,
+    "cat1": 40,
+    "cat2": 10,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Universidad",
+    "slugger": "universidad"
+  },
+  {
+    "idcategoria": 324,
+    "cat1": 40,
+    "cat2": 10,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Idiomas",
+    "slugger": "clases-particulares-de-idiomas"
+  },
+  {
+    "idcategoria": 325,
+    "cat1": 40,
+    "cat2": 10,
+    "cat3": 40,
+    "cat4": 0,
+    "nombre": "Otros",
+    "slugger": "otras-clases-particulares"
+  },
+  {
+    "idcategoria": 326,
+    "cat1": 40,
+    "cat2": 30,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Idiomas",
+    "slugger": "cursos-de-idiomas"
+  },
+  {
+    "idcategoria": 327,
+    "cat1": 40,
+    "cat2": 30,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Cursos de inglés",
+    "slugger": "cursos-de-ingles"
+  },
+  {
+    "idcategoria": 328,
+    "cat1": 40,
+    "cat2": 30,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Cursos de francés",
+    "slugger": "cursos-de-frances"
+  },
+  {
+    "idcategoria": 329,
+    "cat1": 40,
+    "cat2": 30,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Cursos de italiano",
+    "slugger": "cursos-de-italiano"
+  },
+  {
+    "idcategoria": 330,
+    "cat1": 40,
+    "cat2": 30,
+    "cat3": 40,
+    "cat4": 0,
+    "nombre": "Cursos de alemán",
+    "slugger": "cursos-de-aleman"
+  },
+  {
+    "idcategoria": 331,
+    "cat1": 40,
+    "cat2": 30,
+    "cat3": 50,
+    "cat4": 0,
+    "nombre": "Cursos de portugués",
+    "slugger": "cursos-de-portugues"
+  },
+  {
+    "idcategoria": 333,
+    "cat1": 40,
+    "cat2": 30,
+    "cat3": 80,
+    "cat4": 0,
+    "nombre": "Otros idiomas",
+    "slugger": "otros-idiomas"
+  },
+  {
+    "idcategoria": 334,
+    "cat1": 40,
+    "cat2": 20,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Libros y más",
+    "slugger": "material-de-lectura"
+  },
+  {
+    "idcategoria": 335,
+    "cat1": 40,
+    "cat2": 20,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Libros",
+    "slugger": "libros"
+  },
+  {
+    "idcategoria": 336,
+    "cat1": 40,
+    "cat2": 20,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Apuntes",
+    "slugger": "apuntes"
+  },
+  {
+    "idcategoria": 337,
+    "cat1": 40,
+    "cat2": 20,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Revistas/Comics",
+    "slugger": "revistas-y-comics"
+  },
+  {
+    "idcategoria": 338,
+    "cat1": 40,
+    "cat2": 20,
+    "cat3": 40,
+    "cat4": 0,
+    "nombre": "Enciclopedias, diccionarios y atlas",
+    "slugger": "enciclopedias"
+  },
+  {
+    "idcategoria": 339,
+    "cat1": 40,
+    "cat2": 40,
+    "cat3": 90,
+    "cat4": 0,
+    "nombre": "Master en turismo",
+    "slugger": "master-en-turismo"
+  },
+  {
+    "idcategoria": 340,
+    "cat1": 40,
+    "cat2": 40,
+    "cat3": 60,
+    "cat4": 0,
+    "nombre": "Master en periodismo",
+    "slugger": "master-en-periodismo"
+  },
+  {
+    "idcategoria": 341,
+    "cat1": 40,
+    "cat2": 40,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Dirección de empresas",
+    "slugger": "master-direccion-de-empresas"
+  },
+  {
+    "idcategoria": 342,
+    "cat1": 40,
+    "cat2": 40,
+    "cat3": 50,
+    "cat4": 0,
+    "nombre": "Master en marketing",
+    "slugger": "master-en-marketing"
+  },
+  {
+    "idcategoria": 343,
+    "cat1": 40,
+    "cat2": 30,
+    "cat3": 60,
+    "cat4": 0,
+    "nombre": "Cursos de catalán",
+    "slugger": "cursos-de-catalan"
+  },
+  {
+    "idcategoria": 344,
+    "cat1": 40,
+    "cat2": 30,
+    "cat3": 70,
+    "cat4": 0,
+    "nombre": "Cursos de español",
+    "slugger": "cursos-de-espanol"
+  },
+  {
+    "idcategoria": 345,
+    "cat1": 40,
+    "cat2": 20,
+    "cat3": 15,
+    "cat4": 0,
+    "nombre": "Libros de texto",
+    "slugger": "libros-de-texto"
+  },
+  {
+    "idcategoria": 346,
+    "cat1": 60,
+    "cat2": 70,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Oportunidades de negocio",
+    "slugger": "oportunidades-de-negocio"
+  },
+  {
+    "idcategoria": 347,
+    "cat1": 60,
+    "cat2": 50,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Venta de empresas",
+    "slugger": "venta-de-empresas"
+  },
+  {
+    "idcategoria": 348,
+    "cat1": 60,
+    "cat2": 60,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Alquiler de negocio",
+    "slugger": "alquiler-de-negocio"
+  },
+  {
+    "idcategoria": 349,
+    "cat1": 60,
+    "cat2": 40,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Traspasos",
+    "slugger": "traspasos"
+  },
+  {
+    "idcategoria": 350,
+    "cat1": 60,
+    "cat2": 40,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Traspasos Academias",
+    "slugger": "traspasos-de-academias"
+  },
+  {
+    "idcategoria": 351,
+    "cat1": 60,
+    "cat2": 40,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Tiendas de alimentación",
+    "slugger": "traspasos-de-tiendas-de-alimentacion"
+  },
+  {
+    "idcategoria": 352,
+    "cat1": 60,
+    "cat2": 40,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Traspasos Bares",
+    "slugger": "traspasos-de-bares"
+  },
+  {
+    "idcategoria": 353,
+    "cat1": 60,
+    "cat2": 40,
+    "cat3": 40,
+    "cat4": 0,
+    "nombre": "Traspasos Cibercafés",
+    "slugger": "traspasos-de-cibercafes"
+  },
+  {
+    "idcategoria": 354,
+    "cat1": 60,
+    "cat2": 40,
+    "cat3": 50,
+    "cat4": 0,
+    "nombre": "Traspasos Clinicas",
+    "slugger": "traspasos-de-clinicas"
+  },
+  {
+    "idcategoria": 355,
+    "cat1": 60,
+    "cat2": 40,
+    "cat3": 60,
+    "cat4": 0,
+    "nombre": "Traspasos Farmacias",
+    "slugger": "traspasos-de-farmacias"
+  },
+  {
+    "idcategoria": 356,
+    "cat1": 60,
+    "cat2": 40,
+    "cat3": 70,
+    "cat4": 0,
+    "nombre": "Traspasos Gimnasios",
+    "slugger": "traspasos-de-gimnasios"
+  },
+  {
+    "idcategoria": 357,
+    "cat1": 60,
+    "cat2": 40,
+    "cat3": 80,
+    "cat4": 0,
+    "nombre": "Traspasos Guarderías",
+    "slugger": "traspasos-de-guarderias"
+  },
+  {
+    "idcategoria": 358,
+    "cat1": 60,
+    "cat2": 40,
+    "cat3": 90,
+    "cat4": 0,
+    "nombre": "Hostales y Hoteles",
+    "slugger": "traspasos-de-hostales-y-hoteles"
+  },
+  {
+    "idcategoria": 359,
+    "cat1": 60,
+    "cat2": 40,
+    "cat3": 100,
+    "cat4": 0,
+    "nombre": "Traspasos Inmobiliarias",
+    "slugger": "traspasos-de-inmobiliarias"
+  },
+  {
+    "idcategoria": 360,
+    "cat1": 60,
+    "cat2": 40,
+    "cat3": 110,
+    "cat4": 0,
+    "nombre": "Licencia de taxi",
+    "slugger": "licencia-de-taxi"
+  },
+  {
+    "idcategoria": 361,
+    "cat1": 60,
+    "cat2": 40,
+    "cat3": 120,
+    "cat4": 0,
+    "nombre": "Traspasos Locutorios",
+    "slugger": "traspasos-de-locutorios"
+  },
+  {
+    "idcategoria": 362,
+    "cat1": 60,
+    "cat2": 40,
+    "cat3": 130,
+    "cat4": 0,
+    "nombre": "Traspasos Panaderías",
+    "slugger": "traspasos-de-panaderias"
+  },
+  {
+    "idcategoria": 363,
+    "cat1": 60,
+    "cat2": 40,
+    "cat3": 140,
+    "cat4": 0,
+    "nombre": "Traspasos Peluquerías",
+    "slugger": "traspasos-de-peluquerias"
+  },
+  {
+    "idcategoria": 364,
+    "cat1": 60,
+    "cat2": 40,
+    "cat3": 150,
+    "cat4": 0,
+    "nombre": "Traspasos Residencias",
+    "slugger": "traspasos-de-residencias"
+  },
+  {
+    "idcategoria": 365,
+    "cat1": 60,
+    "cat2": 40,
+    "cat3": 160,
+    "cat4": 0,
+    "nombre": "Traspasos Restaurantes",
+    "slugger": "traspasos-de-restaurantes"
+  },
+  {
+    "idcategoria": 366,
+    "cat1": 60,
+    "cat2": 40,
+    "cat3": 170,
+    "cat4": 0,
+    "nombre": "Traspasos Talleres",
+    "slugger": "traspasos-de-talleres"
+  },
+  {
+    "idcategoria": 367,
+    "cat1": 60,
+    "cat2": 40,
+    "cat3": 180,
+    "cat4": 0,
+    "nombre": "Tiendas de informática",
+    "slugger": "traspasos-de-tiendas-de-informatica"
+  },
+  {
+    "idcategoria": 368,
+    "cat1": 60,
+    "cat2": 40,
+    "cat3": 190,
+    "cat4": 0,
+    "nombre": "Tiendas de moda",
+    "slugger": "traspasos-de-tiendas-de-moda"
+  },
+  {
+    "idcategoria": 369,
+    "cat1": 60,
+    "cat2": 40,
+    "cat3": 200,
+    "cat4": 0,
+    "nombre": "Traspasos Tintorerías",
+    "slugger": "traspasos-de-tintorerias"
+  },
+  {
+    "idcategoria": 370,
+    "cat1": 60,
+    "cat2": 40,
+    "cat3": 210,
+    "cat4": 0,
+    "nombre": "Traspasos Videoclubs",
+    "slugger": "traspasos-de-videoclubs"
+  },
+  {
+    "idcategoria": 371,
+    "cat1": 60,
+    "cat2": 40,
+    "cat3": 220,
+    "cat4": 0,
+    "nombre": "Otros",
+    "slugger": "otros-traspasos"
+  },
+  {
+    "idcategoria": 372,
+    "cat1": 60,
+    "cat2": 30,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Franquicias",
+    "slugger": "franquicias"
+  },
+  {
+    "idcategoria": 373,
+    "cat1": 60,
+    "cat2": 30,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Agencias de viaje",
+    "slugger": "franquicias-de-agencias-de-viaje"
+  },
+  {
+    "idcategoria": 374,
+    "cat1": 60,
+    "cat2": 30,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Franquicias Cafeterías",
+    "slugger": "franquicias-de-cafeterias"
+  },
+  {
+    "idcategoria": 375,
+    "cat1": 60,
+    "cat2": 30,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Franquicias Farmacias",
+    "slugger": "franquicias-de-farmacias"
+  },
+  {
+    "idcategoria": 376,
+    "cat1": 60,
+    "cat2": 30,
+    "cat3": 40,
+    "cat4": 0,
+    "nombre": "Franquicias Guarderías",
+    "slugger": "franquicias-de-guarderias"
+  },
+  {
+    "idcategoria": 377,
+    "cat1": 60,
+    "cat2": 30,
+    "cat3": 50,
+    "cat4": 0,
+    "nombre": "Franquicias Informatica",
+    "slugger": "franquicias-de-informatica"
+  },
+  {
+    "idcategoria": 378,
+    "cat1": 60,
+    "cat2": 30,
+    "cat3": 60,
+    "cat4": 0,
+    "nombre": "Franquicias Inmobiliarias",
+    "slugger": "franquicias-de-inmobiliarias"
+  },
+  {
+    "idcategoria": 379,
+    "cat1": 60,
+    "cat2": 30,
+    "cat3": 70,
+    "cat4": 0,
+    "nombre": "Franquicias Moda y Ropa",
+    "slugger": "franquicias-de-moda-y-ropa"
+  },
+  {
+    "idcategoria": 380,
+    "cat1": 60,
+    "cat2": 30,
+    "cat3": 80,
+    "cat4": 0,
+    "nombre": "Franquicias Peluquerías",
+    "slugger": "franquicias-de-peluquerias"
+  },
+  {
+    "idcategoria": 381,
+    "cat1": 60,
+    "cat2": 30,
+    "cat3": 90,
+    "cat4": 0,
+    "nombre": "Franquicias Restaurantes",
+    "slugger": "franquicias-de-restaurantes"
+  },
+  {
+    "idcategoria": 382,
+    "cat1": 60,
+    "cat2": 30,
+    "cat3": 100,
+    "cat4": 0,
+    "nombre": "Franquicias Videoclubs",
+    "slugger": "franquicias-de-videoclubs"
+  },
+  {
+    "idcategoria": 383,
+    "cat1": 60,
+    "cat2": 30,
+    "cat3": 110,
+    "cat4": 0,
+    "nombre": "Otras franquicias",
+    "slugger": "otras-franquicias"
+  },
+  {
+    "idcategoria": 384,
+    "cat1": 60,
+    "cat2": 20,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Mobiliario",
+    "slugger": "mobiliario"
+  },
+  {
+    "idcategoria": 385,
+    "cat1": 60,
+    "cat2": 20,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Mobiliario comercial",
+    "slugger": "mobiliario-comercial"
+  },
+  {
+    "idcategoria": 386,
+    "cat1": 60,
+    "cat2": 20,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Mobiliario de hosteleria",
+    "slugger": "mobiliario-de-hosteleria"
+  },
+  {
+    "idcategoria": 387,
+    "cat1": 60,
+    "cat2": 20,
+    "cat3": 40,
+    "cat4": 0,
+    "nombre": "Mobiliario de peluqueria",
+    "slugger": "mobiliario-de-peluqueria"
+  },
+  {
+    "idcategoria": 388,
+    "cat1": 60,
+    "cat2": 20,
+    "cat3": 50,
+    "cat4": 0,
+    "nombre": "Mobiliario clinico",
+    "slugger": "mobiliario-clinico"
+  },
+  {
+    "idcategoria": 389,
+    "cat1": 60,
+    "cat2": 20,
+    "cat3": 60,
+    "cat4": 0,
+    "nombre": "Otros",
+    "slugger": "otros-mobiliario"
+  },
+  {
+    "idcategoria": 390,
+    "cat1": 60,
+    "cat2": 10,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Financiación",
+    "slugger": "financiacion"
+  },
+  {
+    "idcategoria": 391,
+    "cat1": 60,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Socios capitalistas",
+    "slugger": "socios-capitalistas"
+  },
+  {
+    "idcategoria": 392,
+    "cat1": 60,
+    "cat2": 10,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Acciones",
+    "slugger": "acciones"
+  },
+  {
+    "idcategoria": 393,
+    "cat1": 60,
+    "cat2": 10,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Prestamos",
+    "slugger": "prestamos"
+  },
+  {
+    "idcategoria": 394,
+    "cat1": 60,
+    "cat2": 80,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Maquinaria",
+    "slugger": "maquinaria"
+  },
+  {
+    "idcategoria": 395,
+    "cat1": 60,
+    "cat2": 90,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Productos y stocks",
+    "slugger": "productos-y-stocks"
+  },
+  {
+    "idcategoria": 396,
+    "cat1": 60,
+    "cat2": 20,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Mobiliario oficina",
+    "slugger": "mobiliario-de-oficina"
+  },
+  {
+    "idcategoria": 397,
+    "cat1": 100,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Billares",
+    "slugger": "billares"
+  },
+  {
+    "idcategoria": 398,
+    "cat1": 100,
+    "cat2": 10,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Futbolines",
+    "slugger": "futbolines"
+  },
+  {
+    "idcategoria": 399,
+    "cat1": 100,
+    "cat2": 10,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Máquinas tragaperras",
+    "slugger": "maquinas-tragaperras"
+  },
+  {
+    "idcategoria": 400,
+    "cat1": 100,
+    "cat2": 10,
+    "cat3": 40,
+    "cat4": 0,
+    "nombre": "Pinballs",
+    "slugger": "pinballs"
+  },
+  {
+    "idcategoria": 401,
+    "cat1": 100,
+    "cat2": 10,
+    "cat3": 50,
+    "cat4": 0,
+    "nombre": "Dardos",
+    "slugger": "dardos"
+  },
+  {
+    "idcategoria": 402,
+    "cat1": 100,
+    "cat2": 10,
+    "cat3": 60,
+    "cat4": 0,
+    "nombre": "Otros juegos de bar",
+    "slugger": "otros-juegos-de-bar"
+  },
+  {
+    "idcategoria": 403,
+    "cat1": 100,
+    "cat2": 20,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Juguetes",
+    "slugger": "juguetes"
+  },
+  {
+    "idcategoria": 404,
+    "cat1": 100,
+    "cat2": 20,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Muñecas",
+    "slugger": "munecas"
+  },
+  {
+    "idcategoria": 405,
+    "cat1": 100,
+    "cat2": 20,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Scalextric",
+    "slugger": "scalextric"
+  },
+  {
+    "idcategoria": 406,
+    "cat1": 100,
+    "cat2": 20,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Trenes eléctricos",
+    "slugger": "modelismo-ferroviario"
+  },
+  {
+    "idcategoria": 407,
+    "cat1": 100,
+    "cat2": 20,
+    "cat3": 40,
+    "cat4": 0,
+    "nombre": "Juegos de mesa",
+    "slugger": "juegos-de-mesa"
+  },
+  {
+    "idcategoria": 408,
+    "cat1": 100,
+    "cat2": 20,
+    "cat3": 50,
+    "cat4": 0,
+    "nombre": "Juegos de rol",
+    "slugger": "juegos-de-rol"
+  },
+  {
+    "idcategoria": 409,
+    "cat1": 100,
+    "cat2": 20,
+    "cat3": 60,
+    "cat4": 0,
+    "nombre": "Juegos educativos",
+    "slugger": "juegos-educativos"
+  },
+  {
+    "idcategoria": 410,
+    "cat1": 100,
+    "cat2": 20,
+    "cat3": 70,
+    "cat4": 0,
+    "nombre": "Bicicletas",
+    "slugger": "bicicletas"
+  },
+  {
+    "idcategoria": 411,
+    "cat1": 100,
+    "cat2": 20,
+    "cat3": 80,
+    "cat4": 0,
+    "nombre": "Otros juguetes",
+    "slugger": "otros-juguetes"
+  },
+  {
+    "idcategoria": 412,
+    "cat1": 100,
+    "cat2": 30,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Videoconsolas",
+    "slugger": "videoconsolas"
+  },
+  {
+    "idcategoria": 413,
+    "cat1": 100,
+    "cat2": 30,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Consolas",
+    "slugger": "consolas"
+  },
+  {
+    "idcategoria": 414,
+    "cat1": 100,
+    "cat2": 30,
+    "cat3": 10,
+    "cat4": 10,
+    "nombre": "XBox",
+    "slugger": "xbox"
+  },
+  {
+    "idcategoria": 415,
+    "cat1": 100,
+    "cat2": 30,
+    "cat3": 10,
+    "cat4": 20,
+    "nombre": "PlayStation",
+    "slugger": "playstation"
+  },
+  {
+    "idcategoria": 416,
+    "cat1": 100,
+    "cat2": 30,
+    "cat3": 10,
+    "cat4": 30,
+    "nombre": "PlayStation 2",
+    "slugger": "playstation-2"
+  },
+  {
+    "idcategoria": 418,
+    "cat1": 100,
+    "cat2": 30,
+    "cat3": 10,
+    "cat4": 50,
+    "nombre": "Nintendo 64",
+    "slugger": "nintendo-64"
+  },
+  {
+    "idcategoria": 419,
+    "cat1": 100,
+    "cat2": 30,
+    "cat3": 10,
+    "cat4": 60,
+    "nombre": "Gameboy",
+    "slugger": "gameboy"
+  },
+  {
+    "idcategoria": 420,
+    "cat1": 100,
+    "cat2": 30,
+    "cat3": 10,
+    "cat4": 70,
+    "nombre": "Gameboy Advanced",
+    "slugger": "gameboy-advanced"
+  },
+  {
+    "idcategoria": 422,
+    "cat1": 100,
+    "cat2": 30,
+    "cat3": 10,
+    "cat4": 90,
+    "nombre": "Otras consolas",
+    "slugger": "otras-consolas"
+  },
+  {
+    "idcategoria": 423,
+    "cat1": 100,
+    "cat2": 30,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Videojuegos",
+    "slugger": "videojuegos"
+  },
+  {
+    "idcategoria": 424,
+    "cat1": 100,
+    "cat2": 30,
+    "cat3": 20,
+    "cat4": 10,
+    "nombre": "Juegos de XBox",
+    "slugger": "juegos-de-xbox"
+  },
+  {
+    "idcategoria": 425,
+    "cat1": 100,
+    "cat2": 30,
+    "cat3": 20,
+    "cat4": 20,
+    "nombre": "Juegos de PlayStation",
+    "slugger": "juegos-de-playstation"
+  },
+  {
+    "idcategoria": 426,
+    "cat1": 100,
+    "cat2": 30,
+    "cat3": 20,
+    "cat4": 30,
+    "nombre": "Juegos de PlayStation 2",
+    "slugger": "juegos-de-playstation-2"
+  },
+  {
+    "idcategoria": 428,
+    "cat1": 100,
+    "cat2": 30,
+    "cat3": 20,
+    "cat4": 50,
+    "nombre": "Juegos de Nintendo",
+    "slugger": "juegos-de-nintendo"
+  },
+  {
+    "idcategoria": 429,
+    "cat1": 100,
+    "cat2": 30,
+    "cat3": 20,
+    "cat4": 60,
+    "nombre": "Juegos de PC",
+    "slugger": "juegos-de-pc"
+  },
+  {
+    "idcategoria": 430,
+    "cat1": 100,
+    "cat2": 30,
+    "cat3": 20,
+    "cat4": 70,
+    "nombre": "Juegos de Gameboy",
+    "slugger": "juegos-de-gameboy"
+  },
+  {
+    "idcategoria": 431,
+    "cat1": 100,
+    "cat2": 30,
+    "cat3": 20,
+    "cat4": 80,
+    "nombre": "Otros juegos",
+    "slugger": "otros-videojuegos"
+  },
+  {
+    "idcategoria": 432,
+    "cat1": 100,
+    "cat2": 30,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Accesorios",
+    "slugger": "accesorios-para-consolas"
+  },
+  {
+    "idcategoria": 433,
+    "cat1": 100,
+    "cat2": 40,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Otros",
+    "slugger": "otros-juegos"
+  },
+  {
+    "idcategoria": 434,
+    "cat1": 100,
+    "cat2": 40,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Ajedrez",
+    "slugger": "juegos-de-ajedrez"
+  },
+  {
+    "idcategoria": 435,
+    "cat1": 100,
+    "cat2": 40,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Modelismo",
+    "slugger": "modelismo"
+  },
+  {
+    "idcategoria": 436,
+    "cat1": 100,
+    "cat2": 40,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Radiocontrol",
+    "slugger": "radiocontrol"
+  },
+  {
+    "idcategoria": 437,
+    "cat1": 100,
+    "cat2": 40,
+    "cat3": 40,
+    "cat4": 0,
+    "nombre": "Otros",
+    "slugger": "otros-juegos-diferentes"
+  },
+  {
+    "idcategoria": 438,
+    "cat1": 100,
+    "cat2": 10,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Juegos de bar",
+    "slugger": "juegos-de-bar"
+  },
+  {
+    "idcategoria": 439,
+    "cat1": 110,
+    "cat2": 10,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Gastronomía",
+    "slugger": "gastronomia"
+  },
+  {
+    "idcategoria": 440,
+    "cat1": 110,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Vinos",
+    "slugger": "vinos"
+  },
+  {
+    "idcategoria": 441,
+    "cat1": 110,
+    "cat2": 10,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Alimentación",
+    "slugger": "alimentacion"
+  },
+  {
+    "idcategoria": 442,
+    "cat1": 110,
+    "cat2": 10,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Otros",
+    "slugger": "otros-articulos-de-gastronomia"
+  },
+  {
+    "idcategoria": 443,
+    "cat1": 110,
+    "cat2": 20,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Menaje del hogar",
+    "slugger": "menaje-del-hogar"
+  },
+  {
+    "idcategoria": 444,
+    "cat1": 110,
+    "cat2": 20,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Cuberterías",
+    "slugger": "cuberterias"
+  },
+  {
+    "idcategoria": 445,
+    "cat1": 110,
+    "cat2": 20,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Cristalerías",
+    "slugger": "cristalerias"
+  },
+  {
+    "idcategoria": 446,
+    "cat1": 110,
+    "cat2": 20,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Vajillas",
+    "slugger": "vajillas"
+  },
+  {
+    "idcategoria": 447,
+    "cat1": 110,
+    "cat2": 20,
+    "cat3": 40,
+    "cat4": 0,
+    "nombre": "Otros",
+    "slugger": "otros-articulos-de-menaje"
+  },
+  {
+    "idcategoria": 448,
+    "cat1": 110,
+    "cat2": 50,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Bricolaje",
+    "slugger": "bricolaje"
+  },
+  {
+    "idcategoria": 449,
+    "cat1": 110,
+    "cat2": 50,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Taladros",
+    "slugger": "taladros"
+  },
+  {
+    "idcategoria": 450,
+    "cat1": 110,
+    "cat2": 50,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Lijadoras",
+    "slugger": "lijadoras"
+  },
+  {
+    "idcategoria": 451,
+    "cat1": 110,
+    "cat2": 50,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Materiales de construcción",
+    "slugger": "materiales-de-construccion"
+  },
+  {
+    "idcategoria": 452,
+    "cat1": 110,
+    "cat2": 50,
+    "cat3": 40,
+    "cat4": 0,
+    "nombre": "Juegos de herramientas",
+    "slugger": "juegos-de-herramientas"
+  },
+  {
+    "idcategoria": 453,
+    "cat1": 110,
+    "cat2": 50,
+    "cat3": 50,
+    "cat4": 0,
+    "nombre": "Otros",
+    "slugger": "otros-articulos-de-bricolaje"
+  },
+  {
+    "idcategoria": 454,
+    "cat1": 110,
+    "cat2": 30,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Jardinería",
+    "slugger": "jardineria"
+  },
+  {
+    "idcategoria": 455,
+    "cat1": 110,
+    "cat2": 30,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Plantas",
+    "slugger": "plantas"
+  },
+  {
+    "idcategoria": 456,
+    "cat1": 110,
+    "cat2": 30,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Semillas",
+    "slugger": "semillas"
+  },
+  {
+    "idcategoria": 457,
+    "cat1": 110,
+    "cat2": 30,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Mobiliario de jardín",
+    "slugger": "mobiliario-de-jardin"
+  },
+  {
+    "idcategoria": 458,
+    "cat1": 110,
+    "cat2": 30,
+    "cat3": 40,
+    "cat4": 0,
+    "nombre": "Herramientas",
+    "slugger": "herramientas-de-jardin"
+  },
+  {
+    "idcategoria": 459,
+    "cat1": 110,
+    "cat2": 30,
+    "cat3": 50,
+    "cat4": 0,
+    "nombre": "Cortacesped",
+    "slugger": "cortacesped"
+  },
+  {
+    "idcategoria": 460,
+    "cat1": 110,
+    "cat2": 30,
+    "cat3": 60,
+    "cat4": 0,
+    "nombre": "Otros",
+    "slugger": "otros-articulos-de-jardineria"
+  },
+  {
+    "idcategoria": 461,
+    "cat1": 110,
+    "cat2": 40,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Textil",
+    "slugger": "articulos-textiles"
+  },
+  {
+    "idcategoria": 462,
+    "cat1": 110,
+    "cat2": 40,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Alfombras",
+    "slugger": "alfombras"
+  },
+  {
+    "idcategoria": 463,
+    "cat1": 110,
+    "cat2": 40,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Sábanas y mantas",
+    "slugger": "sabanas-y-mantas"
+  },
+  {
+    "idcategoria": 464,
+    "cat1": 110,
+    "cat2": 40,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Cortinas",
+    "slugger": "cortinas"
+  },
+  {
+    "idcategoria": 465,
+    "cat1": 110,
+    "cat2": 40,
+    "cat3": 40,
+    "cat4": 0,
+    "nombre": "Manteles",
+    "slugger": "manteles"
+  },
+  {
+    "idcategoria": 466,
+    "cat1": 110,
+    "cat2": 40,
+    "cat3": 50,
+    "cat4": 0,
+    "nombre": "Edredones y fundas",
+    "slugger": "edredones-y-fundas-nordicas"
+  },
+  {
+    "idcategoria": 467,
+    "cat1": 110,
+    "cat2": 40,
+    "cat3": 60,
+    "cat4": 0,
+    "nombre": "Otros",
+    "slugger": "otros-articulos-textiles"
+  },
+  {
+    "idcategoria": 468,
+    "cat1": 110,
+    "cat2": 60,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Arte y decoración",
+    "slugger": "arte-y-decoracion"
+  },
+  {
+    "idcategoria": 469,
+    "cat1": 110,
+    "cat2": 60,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Pinturas",
+    "slugger": "pinturas"
+  },
+  {
+    "idcategoria": 470,
+    "cat1": 110,
+    "cat2": 60,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Esculturas",
+    "slugger": "esculturas"
+  },
+  {
+    "idcategoria": 471,
+    "cat1": 110,
+    "cat2": 60,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Cristal",
+    "slugger": "cristal"
+  },
+  {
+    "idcategoria": 472,
+    "cat1": 110,
+    "cat2": 60,
+    "cat3": 40,
+    "cat4": 0,
+    "nombre": "Láminas",
+    "slugger": "laminas"
+  },
+  {
+    "idcategoria": 473,
+    "cat1": 110,
+    "cat2": 60,
+    "cat3": 50,
+    "cat4": 0,
+    "nombre": "Marcos",
+    "slugger": "marcos"
+  },
+  {
+    "idcategoria": 474,
+    "cat1": 110,
+    "cat2": 60,
+    "cat3": 60,
+    "cat4": 0,
+    "nombre": "Velas",
+    "slugger": "velas"
+  },
+  {
+    "idcategoria": 475,
+    "cat1": 110,
+    "cat2": 60,
+    "cat3": 70,
+    "cat4": 0,
+    "nombre": "Otros",
+    "slugger": "otros-articulos-de-arte"
+  },
+  {
+    "idcategoria": 476,
+    "cat1": 110,
+    "cat2": 90,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Muebles",
+    "slugger": "muebles"
+  },
+  {
+    "idcategoria": 477,
+    "cat1": 110,
+    "cat2": 90,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Muebles de cocina",
+    "slugger": "muebles-de-cocina"
+  },
+  {
+    "idcategoria": 478,
+    "cat1": 110,
+    "cat2": 90,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Muebles de oficina",
+    "slugger": "mobiliario-de-oficina"
+  },
+  {
+    "idcategoria": 479,
+    "cat1": 110,
+    "cat2": 90,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Saneamientos",
+    "slugger": "saneamientos"
+  },
+  {
+    "idcategoria": 480,
+    "cat1": 110,
+    "cat2": 90,
+    "cat3": 30,
+    "cat4": 10,
+    "nombre": "Bañeras",
+    "slugger": "baneras"
+  },
+  {
+    "idcategoria": 481,
+    "cat1": 110,
+    "cat2": 90,
+    "cat3": 30,
+    "cat4": 20,
+    "nombre": "Lavabos",
+    "slugger": "lavabos"
+  },
+  {
+    "idcategoria": 482,
+    "cat1": 110,
+    "cat2": 90,
+    "cat3": 30,
+    "cat4": 30,
+    "nombre": "Tazas",
+    "slugger": "tazas"
+  },
+  {
+    "idcategoria": 483,
+    "cat1": 110,
+    "cat2": 90,
+    "cat3": 30,
+    "cat4": 40,
+    "nombre": "Otros",
+    "slugger": "otros-articulos-de-bano"
+  },
+  {
+    "idcategoria": 484,
+    "cat1": 110,
+    "cat2": 90,
+    "cat3": 40,
+    "cat4": 0,
+    "nombre": "Mesas",
+    "slugger": "mesas"
+  },
+  {
+    "idcategoria": 485,
+    "cat1": 110,
+    "cat2": 90,
+    "cat3": 50,
+    "cat4": 0,
+    "nombre": "Mesillas",
+    "slugger": "mesillas"
+  },
+  {
+    "idcategoria": 486,
+    "cat1": 110,
+    "cat2": 90,
+    "cat3": 60,
+    "cat4": 0,
+    "nombre": "Sillas sofás sillones",
+    "slugger": "sillas-sofas-y-sillones"
+  },
+  {
+    "idcategoria": 487,
+    "cat1": 110,
+    "cat2": 90,
+    "cat3": 70,
+    "cat4": 0,
+    "nombre": "Armarios",
+    "slugger": "armarios"
+  },
+  {
+    "idcategoria": 488,
+    "cat1": 110,
+    "cat2": 90,
+    "cat3": 80,
+    "cat4": 0,
+    "nombre": "Librerías",
+    "slugger": "librerias"
+  },
+  {
+    "idcategoria": 489,
+    "cat1": 110,
+    "cat2": 90,
+    "cat3": 90,
+    "cat4": 0,
+    "nombre": "Colchones",
+    "slugger": "colchones"
+  },
+  {
+    "idcategoria": 490,
+    "cat1": 110,
+    "cat2": 90,
+    "cat3": 100,
+    "cat4": 0,
+    "nombre": "Somieres",
+    "slugger": "somieres"
+  },
+  {
+    "idcategoria": 491,
+    "cat1": 110,
+    "cat2": 90,
+    "cat3": 110,
+    "cat4": 0,
+    "nombre": "Literas",
+    "slugger": "literas"
+  },
+  {
+    "idcategoria": 492,
+    "cat1": 110,
+    "cat2": 90,
+    "cat3": 120,
+    "cat4": 0,
+    "nombre": "Otros",
+    "slugger": "otros-muebles"
+  },
+  {
+    "idcategoria": 493,
+    "cat1": 110,
+    "cat2": 80,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Iluminación",
+    "slugger": "iluminacion"
+  },
+  {
+    "idcategoria": 494,
+    "cat1": 110,
+    "cat2": 70,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Electrodomésticos",
+    "slugger": "electrodomesticos"
+  },
+  {
+    "idcategoria": 495,
+    "cat1": 110,
+    "cat2": 70,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Frigoríficos",
+    "slugger": "frigorificos"
+  },
+  {
+    "idcategoria": 496,
+    "cat1": 110,
+    "cat2": 70,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Lavadoras",
+    "slugger": "lavadoras"
+  },
+  {
+    "idcategoria": 497,
+    "cat1": 110,
+    "cat2": 70,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Hornos",
+    "slugger": "hornos"
+  },
+  {
+    "idcategoria": 499,
+    "cat1": 110,
+    "cat2": 70,
+    "cat3": 40,
+    "cat4": 0,
+    "nombre": "Secadoras",
+    "slugger": "secadoras"
+  },
+  {
+    "idcategoria": 500,
+    "cat1": 110,
+    "cat2": 70,
+    "cat3": 60,
+    "cat4": 0,
+    "nombre": "Aire acondicionado",
+    "slugger": "aire-acondicionado"
+  },
+  {
+    "idcategoria": 501,
+    "cat1": 110,
+    "cat2": 70,
+    "cat3": 70,
+    "cat4": 0,
+    "nombre": "Calentadores de agua",
+    "slugger": "calentadores-de-agua"
+  },
+  {
+    "idcategoria": 502,
+    "cat1": 110,
+    "cat2": 70,
+    "cat3": 80,
+    "cat4": 0,
+    "nombre": "Microondas",
+    "slugger": "microondas"
+  },
+  {
+    "idcategoria": 503,
+    "cat1": 110,
+    "cat2": 70,
+    "cat3": 90,
+    "cat4": 0,
+    "nombre": "Congeladores",
+    "slugger": "congeladores"
+  },
+  {
+    "idcategoria": 504,
+    "cat1": 110,
+    "cat2": 70,
+    "cat3": 100,
+    "cat4": 0,
+    "nombre": "Cafeteras",
+    "slugger": "cafeteras"
+  },
+  {
+    "idcategoria": 505,
+    "cat1": 110,
+    "cat2": 70,
+    "cat3": 110,
+    "cat4": 0,
+    "nombre": "Planchas",
+    "slugger": "planchas"
+  },
+  {
+    "idcategoria": 506,
+    "cat1": 110,
+    "cat2": 70,
+    "cat3": 120,
+    "cat4": 0,
+    "nombre": "Aspiradoras",
+    "slugger": "aspiradoras"
+  },
+  {
+    "idcategoria": 507,
+    "cat1": 110,
+    "cat2": 70,
+    "cat3": 130,
+    "cat4": 0,
+    "nombre": "Otros",
+    "slugger": "otros-electrodomesticos"
+  },
+  {
+    "idcategoria": 510,
+    "cat1": 120,
+    "cat2": 6,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Ropa infantil",
+    "slugger": "ropa-infantil"
+  },
+  {
+    "idcategoria": 511,
+    "cat1": 120,
+    "cat2": 6,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Calzado infantil",
+    "slugger": "calzado-infantil"
+  },
+  {
+    "idcategoria": 512,
+    "cat1": 120,
+    "cat2": 6,
+    "cat3": 50,
+    "cat4": 0,
+    "nombre": "Otros",
+    "slugger": "otros-moda-infantil"
+  },
+  {
+    "idcategoria": 513,
+    "cat1": 125,
+    "cat2": 0,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Bebes",
+    "slugger": "bebes"
+  },
+  {
+    "idcategoria": 514,
+    "cat1": 125,
+    "cat2": 5,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Ropa",
+    "slugger": "ropa-para-bebes"
+  },
+  {
+    "idcategoria": 515,
+    "cat1": 125,
+    "cat2": 20,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Cunas para bebe",
+    "slugger": "cunas-para-bebe"
+  },
+  {
+    "idcategoria": 516,
+    "cat1": 125,
+    "cat2": 30,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Coches de bebe y sillas de paseo",
+    "slugger": "coches-de-bebe"
+  },
+  {
+    "idcategoria": 517,
+    "cat1": 125,
+    "cat2": 40,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Juguetes para bebes",
+    "slugger": "juguetes-para-bebes"
+  },
+  {
+    "idcategoria": 518,
+    "cat1": 125,
+    "cat2": 90,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Accesorios para bebe",
+    "slugger": "accesorios-para-bebe"
+  },
+  {
+    "idcategoria": 519,
+    "cat1": 120,
+    "cat2": 4,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Moda hombre",
+    "slugger": "moda-hombre"
+  },
+  {
+    "idcategoria": 520,
+    "cat1": 120,
+    "cat2": 4,
+    "cat3": 10,
+    "cat4": 10,
+    "nombre": "Abrigos y chaquetas",
+    "slugger": "abrigos-para-hombre"
+  },
+  {
+    "idcategoria": 521,
+    "cat1": 120,
+    "cat2": 4,
+    "cat3": 10,
+    "cat4": 90,
+    "nombre": "Trajes",
+    "slugger": "trajes"
+  },
+  {
+    "idcategoria": 522,
+    "cat1": 120,
+    "cat2": 4,
+    "cat3": 10,
+    "cat4": 80,
+    "nombre": "Chaqués y trajes de novio",
+    "slugger": "chaques"
+  },
+  {
+    "idcategoria": 523,
+    "cat1": 120,
+    "cat2": 4,
+    "cat3": 10,
+    "cat4": 30,
+    "nombre": "Camisas",
+    "slugger": "camisas-de-caballero"
+  },
+  {
+    "idcategoria": 524,
+    "cat1": 120,
+    "cat2": 4,
+    "cat3": 10,
+    "cat4": 50,
+    "nombre": "Camisetas",
+    "slugger": "camisetas-de-caballero"
+  },
+  {
+    "idcategoria": 525,
+    "cat1": 120,
+    "cat2": 4,
+    "cat3": 10,
+    "cat4": 40,
+    "nombre": "Polos",
+    "slugger": "polos"
+  },
+  {
+    "idcategoria": 526,
+    "cat1": 120,
+    "cat2": 4,
+    "cat3": 10,
+    "cat4": 60,
+    "nombre": "Pantalones",
+    "slugger": "pantalones-de-caballero"
+  },
+  {
+    "idcategoria": 527,
+    "cat1": 120,
+    "cat2": 4,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Calzado",
+    "slugger": "calzado-para-caballero"
+  },
+  {
+    "idcategoria": 528,
+    "cat1": 120,
+    "cat2": 4,
+    "cat3": 10,
+    "cat4": 100,
+    "nombre": "Otros",
+    "slugger": "otros-moda-hombre"
+  },
+  {
+    "idcategoria": 529,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Moda mujer",
+    "slugger": "moda-mujer"
+  },
+  {
+    "idcategoria": 530,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 5,
+    "cat4": 10,
+    "nombre": "Abrigos y chaquetas",
+    "slugger": "abrigos-y-chaquetas"
+  },
+  {
+    "idcategoria": 531,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 5,
+    "cat4": 30,
+    "nombre": "Camisetas",
+    "slugger": "camisetas"
+  },
+  {
+    "idcategoria": 532,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 5,
+    "cat4": 20,
+    "nombre": "Camisas y blusas",
+    "slugger": "camisas-y-blusas"
+  },
+  {
+    "idcategoria": 533,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 5,
+    "cat4": 120,
+    "nombre": "Tops",
+    "slugger": "tops"
+  },
+  {
+    "idcategoria": 534,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 5,
+    "cat4": 70,
+    "nombre": "Faldas",
+    "slugger": "faldas"
+  },
+  {
+    "idcategoria": 535,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 5,
+    "cat4": 50,
+    "nombre": "Pantalones",
+    "slugger": "pantalones"
+  },
+  {
+    "idcategoria": 536,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 5,
+    "cat4": 90,
+    "nombre": "Vestidos de novia",
+    "slugger": "vestidos-de-novia"
+  },
+  {
+    "idcategoria": 537,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 5,
+    "cat4": 80,
+    "nombre": "Vestidos de fiesta",
+    "slugger": "vestidos-de-fiesta"
+  },
+  {
+    "idcategoria": 538,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 5,
+    "cat4": 150,
+    "nombre": "Lencería y bikinis",
+    "slugger": "lenceria"
+  },
+  {
+    "idcategoria": 539,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Calzado",
+    "slugger": "calzado"
+  },
+  {
+    "idcategoria": 540,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 5,
+    "cat4": 160,
+    "nombre": "Otros",
+    "slugger": "otros-moda-mujer"
+  },
+  {
+    "idcategoria": 541,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 20,
+    "cat4": 10,
+    "nombre": "Bolsos",
+    "slugger": "bolsos"
+  },
+  {
+    "idcategoria": 542,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 20,
+    "cat4": 20,
+    "nombre": "Cinturones",
+    "slugger": "cinturones"
+  },
+  {
+    "idcategoria": 543,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 20,
+    "cat4": 40,
+    "nombre": "Gafas",
+    "slugger": "gafas"
+  },
+  {
+    "idcategoria": 544,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 50,
+    "cat4": 0,
+    "nombre": "Cosméticos",
+    "slugger": "cosmeticos"
+  },
+  {
+    "idcategoria": 545,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 40,
+    "cat4": 0,
+    "nombre": "Perfumes",
+    "slugger": "perfumes"
+  },
+  {
+    "idcategoria": 546,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 20,
+    "cat4": 50,
+    "nombre": "Relojes",
+    "slugger": "relojes"
+  },
+  {
+    "idcategoria": 547,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Joyas y bisutería",
+    "slugger": "joyas"
+  },
+  {
+    "idcategoria": 548,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 30,
+    "cat4": 60,
+    "nombre": "Joyerías",
+    "slugger": "joyerias"
+  },
+  {
+    "idcategoria": 549,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 30,
+    "cat4": 10,
+    "nombre": "Anillos",
+    "slugger": "anillos"
+  },
+  {
+    "idcategoria": 550,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 30,
+    "cat4": 20,
+    "nombre": "Collares y colgantes",
+    "slugger": "collares"
+  },
+  {
+    "idcategoria": 551,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 30,
+    "cat4": 40,
+    "nombre": "Pendientes",
+    "slugger": "pendientes"
+  },
+  {
+    "idcategoria": 552,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 30,
+    "cat4": 50,
+    "nombre": "Pulseras",
+    "slugger": "pulseras"
+  },
+  {
+    "idcategoria": 553,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 30,
+    "cat4": 80,
+    "nombre": "Otros",
+    "slugger": "otras-joyas"
+  },
+  {
+    "idcategoria": 554,
+    "cat1": 120,
+    "cat2": 90,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Otros",
+    "slugger": "otros-moda"
+  },
+  {
+    "idcategoria": 555,
+    "cat1": 80,
+    "cat2": 1,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Fotografía",
+    "slugger": "fotografia"
+  },
+  {
+    "idcategoria": 556,
+    "cat1": 80,
+    "cat2": 1,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Cámaras analógicas",
+    "slugger": "camaras-fotos-analogicas"
+  },
+  {
+    "idcategoria": 559,
+    "cat1": 80,
+    "cat2": 1,
+    "cat3": 100,
+    "cat4": 0,
+    "nombre": "Otros",
+    "slugger": "otros-articulos-fotograficos"
+  },
+  {
+    "idcategoria": 560,
+    "cat1": 80,
+    "cat2": 15,
+    "cat3": 1,
+    "cat4": 0,
+    "nombre": "Partituras",
+    "slugger": "partituras"
+  },
+  {
+    "idcategoria": 561,
+    "cat1": 80,
+    "cat2": 15,
+    "cat3": 2,
+    "cat4": 0,
+    "nombre": "Cds Cintas y Vinilos",
+    "slugger": "cds-cintas-y-vinilos"
+  },
+  {
+    "idcategoria": 562,
+    "cat1": 80,
+    "cat2": 15,
+    "cat3": 3,
+    "cat4": 0,
+    "nombre": "Instrumentos musicales",
+    "slugger": "instrumentos-musicales"
+  },
+  {
+    "idcategoria": 563,
+    "cat1": 80,
+    "cat2": 15,
+    "cat3": 3,
+    "cat4": 1,
+    "nombre": "Pianos",
+    "slugger": "pianos"
+  },
+  {
+    "idcategoria": 564,
+    "cat1": 80,
+    "cat2": 15,
+    "cat3": 3,
+    "cat4": 2,
+    "nombre": "Saxofones",
+    "slugger": "saxofones"
+  },
+  {
+    "idcategoria": 565,
+    "cat1": 80,
+    "cat2": 15,
+    "cat3": 3,
+    "cat4": 3,
+    "nombre": "Guitarras eléctricas",
+    "slugger": "guitarras-electricas"
+  },
+  {
+    "idcategoria": 566,
+    "cat1": 80,
+    "cat2": 15,
+    "cat3": 3,
+    "cat4": 4,
+    "nombre": "Guitarras clásicas",
+    "slugger": "guitarras-clasicas"
+  },
+  {
+    "idcategoria": 567,
+    "cat1": 80,
+    "cat2": 15,
+    "cat3": 3,
+    "cat4": 5,
+    "nombre": "Bajos",
+    "slugger": "bajos"
+  },
+  {
+    "idcategoria": 568,
+    "cat1": 80,
+    "cat2": 15,
+    "cat3": 3,
+    "cat4": 6,
+    "nombre": "Baterías",
+    "slugger": "baterias"
+  },
+  {
+    "idcategoria": 569,
+    "cat1": 80,
+    "cat2": 15,
+    "cat3": 3,
+    "cat4": 7,
+    "nombre": "Violines",
+    "slugger": "violines"
+  },
+  {
+    "idcategoria": 570,
+    "cat1": 80,
+    "cat2": 15,
+    "cat3": 3,
+    "cat4": 8,
+    "nombre": "Acordeones",
+    "slugger": "acordeones"
+  },
+  {
+    "idcategoria": 571,
+    "cat1": 80,
+    "cat2": 15,
+    "cat3": 3,
+    "cat4": 9,
+    "nombre": "Armónicas",
+    "slugger": "armonicas"
+  },
+  {
+    "idcategoria": 572,
+    "cat1": 80,
+    "cat2": 15,
+    "cat3": 3,
+    "cat4": 10,
+    "nombre": "Flautas",
+    "slugger": "flautas"
+  },
+  {
+    "idcategoria": 573,
+    "cat1": 80,
+    "cat2": 15,
+    "cat3": 3,
+    "cat4": 20,
+    "nombre": "Otros",
+    "slugger": "otros-instrumentos-musicales"
+  },
+  {
+    "idcategoria": 574,
+    "cat1": 60,
+    "cat2": 90,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Proveedores",
+    "slugger": "proveedores"
+  },
+  {
+    "idcategoria": 575,
+    "cat1": 60,
+    "cat2": 90,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Importadores",
+    "slugger": "importadores"
+  },
+  {
+    "idcategoria": 576,
+    "cat1": 60,
+    "cat2": 90,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Mayoristas",
+    "slugger": "mayoristas"
+  },
+  {
+    "idcategoria": 577,
+    "cat1": 60,
+    "cat2": 90,
+    "cat3": 40,
+    "cat4": 0,
+    "nombre": "Distribuidores",
+    "slugger": "distribuidores"
+  },
+  {
+    "idcategoria": 578,
+    "cat1": 60,
+    "cat2": 90,
+    "cat3": 50,
+    "cat4": 0,
+    "nombre": "Otros",
+    "slugger": "otros-stocks"
+  },
+  {
+    "idcategoria": 579,
+    "cat1": 10,
+    "cat2": 150,
+    "cat3": 1,
+    "cat4": 3,
+    "nombre": "Otros",
+    "slugger": "otras-vehiculos-industriales"
+  },
+  {
+    "idcategoria": 580,
+    "cat1": 10,
+    "cat2": 150,
+    "cat3": 2,
+    "cat4": 4,
+    "nombre": "Otros",
+    "slugger": "otras-maquinarias-agricolas"
+  },
+  {
+    "idcategoria": 592,
+    "cat1": 140,
+    "cat2": 10,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Modelismo",
+    "slugger": "modelismo"
+  },
+  {
+    "idcategoria": 593,
+    "cat1": 140,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Aeromodelismo",
+    "slugger": "aeromodelismo"
+  },
+  {
+    "idcategoria": 594,
+    "cat1": 140,
+    "cat2": 10,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Automodelismo",
+    "slugger": "automodelismo"
+  },
+  {
+    "idcategoria": 595,
+    "cat1": 140,
+    "cat2": 10,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Modelismo naval",
+    "slugger": "modelismo-naval"
+  },
+  {
+    "idcategoria": 596,
+    "cat1": 140,
+    "cat2": 10,
+    "cat3": 40,
+    "cat4": 0,
+    "nombre": "Modelismo ferroviario",
+    "slugger": "modelismo-ferroviario"
+  },
+  {
+    "idcategoria": 597,
+    "cat1": 140,
+    "cat2": 10,
+    "cat3": 50,
+    "cat4": 0,
+    "nombre": "Radiocontrol",
+    "slugger": "radiocontrol"
+  },
+  {
+    "idcategoria": 598,
+    "cat1": 140,
+    "cat2": 10,
+    "cat3": 60,
+    "cat4": 0,
+    "nombre": "Otros",
+    "slugger": "otros-modelismo"
+  },
+  {
+    "idcategoria": 599,
+    "cat1": 140,
+    "cat2": 20,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Caza y pesca",
+    "slugger": "caza-y-pesca"
+  },
+  {
+    "idcategoria": 600,
+    "cat1": 140,
+    "cat2": 20,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Caza",
+    "slugger": "caza"
+  },
+  {
+    "idcategoria": 601,
+    "cat1": 140,
+    "cat2": 20,
+    "cat3": 10,
+    "cat4": 10,
+    "nombre": "Escopetas",
+    "slugger": "escopetas"
+  },
+  {
+    "idcategoria": 602,
+    "cat1": 140,
+    "cat2": 20,
+    "cat3": 10,
+    "cat4": 20,
+    "nombre": "Perros de caza",
+    "slugger": "perros-de-caza"
+  },
+  {
+    "idcategoria": 603,
+    "cat1": 140,
+    "cat2": 20,
+    "cat3": 10,
+    "cat4": 30,
+    "nombre": "Monterías",
+    "slugger": "monterias"
+  },
+  {
+    "idcategoria": 604,
+    "cat1": 140,
+    "cat2": 20,
+    "cat3": 10,
+    "cat4": 40,
+    "nombre": "Cotos de caza",
+    "slugger": "cotos-de-caza"
+  },
+  {
+    "idcategoria": 605,
+    "cat1": 140,
+    "cat2": 20,
+    "cat3": 10,
+    "cat4": 50,
+    "nombre": "Artículos de caza",
+    "slugger": "articulos-de-caza"
+  },
+  {
+    "idcategoria": 606,
+    "cat1": 140,
+    "cat2": 20,
+    "cat3": 10,
+    "cat4": 60,
+    "nombre": "Todoterrenos",
+    "slugger": "todoterreno-de-ocasion"
+  },
+  {
+    "idcategoria": 607,
+    "cat1": 140,
+    "cat2": 20,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Pesca",
+    "slugger": "pesca"
+  },
+  {
+    "idcategoria": 608,
+    "cat1": 140,
+    "cat2": 20,
+    "cat3": 20,
+    "cat4": 10,
+    "nombre": "Cañas de pescar",
+    "slugger": "canas-de-pescar"
+  },
+  {
+    "idcategoria": 609,
+    "cat1": 140,
+    "cat2": 20,
+    "cat3": 20,
+    "cat4": 20,
+    "nombre": "Cotos de pesca",
+    "slugger": "cotos-de-pesca"
+  },
+  {
+    "idcategoria": 610,
+    "cat1": 140,
+    "cat2": 20,
+    "cat3": 20,
+    "cat4": 30,
+    "nombre": "Artículos de pesca",
+    "slugger": "articulos-de-pesca"
+  },
+  {
+    "idcategoria": 611,
+    "cat1": 140,
+    "cat2": 20,
+    "cat3": 20,
+    "cat4": 40,
+    "nombre": "Barcos",
+    "slugger": "barcos"
+  },
+  {
+    "idcategoria": 612,
+    "cat1": 160,
+    "cat2": 0,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Mascotas y agricultura",
+    "slugger": "mascotas"
+  },
+  {
+    "idcategoria": 613,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Perros",
+    "slugger": "perros"
+  },
+  {
+    "idcategoria": 614,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 35,
+    "nombre": "Boxer",
+    "slugger": "boxer"
+  },
+  {
+    "idcategoria": 615,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 45,
+    "nombre": "Bulldog Inglés",
+    "slugger": "bulldogs"
+  },
+  {
+    "idcategoria": 616,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 80,
+    "nombre": "Cocker",
+    "slugger": "cocker"
+  },
+  {
+    "idcategoria": 617,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 85,
+    "nombre": "Dalmata",
+    "slugger": "dalmata"
+  },
+  {
+    "idcategoria": 618,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 90,
+    "nombre": "Doberman",
+    "slugger": "doberman"
+  },
+  {
+    "idcategoria": 619,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 105,
+    "nombre": "Otros dogos",
+    "slugger": "dogo"
+  },
+  {
+    "idcategoria": 620,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 110,
+    "nombre": "Fox terrier",
+    "slugger": "fox-terrier"
+  },
+  {
+    "idcategoria": 621,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 115,
+    "nombre": "Galgos",
+    "slugger": "galgos"
+  },
+  {
+    "idcategoria": 622,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 125,
+    "nombre": "Gran danés",
+    "slugger": "gran-danes"
+  },
+  {
+    "idcategoria": 623,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 130,
+    "nombre": "Husky",
+    "slugger": "husky"
+  },
+  {
+    "idcategoria": 624,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 140,
+    "nombre": "Labradores",
+    "slugger": "labradores"
+  },
+  {
+    "idcategoria": 625,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 145,
+    "nombre": "Mastines",
+    "slugger": "mastines"
+  },
+  {
+    "idcategoria": 626,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 150,
+    "nombre": "Pastor Alemán",
+    "slugger": "pastor-aleman"
+  },
+  {
+    "idcategoria": 627,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 155,
+    "nombre": "Pekines",
+    "slugger": "pekines"
+  },
+  {
+    "idcategoria": 628,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 195,
+    "nombre": "Rottweiler",
+    "slugger": "rottweiler"
+  },
+  {
+    "idcategoria": 629,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 20,
+    "nombre": "Basset Hound",
+    "slugger": "basset-hound"
+  },
+  {
+    "idcategoria": 630,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 200,
+    "nombre": "Samoyedo",
+    "slugger": "samoyedo"
+  },
+  {
+    "idcategoria": 631,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 205,
+    "nombre": "San bernardo",
+    "slugger": "san-bernardo"
+  },
+  {
+    "idcategoria": 632,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 215,
+    "nombre": "Setters",
+    "slugger": "setters"
+  },
+  {
+    "idcategoria": 633,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 250,
+    "nombre": "Yorkshire",
+    "slugger": "yorkshire"
+  },
+  {
+    "idcategoria": 634,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 254,
+    "nombre": "Otras razas",
+    "slugger": "otras-razas-de-perros"
+  },
+  {
+    "idcategoria": 635,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Perreras",
+    "slugger": "perreras"
+  },
+  {
+    "idcategoria": 636,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 255,
+    "nombre": "Cruces de perros",
+    "slugger": "cruces-de-perros"
+  },
+  {
+    "idcategoria": 637,
+    "cat1": 160,
+    "cat2": 20,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Gatos",
+    "slugger": "gatos"
+  },
+  {
+    "idcategoria": 638,
+    "cat1": 160,
+    "cat2": 30,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Peces",
+    "slugger": "peces"
+  },
+  {
+    "idcategoria": 639,
+    "cat1": 160,
+    "cat2": 40,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Caballos",
+    "slugger": "caballos"
+  },
+  {
+    "idcategoria": 640,
+    "cat1": 160,
+    "cat2": 50,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Pájaros y aves",
+    "slugger": "pajaros"
+  },
+  {
+    "idcategoria": 641,
+    "cat1": 160,
+    "cat2": 60,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Conejos",
+    "slugger": "conejos"
+  },
+  {
+    "idcategoria": 642,
+    "cat1": 160,
+    "cat2": 70,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Otros animales",
+    "slugger": "otros-animales"
+  },
+  {
+    "idcategoria": 643,
+    "cat1": 160,
+    "cat2": 80,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Veterinarios",
+    "slugger": "veterinarios"
+  },
+  {
+    "idcategoria": 644,
+    "cat1": 140,
+    "cat2": 40,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Coleccionismo",
+    "slugger": "coleccionismo"
+  },
+  {
+    "idcategoria": 645,
+    "cat1": 140,
+    "cat2": 40,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Acciones",
+    "slugger": "acciones-de-coleccion"
+  },
+  {
+    "idcategoria": 646,
+    "cat1": 110,
+    "cat2": 100,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Antigüedades",
+    "slugger": "antiguedades-de-coleccion"
+  },
+  {
+    "idcategoria": 647,
+    "cat1": 140,
+    "cat2": 40,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Armas",
+    "slugger": "armas-de-coleccion"
+  },
+  {
+    "idcategoria": 648,
+    "cat1": 140,
+    "cat2": 40,
+    "cat3": 40,
+    "cat4": 0,
+    "nombre": "Bebidas",
+    "slugger": "bebidas-de-coleccion"
+  },
+  {
+    "idcategoria": 649,
+    "cat1": 140,
+    "cat2": 40,
+    "cat3": 50,
+    "cat4": 0,
+    "nombre": "Billetes",
+    "slugger": "billetes-de-coleccion"
+  },
+  {
+    "idcategoria": 650,
+    "cat1": 140,
+    "cat2": 40,
+    "cat3": 60,
+    "cat4": 0,
+    "nombre": "Calendarios",
+    "slugger": "calendarios-de-coleccion"
+  },
+  {
+    "idcategoria": 651,
+    "cat1": 140,
+    "cat2": 40,
+    "cat3": 70,
+    "cat4": 0,
+    "nombre": "Cartas",
+    "slugger": "cartas-de-coleccion"
+  },
+  {
+    "idcategoria": 652,
+    "cat1": 140,
+    "cat2": 40,
+    "cat3": 80,
+    "cat4": 0,
+    "nombre": "Carteles y posters",
+    "slugger": "carteles-y-posters-de-coleccion"
+  },
+  {
+    "idcategoria": 653,
+    "cat1": 140,
+    "cat2": 40,
+    "cat3": 90,
+    "cat4": 0,
+    "nombre": "Comics y tebeos",
+    "slugger": "comics-y-tebeos-de-coleccion"
+  },
+  {
+    "idcategoria": 654,
+    "cat1": 140,
+    "cat2": 40,
+    "cat3": 100,
+    "cat4": 0,
+    "nombre": "Cromos",
+    "slugger": "cromos-de-coleccion"
+  },
+  {
+    "idcategoria": 655,
+    "cat1": 140,
+    "cat2": 40,
+    "cat3": 110,
+    "cat4": 0,
+    "nombre": "Llaveros",
+    "slugger": "llaveros-de-coleccion"
+  },
+  {
+    "idcategoria": 656,
+    "cat1": 140,
+    "cat2": 40,
+    "cat3": 120,
+    "cat4": 0,
+    "nombre": "Loterías",
+    "slugger": "loterias-de-coleccion"
+  },
+  {
+    "idcategoria": 657,
+    "cat1": 140,
+    "cat2": 40,
+    "cat3": 130,
+    "cat4": 0,
+    "nombre": "Mecheros",
+    "slugger": "mecheros-de-coleccion"
+  },
+  {
+    "idcategoria": 658,
+    "cat1": 140,
+    "cat2": 40,
+    "cat3": 140,
+    "cat4": 0,
+    "nombre": "Minerales",
+    "slugger": "minerales-de-coleccion"
+  },
+  {
+    "idcategoria": 659,
+    "cat1": 140,
+    "cat2": 40,
+    "cat3": 150,
+    "cat4": 0,
+    "nombre": "Miniaturas",
+    "slugger": "miniaturas-de-coleccion"
+  },
+  {
+    "idcategoria": 660,
+    "cat1": 140,
+    "cat2": 40,
+    "cat3": 160,
+    "cat4": 0,
+    "nombre": "Monedas",
+    "slugger": "monedas-de-coleccion"
+  },
+  {
+    "idcategoria": 661,
+    "cat1": 140,
+    "cat2": 40,
+    "cat3": 170,
+    "cat4": 0,
+    "nombre": "Periódicos",
+    "slugger": "periodicos-de-coleccion"
+  },
+  {
+    "idcategoria": 662,
+    "cat1": 140,
+    "cat2": 40,
+    "cat3": 180,
+    "cat4": 0,
+    "nombre": "Pins",
+    "slugger": "pins-de-coleccion"
+  },
+  {
+    "idcategoria": 663,
+    "cat1": 140,
+    "cat2": 40,
+    "cat3": 190,
+    "cat4": 0,
+    "nombre": "Postales",
+    "slugger": "postales-de-coleccion"
+  },
+  {
+    "idcategoria": 664,
+    "cat1": 140,
+    "cat2": 40,
+    "cat3": 200,
+    "cat4": 0,
+    "nombre": "Relojes",
+    "slugger": "relojes-de-coleccion"
+  },
+  {
+    "idcategoria": 665,
+    "cat1": 140,
+    "cat2": 40,
+    "cat3": 210,
+    "cat4": 0,
+    "nombre": "Sellos",
+    "slugger": "sellos-de-coleccion"
+  },
+  {
+    "idcategoria": 666,
+    "cat1": 140,
+    "cat2": 40,
+    "cat3": 220,
+    "cat4": 0,
+    "nombre": "Tarjetas telefónicas",
+    "slugger": "tarjetas-telefonicas-de-coleccion"
+  },
+  {
+    "idcategoria": 667,
+    "cat1": 140,
+    "cat2": 40,
+    "cat3": 230,
+    "cat4": 0,
+    "nombre": "Vitolas",
+    "slugger": "vitolas-de-coleccion"
+  },
+  {
+    "idcategoria": 668,
+    "cat1": 140,
+    "cat2": 40,
+    "cat3": 240,
+    "cat4": 0,
+    "nombre": "Otros",
+    "slugger": "otros-coleccionables"
+  },
+  {
+    "idcategoria": 669,
+    "cat1": 140,
+    "cat2": 50,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Bricolaje",
+    "slugger": "bricolaje"
+  },
+  {
+    "idcategoria": 670,
+    "cat1": 140,
+    "cat2": 60,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Cometas",
+    "slugger": "cometas"
+  },
+  {
+    "idcategoria": 671,
+    "cat1": 140,
+    "cat2": 70,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Karting",
+    "slugger": "venta-de-karts"
+  },
+  {
+    "idcategoria": 672,
+    "cat1": 140,
+    "cat2": 5,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Paracaidismo",
+    "slugger": "paracaidismo"
+  },
+  {
+    "idcategoria": 673,
+    "cat1": 140,
+    "cat2": 5,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Parapente",
+    "slugger": "parapente"
+  },
+  {
+    "idcategoria": 674,
+    "cat1": 140,
+    "cat2": 100,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Puenting",
+    "slugger": "puenting"
+  },
+  {
+    "idcategoria": 675,
+    "cat1": 140,
+    "cat2": 110,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Radioaficionados",
+    "slugger": "radioaficionados"
+  },
+  {
+    "idcategoria": 676,
+    "cat1": 140,
+    "cat2": 120,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Tunning",
+    "slugger": "tuning"
+  },
+  {
+    "idcategoria": 677,
+    "cat1": 140,
+    "cat2": 5,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Vuelo sin motor",
+    "slugger": "vuelo-sin-motor"
+  },
+  {
+    "idcategoria": 678,
+    "cat1": 150,
+    "cat2": 10,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Deportes",
+    "slugger": "deportes"
+  },
+  {
+    "idcategoria": 679,
+    "cat1": 150,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Bicicletas",
+    "slugger": "bicicletas"
+  },
+  {
+    "idcategoria": 680,
+    "cat1": 150,
+    "cat2": 10,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Buceo",
+    "slugger": "buceo"
+  },
+  {
+    "idcategoria": 681,
+    "cat1": 150,
+    "cat2": 10,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Caza y Pesca",
+    "slugger": "caza-y-pesca"
+  },
+  {
+    "idcategoria": 682,
+    "cat1": 150,
+    "cat2": 10,
+    "cat3": 40,
+    "cat4": 0,
+    "nombre": "Cometas",
+    "slugger": "cometas"
+  },
+  {
+    "idcategoria": 683,
+    "cat1": 150,
+    "cat2": 10,
+    "cat3": 50,
+    "cat4": 0,
+    "nombre": "Equitación",
+    "slugger": "caballos"
+  },
+  {
+    "idcategoria": 684,
+    "cat1": 150,
+    "cat2": 10,
+    "cat3": 60,
+    "cat4": 0,
+    "nombre": "Escalada",
+    "slugger": "escalada"
+  },
+  {
+    "idcategoria": 685,
+    "cat1": 150,
+    "cat2": 10,
+    "cat3": 70,
+    "cat4": 0,
+    "nombre": "Esquí",
+    "slugger": "esqui"
+  },
+  {
+    "idcategoria": 686,
+    "cat1": 150,
+    "cat2": 10,
+    "cat3": 80,
+    "cat4": 0,
+    "nombre": "Snowboard",
+    "slugger": "snowboard"
+  },
+  {
+    "idcategoria": 687,
+    "cat1": 150,
+    "cat2": 10,
+    "cat3": 90,
+    "cat4": 0,
+    "nombre": "Futbol",
+    "slugger": "futbol"
+  },
+  {
+    "idcategoria": 688,
+    "cat1": 150,
+    "cat2": 10,
+    "cat3": 100,
+    "cat4": 0,
+    "nombre": "Golf",
+    "slugger": "golf"
+  },
+  {
+    "idcategoria": 689,
+    "cat1": 150,
+    "cat2": 10,
+    "cat3": 110,
+    "cat4": 0,
+    "nombre": "Monopatines",
+    "slugger": "monopatines"
+  },
+  {
+    "idcategoria": 690,
+    "cat1": 150,
+    "cat2": 10,
+    "cat3": 120,
+    "cat4": 0,
+    "nombre": "Padel",
+    "slugger": "padel"
+  },
+  {
+    "idcategoria": 691,
+    "cat1": 150,
+    "cat2": 10,
+    "cat3": 130,
+    "cat4": 0,
+    "nombre": "Patines",
+    "slugger": "patines"
+  },
+  {
+    "idcategoria": 692,
+    "cat1": 150,
+    "cat2": 10,
+    "cat3": 140,
+    "cat4": 0,
+    "nombre": "Tenis",
+    "slugger": "tenis"
+  },
+  {
+    "idcategoria": 693,
+    "cat1": 150,
+    "cat2": 10,
+    "cat3": 150,
+    "cat4": 0,
+    "nombre": "Tiro con arco",
+    "slugger": "tiro-con-arco"
+  },
+  {
+    "idcategoria": 694,
+    "cat1": 150,
+    "cat2": 10,
+    "cat3": 160,
+    "cat4": 0,
+    "nombre": "Otros",
+    "slugger": "otros-deportes"
+  },
+  {
+    "idcategoria": 695,
+    "cat1": 150,
+    "cat2": 20,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Embarcaciones",
+    "slugger": "embarcaciones"
+  },
+  {
+    "idcategoria": 696,
+    "cat1": 150,
+    "cat2": 20,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Barcos",
+    "slugger": "barcos"
+  },
+  {
+    "idcategoria": 697,
+    "cat1": 150,
+    "cat2": 20,
+    "cat3": 10,
+    "cat4": 10,
+    "nombre": "Lanchas neumáticas",
+    "slugger": "lanchas-neumaticas"
+  },
+  {
+    "idcategoria": 699,
+    "cat1": 150,
+    "cat2": 20,
+    "cat3": 10,
+    "cat4": 30,
+    "nombre": "Barcos de pesca",
+    "slugger": "barcos-de-pesca"
+  },
+  {
+    "idcategoria": 700,
+    "cat1": 150,
+    "cat2": 20,
+    "cat3": 10,
+    "cat4": 40,
+    "nombre": "Barcos a motor",
+    "slugger": "barcos-a-motor"
+  },
+  {
+    "idcategoria": 701,
+    "cat1": 150,
+    "cat2": 20,
+    "cat3": 10,
+    "cat4": 50,
+    "nombre": "Yates",
+    "slugger": "yates"
+  },
+  {
+    "idcategoria": 702,
+    "cat1": 150,
+    "cat2": 20,
+    "cat3": 10,
+    "cat4": 60,
+    "nombre": "Veleros",
+    "slugger": "veleros"
+  },
+  {
+    "idcategoria": 703,
+    "cat1": 150,
+    "cat2": 20,
+    "cat3": 10,
+    "cat4": 70,
+    "nombre": "Catamaranes",
+    "slugger": "catamaranes"
+  },
+  {
+    "idcategoria": 704,
+    "cat1": 150,
+    "cat2": 20,
+    "cat3": 10,
+    "cat4": 80,
+    "nombre": "Vela ligera",
+    "slugger": "vela-ligera"
+  },
+  {
+    "idcategoria": 705,
+    "cat1": 150,
+    "cat2": 20,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Amarres",
+    "slugger": "amarres"
+  },
+  {
+    "idcategoria": 706,
+    "cat1": 150,
+    "cat2": 20,
+    "cat3": 20,
+    "cat4": 10,
+    "nombre": "Alquiler de amarres",
+    "slugger": "alquiler-de-amarres"
+  },
+  {
+    "idcategoria": 707,
+    "cat1": 150,
+    "cat2": 20,
+    "cat3": 20,
+    "cat4": 20,
+    "nombre": "Venta de amarres",
+    "slugger": "venta-de-amarres"
+  },
+  {
+    "idcategoria": 708,
+    "cat1": 150,
+    "cat2": 20,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Accesorios barcos",
+    "slugger": "accesorios-barcos"
+  },
+  {
+    "idcategoria": 709,
+    "cat1": 150,
+    "cat2": 20,
+    "cat3": 30,
+    "cat4": 10,
+    "nombre": "Motores fueraborda",
+    "slugger": "motores-fueraborda"
+  },
+  {
+    "idcategoria": 710,
+    "cat1": 150,
+    "cat2": 20,
+    "cat3": 30,
+    "cat4": 20,
+    "nombre": "GPS",
+    "slugger": "gps"
+  },
+  {
+    "idcategoria": 711,
+    "cat1": 150,
+    "cat2": 20,
+    "cat3": 30,
+    "cat4": 30,
+    "nombre": "Cartas naúticas",
+    "slugger": "cartas-nauticas"
+  },
+  {
+    "idcategoria": 712,
+    "cat1": 150,
+    "cat2": 20,
+    "cat3": 30,
+    "cat4": 40,
+    "nombre": "Otros",
+    "slugger": "otros-barcos"
+  },
+  {
+    "idcategoria": 713,
+    "cat1": 150,
+    "cat2": 20,
+    "cat3": 40,
+    "cat4": 0,
+    "nombre": "Motos de agua",
+    "slugger": "motos-de-agua"
+  },
+  {
+    "idcategoria": 714,
+    "cat1": 150,
+    "cat2": 20,
+    "cat3": 50,
+    "cat4": 0,
+    "nombre": "Piraguas",
+    "slugger": "piraguas"
+  },
+  {
+    "idcategoria": 715,
+    "cat1": 150,
+    "cat2": 20,
+    "cat3": 60,
+    "cat4": 0,
+    "nombre": "Canoas",
+    "slugger": "canoas"
+  },
+  {
+    "idcategoria": 716,
+    "cat1": 150,
+    "cat2": 20,
+    "cat3": 70,
+    "cat4": 0,
+    "nombre": "Kayak",
+    "slugger": "kayak"
+  },
+  {
+    "idcategoria": 717,
+    "cat1": 150,
+    "cat2": 20,
+    "cat3": 80,
+    "cat4": 0,
+    "nombre": "Windsurf",
+    "slugger": "windsurf"
+  },
+  {
+    "idcategoria": 718,
+    "cat1": 150,
+    "cat2": 20,
+    "cat3": 90,
+    "cat4": 0,
+    "nombre": "Surf",
+    "slugger": "surf"
+  },
+  {
+    "idcategoria": 719,
+    "cat1": 150,
+    "cat2": 20,
+    "cat3": 100,
+    "cat4": 0,
+    "nombre": "Kitesurf",
+    "slugger": "kitesurf"
+  },
+  {
+    "idcategoria": 720,
+    "cat1": 150,
+    "cat2": 20,
+    "cat3": 120,
+    "cat4": 0,
+    "nombre": "Otros",
+    "slugger": "otras-embarcaciones"
+  },
+  {
+    "idcategoria": 721,
+    "cat1": 150,
+    "cat2": 10,
+    "cat3": 75,
+    "cat4": 0,
+    "nombre": "Gimnasios",
+    "slugger": "gimnasios"
+  },
+  {
+    "idcategoria": 722,
+    "cat1": 150,
+    "cat2": 10,
+    "cat3": 25,
+    "cat4": 0,
+    "nombre": "Escuelas de buceo",
+    "slugger": "cursos-de-buceo"
+  },
+  {
+    "idcategoria": 723,
+    "cat1": 140,
+    "cat2": 5,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Volar",
+    "slugger": "volar"
+  },
+  {
+    "idcategoria": 724,
+    "cat1": 140,
+    "cat2": 5,
+    "cat3": 40,
+    "cat4": 0,
+    "nombre": "Ultraligeros",
+    "slugger": "ultraligeros"
+  },
+  {
+    "idcategoria": 725,
+    "cat1": 140,
+    "cat2": 5,
+    "cat3": 50,
+    "cat4": 0,
+    "nombre": "Ala Delta",
+    "slugger": "ala-delta"
+  },
+  {
+    "idcategoria": 726,
+    "cat1": 140,
+    "cat2": 5,
+    "cat3": 60,
+    "cat4": 0,
+    "nombre": "Otros",
+    "slugger": "otros-aviones"
+  },
+  {
+    "idcategoria": 727,
+    "cat1": 140,
+    "cat2": 140,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Casas rurales",
+    "slugger": "casas-rurales"
+  },
+  {
+    "idcategoria": 729,
+    "cat1": 140,
+    "cat2": 150,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Camping",
+    "slugger": "camping"
+  },
+  {
+    "idcategoria": 730,
+    "cat1": 140,
+    "cat2": 160,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Montañismo",
+    "slugger": "montanismo"
+  },
+  {
+    "idcategoria": 732,
+    "cat1": 140,
+    "cat2": 180,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Entradas",
+    "slugger": "entradas"
+  },
+  {
+    "idcategoria": 733,
+    "cat1": 140,
+    "cat2": 180,
+    "cat3": 5,
+    "cat4": 10,
+    "nombre": "Entradas de fútbol",
+    "slugger": "entradas-de-futbol"
+  },
+  {
+    "idcategoria": 734,
+    "cat1": 140,
+    "cat2": 180,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Entradas de concierto",
+    "slugger": "entradas-de-concierto"
+  },
+  {
+    "idcategoria": 735,
+    "cat1": 140,
+    "cat2": 180,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Entradas de cine",
+    "slugger": "entradas-de-cine"
+  },
+  {
+    "idcategoria": 736,
+    "cat1": 140,
+    "cat2": 180,
+    "cat3": 40,
+    "cat4": 0,
+    "nombre": "Entradas espectáculos",
+    "slugger": "entradas-espectaculos"
+  },
+  {
+    "idcategoria": 737,
+    "cat1": 140,
+    "cat2": 190,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Discotecas",
+    "slugger": "discotecas"
+  },
+  {
+    "idcategoria": 738,
+    "cat1": 140,
+    "cat2": 200,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Restaurantes",
+    "slugger": "restaurantes"
+  },
+  {
+    "idcategoria": 739,
+    "cat1": 140,
+    "cat2": 210,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Bares",
+    "slugger": "bares"
+  },
+  {
+    "idcategoria": 741,
+    "cat1": 150,
+    "cat2": 20,
+    "cat3": 110,
+    "cat4": 0,
+    "nombre": "Trajes de neopreno",
+    "slugger": "trajes-de-neopreno"
+  },
+  {
+    "idcategoria": 743,
+    "cat1": 160,
+    "cat2": 40,
+    "cat3": 95,
+    "cat4": 0,
+    "nombre": "Transporte",
+    "slugger": "transporte-de-caballos"
+  },
+  {
+    "idcategoria": 744,
+    "cat1": 160,
+    "cat2": 40,
+    "cat3": 100,
+    "cat4": 0,
+    "nombre": "Otros",
+    "slugger": "otros-caballos"
+  },
+  {
+    "idcategoria": 745,
+    "cat1": 160,
+    "cat2": 40,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Potros",
+    "slugger": "venta-de-potros"
+  },
+  {
+    "idcategoria": 746,
+    "cat1": 160,
+    "cat2": 40,
+    "cat3": 90,
+    "cat4": 0,
+    "nombre": "Van",
+    "slugger": "van-de-caballos"
+  },
+  {
+    "idcategoria": 747,
+    "cat1": 160,
+    "cat2": 40,
+    "cat3": 80,
+    "cat4": 0,
+    "nombre": "Carruajes",
+    "slugger": "carruajes"
+  },
+  {
+    "idcategoria": 748,
+    "cat1": 160,
+    "cat2": 40,
+    "cat3": 70,
+    "cat4": 0,
+    "nombre": "Monturas",
+    "slugger": "monturas-de-caballo"
+  },
+  {
+    "idcategoria": 749,
+    "cat1": 160,
+    "cat2": 40,
+    "cat3": 60,
+    "cat4": 0,
+    "nombre": "Burros",
+    "slugger": "venta-de-burros"
+  },
+  {
+    "idcategoria": 750,
+    "cat1": 40,
+    "cat2": 20,
+    "cat3": 17,
+    "cat4": 0,
+    "nombre": "Novelas",
+    "slugger": "novelas"
+  },
+  {
+    "idcategoria": 751,
+    "cat1": 160,
+    "cat2": 40,
+    "cat3": 50,
+    "cat4": 0,
+    "nombre": "Mulas",
+    "slugger": "venta-de-mulas"
+  },
+  {
+    "idcategoria": 752,
+    "cat1": 160,
+    "cat2": 40,
+    "cat3": 40,
+    "cat4": 0,
+    "nombre": "Ponys",
+    "slugger": "venta-de-ponys"
+  },
+  {
+    "idcategoria": 753,
+    "cat1": 160,
+    "cat2": 40,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Yeguas",
+    "slugger": "venta-de-yeguas"
+  },
+  {
+    "idcategoria": 754,
+    "cat1": 160,
+    "cat2": 40,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Caballos",
+    "slugger": "venta-de-caballos"
+  },
+  {
+    "idcategoria": 757,
+    "cat1": 10,
+    "cat2": 160,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Embarcaciones",
+    "slugger": "embarcaciones"
+  },
+  {
+    "idcategoria": 758,
+    "cat1": 110,
+    "cat2": 5,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Bebes",
+    "slugger": "bebes"
+  },
+  {
+    "idcategoria": 760,
+    "cat1": 20,
+    "cat2": 1,
+    "cat3": 80,
+    "cat4": 0,
+    "nombre": "Casas prefabricadas",
+    "slugger": "casas-prefabricadas"
+  },
+  {
+    "idcategoria": 761,
+    "cat1": 10,
+    "cat2": 20,
+    "cat3": 6,
+    "cat4": 0,
+    "nombre": "Minimotos",
+    "slugger": "minimotos"
+  },
+  {
+    "idcategoria": 762,
+    "cat1": 140,
+    "cat2": 45,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Telescopios",
+    "slugger": "telescopios"
+  },
+  {
+    "idcategoria": 763,
+    "cat1": 50,
+    "cat2": 10,
+    "cat3": 34,
+    "cat4": 0,
+    "nombre": "Dietética",
+    "slugger": "dietetica"
+  },
+  {
+    "idcategoria": 764,
+    "cat1": 30,
+    "cat2": 26,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Servicio doméstico",
+    "slugger": "servicio-domestico"
+  },
+  {
+    "idcategoria": 766,
+    "cat1": 20,
+    "cat2": 1,
+    "cat3": 70,
+    "cat4": 0,
+    "nombre": "Casas",
+    "slugger": "casas"
+  },
+  {
+    "idcategoria": 767,
+    "cat1": 20,
+    "cat2": 1,
+    "cat3": 70,
+    "cat4": 1,
+    "nombre": "Alquiler de casas",
+    "slugger": "alquiler-de-casas"
+  },
+  {
+    "idcategoria": 768,
+    "cat1": 20,
+    "cat2": 1,
+    "cat3": 70,
+    "cat4": 2,
+    "nombre": "Venta de casas",
+    "slugger": "venta-de-casas"
+  },
+  {
+    "idcategoria": 769,
+    "cat1": 110,
+    "cat2": 70,
+    "cat3": 25,
+    "cat4": 0,
+    "nombre": "Lavavajillas",
+    "slugger": "lavavajillas"
+  },
+  {
+    "idcategoria": 770,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 248,
+    "nombre": "Westy",
+    "slugger": "westy"
+  },
+  {
+    "idcategoria": 771,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 55,
+    "nombre": "Caniches",
+    "slugger": "caniches"
+  },
+  {
+    "idcategoria": 772,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 220,
+    "nombre": "Shar Pei",
+    "slugger": "shar-pei"
+  },
+  {
+    "idcategoria": 773,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 225,
+    "nombre": "Shih Tzu",
+    "slugger": "shih-tzu"
+  },
+  {
+    "idcategoria": 774,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 25,
+    "nombre": "Bichón Maltés",
+    "slugger": "bichon-maltes"
+  },
+  {
+    "idcategoria": 775,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 21,
+    "nombre": "Beagle",
+    "slugger": "beagle"
+  },
+  {
+    "idcategoria": 776,
+    "cat1": 140,
+    "cat2": 180,
+    "cat3": 5,
+    "cat4": 0,
+    "nombre": "Entradas deportes",
+    "slugger": "entradas-deportes"
+  },
+  {
+    "idcategoria": 777,
+    "cat1": 140,
+    "cat2": 180,
+    "cat3": 5,
+    "cat4": 20,
+    "nombre": "Entradas de baloncesto",
+    "slugger": "entradas-de-baloncesto"
+  },
+  {
+    "idcategoria": 778,
+    "cat1": 140,
+    "cat2": 180,
+    "cat3": 5,
+    "cat4": 30,
+    "nombre": "Entradas de tenis",
+    "slugger": "entradas-de-tenis"
+  },
+  {
+    "idcategoria": 779,
+    "cat1": 140,
+    "cat2": 180,
+    "cat3": 5,
+    "cat4": 40,
+    "nombre": "otros deportes",
+    "slugger": "entradas-otros-deportes"
+  },
+  {
+    "idcategoria": 782,
+    "cat1": 100,
+    "cat2": 30,
+    "cat3": 10,
+    "cat4": 35,
+    "nombre": "PlayStation 3",
+    "slugger": "playstation-3"
+  },
+  {
+    "idcategoria": 783,
+    "cat1": 100,
+    "cat2": 30,
+    "cat3": 10,
+    "cat4": 15,
+    "nombre": "Xbox 360",
+    "slugger": "xbox-360"
+  },
+  {
+    "idcategoria": 784,
+    "cat1": 100,
+    "cat2": 30,
+    "cat3": 10,
+    "cat4": 38,
+    "nombre": "PSP",
+    "slugger": "psp"
+  },
+  {
+    "idcategoria": 785,
+    "cat1": 100,
+    "cat2": 30,
+    "cat3": 10,
+    "cat4": 55,
+    "nombre": "Nintendo DS",
+    "slugger": "nintendo-ds"
+  },
+  {
+    "idcategoria": 786,
+    "cat1": 100,
+    "cat2": 30,
+    "cat3": 10,
+    "cat4": 58,
+    "nombre": "Wii",
+    "slugger": "wii"
+  },
+  {
+    "idcategoria": 787,
+    "cat1": 100,
+    "cat2": 30,
+    "cat3": 20,
+    "cat4": 15,
+    "nombre": "Juegos de Xbox 360",
+    "slugger": "juegos-de-xbox-360"
+  },
+  {
+    "idcategoria": 789,
+    "cat1": 100,
+    "cat2": 30,
+    "cat3": 20,
+    "cat4": 35,
+    "nombre": "Juegos de PlayStation 3",
+    "slugger": "juegos-de-playstation-3"
+  },
+  {
+    "idcategoria": 790,
+    "cat1": 100,
+    "cat2": 30,
+    "cat3": 20,
+    "cat4": 38,
+    "nombre": "Juegos de PSP",
+    "slugger": "juegos-de-psp"
+  },
+  {
+    "idcategoria": 791,
+    "cat1": 100,
+    "cat2": 30,
+    "cat3": 20,
+    "cat4": 55,
+    "nombre": "Juegos de Nintendo DS",
+    "slugger": "juegos-de-nintendo-ds"
+  },
+  {
+    "idcategoria": 792,
+    "cat1": 100,
+    "cat2": 30,
+    "cat3": 20,
+    "cat4": 58,
+    "nombre": "Juegos de Wii",
+    "slugger": "juegos-de-wii"
+  },
+  {
+    "idcategoria": 793,
+    "cat1": 10,
+    "cat2": 75,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Autocaravanas",
+    "slugger": "autocaravanas-de-segunda-mano"
+  },
+  {
+    "idcategoria": 800,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 2,
+    "cat4": 0,
+    "nombre": "Alfa Romeo",
+    "slugger": "alfa-romeo-de-segunda-mano"
+  },
+  {
+    "idcategoria": 801,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 4,
+    "cat4": 0,
+    "nombre": "Aston Martin",
+    "slugger": "aston-martin-de-segunda-mano"
+  },
+  {
+    "idcategoria": 802,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 6,
+    "cat4": 0,
+    "nombre": "Audi",
+    "slugger": "audi-de-segunda-mano"
+  },
+  {
+    "idcategoria": 803,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 8,
+    "cat4": 0,
+    "nombre": "Austin",
+    "slugger": "austin-de-segunda-mano"
+  },
+  {
+    "idcategoria": 804,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Bentley",
+    "slugger": "bentley-de-segunda-mano"
+  },
+  {
+    "idcategoria": 805,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 12,
+    "cat4": 0,
+    "nombre": "BMW",
+    "slugger": "bmw-de-segunda-mano"
+  },
+  {
+    "idcategoria": 806,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 14,
+    "cat4": 0,
+    "nombre": "Cadillac",
+    "slugger": "cadillac-de-segunda-mano"
+  },
+  {
+    "idcategoria": 807,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 16,
+    "cat4": 0,
+    "nombre": "Chevrolet",
+    "slugger": "chevrolet-de-segunda-mano"
+  },
+  {
+    "idcategoria": 808,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 18,
+    "cat4": 0,
+    "nombre": "Chrysler",
+    "slugger": "chrysler-de-segunda-mano"
+  },
+  {
+    "idcategoria": 809,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Citroen",
+    "slugger": "citroen-de-segunda-mano"
+  },
+  {
+    "idcategoria": 810,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 22,
+    "cat4": 0,
+    "nombre": "Dacia",
+    "slugger": "dacia-de-segunda-mano"
+  },
+  {
+    "idcategoria": 811,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 24,
+    "cat4": 0,
+    "nombre": "Daewoo",
+    "slugger": "daewoo-de-segunda-mano"
+  },
+  {
+    "idcategoria": 812,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 26,
+    "cat4": 0,
+    "nombre": "Daihatsu",
+    "slugger": "daihatsu-de-segunda-mano"
+  },
+  {
+    "idcategoria": 813,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 28,
+    "cat4": 0,
+    "nombre": "Dodge",
+    "slugger": "dodge-de-segunda-mano"
+  },
+  {
+    "idcategoria": 814,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Ferrari",
+    "slugger": "ferrari-de-segunda-mano"
+  },
+  {
+    "idcategoria": 815,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 32,
+    "cat4": 0,
+    "nombre": "Fiat",
+    "slugger": "fiat-de-segunda-mano"
+  },
+  {
+    "idcategoria": 816,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 34,
+    "cat4": 0,
+    "nombre": "Ford",
+    "slugger": "ford-de-segunda-mano"
+  },
+  {
+    "idcategoria": 817,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 36,
+    "cat4": 0,
+    "nombre": "Galloper",
+    "slugger": "galloper-de-segunda-mano"
+  },
+  {
+    "idcategoria": 818,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 38,
+    "cat4": 0,
+    "nombre": "Honda",
+    "slugger": "honda-de-segunda-mano"
+  },
+  {
+    "idcategoria": 819,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 40,
+    "cat4": 0,
+    "nombre": "Hummer",
+    "slugger": "hummer-de-segunda-mano"
+  },
+  {
+    "idcategoria": 820,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 42,
+    "cat4": 0,
+    "nombre": "Hyundai",
+    "slugger": "hyundai-de-segunda-mano"
+  },
+  {
+    "idcategoria": 821,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 44,
+    "cat4": 0,
+    "nombre": "Isuzu",
+    "slugger": "isuzu-de-segunda-mano"
+  },
+  {
+    "idcategoria": 822,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 46,
+    "cat4": 0,
+    "nombre": "Jaguar",
+    "slugger": "jaguar-de-segunda-mano"
+  },
+  {
+    "idcategoria": 823,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 48,
+    "cat4": 0,
+    "nombre": "Jeep",
+    "slugger": "jeep-de-segunda-mano"
+  },
+  {
+    "idcategoria": 824,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 50,
+    "cat4": 0,
+    "nombre": "Kia",
+    "slugger": "kia-de-segunda-mano"
+  },
+  {
+    "idcategoria": 825,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 52,
+    "cat4": 0,
+    "nombre": "Lada",
+    "slugger": "lada-de-segunda-mano"
+  },
+  {
+    "idcategoria": 826,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 54,
+    "cat4": 0,
+    "nombre": "Lamborghini",
+    "slugger": "lamborghini-de-segunda-mano"
+  },
+  {
+    "idcategoria": 827,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 56,
+    "cat4": 0,
+    "nombre": "Lancia",
+    "slugger": "lancia-de-segunda-mano"
+  },
+  {
+    "idcategoria": 828,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 58,
+    "cat4": 0,
+    "nombre": "Land-Rover",
+    "slugger": "land-rover-de-segunda-mano"
+  },
+  {
+    "idcategoria": 829,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 60,
+    "cat4": 0,
+    "nombre": "Lexus",
+    "slugger": "lexus-de-segunda-mano"
+  },
+  {
+    "idcategoria": 830,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 62,
+    "cat4": 0,
+    "nombre": "Lotus",
+    "slugger": "lotus-de-segunda-mano"
+  },
+  {
+    "idcategoria": 831,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 64,
+    "cat4": 0,
+    "nombre": "Maserati",
+    "slugger": "maserati-de-segunda-mano"
+  },
+  {
+    "idcategoria": 832,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 66,
+    "cat4": 0,
+    "nombre": "Mazda",
+    "slugger": "mazda-de-segunda-mano"
+  },
+  {
+    "idcategoria": 833,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 68,
+    "cat4": 0,
+    "nombre": "Mercedes-Benz",
+    "slugger": "mercedes-benz-de-segunda-mano"
+  },
+  {
+    "idcategoria": 834,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 70,
+    "cat4": 0,
+    "nombre": "MG",
+    "slugger": "mg-de-segunda-mano"
+  },
+  {
+    "idcategoria": 835,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 72,
+    "cat4": 0,
+    "nombre": "Mini",
+    "slugger": "mini-de-segunda-mano"
+  },
+  {
+    "idcategoria": 836,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 74,
+    "cat4": 0,
+    "nombre": "Mitsubishi",
+    "slugger": "mitsubishi-de-segunda-mano"
+  },
+  {
+    "idcategoria": 837,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 76,
+    "cat4": 0,
+    "nombre": "Nissan",
+    "slugger": "nissan-de-segunda-mano"
+  },
+  {
+    "idcategoria": 838,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 78,
+    "cat4": 0,
+    "nombre": "Opel",
+    "slugger": "opel-de-segunda-mano"
+  },
+  {
+    "idcategoria": 839,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 80,
+    "cat4": 0,
+    "nombre": "Peugeot",
+    "slugger": "peugeot-de-segunda-mano"
+  },
+  {
+    "idcategoria": 840,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 82,
+    "cat4": 0,
+    "nombre": "Pontiac",
+    "slugger": "pontiac-de-segunda-mano"
+  },
+  {
+    "idcategoria": 841,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 84,
+    "cat4": 0,
+    "nombre": "Porsche",
+    "slugger": "porsche-de-segunda-mano"
+  },
+  {
+    "idcategoria": 842,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 86,
+    "cat4": 0,
+    "nombre": "Renault",
+    "slugger": "renault-de-segunda-mano"
+  },
+  {
+    "idcategoria": 843,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 88,
+    "cat4": 0,
+    "nombre": "Rolls-Royce",
+    "slugger": "rolls-royce-de-segunda-mano"
+  },
+  {
+    "idcategoria": 844,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 90,
+    "cat4": 0,
+    "nombre": "Rover",
+    "slugger": "rover-de-segunda-mano"
+  },
+  {
+    "idcategoria": 845,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 92,
+    "cat4": 0,
+    "nombre": "Saab",
+    "slugger": "saab-de-segunda-mano"
+  },
+  {
+    "idcategoria": 846,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 94,
+    "cat4": 0,
+    "nombre": "Seat",
+    "slugger": "seat-de-segunda-mano"
+  },
+  {
+    "idcategoria": 847,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 96,
+    "cat4": 0,
+    "nombre": "Skoda",
+    "slugger": "skoda-de-segunda-mano"
+  },
+  {
+    "idcategoria": 848,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 98,
+    "cat4": 0,
+    "nombre": "Smart",
+    "slugger": "smart-de-segunda-mano"
+  },
+  {
+    "idcategoria": 849,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 100,
+    "cat4": 0,
+    "nombre": "Ssangyong",
+    "slugger": "ssangyong-de-segunda-mano"
+  },
+  {
+    "idcategoria": 850,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 102,
+    "cat4": 0,
+    "nombre": "Subaru",
+    "slugger": "subaru-de-segunda-mano"
+  },
+  {
+    "idcategoria": 851,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 104,
+    "cat4": 0,
+    "nombre": "Suzuki",
+    "slugger": "suzuki-de-segunda-mano"
+  },
+  {
+    "idcategoria": 852,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 106,
+    "cat4": 0,
+    "nombre": "Talbot",
+    "slugger": "talbot-de-segunda-mano"
+  },
+  {
+    "idcategoria": 853,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 108,
+    "cat4": 0,
+    "nombre": "Tata",
+    "slugger": "tata-de-segunda-mano"
+  },
+  {
+    "idcategoria": 854,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 110,
+    "cat4": 0,
+    "nombre": "Toyota",
+    "slugger": "toyota-de-segunda-mano"
+  },
+  {
+    "idcategoria": 855,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 112,
+    "cat4": 0,
+    "nombre": "Volkswagen",
+    "slugger": "volkswagen-de-segunda-mano"
+  },
+  {
+    "idcategoria": 856,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 114,
+    "cat4": 0,
+    "nombre": "Volvo",
+    "slugger": "volvo-de-segunda-mano"
+  },
+  {
+    "idcategoria": 857,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 43,
+    "cat4": 0,
+    "nombre": "Infiniti",
+    "slugger": "infiniti-de-segunda-mano"
+  },
+  {
+    "idcategoria": 880,
+    "cat1": 10,
+    "cat2": 1,
+    "cat3": 115,
+    "cat4": 0,
+    "nombre": "Otros coches",
+    "slugger": "otros-coches-de-segunda-mano"
+  },
+  {
+    "idcategoria": 881,
+    "cat1": 10,
+    "cat2": 15,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Coches sin carnet",
+    "slugger": "coches-sin-carnet"
+  },
+  {
+    "idcategoria": 882,
+    "cat1": 10,
+    "cat2": 15,
+    "cat3": 10,
+    "cat4": 70,
+    "nombre": "Otros microcoches",
+    "slugger": "otros-microcoches-de-segunda-mano"
+  },
+  {
+    "idcategoria": 883,
+    "cat1": 10,
+    "cat2": 15,
+    "cat3": 10,
+    "cat4": 20,
+    "nombre": "Casalini",
+    "slugger": "casalini-de-segunda-mano"
+  },
+  {
+    "idcategoria": 884,
+    "cat1": 10,
+    "cat2": 15,
+    "cat3": 10,
+    "cat4": 30,
+    "nombre": "Chatenet",
+    "slugger": "chatenet-de-segunda-mano"
+  },
+  {
+    "idcategoria": 885,
+    "cat1": 10,
+    "cat2": 15,
+    "cat3": 10,
+    "cat4": 40,
+    "nombre": "Grecav",
+    "slugger": "grecav-de-segunda-mano"
+  },
+  {
+    "idcategoria": 886,
+    "cat1": 10,
+    "cat2": 15,
+    "cat3": 10,
+    "cat4": 50,
+    "nombre": "Ligier",
+    "slugger": "ligier-de-segunda-mano"
+  },
+  {
+    "idcategoria": 887,
+    "cat1": 10,
+    "cat2": 15,
+    "cat3": 10,
+    "cat4": 60,
+    "nombre": "Microcar",
+    "slugger": "microcar-de-segunda-mano"
+  },
+  {
+    "idcategoria": 888,
+    "cat1": 10,
+    "cat2": 15,
+    "cat3": 10,
+    "cat4": 10,
+    "nombre": "Aixam",
+    "slugger": "aixam-de-segunda-mano"
+  },
+  {
+    "idcategoria": 889,
+    "cat1": 10,
+    "cat2": 15,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Coches sin carnet",
+    "slugger": "venta-de-coches-sin-carnet"
+  },
+  {
+    "idcategoria": 890,
+    "cat1": 10,
+    "cat2": 15,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Recambios coches sin carnet",
+    "slugger": "recambios-de-coches-sin-carnet"
+  },
+  {
+    "idcategoria": 901,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 50,
+    "nombre": "Bull terrier",
+    "slugger": "bull-terrier"
+  },
+  {
+    "idcategoria": 902,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 10,
+    "nombre": "American Stanford",
+    "slugger": "american-stanford"
+  },
+  {
+    "idcategoria": 904,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 30,
+    "nombre": "Border Collie",
+    "slugger": "border-collie"
+  },
+  {
+    "idcategoria": 905,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 40,
+    "nombre": "Braco",
+    "slugger": "braco-weimar"
+  },
+  {
+    "idcategoria": 906,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 42,
+    "nombre": "Bretón",
+    "slugger": "breton"
+  },
+  {
+    "idcategoria": 907,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 44,
+    "nombre": "Bulldog Frances",
+    "slugger": "bulldog-frances"
+  },
+  {
+    "idcategoria": 908,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 60,
+    "nombre": "Carlino",
+    "slugger": "carlino"
+  },
+  {
+    "idcategoria": 909,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 70,
+    "nombre": "Chihuahua",
+    "slugger": "chihuahua"
+  },
+  {
+    "idcategoria": 910,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 95,
+    "nombre": "Dogo Argentino",
+    "slugger": "dogo-argentino"
+  },
+  {
+    "idcategoria": 911,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 100,
+    "nombre": "Dogo Burdeos",
+    "slugger": "dogo-burdeos"
+  },
+  {
+    "idcategoria": 912,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 135,
+    "nombre": "Jack Russell",
+    "slugger": "jack-russell"
+  },
+  {
+    "idcategoria": 913,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 120,
+    "nombre": "Golden Retriever",
+    "slugger": "golden-retriever"
+  },
+  {
+    "idcategoria": 915,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 160,
+    "nombre": "Perro de Agua",
+    "slugger": "perro-de-agua"
+  },
+  {
+    "idcategoria": 916,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 165,
+    "nombre": "Pincher",
+    "slugger": "pincher"
+  },
+  {
+    "idcategoria": 917,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 170,
+    "nombre": "Pitbull",
+    "slugger": "pitbull"
+  },
+  {
+    "idcategoria": 919,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 180,
+    "nombre": "Pointer",
+    "slugger": "pointer"
+  },
+  {
+    "idcategoria": 920,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 185,
+    "nombre": "Pomerania",
+    "slugger": "pomerania"
+  },
+  {
+    "idcategoria": 922,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 190,
+    "nombre": "Ratón de Praga",
+    "slugger": "raton-de-praga"
+  },
+  {
+    "idcategoria": 923,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 210,
+    "nombre": "Schnauzer",
+    "slugger": "schnauzer"
+  },
+  {
+    "idcategoria": 924,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 230,
+    "nombre": "Staffordshire",
+    "slugger": "staffordshire"
+  },
+  {
+    "idcategoria": 925,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 235,
+    "nombre": "Teckel",
+    "slugger": "teckel"
+  },
+  {
+    "idcategoria": 926,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 240,
+    "nombre": "Terranova",
+    "slugger": "terranova"
+  },
+  {
+    "idcategoria": 927,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 75,
+    "nombre": "Chow chow",
+    "slugger": "chow-chow"
+  },
+  {
+    "idcategoria": 929,
+    "cat1": 10,
+    "cat2": 20,
+    "cat3": 8,
+    "cat4": 0,
+    "nombre": "Recambios y despieces",
+    "slugger": "recambios-y-despieces-de-motos"
+  },
+  {
+    "idcategoria": 930,
+    "cat1": 10,
+    "cat2": 20,
+    "cat3": 1,
+    "cat4": 0,
+    "nombre": "Motos clásicas",
+    "slugger": "motos-clasicas"
+  },
+  {
+    "idcategoria": 950,
+    "cat1": 50,
+    "cat2": 40,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Para motor",
+    "slugger": "servicios-para-motor"
+  },
+  {
+    "idcategoria": 960,
+    "cat1": 60,
+    "cat2": 100,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Comerciales independientes",
+    "slugger": "comerciales-independientes"
+  },
+  {
+    "idcategoria": 970,
+    "cat1": 60,
+    "cat2": 100,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Venta alarmas",
+    "slugger": "comerciales-independientes-alarmas"
+  },
+  {
+    "idcategoria": 980,
+    "cat1": 60,
+    "cat2": 100,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Seguros",
+    "slugger": "comerciales-independientes-seguros"
+  },
+  {
+    "idcategoria": 990,
+    "cat1": 60,
+    "cat2": 100,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Sector energético",
+    "slugger": "comerciales-independientes-sector-energetico"
+  },
+  {
+    "idcategoria": 1000,
+    "cat1": 60,
+    "cat2": 100,
+    "cat3": 40,
+    "cat4": 0,
+    "nombre": "Venta por catálogo",
+    "slugger": "comerciales-independientes-venta-catalogo"
+  },
+  {
+    "idcategoria": 1010,
+    "cat1": 60,
+    "cat2": 100,
+    "cat3": 50,
+    "cat4": 0,
+    "nombre": "Otros",
+    "slugger": "otros-comerciales-independientes"
+  },
+  {
+    "idcategoria": 1020,
+    "cat1": 10,
+    "cat2": 170,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Servicios motor",
+    "slugger": "servicios-para-motor"
+  },
+  {
+    "idcategoria": 1030,
+    "cat1": 30,
+    "cat2": 8,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Comerciales independientes",
+    "slugger": "comerciales-independientes"
+  },
+  {
+    "idcategoria": 1040,
+    "cat1": 20,
+    "cat2": 1,
+    "cat3": 5,
+    "cat4": 0,
+    "nombre": "Alquiler vacaciones",
+    "slugger": "alquiler-vacaciones"
+  },
+  {
+    "idcategoria": 1060,
+    "cat1": 140,
+    "cat2": 155,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Alquiler vacaciones",
+    "slugger": "alquiler-vacaciones"
+  },
+  {
+    "idcategoria": 1070,
+    "cat1": 10,
+    "cat2": 14,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Recambios clasicos",
+    "slugger": "recambios-de-coches-clasicos"
+  },
+  {
+    "idcategoria": 1080,
+    "cat1": 10,
+    "cat2": 14,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Coches clásicos",
+    "slugger": "coches-clasicos"
+  },
+  {
+    "idcategoria": 1090,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Montas de perros",
+    "slugger": "montas-de-perros"
+  },
+  {
+    "idcategoria": 1100,
+    "cat1": 140,
+    "cat2": 165,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Airsoft",
+    "slugger": "airsoft"
+  },
+  {
+    "idcategoria": 1101,
+    "cat1": 140,
+    "cat2": 167,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Drones",
+    "slugger": "drones"
+  },
+  {
+    "idcategoria": 1110,
+    "cat1": 150,
+    "cat2": 10,
+    "cat3": 155,
+    "cat4": 0,
+    "nombre": "Airsoft",
+    "slugger": "airsoft"
+  },
+  {
+    "idcategoria": 1120,
+    "cat1": 70,
+    "cat2": 4,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Tablets y ebooks",
+    "slugger": "tablets"
+  },
+  {
+    "idcategoria": 1130,
+    "cat1": 90,
+    "cat2": 30,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Tablets / iPad",
+    "slugger": "tablets"
+  },
+  {
+    "idcategoria": 1140,
+    "cat1": 160,
+    "cat2": 62,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Hurones",
+    "slugger": "hurones"
+  },
+  {
+    "idcategoria": 1150,
+    "cat1": 160,
+    "cat2": 64,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Reptiles",
+    "slugger": "reptiles"
+  },
+  {
+    "idcategoria": 1160,
+    "cat1": 160,
+    "cat2": 66,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Ganadería",
+    "slugger": "ganaderia"
+  },
+  {
+    "idcategoria": 1170,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Perros",
+    "slugger": "venta-de-perros"
+  },
+  {
+    "idcategoria": 1180,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 40,
+    "cat4": 0,
+    "nombre": "Accesorios y productos",
+    "slugger": "accesorios-productos-perros"
+  },
+  {
+    "idcategoria": 1190,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 50,
+    "cat4": 0,
+    "nombre": "Servicios para perros",
+    "slugger": "servicios-para-perros"
+  },
+  {
+    "idcategoria": 1220,
+    "cat1": 110,
+    "cat2": 110,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Ortopedia",
+    "slugger": "ortopedia"
+  },
+  {
+    "idcategoria": 1230,
+    "cat1": 120,
+    "cat2": 85,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Ortopedia",
+    "slugger": "ortopedia"
+  },
+  {
+    "idcategoria": 1240,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 5,
+    "cat4": 100,
+    "nombre": "Vestidos",
+    "slugger": "vestidos"
+  },
+  {
+    "idcategoria": 1250,
+    "cat1": 90,
+    "cat2": 1,
+    "cat3": 1,
+    "cat4": 16,
+    "nombre": "HTC",
+    "slugger": "moviles-htc"
+  },
+  {
+    "idcategoria": 1260,
+    "cat1": 90,
+    "cat2": 1,
+    "cat3": 1,
+    "cat4": 8,
+    "nombre": "Blackberry",
+    "slugger": "blackberry"
+  },
+  {
+    "idcategoria": 1270,
+    "cat1": 90,
+    "cat2": 1,
+    "cat3": 1,
+    "cat4": 32,
+    "nombre": "iPhone",
+    "slugger": "iphone"
+  },
+  {
+    "idcategoria": 1280,
+    "cat1": 90,
+    "cat2": 1,
+    "cat3": 1,
+    "cat4": 24,
+    "nombre": "Huawei",
+    "slugger": "moviles-huawei"
+  },
+  {
+    "idcategoria": 1290,
+    "cat1": 140,
+    "cat2": 40,
+    "cat3": 35,
+    "cat4": 0,
+    "nombre": "Airsoft",
+    "slugger": "airsoft"
+  },
+  {
+    "idcategoria": 1300,
+    "cat1": 10,
+    "cat2": 18,
+    "cat3": 6,
+    "cat4": 0,
+    "nombre": "Neumáticos",
+    "slugger": "neumaticos"
+  },
+  {
+    "idcategoria": 1310,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 60,
+    "cat4": 0,
+    "nombre": "Disfraces",
+    "slugger": "disfraces"
+  },
+  {
+    "idcategoria": 1320,
+    "cat1": 60,
+    "cat2": 110,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Compra-venta de oro",
+    "slugger": "compra-venta-oro"
+  },
+  {
+    "idcategoria": 1330,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 30,
+    "cat4": 70,
+    "nombre": "Compra-venta de oro",
+    "slugger": "compra-venta-oro"
+  },
+  {
+    "idcategoria": 1340,
+    "cat1": 10,
+    "cat2": 105,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Buggies",
+    "slugger": "buggies"
+  },
+  {
+    "idcategoria": 1350,
+    "cat1": 60,
+    "cat2": 40,
+    "cat3": 55,
+    "cat4": 0,
+    "nombre": "Traspasos Estancos",
+    "slugger": "traspasos-de-estancos"
+  },
+  {
+    "idcategoria": 1360,
+    "cat1": 20,
+    "cat2": 15,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Edificios",
+    "slugger": "edificios"
+  },
+  {
+    "idcategoria": 1370,
+    "cat1": 20,
+    "cat2": 15,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Alquiler de edificios",
+    "slugger": "alquiler-de-edificios"
+  },
+  {
+    "idcategoria": 1380,
+    "cat1": 20,
+    "cat2": 15,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Venta de edificios",
+    "slugger": "venta-de-edificios"
+  },
+  {
+    "idcategoria": 1390,
+    "cat1": 10,
+    "cat2": 18,
+    "cat3": 7,
+    "cat4": 0,
+    "nombre": "Navegadores GPS",
+    "slugger": "navegadores-gps"
+  },
+  {
+    "idcategoria": 1400,
+    "cat1": 70,
+    "cat2": 25,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Navegadores GPS",
+    "slugger": "navegadores-gps"
+  },
+  {
+    "idcategoria": 1410,
+    "cat1": 160,
+    "cat2": 66,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Alimentacion animales",
+    "slugger": "alimentacion-animales"
+  },
+  {
+    "idcategoria": 1420,
+    "cat1": 160,
+    "cat2": 66,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Cabras",
+    "slugger": "cabras"
+  },
+  {
+    "idcategoria": 1430,
+    "cat1": 160,
+    "cat2": 66,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Cerdos",
+    "slugger": "cerdos"
+  },
+  {
+    "idcategoria": 1440,
+    "cat1": 160,
+    "cat2": 66,
+    "cat3": 40,
+    "cat4": 0,
+    "nombre": "Gallinas",
+    "slugger": "gallinas"
+  },
+  {
+    "idcategoria": 1450,
+    "cat1": 160,
+    "cat2": 66,
+    "cat3": 50,
+    "cat4": 0,
+    "nombre": "Gallos",
+    "slugger": "gallos"
+  },
+  {
+    "idcategoria": 1460,
+    "cat1": 160,
+    "cat2": 66,
+    "cat3": 60,
+    "cat4": 0,
+    "nombre": "Ovejas",
+    "slugger": "ovejas"
+  },
+  {
+    "idcategoria": 1470,
+    "cat1": 160,
+    "cat2": 66,
+    "cat3": 70,
+    "cat4": 0,
+    "nombre": "Patos",
+    "slugger": "patos"
+  },
+  {
+    "idcategoria": 1480,
+    "cat1": 160,
+    "cat2": 66,
+    "cat3": 80,
+    "cat4": 0,
+    "nombre": "Vacas",
+    "slugger": "vacas"
+  },
+  {
+    "idcategoria": 1490,
+    "cat1": 160,
+    "cat2": 66,
+    "cat3": 90,
+    "cat4": 0,
+    "nombre": "Toros",
+    "slugger": "toros"
+  },
+  {
+    "idcategoria": 1500,
+    "cat1": 160,
+    "cat2": 66,
+    "cat3": 100,
+    "cat4": 0,
+    "nombre": "Terneros",
+    "slugger": "terneros"
+  },
+  {
+    "idcategoria": 1510,
+    "cat1": 160,
+    "cat2": 66,
+    "cat3": 110,
+    "cat4": 0,
+    "nombre": "Otro ganado",
+    "slugger": "otro-ganado"
+  },
+  {
+    "idcategoria": 1520,
+    "cat1": 20,
+    "cat2": 12,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Trasteros",
+    "slugger": "trasteros"
+  },
+  {
+    "idcategoria": 1530,
+    "cat1": 20,
+    "cat2": 12,
+    "cat3": 5,
+    "cat4": 0,
+    "nombre": "Alquiler de trasteros",
+    "slugger": "alquiler-de-trasteros"
+  },
+  {
+    "idcategoria": 1540,
+    "cat1": 20,
+    "cat2": 12,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Venta de trasteros",
+    "slugger": "venta-de-trasteros"
+  },
+  {
+    "idcategoria": 1550,
+    "cat1": 100,
+    "cat2": 20,
+    "cat3": 75,
+    "cat4": 0,
+    "nombre": "Airsoft",
+    "slugger": "airsoft"
+  },
+  {
+    "idcategoria": 1560,
+    "cat1": 10,
+    "cat2": 18,
+    "cat3": 8,
+    "cat4": 0,
+    "nombre": "Recambios y despieces de motos",
+    "slugger": "recambios-y-despieces-de-motos"
+  },
+  {
+    "idcategoria": 1570,
+    "cat1": 50,
+    "cat2": 10,
+    "cat3": 130,
+    "cat4": 0,
+    "nombre": "Psicólogos",
+    "slugger": "psicologos"
+  },
+  {
+    "idcategoria": 1580,
+    "cat1": 80,
+    "cat2": 5,
+    "cat3": 1,
+    "cat4": 10,
+    "nombre": "LED",
+    "slugger": "televisores-led"
+  },
+  {
+    "idcategoria": 1590,
+    "cat1": 80,
+    "cat2": 5,
+    "cat3": 6,
+    "cat4": 10,
+    "nombre": "Blu Ray",
+    "slugger": "peliculas-blu-ray"
+  },
+  {
+    "idcategoria": 1600,
+    "cat1": 160,
+    "cat2": 90,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Mascotas perdidas",
+    "slugger": "mascotas-perdidas"
+  },
+  {
+    "idcategoria": 1610,
+    "cat1": 100,
+    "cat2": 30,
+    "cat3": 10,
+    "cat4": 56,
+    "nombre": "Nintendo 3DS",
+    "slugger": "nintendo-3ds"
+  },
+  {
+    "idcategoria": 1620,
+    "cat1": 100,
+    "cat2": 30,
+    "cat3": 20,
+    "cat4": 56,
+    "nombre": "Juegos de Nintendo 3DS",
+    "slugger": "juegos-de-nintendo-3ds"
+  },
+  {
+    "idcategoria": 1630,
+    "cat1": 140,
+    "cat2": 185,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Billetes",
+    "slugger": "billetes"
+  },
+  {
+    "idcategoria": 1640,
+    "cat1": 140,
+    "cat2": 185,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Billetes de tren",
+    "slugger": "billetes-tren"
+  },
+  {
+    "idcategoria": 1650,
+    "cat1": 140,
+    "cat2": 185,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Billetes de autobus",
+    "slugger": "billetes-autobus"
+  },
+  {
+    "idcategoria": 1660,
+    "cat1": 140,
+    "cat2": 185,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Billetes de avión",
+    "slugger": "billetes-avion"
+  },
+  {
+    "idcategoria": 1670,
+    "cat1": 20,
+    "cat2": 1,
+    "cat3": 20,
+    "cat4": 3,
+    "nombre": "Compartir piso / alquilar habitación",
+    "slugger": "pisos-compartidos"
+  },
+  {
+    "idcategoria": 1680,
+    "cat1": 20,
+    "cat2": 1,
+    "cat3": 30,
+    "cat4": 3,
+    "nombre": "Compartir piso / alquilar habitación",
+    "slugger": "pisos-compartidos"
+  },
+  {
+    "idcategoria": 1690,
+    "cat1": 20,
+    "cat2": 1,
+    "cat3": 10,
+    "cat4": 4,
+    "nombre": "Alquilar habitación",
+    "slugger": "pisos-compartidos"
+  },
+  {
+    "idcategoria": 1700,
+    "cat1": 100,
+    "cat2": 30,
+    "cat3": 10,
+    "cat4": 39,
+    "nombre": "PS Vita",
+    "slugger": "ps-vita"
+  },
+  {
+    "idcategoria": 1710,
+    "cat1": 100,
+    "cat2": 30,
+    "cat3": 20,
+    "cat4": 39,
+    "nombre": "Juegos de PS Vita",
+    "slugger": "juegos-de-ps-vita"
+  },
+  {
+    "idcategoria": 1720,
+    "cat1": 110,
+    "cat2": 30,
+    "cat3": 55,
+    "cat4": 0,
+    "nombre": "Leña",
+    "slugger": "lena"
+  },
+  {
+    "idcategoria": 1730,
+    "cat1": 110,
+    "cat2": 70,
+    "cat3": 125,
+    "cat4": 0,
+    "nombre": "Estufas",
+    "slugger": "estufas"
+  },
+  {
+    "idcategoria": 1740,
+    "cat1": 20,
+    "cat2": 1,
+    "cat3": 3,
+    "cat4": 0,
+    "nombre": "Casas Rurales",
+    "slugger": "casas-rurales"
+  },
+  {
+    "idcategoria": 1750,
+    "cat1": 140,
+    "cat2": 40,
+    "cat3": 125,
+    "cat4": 0,
+    "nombre": "Máquinas de escribir",
+    "slugger": "maquinas-de-escribir"
+  },
+  {
+    "idcategoria": 1760,
+    "cat1": 100,
+    "cat2": 30,
+    "cat3": 10,
+    "cat4": 17,
+    "nombre": "XBox One",
+    "slugger": "xbox-one"
+  },
+  {
+    "idcategoria": 1770,
+    "cat1": 100,
+    "cat2": 30,
+    "cat3": 20,
+    "cat4": 17,
+    "nombre": "Juegos de XBox One",
+    "slugger": "juegos-de-xbox-one"
+  },
+  {
+    "idcategoria": 1780,
+    "cat1": 100,
+    "cat2": 30,
+    "cat3": 10,
+    "cat4": 36,
+    "nombre": "PlayStation 4",
+    "slugger": "playstation-4"
+  },
+  {
+    "idcategoria": 1790,
+    "cat1": 100,
+    "cat2": 30,
+    "cat3": 20,
+    "cat4": 36,
+    "nombre": "Juegos de PlayStation 4",
+    "slugger": "juegos-de-ps4"
+  },
+  {
+    "idcategoria": 1810,
+    "cat1": 80,
+    "cat2": 15,
+    "cat3": 3,
+    "cat4": 15,
+    "nombre": "Trompetas",
+    "slugger": "trompetas"
+  },
+  {
+    "idcategoria": 1820,
+    "cat1": 100,
+    "cat2": 30,
+    "cat3": 10,
+    "cat4": 59,
+    "nombre": "Wii U",
+    "slugger": "wii-u"
+  },
+  {
+    "idcategoria": 1830,
+    "cat1": 100,
+    "cat2": 30,
+    "cat3": 20,
+    "cat4": 59,
+    "nombre": "Juegos de Wii U",
+    "slugger": "juegos-de-wii-u"
+  },
+  {
+    "idcategoria": 1840,
+    "cat1": 50,
+    "cat2": 35,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Servicios de Electronica",
+    "slugger": "servicios-electronica"
+  },
+  {
+    "idcategoria": 1850,
+    "cat1": 90,
+    "cat2": 1,
+    "cat3": 5,
+    "cat4": 0,
+    "nombre": "Servicios de Telefonía",
+    "slugger": "servicios-electronica"
+  },
+  {
+    "idcategoria": 1860,
+    "cat1": 100,
+    "cat2": 30,
+    "cat3": 40,
+    "cat4": 0,
+    "nombre": "Servicios para Videoconsolas",
+    "slugger": "servicios-electronica"
+  },
+  {
+    "idcategoria": 1870,
+    "cat1": 70,
+    "cat2": 30,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Reparación de ordenadores",
+    "slugger": "servicios-electronica"
+  },
+  {
+    "idcategoria": 1880,
+    "cat1": 110,
+    "cat2": 30,
+    "cat3": 58,
+    "cat4": 0,
+    "nombre": "Piscinas",
+    "slugger": "piscinas"
+  },
+  {
+    "idcategoria": 1890,
+    "cat1": 10,
+    "cat2": 13,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Remolques",
+    "slugger": "remolques"
+  },
+  {
+    "idcategoria": 1900,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 175,
+    "nombre": "Podenco",
+    "slugger": "perros-de-caza"
+  },
+  {
+    "idcategoria": 1910,
+    "cat1": 150,
+    "cat2": 10,
+    "cat3": 15,
+    "cat4": 0,
+    "nombre": "Boxeo",
+    "slugger": "boxeo"
+  },
+  {
+    "idcategoria": 1920,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 65,
+    "nombre": "Cavalier",
+    "slugger": "cavalier"
+  },
+  {
+    "idcategoria": 1930,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 5,
+    "cat4": 110,
+    "nombre": "Premamá",
+    "slugger": "moda-premama"
+  },
+  {
+    "idcategoria": 1940,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 38,
+    "nombre": "Boyero de berna",
+    "slugger": "boyero-de-berna"
+  },
+  {
+    "idcategoria": 1950,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 5,
+    "nombre": "Alaskan malamute",
+    "slugger": "alaskan-malamute"
+  },
+  {
+    "idcategoria": 1960,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 1,
+    "nombre": "Akita inu",
+    "slugger": "akita-inu"
+  },
+  {
+    "idcategoria": 1970,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 222,
+    "nombre": "Shiba inu",
+    "slugger": "shiba-inu"
+  },
+  {
+    "idcategoria": 1980,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 28,
+    "nombre": "Bodeguero ratonero andaluz",
+    "slugger": "bodeguero-ratonero-andaluz"
+  },
+  {
+    "idcategoria": 1990,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 33,
+    "nombre": "Boston terrier",
+    "slugger": "boston-terrier"
+  },
+  {
+    "idcategoria": 2000,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 8,
+    "nombre": "American bully",
+    "slugger": "american-bully"
+  },
+  {
+    "idcategoria": 2010,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 152,
+    "nombre": "Pastor del Cáucaso",
+    "slugger": "pastor-del-caucaso"
+  },
+  {
+    "idcategoria": 2020,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 24,
+    "nombre": "Bichón Habanero",
+    "slugger": "bichon-habanero"
+  },
+  {
+    "idcategoria": 2030,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 22,
+    "nombre": "Bichón frisé",
+    "slugger": "bichon-frise"
+  },
+  {
+    "idcategoria": 2040,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 151,
+    "nombre": "Pastor Belga",
+    "slugger": "pastor-belga"
+  },
+  {
+    "idcategoria": 2041,
+    "cat1": 140,
+    "cat2": 115,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Radiocontrol",
+    "slugger": "radiocontrol"
+  },
+  {
+    "idcategoria": 2042,
+    "cat1": 50,
+    "cat2": 45,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Cursos",
+    "slugger": "cursos"
+  },
+  {
+    "idcategoria": 2044,
+    "cat1": 160,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 52,
+    "nombre": "Bullmastiff",
+    "slugger": "bullmastiff"
+  },
+  {
+    "idcategoria": 2045,
+    "cat1": 150,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 10,
+    "nombre": "Bicicletas BMX",
+    "slugger": "bicicletas-bmx-de-segunda-mano"
+  },
+  {
+    "idcategoria": 2046,
+    "cat1": 150,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 20,
+    "nombre": "Bicicletas de carretera",
+    "slugger": "bicicletas-carretera-de-segunda-mano"
+  },
+  {
+    "idcategoria": 2047,
+    "cat1": 150,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 40,
+    "nombre": "Bicicletas de descenso",
+    "slugger": "bicicletas-descenso-de-segunda-mano"
+  },
+  {
+    "idcategoria": 2048,
+    "cat1": 150,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 70,
+    "nombre": "Bicicletas de montaña",
+    "slugger": "bicicletas-montaña-de-segunda-mano"
+  },
+  {
+    "idcategoria": 2049,
+    "cat1": 150,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 80,
+    "nombre": "Bicicletas de mujer",
+    "slugger": "bicicletas-mujer-de-segunda-mano"
+  },
+  {
+    "idcategoria": 2050,
+    "cat1": 150,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 90,
+    "nombre": "Bicicletas de niños",
+    "slugger": "bicicletas-niños-de-segunda-mano"
+  },
+  {
+    "idcategoria": 2051,
+    "cat1": 150,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 100,
+    "nombre": "Bicicletas de paseo y ciudad",
+    "slugger": "bicicletas-paseo-ciudad-de-segunda-mano"
+  },
+  {
+    "idcategoria": 2052,
+    "cat1": 150,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 110,
+    "nombre": "Bicicletas de trial",
+    "slugger": "bicicletas-trial-de-segunda-mano"
+  },
+  {
+    "idcategoria": 2053,
+    "cat1": 150,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 120,
+    "nombre": "Bicicletas de triatlon",
+    "slugger": "bicicletas-triatlon-de-segunda-mano"
+  },
+  {
+    "idcategoria": 2054,
+    "cat1": 150,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 130,
+    "nombre": "Equipamiento y accesorios",
+    "slugger": "equipamiento-accesorios-bicicletas"
+  },
+  {
+    "idcategoria": 2055,
+    "cat1": 150,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 140,
+    "nombre": "Componentes y recambios",
+    "slugger": "componentes-recambios-bicicletas"
+  },
+  {
+    "idcategoria": 2056,
+    "cat1": 150,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 50,
+    "nombre": "Bicicletas eléctricas",
+    "slugger": "bicicletas-electricas-de-segunda-mano"
+  },
+  {
+    "idcategoria": 2057,
+    "cat1": 150,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 30,
+    "nombre": "Bicicletas clásicas",
+    "slugger": "bicicletas-clasicas-de-segunda-mano"
+  },
+  {
+    "idcategoria": 2058,
+    "cat1": 150,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 60,
+    "nombre": "Bicicletas estáticas y spinning",
+    "slugger": "bicicletas-estaticas-spinning-de-segunda-mano"
+  },
+  {
+    "idcategoria": 2059,
+    "cat1": 80,
+    "cat2": 5,
+    "cat3": 6,
+    "cat4": 20,
+    "nombre": "Otros",
+    "slugger": "otras-peliculas"
+  },
+  {
+    "idcategoria": 2060,
+    "cat1": 40,
+    "cat2": 20,
+    "cat3": 30,
+    "cat4": 5,
+    "nombre": "Revistas",
+    "slugger": "revistas"
+  },
+  {
+    "idcategoria": 2061,
+    "cat1": 40,
+    "cat2": 20,
+    "cat3": 30,
+    "cat4": 10,
+    "nombre": "Comics",
+    "slugger": "comics"
+  },
+  {
+    "idcategoria": 2062,
+    "cat1": 125,
+    "cat2": 35,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Silla infantil para coche",
+    "slugger": "silla-infantil"
+  },
+  {
+    "idcategoria": 2063,
+    "cat1": 10,
+    "cat2": 18,
+    "cat3": 9,
+    "cat4": 0,
+    "nombre": "Silla infantil para coche",
+    "slugger": "silla-infantil"
+  },
+  {
+    "idcategoria": 2064,
+    "cat1": 170,
+    "cat2": 0,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Comunidad",
+    "slugger": "comunidad"
+  },
+  {
+    "idcategoria": 2065,
+    "cat1": 170,
+    "cat2": 30,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Coworking",
+    "slugger": "coworking"
+  },
+  {
+    "idcategoria": 2066,
+    "cat1": 170,
+    "cat2": 20,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Compartir Parking",
+    "slugger": "compartir-parking"
+  },
+  {
+    "idcategoria": 2067,
+    "cat1": 170,
+    "cat2": 70,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Trueque",
+    "slugger": "trueque"
+  },
+  {
+    "idcategoria": 2068,
+    "cat1": 170,
+    "cat2": 10,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Compartir coche",
+    "slugger": "compartir-coche"
+  },
+  {
+    "idcategoria": 2069,
+    "cat1": 170,
+    "cat2": 40,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Intercambio de idiomas",
+    "slugger": "intercambio-idiomas"
+  },
+  {
+    "idcategoria": 2070,
+    "cat1": 170,
+    "cat2": 60,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Retornos mercancías",
+    "slugger": "retornos-mercancias"
+  },
+  {
+    "idcategoria": 2071,
+    "cat1": 170,
+    "cat2": 50,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Intercambio de vacaciones",
+    "slugger": "intercambio-de-vacaciones"
+  },
+  {
+    "idcategoria": 2072,
+    "cat1": 170,
+    "cat2": 80,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Compartir piso",
+    "slugger": "pisos-compartidos"
+  },
+  {
+    "idcategoria": 2073,
+    "cat1": 50,
+    "cat2": 50,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Para bicicletas",
+    "slugger": "servicios-para-bicicletas"
+  },
+  {
+    "idcategoria": 2074,
+    "cat1": 150,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 150,
+    "nombre": "Servicios bicicletas",
+    "slugger": "servicios-para-bicicletas"
+  },
+  {
+    "idcategoria": 2075,
+    "cat1": 80,
+    "cat2": 1,
+    "cat3": 5,
+    "cat4": 5,
+    "nombre": "Cámaras reflex digitales",
+    "slugger": "camaras-fotos-reflex"
+  },
+  {
+    "idcategoria": 2076,
+    "cat1": 80,
+    "cat2": 1,
+    "cat3": 5,
+    "cat4": 10,
+    "nombre": "Cámaras compactas digitales",
+    "slugger": "camaras-fotos-compactas"
+  },
+  {
+    "idcategoria": 2077,
+    "cat1": 80,
+    "cat2": 1,
+    "cat3": 10,
+    "cat4": 5,
+    "nombre": "Cámaras analógicas reflex",
+    "slugger": "camaras-analogicas-reflex"
+  },
+  {
+    "idcategoria": 2078,
+    "cat1": 80,
+    "cat2": 1,
+    "cat3": 10,
+    "cat4": 10,
+    "nombre": "Cámaras analógicas compactas",
+    "slugger": "camaras-analogicas-compactas"
+  },
+  {
+    "idcategoria": 2079,
+    "cat1": 80,
+    "cat2": 1,
+    "cat3": 15,
+    "cat4": 0,
+    "nombre": "Objetivos y lentes",
+    "slugger": "objetivos-camaras-fotos"
+  },
+  {
+    "idcategoria": 2080,
+    "cat1": 80,
+    "cat2": 1,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Flashes",
+    "slugger": "flashes-camaras-fotos"
+  },
+  {
+    "idcategoria": 2081,
+    "cat1": 80,
+    "cat2": 1,
+    "cat3": 25,
+    "cat4": 0,
+    "nombre": "Trípodes",
+    "slugger": "tripodes-camaras-fotos"
+  },
+  {
+    "idcategoria": 2082,
+    "cat1": 80,
+    "cat2": 1,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Bolsas y mochilas",
+    "slugger": "bolsas-mochilas-camaras-fotos"
+  },
+  {
+    "idcategoria": 2083,
+    "cat1": 50,
+    "cat2": 60,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Para mascotas",
+    "slugger": "servicios-para-perros"
+  },
+  {
+    "idcategoria": 2084,
+    "cat1": 160,
+    "cat2": 20,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Gatos",
+    "slugger": "venta-de-gatos"
+  },
+  {
+    "idcategoria": 2085,
+    "cat1": 160,
+    "cat2": 20,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Cruces y mestizos de Gatos",
+    "slugger": "cruces-y-mestizos"
+  },
+  {
+    "idcategoria": 2086,
+    "cat1": 160,
+    "cat2": 20,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Accesorios para Gatos",
+    "slugger": "accesorios-productos-gatos"
+  },
+  {
+    "idcategoria": 2087,
+    "cat1": 160,
+    "cat2": 50,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Pájaros y aves",
+    "slugger": "venta-de-pajaros"
+  },
+  {
+    "idcategoria": 2088,
+    "cat1": 160,
+    "cat2": 50,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Accesorios para pájaros",
+    "slugger": "accesorios-productos-pajaros"
+  },
+  {
+    "idcategoria": 2089,
+    "cat1": 80,
+    "cat2": 5,
+    "cat3": 1,
+    "cat4": 15,
+    "nombre": "Otros televisores",
+    "slugger": "otros-televisores"
+  },
+  {
+    "idcategoria": 2090,
+    "cat1": 80,
+    "cat2": 10,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Auriculares",
+    "slugger": "auriculares"
+  },
+  {
+    "idcategoria": 2091,
+    "cat1": 80,
+    "cat2": 15,
+    "cat3": 2,
+    "cat4": 1,
+    "nombre": "Casetes",
+    "slugger": "casetes"
+  },
+  {
+    "idcategoria": 2092,
+    "cat1": 80,
+    "cat2": 15,
+    "cat3": 2,
+    "cat4": 2,
+    "nombre": "Vinilos",
+    "slugger": "vinilos"
+  },
+  {
+    "idcategoria": 2093,
+    "cat1": 80,
+    "cat2": 15,
+    "cat3": 2,
+    "cat4": 3,
+    "nombre": "CDs",
+    "slugger": "cds"
+  },
+  {
+    "idcategoria": 2094,
+    "cat1": 40,
+    "cat2": 50,
+    "cat3": 170,
+    "cat4": 0,
+    "nombre": "Cursos de aventura",
+    "slugger": "cursos-de-aventura"
+  },
+  {
+    "idcategoria": 2095,
+    "cat1": 150,
+    "cat2": 10,
+    "cat3": 135,
+    "cat4": 0,
+    "nombre": "Running",
+    "slugger": "running"
+  },
+  {
+    "idcategoria": 2096,
+    "cat1": 150,
+    "cat2": 10,
+    "cat3": 5,
+    "cat4": 0,
+    "nombre": "Baloncesto",
+    "slugger": "baloncesto"
+  },
+  {
+    "idcategoria": 2097,
+    "cat1": 70,
+    "cat2": 20,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Fotocopiadoras",
+    "slugger": "fotocopiadoras"
+  },
+  {
+    "idcategoria": 2099,
+    "cat1": 70,
+    "cat2": 8,
+    "cat3": 6,
+    "cat4": 0,
+    "nombre": "Memorias RAM",
+    "slugger": "memorias-ram"
+  },
+  {
+    "idcategoria": 2100,
+    "cat1": 120,
+    "cat2": 6,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Moda niño",
+    "slugger": "moda-niño"
+  },
+  {
+    "idcategoria": 2101,
+    "cat1": 120,
+    "cat2": 8,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Moda niña",
+    "slugger": "moda-niña"
+  },
+  {
+    "idcategoria": 2102,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 5,
+    "cat4": 0,
+    "nombre": "Ropa",
+    "slugger": "moda-mujer-ropa"
+  },
+  {
+    "idcategoria": 2103,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 5,
+    "cat4": 40,
+    "nombre": "Ropa deportiva",
+    "slugger": "ropa-deportiva-mujer"
+  },
+  {
+    "idcategoria": 2104,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 5,
+    "cat4": 15,
+    "nombre": "Jersey",
+    "slugger": "jerseys-mujer"
+  },
+  {
+    "idcategoria": 2105,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 5,
+    "cat4": 75,
+    "nombre": "Moda flamenca",
+    "slugger": "moda-flamenca-mujer"
+  },
+  {
+    "idcategoria": 2106,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 5,
+    "cat4": 77,
+    "nombre": "Traje regional",
+    "slugger": "moda-regional-mujer"
+  },
+  {
+    "idcategoria": 2107,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 10,
+    "cat4": 10,
+    "nombre": "Zapatillas",
+    "slugger": "zapatillas-mujer"
+  },
+  {
+    "idcategoria": 2108,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 10,
+    "cat4": 20,
+    "nombre": "Sandalias",
+    "slugger": "sandalias-mujer"
+  },
+  {
+    "idcategoria": 2109,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 10,
+    "cat4": 30,
+    "nombre": "Botas",
+    "slugger": "botas-mujer"
+  },
+  {
+    "idcategoria": 2110,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 10,
+    "cat4": 40,
+    "nombre": "Botines",
+    "slugger": "botines-mujer"
+  },
+  {
+    "idcategoria": 2111,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 10,
+    "cat4": 50,
+    "nombre": "Otros",
+    "slugger": "otros-calzado-mujer"
+  },
+  {
+    "idcategoria": 2112,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Complementos",
+    "slugger": "complementos-mujer"
+  },
+  {
+    "idcategoria": 2113,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 20,
+    "cat4": 30,
+    "nombre": "Accesorios",
+    "slugger": "accesorios-mujer"
+  },
+  {
+    "idcategoria": 2114,
+    "cat1": 120,
+    "cat2": 82,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Maletas",
+    "slugger": "maletas"
+  },
+  {
+    "idcategoria": 2115,
+    "cat1": 120,
+    "cat2": 4,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Ropa",
+    "slugger": "moda-hombre-ropa"
+  },
+  {
+    "idcategoria": 2116,
+    "cat1": 120,
+    "cat2": 4,
+    "cat3": 10,
+    "cat4": 20,
+    "nombre": "Cazadoras y americanas",
+    "slugger": "cazadoras-americanas-hombre"
+  },
+  {
+    "idcategoria": 2117,
+    "cat1": 120,
+    "cat2": 4,
+    "cat3": 10,
+    "cat4": 70,
+    "nombre": "Chandal y sudaderas",
+    "slugger": "chandal-sudaderas-hombre"
+  },
+  {
+    "idcategoria": 2118,
+    "cat1": 120,
+    "cat2": 4,
+    "cat3": 20,
+    "cat4": 10,
+    "nombre": "Zapatillas",
+    "slugger": "zapatillas-hombre"
+  },
+  {
+    "idcategoria": 2119,
+    "cat1": 120,
+    "cat2": 4,
+    "cat3": 20,
+    "cat4": 20,
+    "nombre": "Zapatos",
+    "slugger": "zapatos-hombre"
+  },
+  {
+    "idcategoria": 2120,
+    "cat1": 120,
+    "cat2": 4,
+    "cat3": 20,
+    "cat4": 30,
+    "nombre": "Botas y botines",
+    "slugger": "botas-botines-hombre"
+  },
+  {
+    "idcategoria": 2121,
+    "cat1": 120,
+    "cat2": 4,
+    "cat3": 20,
+    "cat4": 40,
+    "nombre": "Otros",
+    "slugger": "otros-calzado-hombre"
+  },
+  {
+    "idcategoria": 2122,
+    "cat1": 120,
+    "cat2": 4,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Complementos",
+    "slugger": "complementos-hombre"
+  },
+  {
+    "idcategoria": 2124,
+    "cat1": 120,
+    "cat2": 4,
+    "cat3": 30,
+    "cat4": 20,
+    "nombre": "Cinturones",
+    "slugger": "cinturones-hombre"
+  },
+  {
+    "idcategoria": 2126,
+    "cat1": 120,
+    "cat2": 4,
+    "cat3": 30,
+    "cat4": 40,
+    "nombre": "Gafas",
+    "slugger": "gafas-hombre"
+  },
+  {
+    "idcategoria": 2127,
+    "cat1": 120,
+    "cat2": 4,
+    "cat3": 30,
+    "cat4": 50,
+    "nombre": "Relojes",
+    "slugger": "relojes-hombre"
+  },
+  {
+    "idcategoria": 2128,
+    "cat1": 120,
+    "cat2": 4,
+    "cat3": 30,
+    "cat4": 60,
+    "nombre": "Accesorios",
+    "slugger": "accesorios-hombre"
+  },
+  {
+    "idcategoria": 2129,
+    "cat1": 120,
+    "cat2": 4,
+    "cat3": 30,
+    "cat4": 70,
+    "nombre": "Joyas",
+    "slugger": "joyas-hombre"
+  },
+  {
+    "idcategoria": 2130,
+    "cat1": 120,
+    "cat2": 4,
+    "cat3": 40,
+    "cat4": 0,
+    "nombre": "Perfumes y colonias",
+    "slugger": "perfumes-colonias-hombre"
+  },
+  {
+    "idcategoria": 2131,
+    "cat1": 120,
+    "cat2": 4,
+    "cat3": 50,
+    "cat4": 0,
+    "nombre": "Cosmeticos",
+    "slugger": "cosmeticos-hombre"
+  },
+  {
+    "idcategoria": 2132,
+    "cat1": 120,
+    "cat2": 4,
+    "cat3": 60,
+    "cat4": 0,
+    "nombre": "Disfraces",
+    "slugger": "disfraces-hombre"
+  },
+  {
+    "idcategoria": 2133,
+    "cat1": 125,
+    "cat2": 5,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Moda bebe niño",
+    "slugger": "bebe-nino"
+  },
+  {
+    "idcategoria": 2134,
+    "cat1": 125,
+    "cat2": 9,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Moda bebe niña",
+    "slugger": "bebe-nina"
+  },
+  {
+    "idcategoria": 2135,
+    "cat1": 125,
+    "cat2": 5,
+    "cat3": 10,
+    "cat4": 10,
+    "nombre": "Abrigos y buzos",
+    "slugger": "abrigos-buzos-bebe-nino"
+  },
+  {
+    "idcategoria": 2136,
+    "cat1": 125,
+    "cat2": 5,
+    "cat3": 10,
+    "cat4": 20,
+    "nombre": "Pantalones y petos",
+    "slugger": "pantalones-bebe-nino"
+  },
+  {
+    "idcategoria": 2137,
+    "cat1": 125,
+    "cat2": 5,
+    "cat3": 10,
+    "cat4": 30,
+    "nombre": "Camisas, camisetas y jerseys",
+    "slugger": "camisas-camisetas-bebe-nino"
+  },
+  {
+    "idcategoria": 2138,
+    "cat1": 125,
+    "cat2": 5,
+    "cat3": 10,
+    "cat4": 40,
+    "nombre": "Trajes ceremonia",
+    "slugger": "trajes-ceremonia-bebe-nino"
+  },
+  {
+    "idcategoria": 2139,
+    "cat1": 125,
+    "cat2": 5,
+    "cat3": 10,
+    "cat4": 50,
+    "nombre": "Otros",
+    "slugger": "otros-ropa-bebe-nino"
+  },
+  {
+    "idcategoria": 2140,
+    "cat1": 125,
+    "cat2": 5,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Calzado",
+    "slugger": "calzado-bebe-nino"
+  },
+  {
+    "idcategoria": 2141,
+    "cat1": 125,
+    "cat2": 5,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Otros",
+    "slugger": "otros-bebe-nino"
+  },
+  {
+    "idcategoria": 2142,
+    "cat1": 125,
+    "cat2": 9,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Ropa",
+    "slugger": "ropa-bebe-nina"
+  },
+  {
+    "idcategoria": 2143,
+    "cat1": 125,
+    "cat2": 9,
+    "cat3": 10,
+    "cat4": 10,
+    "nombre": "Abrigos y buzos",
+    "slugger": "abrigos-buzos-bebe-nina"
+  },
+  {
+    "idcategoria": 2144,
+    "cat1": 125,
+    "cat2": 9,
+    "cat3": 10,
+    "cat4": 20,
+    "nombre": "Faldas y pantalones",
+    "slugger": "faldas-pantalones-bebe-nina"
+  },
+  {
+    "idcategoria": 2145,
+    "cat1": 125,
+    "cat2": 9,
+    "cat3": 10,
+    "cat4": 30,
+    "nombre": "Blusas, camisetas y jerseys",
+    "slugger": "camisas-camisetas-bebe-nina"
+  },
+  {
+    "idcategoria": 2146,
+    "cat1": 125,
+    "cat2": 9,
+    "cat3": 10,
+    "cat4": 40,
+    "nombre": "Vestidos ceremonia",
+    "slugger": "trajes-ceremonia-bebe-nina"
+  },
+  {
+    "idcategoria": 2147,
+    "cat1": 125,
+    "cat2": 9,
+    "cat3": 10,
+    "cat4": 50,
+    "nombre": "Otros",
+    "slugger": "otros-ropa-bebe-nina"
+  },
+  {
+    "idcategoria": 2148,
+    "cat1": 125,
+    "cat2": 9,
+    "cat3": 20,
+    "cat4": 0,
+    "nombre": "Calzado",
+    "slugger": "calzado-bebe-nina"
+  },
+  {
+    "idcategoria": 2149,
+    "cat1": 125,
+    "cat2": 9,
+    "cat3": 30,
+    "cat4": 0,
+    "nombre": "Otros",
+    "slugger": "otros-bebe-nina"
+  },
+  {
+    "idcategoria": 2150,
+    "cat1": 125,
+    "cat2": 50,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Tronas",
+    "slugger": "tronas"
+  },
+  {
+    "idcategoria": 2151,
+    "cat1": 125,
+    "cat2": 60,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Bañeras y cambiadores",
+    "slugger": "baneras-cambiadores"
+  },
+  {
+    "idcategoria": 2152,
+    "cat1": 125,
+    "cat2": 70,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Mochilas y fulares portabebes",
+    "slugger": "mochilas-fulares-portabebes"
+  },
+  {
+    "idcategoria": 2153,
+    "cat1": 125,
+    "cat2": 80,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Hamacas y columpios",
+    "slugger": "hamacas-columpios"
+  },
+  {
+    "idcategoria": 2154,
+    "cat1": 120,
+    "cat2": 6,
+    "cat3": 10,
+    "cat4": 20,
+    "nombre": "Pantalones y petos",
+    "slugger": "pantalones-nino"
+  },
+  {
+    "idcategoria": 2155,
+    "cat1": 120,
+    "cat2": 6,
+    "cat3": 10,
+    "cat4": 15,
+    "nombre": "Camisas, camisetas y jerseys",
+    "slugger": "camisas-camisetas-nino"
+  },
+  {
+    "idcategoria": 2156,
+    "cat1": 120,
+    "cat2": 6,
+    "cat3": 10,
+    "cat4": 30,
+    "nombre": "Trajes, ceremonia y uniformes",
+    "slugger": "trajes-ceremonia-uniformes-nino"
+  },
+  {
+    "idcategoria": 2157,
+    "cat1": 120,
+    "cat2": 83,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Mochilas y maletas infantil",
+    "slugger": "mochilas-maletas-infantil"
+  },
+  {
+    "idcategoria": 2158,
+    "cat1": 120,
+    "cat2": 6,
+    "cat3": 40,
+    "cat4": 0,
+    "nombre": "Disfraces",
+    "slugger": "disfraces-nino"
+  },
+  {
+    "idcategoria": 2159,
+    "cat1": 120,
+    "cat2": 8,
+    "cat3": 10,
+    "cat4": 0,
+    "nombre": "Ropa infantil",
+    "slugger": "ropa-infantil-nina"
+  },
+  {
+    "idcategoria": 2160,
+    "cat1": 120,
+    "cat2": 8,
+    "cat3": 10,
+    "cat4": 10,
+    "nombre": "Pantalones y petos",
+    "slugger": "pantalones-nina"
+  },
+  {
+    "idcategoria": 2161,
+    "cat1": 120,
+    "cat2": 8,
+    "cat3": 10,
+    "cat4": 20,
+    "nombre": "Blusas, camisetas y jerseys",
+    "slugger": "camisas-camisetas-nina"
+  },
+  {
+    "idcategoria": 2162,
+    "cat1": 120,
+    "cat2": 8,
+    "cat3": 10,
+    "cat4": 30,
+    "nombre": "Vestidos, ceremonia y uniformes",
+    "slugger": "trajes-ceremonia-uniformes-nina"
+  },
+  {
+    "idcategoria": 2163,
+    "cat1": 120,
+    "cat2": 8,
+    "cat3": 10,
+    "cat4": 40,
+    "nombre": "Otros",
+    "slugger": "otros-ropa-nina"
+  },
+  {
+    "idcategoria": 2164,
+    "cat1": 120,
+    "cat2": 8,
+    "cat3": 50,
+    "cat4": 0,
+    "nombre": "Calzado infantil",
+    "slugger": "calzado-infantil-nina"
+  },
+  {
+    "idcategoria": 2166,
+    "cat1": 120,
+    "cat2": 8,
+    "cat3": 70,
+    "cat4": 0,
+    "nombre": "Disfraces",
+    "slugger": "disfraces-nina"
+  },
+  {
+    "idcategoria": 2167,
+    "cat1": 120,
+    "cat2": 8,
+    "cat3": 80,
+    "cat4": 0,
+    "nombre": "Otros",
+    "slugger": "otros-ropa-infantil-nina"
+  },
+  {
+    "idcategoria": 2168,
+    "cat1": 120,
+    "cat2": 2,
+    "cat3": 10,
+    "cat4": 15,
+    "nombre": "Zapatos",
+    "slugger": "zapatos-mujer"
+  },
+  {
+    "idcategoria": 2169,
+    "cat1": 125,
+    "cat2": 5,
+    "cat3": 10,
+    "cat4": 5,
+    "nombre": "Lotes",
+    "slugger": "bebe-nino-lotes"
+  },
+  {
+    "idcategoria": 2170,
+    "cat1": 125,
+    "cat2": 5,
+    "cat3": 10,
+    "cat4": 7,
+    "nombre": "Conjuntos",
+    "slugger": "bebe-nino-conjuntos"
+  },
+  {
+    "idcategoria": 2171,
+    "cat1": 125,
+    "cat2": 9,
+    "cat3": 10,
+    "cat4": 5,
+    "nombre": "Lotes",
+    "slugger": "bebe-nina-lotes"
+  },
+  {
+    "idcategoria": 2172,
+    "cat1": 125,
+    "cat2": 9,
+    "cat3": 10,
+    "cat4": 7,
+    "nombre": "Conjuntos",
+    "slugger": "bebe-nina-conjuntos"
+  },
+  {
+    "idcategoria": 2173,
+    "cat1": 125,
+    "cat2": 9,
+    "cat3": 10,
+    "cat4": 8,
+    "nombre": "Vestidos",
+    "slugger": "bebe-nina-vestidoos"
+  },
+  {
+    "idcategoria": 2174,
+    "cat1": 110,
+    "cat2": 70,
+    "cat3": 105,
+    "cat4": 0,
+    "nombre": "Belleza y estética",
+    "slugger": "belleza-estetica"
+  },
+  {
+    "idcategoria": 2175,
+    "cat1": 110,
+    "cat2": 70,
+    "cat3": 105,
+    "cat4": 10,
+    "nombre": "Planchas de pelo",
+    "slugger": "planchas-pelo"
+  },
+  {
+    "idcategoria": 2176,
+    "cat1": 110,
+    "cat2": 70,
+    "cat3": 105,
+    "cat4": 20,
+    "nombre": "Secadores y rizadores",
+    "slugger": "secadores-rizadores"
+  },
+  {
+    "idcategoria": 2177,
+    "cat1": 110,
+    "cat2": 70,
+    "cat3": 105,
+    "cat4": 30,
+    "nombre": "Cortapelos, afeitadoras y depiladoras",
+    "slugger": "cortapelos-afeitadoras-depiladoras"
+  },
+  {
+    "idcategoria": 2178,
+    "cat1": 110,
+    "cat2": 70,
+    "cat3": 105,
+    "cat4": 40,
+    "nombre": "Otros",
+    "slugger": "otros-electrodomesticos-belleza"
+  },
+  {
+    "idcategoria": 2179,
+    "cat1": 70,
+    "cat2": 10,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Accesorios y periféricos",
+    "slugger": "accesorios-perifericos"
+  },
+  {
+    "idcategoria": 2180,
+    "cat1": 120,
+    "cat2": 6,
+    "cat3": 10,
+    "cat4": 40,
+    "nombre": "Otros",
+    "slugger": "otros-moda-nino"
+  },
+  {
+    "idcategoria": 2181,
+    "cat1": 120,
+    "cat2": 6,
+    "cat3": 10,
+    "cat4": 5,
+    "nombre": "Abrigos y chaquetas",
+    "slugger": "abrigos-chaquetas-nino"
+  },
+  {
+    "idcategoria": 2182,
+    "cat1": 120,
+    "cat2": 8,
+    "cat3": 10,
+    "cat4": 5,
+    "nombre": "Abrigos y chaquetas",
+    "slugger": "abrigos-chaquetas-nina"
+  },
+  {
+    "idcategoria": 2183,
+    "cat1": 110,
+    "cat2": 70,
+    "cat3": 128,
+    "cat4": 0,
+    "nombre": "Máquinas de coser",
+    "slugger": "maquinas-de-coser"
+  },
+  {
+    "idcategoria": 2184,
+    "cat1": 90,
+    "cat2": 7,
+    "cat3": 0,
+    "cat4": 0,
+    "nombre": "Smartwatch",
+    "slugger": "smartwatch"
+  },
+  {
+    "idcategoria": 2186,
+    "cat1": 150,
+    "cat2": 10,
+    "cat3": 157,
+    "cat4": 0,
+    "nombre": "Yoga",
+    "slugger": "yoga"
+  },
+  {
+    "idcategoria": 2187,
+    "cat1": 110,
+    "cat2": 30,
+    "cat3": 59,
+    "cat4": 0,
+    "nombre": "Barbacoas",
+    "slugger": "barbacoas"
+  }
+]

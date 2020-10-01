@@ -65,8 +65,10 @@
                             <img v-bind:src="foto" alt="" uk-cover>
                         </li>
                     </ul>
+
                     <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
                     <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+                    <ul class="uk-slider-nav uk-dotnav"></ul>
                 </div>
             </div>
         </div>

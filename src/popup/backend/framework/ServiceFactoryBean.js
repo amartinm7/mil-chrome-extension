@@ -8,6 +8,7 @@ import {DoLoginWithBothService} from "../application/user/DoLoginWithBothService
 import {SaveStorageService} from "../application/storage/SaveStorageService";
 import {GetAdStatsService} from "../application/ad/GetAdStatsService";
 import RepositoryFactoryBean from "./RepositoryFactoryBean";
+import {GetCategoriesSuggestedService} from "../application/category/GetCategoriesSuggestedService";
 
 let instance = null
 
@@ -41,6 +42,9 @@ export default class ServiceFactoryBean{
         )
         this._getAdStatsService = new GetAdStatsService(
             RepositoryFactoryBean.getAdStatsRepository()
+        )
+        this._getCategoriesSuggestedService = new GetCategoriesSuggestedService(
+            RepositoryFactoryBean.getCategoriesSuggestedRepository()
         )
     }
 
@@ -85,5 +89,9 @@ export default class ServiceFactoryBean{
 
     static getAdStatsService() {
         return this.getInstance()._getAdStatsService
+    }
+
+    static getCategoriesSuggestedService(){
+        return this.getInstance()._getCategoriesSuggestedService
     }
 }
